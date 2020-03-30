@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>8. Головная плата - Содержимое &#8212; документация Руководство пользователя 1.0</title>
+    <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+    <link rel="next" title="9. Плата расширния №1 - Содержимое" href="B1.html" />
+    <link rel="prev" title="7. Параметры устройства - Содержимое" href="device_params.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Руководство пользователя</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../written/heater_line.html">1. Описание работы линии электрообогрева</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/HCR01F-user-web.html">2. WEB-Интерфейс настройки устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_index.html">3. Словарь объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/Mapping_Struct.html">4. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="modbus_mmappings.html">5. Отображение в адресное пространство Modbus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common_can.html">6. Объекты CANopen DS-301 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_params.html">7. Параметры устройства - Содержимое</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Головная плата - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B1.html">9. Плата расширния №1 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B2.html">10. Плата расширния №2 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B3.html">11. Плата расширния №3 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B4.html">12. Плата расширния №4 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B5.html">13. Плата расширния №5 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B6.html">14. Плата расширния №6 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B7.html">15. Плата расширния №7 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B8.html">16. Плата расширния №8 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExtIO.html">17. Данные с внешних устройств - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserApp.html">18. Приложение пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">19. Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">20. Типовое содержимое архива с ПО для устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">21. Распределение параметров PDO</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">8. Головная плата - Содержимое</a><ul>
+<li><a class="reference internal" href="#b0-board-status">8.1. B0 - Board Status</a></li>
+<li><a class="reference internal" href="#b0-board-control">8.2. B0 - Board Control</a></li>
+<li><a class="reference internal" href="#b0-errors">8.3. B0 - Errors</a></li>
+<li><a class="reference internal" href="#b0-channel-status">8.4. B0 - Channel Status</a></li>
+<li><a class="reference internal" href="#b0-di-read-word">8.5. B0 - DI Read Word</a></li>
+<li><a class="reference internal" href="#b0-di-read-bit">8.6. B0 - DI Read Bit</a></li>
+<li><a class="reference internal" href="#b0-di-invert-polarity">8.7. B0 - DI Invert Polarity</a></li>
+<li><a class="reference internal" href="#b0-di-filter-time">8.8. B0 - DI Filter Time</a></li>
+<li><a class="reference internal" href="#b0-di-mask">8.9. B0 - DI Mask</a></li>
+<li><a class="reference internal" href="#b0-di-mag">8.10. B0 - DI Mag</a></li>
+<li><a class="reference internal" href="#b0-do-write-bit">8.11. B0 - DO Write Bit</a></li>
+<li><a class="reference internal" href="#b0-do-invert-polarity">8.12. B0 - DO Invert Polarity</a></li>
+<li><a class="reference internal" href="#b0-do-error-mode">8.13. B0 - DO Error Mode</a></li>
+<li><a class="reference internal" href="#b0-do-error-value">8.14. B0 - DO Error Value</a></li>
+<li><a class="reference internal" href="#b0-do-mask">8.15. B0 - DO Mask</a></li>
+<li><a class="reference internal" href="#b0-ai-read-float">8.16. B0 - AI Read Float</a></li>
+<li><a class="reference internal" href="#b0-ai-scaling">8.17. B0 - AI Scaling</a></li>
+<li><a class="reference internal" href="#b0-ai-offset">8.18. B0 - AI Offset</a></li>
+<li><a class="reference internal" href="#b0-ai-filter-time">8.19. B0 - AI Filter Time</a></li>
+<li><a class="reference internal" href="#b0-ai-deadband">8.20. B0 - AI Deadband</a></li>
+<li><a class="reference internal" href="#b0-ai-upper-limit">8.21. B0 - AI Upper Limit</a></li>
+<li><a class="reference internal" href="#b0-ai-lower-limit">8.22. B0 - AI Lower Limit</a></li>
+<li><a class="reference internal" href="#b0-ai-settings">8.23. B0 - AI Settings</a></li>
+<li><a class="reference internal" href="#b0-ai-float-mag">8.24. B0 - AI Float Mag</a></li>
+<li><a class="reference internal" href="#b0-ai-deadband-ref">8.25. B0 - AI Deadband Ref</a></li>
+<li><a class="reference internal" href="#b0-io-calibration">8.26. B0 - IO Calibration</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="device_params.html" title="Previous Chapter: 7. Параметры устройства - Содержимое"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 7. Параметры ...</span>
+    </a>
+  </li>
+  <li>
+    <a href="B1.html" title="Next Chapter: 9. Плата расширния №1 - Содержимое"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">9. Плата расш... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/generated/B0.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="id1">
+<h1>8. Головная плата - Содержимое<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="b0-board-status">
+<span id="subtable3f01"></span><h2>8.1. B0 - Board Status<a class="headerlink" href="#b0-board-status" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Субиндексы 0x3F01 B0 - Board Status(0—5)</span><a class="headerlink" href="#id2" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 5</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Board Errors</p></td>
+<td><p>Статус-флаги платы</p></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Processing Time Last</p></td>
+<td><p>Время обработки</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Processing Time AVG</p></td>
+<td><p>Среднее время обработки</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Processing Time Max</p></td>
+<td><p>Максимальное время обработки</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Recent Poll Time</p></td>
+<td><p>Время последнего опроса</p></td>
+<td><p>0</p></td>
+<td><p>uint64</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-board-control">
+<span id="subtable3f03"></span><h2>8.2. B0 - Board Control<a class="headerlink" href="#b0-board-control" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Субиндексы 0x3F03 B0 - Board Control(0—1)</span><a class="headerlink" href="#id3" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Command</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-errors">
+<span id="subtable3f09"></span><h2>8.3. B0 - Errors<a class="headerlink" href="#b0-errors" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Субиндексы 0x3F09 B0 - Errors(0—16)</span><a class="headerlink" href="#id4" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 16</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - Errors 1</p></td>
+<td><p>Ошибки 1</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B0 - Errors 2</p></td>
+<td><p>Ошибки 2</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B0 - Errors 3</p></td>
+<td><p>Ошибки 3</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B0 - Errors 4</p></td>
+<td><p>Ошибки 4</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B0 - Errors 5</p></td>
+<td><p>Ошибки 5</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B0 - Errors 6</p></td>
+<td><p>Ошибки 6</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B0 - Errors 7</p></td>
+<td><p>Ошибки 7</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B0 - Errors 8</p></td>
+<td><p>Ошибки 8</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>B0 - Errors 9</p></td>
+<td><p>Ошибки 9</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>B0 - Errors 10</p></td>
+<td><p>Ошибки 10</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>B0 - Errors 11</p></td>
+<td><p>Ошибки 11</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>B0 - Errors 12</p></td>
+<td><p>Ошибки 12</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>B0 - Errors 13</p></td>
+<td><p>Ошибки 13</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>B0 - Errors 14</p></td>
+<td><p>Ошибки 14</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>B0 - Errors 15</p></td>
+<td><p>Ошибки 15</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>B0 - Errors 16</p></td>
+<td><p>Ошибки 16</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-channel-status">
+<span id="subtable3f0f"></span><h2>8.4. B0 - Channel Status<a class="headerlink" href="#b0-channel-status" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-text">Субиндексы 0x3F0F B0 - Channel Status(0—10)</span><a class="headerlink" href="#id5" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - Channel Status 1</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-di-read-word">
+<span id="subtable3f10"></span><h2>8.5. B0 - DI Read Word<a class="headerlink" href="#b0-di-read-word" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">Субиндексы 0x3F10 B0 - DI Read Word(0—1)</span><a class="headerlink" href="#id6" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - DI Read Word 1</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>uint16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-di-read-bit">
+<span id="subtable3f11"></span><h2>8.6. B0 - DI Read Bit<a class="headerlink" href="#b0-di-read-bit" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-text">Субиндексы 0x3F11 B0 - DI Read Bit(0—10)</span><a class="headerlink" href="#id7" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - DI Read Bit 1</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-di-invert-polarity">
+<span id="subtable3f12"></span><h2>8.7. B0 - DI Invert Polarity<a class="headerlink" href="#b0-di-invert-polarity" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-text">Субиндексы 0x3F12 B0 - DI Invert Polarity(0—10)</span><a class="headerlink" href="#id8" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - DI Invert Polarity 1</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-di-filter-time">
+<span id="subtable3f13"></span><h2>8.8. B0 - DI Filter Time<a class="headerlink" href="#b0-di-filter-time" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id9">
+<caption><span class="caption-text">Субиндексы 0x3F13 B0 - DI Filter Time(0—10)</span><a class="headerlink" href="#id9" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - DI Filter Time 1</p></td>
+<td></td>
+<td><p>20</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>Длительность фильтра задаётся в <em>миллисекундах</em>.
+* Для плат <strong>24В</strong> если более 5/6 выборок имеют логический уровень <strong>1</strong>, то итоговое значение принимается равным <strong>1</strong>, если менее 1/6 значений имеют логический уровень <strong>1</strong>, то итоговое значение принимается равным <strong>0</strong>, в промежуточном случае значение не меняется.
+* Для плат <strong>220В</strong> если более 1/2 выборок имеют логический уровень <strong>1</strong>, то итоговое значение принимается равным <strong>1</strong>, если менее 1/10 значений имеют логический уровень <strong>1</strong>, то итоговое значение принимается равным <strong>0</strong>, в промежуточном случае значение не меняется.</p>
+</div>
+<div class="section" id="b0-di-mask">
+<span id="subtable3f14"></span><h2>8.9. B0 - DI Mask<a class="headerlink" href="#b0-di-mask" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id10">
+<caption><span class="caption-text">Субиндексы 0x3F14 B0 - DI Mask(0—10)</span><a class="headerlink" href="#id10" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - DI Mask 1</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-di-mag">
+<span id="subtable3f15"></span><h2>8.10. B0 - DI Mag<a class="headerlink" href="#b0-di-mag" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id11">
+<caption><span class="caption-text">Субиндексы 0x3F15 B0 - DI Mag(0—1)</span><a class="headerlink" href="#id11" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - DI Mag 1</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>uint16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-do-write-bit">
+<span id="subtable3f21"></span><h2>8.11. B0 - DO Write Bit<a class="headerlink" href="#b0-do-write-bit" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id12">
+<caption><span class="caption-text">Субиндексы 0x3F21 B0 - DO Write Bit(0—10)</span><a class="headerlink" href="#id12" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - DO Write Bit 1</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-do-invert-polarity">
+<span id="subtable3f22"></span><h2>8.12. B0 - DO Invert Polarity<a class="headerlink" href="#b0-do-invert-polarity" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id13">
+<caption><span class="caption-text">Субиндексы 0x3F22 B0 - DO Invert Polarity(0—10)</span><a class="headerlink" href="#id13" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - DO Invert Polarity 1</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-do-error-mode">
+<span id="subtable3f23"></span><h2>8.13. B0 - DO Error Mode<a class="headerlink" href="#b0-do-error-mode" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id14">
+<caption><span class="caption-text">Субиндексы 0x3F23 B0 - DO Error Mode(0—10)</span><a class="headerlink" href="#id14" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - DO Error Mode 1</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>Используется для перевода дискретного выхода в безопасное состояние в случае ошибки(см.  <span class="xref std std-ref">subtable2012</span>  ). Если значение параметра <strong>True</strong>, то параметр принимает значение в соответствии с <em>0x4n24</em> (см.  <a class="reference internal" href="#subtable3f24"><span class="std std-ref">B0 - DO Error Value</span></a> ), где <em>n</em> принимает значение от 0 до 7, в зависимости от номера платы. Если же значение <strong>False</strong>, выход не меняет своего состояния.</p>
+</div>
+<div class="section" id="b0-do-error-value">
+<span id="subtable3f24"></span><h2>8.14. B0 - DO Error Value<a class="headerlink" href="#b0-do-error-value" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id15">
+<caption><span class="caption-text">Субиндексы 0x3F24 B0 - DO Error Value(0—10)</span><a class="headerlink" href="#id15" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - DO Error Value 1</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>Используется для определения безопасного состояния дискретного выхода в случае ошибки(см.  <span class="xref std std-ref">subtable2012</span> ,   <a class="reference internal" href="#subtable3f23"><span class="std std-ref">B0 - DO Error Mode</span></a> ).</p>
+</div>
+<div class="section" id="b0-do-mask">
+<span id="subtable3f25"></span><h2>8.15. B0 - DO Mask<a class="headerlink" href="#b0-do-mask" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id16">
+<caption><span class="caption-text">Субиндексы 0x3F25 B0 - DO Mask(0—10)</span><a class="headerlink" href="#id16" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - DO Mask 1</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-ai-read-float">
+<span id="subtable3f31"></span><h2>8.16. B0 - AI Read Float<a class="headerlink" href="#b0-ai-read-float" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id17">
+<caption><span class="caption-text">Субиндексы 0x3F31 B0 - AI Read Float(0—8)</span><a class="headerlink" href="#id17" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - AI Read Float 1</p></td>
+<td></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-ai-scaling">
+<span id="subtable3f32"></span><h2>8.17. B0 - AI Scaling<a class="headerlink" href="#b0-ai-scaling" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id18">
+<caption><span class="caption-text">Субиндексы 0x3F32 B0 - AI Scaling(0—8)</span><a class="headerlink" href="#id18" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - AI Scaling 1</p></td>
+<td></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-ai-offset">
+<span id="subtable3f33"></span><h2>8.18. B0 - AI Offset<a class="headerlink" href="#b0-ai-offset" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id19">
+<caption><span class="caption-text">Субиндексы 0x3F33 B0 - AI Offset(0—8)</span><a class="headerlink" href="#id19" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - AI Offset 1</p></td>
+<td></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-ai-filter-time">
+<span id="subtable3f34"></span><h2>8.19. B0 - AI Filter Time<a class="headerlink" href="#b0-ai-filter-time" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id20">
+<caption><span class="caption-text">Субиндексы 0x3F34 B0 - AI Filter Time(0—8)</span><a class="headerlink" href="#id20" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - AI Filter Time 1</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Время фильтрации <em>AI</em> задаётся в периодах напряжения в сети 230В(1 период - 20мС).</p>
+</div>
+<div class="section" id="b0-ai-deadband">
+<span id="subtable3f35"></span><h2>8.20. B0 - AI Deadband<a class="headerlink" href="#b0-ai-deadband" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id21">
+<caption><span class="caption-text">Субиндексы 0x3F35 B0 - AI Deadband(0—8)</span><a class="headerlink" href="#id21" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - AI Deadband 1</p></td>
+<td></td>
+<td><p>0.1</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Зона нечувствительности задаётся в тысячных долях процента. После обработки значение записывается в 0x4n3A, 0x4n3B соответственно(<span class="xref std std-ref">subtable3F3A</span>, <a class="reference internal" href="#subtable3f3b"><span class="std std-ref">B0 - AI Float Mag</span></a>). Если значение превышает пределы, заданные в <a class="reference internal" href="#subtable3f36"><span class="std std-ref">B0 - AI Upper Limit</span></a> и <a class="reference internal" href="#subtable3f37"><span class="std std-ref">B0 - AI Lower Limit</span></a>, то значение в <span class="xref std std-ref">subtable3F3A</span> и <a class="reference internal" href="#subtable3f3b"><span class="std std-ref">B0 - AI Float Mag</span></a> меняется независимо от зоны нечувствительности.</p>
+</div>
+<div class="section" id="b0-ai-upper-limit">
+<span id="subtable3f36"></span><h2>8.21. B0 - AI Upper Limit<a class="headerlink" href="#b0-ai-upper-limit" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id22">
+<caption><span class="caption-text">Субиндексы 0x3F36 B0 - AI Upper Limit(0—8)</span><a class="headerlink" href="#id22" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - AI Upper Limit 1</p></td>
+<td></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Верхний предел значения. Проверка на «≥» значению предела. Если значение больше или равно пределу, выставляется соответствующий бит в <a class="reference internal" href="#subtable3f01"><span class="std std-ref">B0 - Board Status</span></a> и изменение обработанных значений <span class="xref std std-ref">subtable3F3A</span> и <a class="reference internal" href="#subtable3f3b"><span class="std std-ref">B0 - AI Float Mag</span></a> просходит независимо от зоны нечувствительности <a class="reference internal" href="#subtable3f35"><span class="std std-ref">B0 - AI Deadband</span></a>.</p>
+</div>
+<div class="section" id="b0-ai-lower-limit">
+<span id="subtable3f37"></span><h2>8.22. B0 - AI Lower Limit<a class="headerlink" href="#b0-ai-lower-limit" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id23">
+<caption><span class="caption-text">Субиндексы 0x3F37 B0 - AI Lower Limit(0—8)</span><a class="headerlink" href="#id23" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - AI Lower Limit 1</p></td>
+<td></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Нижний предел значения. Проверка на «&lt;» значению предела. Если значение меньше предела, выставляется соответствующий бит в <a class="reference internal" href="#subtable3f01"><span class="std std-ref">B0 - Board Status</span></a> и изменение обработанных значений <span class="xref std std-ref">subtable3F3A</span> и <a class="reference internal" href="#subtable3f3b"><span class="std std-ref">B0 - AI Float Mag</span></a> просходит независимо от зоны нечувствительности <a class="reference internal" href="#subtable3f35"><span class="std std-ref">B0 - AI Deadband</span></a>.</p>
+</div>
+<div class="section" id="b0-ai-settings">
+<span id="subtable3f39"></span><h2>8.23. B0 - AI Settings<a class="headerlink" href="#b0-ai-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id24">
+<caption><span class="caption-text">Субиндексы 0x3F39 B0 - AI Settings(0—8)</span><a class="headerlink" href="#id24" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - AI Settings 1</p></td>
+<td></td>
+<td><p>3</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Настройки каналов аналогового ввода(<em>AI</em>). Актуальны для плат температурного ввода, где с помощью данного параметра настраивается тип температурного датчика в соответствии с <em>ГОСТ 6651—2009</em>:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 18%" />
+<col style="width: 35%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Код типа</p></th>
+<th class="head"><p>Материал датчика</p></th>
+<th class="head"><p>Сопротивление при 0 ° C</p></th>
+<th class="head"><p>Температурный коэфициент α</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Медь</p></td>
+<td><p>50 Ом</p></td>
+<td><p>0,00428</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Платина</p></td>
+<td><p>50 Ом</p></td>
+<td><p>0,00385</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Платина</p></td>
+<td><p>100 Ом</p></td>
+<td><p>0,00385</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Платина</p></td>
+<td><p>50 Ом</p></td>
+<td><p>0,00391</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Платина</p></td>
+<td><p>100 Ом</p></td>
+<td><p>0,00391</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b0-ai-float-mag">
+<span id="subtable3f3b"></span><h2>8.24. B0 - AI Float Mag<a class="headerlink" href="#b0-ai-float-mag" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id25">
+<caption><span class="caption-text">Субиндексы 0x3F3B B0 - AI Float Mag(0—8)</span><a class="headerlink" href="#id25" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - AI Float Mag 1</p></td>
+<td></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>В данном индексе хранятся значения формате <em>«float»</em>, обработанные с учётом зоны нечувствительности <a class="reference internal" href="#subtable3f35"><span class="std std-ref">B0 - AI Deadband</span></a> и пределов <a class="reference internal" href="#subtable3f36"><span class="std std-ref">B0 - AI Upper Limit</span></a>, <a class="reference internal" href="#subtable3f37"><span class="std std-ref">B0 - AI Lower Limit</span></a>.</p>
+</div>
+<div class="section" id="b0-ai-deadband-ref">
+<span id="subtable3f3c"></span><h2>8.25. B0 - AI Deadband Ref<a class="headerlink" href="#b0-ai-deadband-ref" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id26">
+<caption><span class="caption-text">Субиндексы 0x3F3C B0 - AI Deadband Ref(0—8)</span><a class="headerlink" href="#id26" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - AI Deadband Ref 1</p></td>
+<td></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>Диапазон значений, относительно которого вычисляется <a class="reference internal" href="#subtable3f35"><span class="std std-ref">B0 - AI Deadband</span></a>. Связан с аппаратными особенностями платы расширения и типом подключенного датчика и не может быть изменён. Автоматически масштабируется при изменении <a class="reference internal" href="#subtable3f32"><span class="std std-ref">B0 - AI Scaling</span></a>.</p>
+</div>
+<div class="section" id="b0-io-calibration">
+<span id="subtable3fe1"></span><h2>8.26. B0 - IO Calibration<a class="headerlink" href="#b0-io-calibration" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id27">
+<caption><span class="caption-text">Субиндексы 0x3FE1 B0 - IO Calibration(0—32)</span><a class="headerlink" href="#id27" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 32</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B0 - Calibration 1</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B0 - Calibration 2</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B0 - Calibration 3</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B0 - Calibration 4</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B0 - Calibration 5</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B0 - Calibration 6</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B0 - Calibration 7</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B0 - Calibration 8</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>B0 - Calibration 9</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>B0 - Calibration 10</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>B0 - Calibration 11</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>B0 - Calibration 12</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>B0 - Calibration 13</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>B0 - Calibration 14</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>B0 - Calibration 15</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>B0 - Calibration 16</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>B0 - Calibration 17</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>B0 - Calibration 18</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>B0 - Calibration 19</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>B0 - Calibration 20</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>21</p></td>
+<td><p>B0 - Calibration 21</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>22</p></td>
+<td><p>B0 - Calibration 22</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>23</p></td>
+<td><p>B0 - Calibration 23</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>24</p></td>
+<td><p>B0 - Calibration 24</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>25</p></td>
+<td><p>B0 - Calibration 25</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>26</p></td>
+<td><p>B0 - Calibration 26</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>27</p></td>
+<td><p>B0 - Calibration 27</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>28</p></td>
+<td><p>B0 - Calibration 28</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>29</p></td>
+<td><p>B0 - Calibration 29</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>30</p></td>
+<td><p>B0 - Calibration 30</p></td>
+<td></td>
+<td><p>1</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>31</p></td>
+<td><p>B0 - Calibration 31</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>32</p></td>
+<td><p>B0 - Calibration 32</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>int32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, Prom-Teq LLC.<br/>
+      Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

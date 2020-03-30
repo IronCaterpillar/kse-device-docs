@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>18. Приложение пользователя - Содержимое &#8212; документация Руководство пользователя 1.0</title>
+    <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+    <link rel="next" title="19. Данные приложения пользователя - Содержимое" href="UserAppData.html" />
+    <link rel="prev" title="17. Данные с внешних устройств - Содержимое" href="ExtIO.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Руководство пользователя</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../written/heater_line.html">1. Описание работы линии электрообогрева</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/HCR01F-user-web.html">2. WEB-Интерфейс настройки устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_index.html">3. Словарь объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/Mapping_Struct.html">4. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="modbus_mmappings.html">5. Отображение в адресное пространство Modbus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common_can.html">6. Объекты CANopen DS-301 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_params.html">7. Параметры устройства - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B0.html">8. Головная плата - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B1.html">9. Плата расширния №1 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B2.html">10. Плата расширния №2 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B3.html">11. Плата расширния №3 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B4.html">12. Плата расширния №4 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B5.html">13. Плата расширния №5 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B6.html">14. Плата расширния №6 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B7.html">15. Плата расширния №7 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B8.html">16. Плата расширния №8 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExtIO.html">17. Данные с внешних устройств - Содержимое</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">18. Приложение пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">19. Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">20. Типовое содержимое архива с ПО для устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">21. Распределение параметров PDO</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">18. Приложение пользователя - Содержимое</a><ul>
+<li><a class="reference internal" href="#user-app-description">18.1. User App Description</a></li>
+<li><a class="reference internal" href="#user-app-status">18.2. User App Status</a></li>
+<li><a class="reference internal" href="#user-app-control">18.3. User App Control</a></li>
+<li><a class="reference internal" href="#line-1-description">18.4. Line 1 Description</a></li>
+<li><a class="reference internal" href="#line-1-status">18.5. Line 1 Status</a></li>
+<li><a class="reference internal" href="#line-1-temp-alarms">18.6. Line 1 Temp Alarms</a></li>
+<li><a class="reference internal" href="#line-1-current-alarms">18.7. Line 1 Current Alarms</a></li>
+<li><a class="reference internal" href="#line-1-misc-alarms">18.8. Line 1 Misc Alarms</a></li>
+<li><a class="reference internal" href="#line-1-temp-trip">18.9. Line 1 Temp Trip</a></li>
+<li><a class="reference internal" href="#line-1-current-trip">18.10. Line 1 Current Trip</a></li>
+<li><a class="reference internal" href="#line-1-temp-pv">18.11. Line 1 Temp PV</a></li>
+<li><a class="reference internal" href="#line-1-current-pv">18.12. Line 1 Current PV</a></li>
+<li><a class="reference internal" href="#line-1-misc-pv">18.13. Line 1 Misc PV</a></li>
+<li><a class="reference internal" href="#line-1-control">18.14. Line 1 Control</a></li>
+<li><a class="reference internal" href="#line-1-settings">18.15. Line 1 Settings</a></li>
+<li><a class="reference internal" href="#line-1-temp-alarm-settings">18.16. Line 1 Temp Alarm Settings</a></li>
+<li><a class="reference internal" href="#line-1-current-alarm-settings">18.17. Line 1 Current Alarm Settings</a></li>
+<li><a class="reference internal" href="#line-1-misc-alarm-settings">18.18. Line 1 Misc Alarm Settings</a></li>
+<li><a class="reference internal" href="#line-1-temp-trip-enable">18.19. Line 1 Temp Trip Enable</a></li>
+<li><a class="reference internal" href="#line-1-current-trip-enable">18.20. Line 1 Current Trip Enable</a></li>
+<li><a class="reference internal" href="#line-1-deadband-settings">18.21. Line 1 Deadband Settings</a></li>
+<li><a class="reference internal" href="#line-1-hw-specific-settings">18.22. Line 1 HW Specific Settings</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="ExtIO.html" title="Previous Chapter: 17. Данные с внешних устройств - Содержимое"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 17. Данные с ...</span>
+    </a>
+  </li>
+  <li>
+    <a href="UserAppData.html" title="Next Chapter: 19. Данные приложения пользователя - Содержимое"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">19. Данные пр... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/generated/UserApp.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="id1">
+<h1>18. Приложение пользователя - Содержимое<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="user-app-description">
+<span id="subtable5000"></span><h2>18.1. User App Description<a class="headerlink" href="#user-app-description" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Субиндексы 0x5000 User App Description(0—4)</span><a class="headerlink" href="#id2" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 4</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Project Name</p></td>
+<td><p>Имя проекта Пользовательской программы</p></td>
+<td></td>
+<td><p>visible_str</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Project Build Date</p></td>
+<td><p>Дата сборки проекта</p></td>
+<td><p>0</p></td>
+<td><p>uint64</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Project Version</p></td>
+<td><p>Версия проекта Пользовательской программы</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Checksum</p></td>
+<td><p>Имя файла проекта</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="user-app-status">
+<span id="subtable5001"></span><h2>18.2. User App Status<a class="headerlink" href="#user-app-status" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Субиндексы 0x5001 User App Status(0—4)</span><a class="headerlink" href="#id3" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 4</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Status</p></td>
+<td><p>Состояние программы</p></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Program Stack Total Size</p></td>
+<td><p>Размер выделенного объема памяти на стек задачи выполнения Пользовательской программы</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Program Stack Free Size</p></td>
+<td><p>Размер свободного объема памяти стека задачи выполнения Пользовательской программы</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Program Cycle Failure Counter</p></td>
+<td><p>Счетчик сбоев цикла программы</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="user-app-control">
+<span id="subtable5002"></span><h2>18.3. User App Control<a class="headerlink" href="#user-app-control" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Субиндексы 0x5002 User App Control(0—1)</span><a class="headerlink" href="#id4" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Command</p></td>
+<td><p>Команда управления программой</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line-1-description">
+<span id="subtable5800"></span><h2>18.4. Line 1 Description<a class="headerlink" href="#line-1-description" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-text">Субиндексы 0x5800 Line 1 Description(0—1)</span><a class="headerlink" href="#id5" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Name</p></td>
+<td><p>Название линии(задаётся пользователем)</p></td>
+<td><p>Line 1</p></td>
+<td><p>visible_str</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line-1-status">
+<span id="subtable5801"></span><h2>18.5. Line 1 Status<a class="headerlink" href="#line-1-status" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">Субиндексы 0x5801 Line 1 Status(0—4)</span><a class="headerlink" href="#id6" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 4</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Fault</p></td>
+<td><p>Присутствует Авария</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Actual Control Mode</p></td>
+<td><p>Текущий режим управления/регулирования: 0 - нагрев выкл., 1 - нагрев вкл., 2 - дистанционный, 3 - периодический (ШИМ), 4 - релейный по температуре, 5 - пропорциональный периодический (ШИМ) по температуре</p></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Safe Mode On</p></td>
+<td><p>Произошёл переход в безопасный режим</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Output State</p></td>
+<td><p>Состояние выхода</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>Параметры Circuitbreaker OF, Circuitbreaker SD и Contactor отображают состояние объекта только если они соответствующим образом настроены в  <a class="reference internal" href="#subtable582b"><span class="std std-ref">Line 1 HW Specific Settings</span></a></p>
+</div>
+<ul class="simple">
+<li><p>1 - Fault</p></li>
+</ul>
+<p>Данный параметр показывает, что присутствует по крайней мере один сигнал «Alarm» и/или «Trip». Расшифровку сигналов «Alarm» см. в <a class="reference internal" href="#subtable5802"><span class="std std-ref">Line 1 Temp Alarms</span></a>, <a class="reference internal" href="#subtable5803"><span class="std std-ref">Line 1 Current Alarms</span></a>, <a class="reference internal" href="#subtable5806"><span class="std std-ref">Line 1 Misc Alarms</span></a>. Расшифровку сигналов «Trip» см. в <a class="reference internal" href="#subtable5807"><span class="std std-ref">Line 1 Temp Trip</span></a>, <a class="reference internal" href="#subtable5808"><span class="std std-ref">Line 1 Current Trip</span></a>.</p>
+<ul class="simple">
+<li><p>2 - Actual Control Mode</p></li>
+</ul>
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-text">Режимы управления линией электрообогрева</span><a class="headerlink" href="#id7" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 88%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Режим №</p></th>
+<th class="head"><p>Описание</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Нагрев всегда выключен</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Нагрев всегда включен</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><dl class="simple">
+<dt>Дистанционный режим</dt><dd><p>(управление через 0x5820:2)</p>
+</dd>
+</dl>
+<p>см. <a class="reference internal" href="#subtable5820"><span class="std std-ref">Line 1 Control</span></a></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Периодический (ШИМ)
+включение через заданные промежутки времени
+период - 0x5821:5, рабочий цикл, % - 0x5821:6 <a class="reference internal" href="#subtable5821"><span class="std std-ref">Line 1 Settings</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>3 - Safe Mode On</p></li>
+</ul>
+<p>Безопасный режим, в который линия электрообогрева переходит при наступлении следующих событий:
+* Ошибка расчёта температуры
+* Отсутствие опроса при работе в дистанционном режиме</p>
+</div>
+<div class="section" id="line-1-temp-alarms">
+<span id="subtable5802"></span><h2>18.6. Line 1 Temp Alarms<a class="headerlink" href="#line-1-temp-alarms" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-text">Субиндексы 0x5802 Line 1 Temp Alarms(0—8)</span><a class="headerlink" href="#id8" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Temp Alarms Word</p></td>
+<td><p>Сводный регистр аварийных событий по температуре</p></td>
+<td><p>0</p></td>
+<td><p>uint16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Process Temp Fault</p></td>
+<td><p>Ошибка расчёта температуры процесса</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Temp 1 Fault</p></td>
+<td><p>Температура 1 Отказ</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Temp 1 Hi</p></td>
+<td><p>Температура 1 Верхний предел</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Temp 1 Lo</p></td>
+<td><p>Температура 1 Нижний предел</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>Temp 2 Fault</p></td>
+<td><p>Температура 2 Отказ</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>Temp 2 Hi</p></td>
+<td><p>Температура 2 Верхний предел</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>Temp 2 Lo</p></td>
+<td><p>Температура 2 Нижний предел</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line-1-current-alarms">
+<span id="subtable5803"></span><h2>18.7. Line 1 Current Alarms<a class="headerlink" href="#line-1-current-alarms" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id9">
+<caption><span class="caption-text">Субиндексы 0x5803 Line 1 Current Alarms(0—5)</span><a class="headerlink" href="#id9" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 5</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Current Alarms Word</p></td>
+<td><p>Сводный регистр аварийных событий по току</p></td>
+<td><p>0</p></td>
+<td><p>uint16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Load Current Hi</p></td>
+<td><p>Ток нагрузки Верхний предел</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Load Current Lo</p></td>
+<td><p>Ток нагрузки Нижний предел</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Leakage Current Hi</p></td>
+<td><p>Ток утечки Верхний предел</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Output Off Current Hi</p></td>
+<td><p>Ток при отключенной нагрузке Верхний предел</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line-1-misc-alarms">
+<span id="subtable5806"></span><h2>18.8. Line 1 Misc Alarms<a class="headerlink" href="#line-1-misc-alarms" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id10">
+<caption><span class="caption-text">Субиндексы 0x5806 Line 1 Misc Alarms(0—2)</span><a class="headerlink" href="#id10" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Misc Alarms Word</p></td>
+<td><p>Сводный регистр прочих аварийных событий</p></td>
+<td><p>0</p></td>
+<td><p>uint16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Misconfig</p></td>
+<td><p>Неправильная конфигурация</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line-1-temp-trip">
+<span id="subtable5807"></span><h2>18.9. Line 1 Temp Trip<a class="headerlink" href="#line-1-temp-trip" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id11">
+<caption><span class="caption-text">Субиндексы 0x5807 Line 1 Temp Trip(0—3)</span><a class="headerlink" href="#id11" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 3</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Temp Trips Word</p></td>
+<td><p>Сводный регистр срабатывания защит по температуре</p></td>
+<td><p>0</p></td>
+<td><p>uint16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Temp 1 Hi</p></td>
+<td><p>Срабатывание защиты Тепература 1 Верхний предел</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Temp 2 Hi</p></td>
+<td><p>Срабатывание защиты Тепература 2 Верхний предел</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line-1-current-trip">
+<span id="subtable5808"></span><h2>18.10. Line 1 Current Trip<a class="headerlink" href="#line-1-current-trip" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id12">
+<caption><span class="caption-text">Субиндексы 0x5808 Line 1 Current Trip(0—3)</span><a class="headerlink" href="#id12" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 3</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Current Trips Word</p></td>
+<td><p>Сводный регистр срабатывания защит по току</p></td>
+<td><p>0</p></td>
+<td><p>uint16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Load Current Hi</p></td>
+<td><p>Срабатывание защиты Ток нагрузки Верхний предел</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Leakage Current Hi</p></td>
+<td><p>Срабатывание защиты Ток утечки Верхний предел</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line-1-temp-pv">
+<span id="subtable5810"></span><h2>18.11. Line 1 Temp PV<a class="headerlink" href="#line-1-temp-pv" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id13">
+<caption><span class="caption-text">Субиндексы 0x5810 Line 1 Temp PV(0—3)</span><a class="headerlink" href="#id13" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 3</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Process Temp</p></td>
+<td><p>Расчетная температура линии [°C]</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Temp 1</p></td>
+<td><p>Температура 1 [°C]</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Temp 2</p></td>
+<td><p>Температура 2 [°C]</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>1 - Process Temp</p></li>
+</ul>
+<p>Температура рассчитывается в соответствии с выбраным алгоритмом. см. 0x5821:7 <a class="reference internal" href="#subtable5821"><span class="std std-ref">Line 1 Settings</span></a></p>
+</div>
+<div class="section" id="line-1-current-pv">
+<span id="subtable5811"></span><h2>18.12. Line 1 Current PV<a class="headerlink" href="#line-1-current-pv" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id14">
+<caption><span class="caption-text">Субиндексы 0x5811 Line 1 Current PV(0—2)</span><a class="headerlink" href="#id14" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Load Current</p></td>
+<td><p>Ток нагрузки [А]</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Leakage Current</p></td>
+<td><p>Ток утечки [мА]</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line-1-misc-pv">
+<span id="subtable5814"></span><h2>18.13. Line 1 Misc PV<a class="headerlink" href="#line-1-misc-pv" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id15">
+<caption><span class="caption-text">Субиндексы 0x5814 Line 1 Misc PV(0—1)</span><a class="headerlink" href="#id15" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>PWM Val</p></td>
+<td><p>Текущий рабочий цикл периодического режима (ШИМ) [%]</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line-1-control">
+<span id="subtable5820"></span><h2>18.14. Line 1 Control<a class="headerlink" href="#line-1-control" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id16">
+<caption><span class="caption-text">Субиндексы 0x5820 Line 1 Control(0—2)</span><a class="headerlink" href="#id16" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Command</p></td>
+<td><p>Команда</p></td>
+<td><p>0</p></td>
+<td><p>uint16</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Remote Output Control</p></td>
+<td><p>Дистанционное управление</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>1 - Command</p></li>
+</ul>
+<p>Команды, поддерживаемые устройством:</p>
+<table class="docutils align-default" id="id17">
+<caption><span class="caption-text">Список команд</span><a class="headerlink" href="#id17" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Команда</p></th>
+<th class="head"><p>Описание</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x8000FFFF</p></td>
+<td><p>Сброс сработавших Trip</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>2 - Remote Output Control</p></li>
+</ul>
+<p>В данный параметр должна осуществляться запись желаемого состояния выхода линии в дистанционном режиме.</p>
+</div>
+<div class="section" id="line-1-settings">
+<span id="subtable5821"></span><h2>18.15. Line 1 Settings<a class="headerlink" href="#line-1-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id18">
+<caption><span class="caption-text">Субиндексы 0x5821 Line 1 Settings(0—15)</span><a class="headerlink" href="#id18" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 15</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Enable</p></td>
+<td><p>Ввод линии в работу</p></td>
+<td><p>1</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Startup Delay</p></td>
+<td><p>Задержка первого включения [c]</p></td>
+<td><p>0</p></td>
+<td><p>uint16</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Control Mode</p></td>
+<td><p>Режим управления/регулирования: 0 - нагрев выкл., 1 - нагрев вкл., 2 - дистанционный, 3 - периодический (ШИМ), 4 - релейный по температуре, 5 - пропорциональный периодический (ШИМ) по температуре</p></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Safe Mode</p></td>
+<td><p>Безопасный режим при отказе датчиков температуры, потери связи в дистанционном режиме управления.</p></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>PWM Period</p></td>
+<td><p>Период ШИМ [сек]</p></td>
+<td><p>600</p></td>
+<td><p>uint32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>PWM Safety Val</p></td>
+<td><p>Рабочий цикл ШИМ в безопасном режиме и по умолчанию в периодическом режиме [%]</p></td>
+<td><p>30.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>Process Temperature Calc Mode</p></td>
+<td><p>Режим расчета температуры процесса.: 0 - выкл., 1 - первый датчик, 2 - второй, 3 - среднее, 4 - мин, 5 - макс</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>Allow Incomplete Sensors</p></td>
+<td><p>Разрешение работы при отказе одного датчика</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>Process Temp Set-point</p></td>
+<td><p>Уставка температуры Релейный режим [°C]</p></td>
+<td><p>5.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>Hysteresis Positive</p></td>
+<td><p>Гистерезис + [°C] уставки температуры Релейный режим</p></td>
+<td><p>5.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>Hysteresis Negative</p></td>
+<td><p>Гистерезис - [°C] уставки температуры Релейный режим</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>Proportional Hi Temp</p></td>
+<td><p>Верхняя граница температуры Пропорциональный режим [°C]</p></td>
+<td><p>5.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>Proportional Hi PWM Val</p></td>
+<td><p>Рабочий цикл ШИМ для верхней границы температуры Пропорциональный режим [%]</p></td>
+<td><p>5.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>Proportional Lo Temp</p></td>
+<td><p>Нижняя граница температуры Пропорциональный режим [°C]</p></td>
+<td><p>-30.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>Proportional Lo PWM Val</p></td>
+<td><p>Рабочий цикл ШИМ для нижней границы температуры Пропорциональный режим [%]</p></td>
+<td><p>100.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>1 - Enable</p></li>
+</ul>
+<p>Включение линии в работу означает её участие в процессе управления и выполнение измерений</p>
+<ul class="simple">
+<li><p>2 - Startup Delay</p></li>
+</ul>
+<p>Задержка старта линии нужна для исключения бросков тока при одновременном включении большого количества устройств; целесообразно задавать этот параметр отличающимся на устройствах, которые подключены к одним питающим цепям.</p>
+<ul class="simple">
+<li><p>3 - Control Mode</p></li>
+</ul>
+</div>
+<div class="section" id="line-1-temp-alarm-settings">
+<span id="subtable5822"></span><h2>18.16. Line 1 Temp Alarm Settings<a class="headerlink" href="#line-1-temp-alarm-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id19">
+<caption><span class="caption-text">Субиндексы 0x5822 Line 1 Temp Alarm Settings(0—2)</span><a class="headerlink" href="#id19" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Temp Hi</p></td>
+<td><p>Уставка Температура Верхний предел [°C]</p></td>
+<td><p>85.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Temp Lo</p></td>
+<td><p>Уставка Температура Нижний предел [°C]</p></td>
+<td><p>5.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line-1-current-alarm-settings">
+<span id="subtable5823"></span><h2>18.17. Line 1 Current Alarm Settings<a class="headerlink" href="#line-1-current-alarm-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id20">
+<caption><span class="caption-text">Субиндексы 0x5823 Line 1 Current Alarm Settings(0—4)</span><a class="headerlink" href="#id20" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 4</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Load Current Hi</p></td>
+<td><p>Уставка Ток нагрузки Верхний предел [А]</p></td>
+<td><p>30.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Load Current Lo</p></td>
+<td><p>Уставка Ток нагрузки Нижний предел [А]</p></td>
+<td><p>0.2</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Leakage Current Hi</p></td>
+<td><p>Уставка Ток утечки Верхний предел [мА]</p></td>
+<td><p>100.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Output Off Current Hi</p></td>
+<td><p>Уставка Ток при отключенном выходе Верхний предел [мА]</p></td>
+<td><p>200.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line-1-misc-alarm-settings">
+<span id="subtable5826"></span><h2>18.18. Line 1 Misc Alarm Settings<a class="headerlink" href="#line-1-misc-alarm-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id21">
+<caption><span class="caption-text">Субиндексы 0x5826 Line 1 Misc Alarm Settings(0—1)</span><a class="headerlink" href="#id21" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Alarm Hold Time</p></td>
+<td><p>Минимальное время удержания флагов аварий [с]</p></td>
+<td><p>5</p></td>
+<td><p>uint16</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line-1-temp-trip-enable">
+<span id="subtable5828"></span><h2>18.19. Line 1 Temp Trip Enable<a class="headerlink" href="#line-1-temp-trip-enable" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id22">
+<caption><span class="caption-text">Субиндексы 0x5828 Line 1 Temp Trip Enable(0—2)</span><a class="headerlink" href="#id22" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Temp 1 Hi</p></td>
+<td><p>Включить защиту Тепература 1 Верхний предел</p></td>
+<td><p>1</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Temp 2 Hi</p></td>
+<td><p>Включить защиту Тепература 2 Верхний предел</p></td>
+<td><p>1</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line-1-current-trip-enable">
+<span id="subtable5829"></span><h2>18.20. Line 1 Current Trip Enable<a class="headerlink" href="#line-1-current-trip-enable" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id23">
+<caption><span class="caption-text">Субиндексы 0x5829 Line 1 Current Trip Enable(0—2)</span><a class="headerlink" href="#id23" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Load Current Hi</p></td>
+<td><p>Включить защиту Ток нагрузки Верхний предел</p></td>
+<td><p>1</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Leakage Current Hi</p></td>
+<td><p>Включить защиту Ток утечки Верхний предел</p></td>
+<td><p>1</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line-1-deadband-settings">
+<span id="subtable582a"></span><h2>18.21. Line 1 Deadband Settings<a class="headerlink" href="#line-1-deadband-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id24">
+<caption><span class="caption-text">Субиндексы 0x582A Line 1 Deadband Settings(0—6)</span><a class="headerlink" href="#id24" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 6</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Temp Deadband Ref</p></td>
+<td><p>Опорный диапазон нечувствительности по температуре [°C]</p></td>
+<td><p>1000.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Temp Deadband</p></td>
+<td><p>Зона нечувствительности по температуре [%]</p></td>
+<td><p>0.1</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Load Current Deadband Ref</p></td>
+<td><p>Опорный диапазон нечувствительности по току нагрузки [А]</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Load Current Deadband</p></td>
+<td><p>Зона нечувствительности по току нагрузки [%]</p></td>
+<td><p>0.5</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Leakage Current Deadband Ref</p></td>
+<td><p>Опорный диапазон нечувствительности по току утечки [мА]</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>Leakage Current Deadband</p></td>
+<td><p>Зона нечувствительности по току утечки [%]</p></td>
+<td><p>0.5</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="line-1-hw-specific-settings">
+<span id="subtable582b"></span><h2>18.22. Line 1 HW Specific Settings<a class="headerlink" href="#line-1-hw-specific-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id25">
+<caption><span class="caption-text">Субиндексы 0x582B Line 1 HW Specific Settings(0—3)</span><a class="headerlink" href="#id25" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 3</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Min Output Hold Time</p></td>
+<td><p>Минимальное время удержания выхода</p></td>
+<td><p>10</p></td>
+<td><p>uint16</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Temp 1 input</p></td>
+<td><p>Выбор входа Температура 1</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Temp 2 input</p></td>
+<td><p>Выбор входа Температура 2</p></td>
+<td><p>2</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, Prom-Teq LLC.<br/>
+      Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

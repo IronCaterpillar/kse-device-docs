@@ -1,0 +1,49 @@
+.. dictdesc documentation master file, created by
+   sphinx-quickstart on Sat Aug  3 16:13:55 2019.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Описание внутренней структуры объектов устройств серии MCU
+===========================================================
+
+|Project_Device|
+
+.. toctree::
+   :numbered:
+   :maxdepth: 1
+   :caption: Содержание:
+
+   written/heater_line
+   written/HCR01F-user-web
+   generated/device_index
+   written/Mapping_Struct
+   generated/modbus_mmappings
+   generated/common_can
+   generated/device_params
+   generated/B0
+   generated/B1
+   generated/B2
+   generated/B3
+   generated/B4
+   generated/B5
+   generated/B6
+   generated/B7
+   generated/B8
+   generated/ExtIO
+   generated/UserApp
+   generated/UserAppData
+   firmware_struct
+   written/CAN_PDO_Mappings
+
+
+
+
+
+
+
+.. Таблицы и Индексы
+   ==================
+   * :ref:`genindex`
+   * :ref:`modindex`
+   
+* :ref:`search`

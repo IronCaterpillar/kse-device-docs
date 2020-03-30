@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>3. Словарь объектов &#8212; документация Руководство пользователя 1.0</title>
+    <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+    <link rel="next" title="4. Принцип отображения словаря устройства в адресное пространство протокола Modbus" href="../written/Mapping_Struct.html" />
+    <link rel="prev" title="2. WEB-Интерфейс настройки устройства" href="../written/HCR01F-user-web.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Руководство пользователя</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../written/heater_line.html">1. Описание работы линии электрообогрева</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/HCR01F-user-web.html">2. WEB-Интерфейс настройки устройства</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Словарь объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/Mapping_Struct.html">4. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="modbus_mmappings.html">5. Отображение в адресное пространство Modbus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common_can.html">6. Объекты CANopen DS-301 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_params.html">7. Параметры устройства - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B0.html">8. Головная плата - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B1.html">9. Плата расширния №1 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B2.html">10. Плата расширния №2 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B3.html">11. Плата расширния №3 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B4.html">12. Плата расширния №4 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B5.html">13. Плата расширния №5 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B6.html">14. Плата расширния №6 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B7.html">15. Плата расширния №7 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B8.html">16. Плата расширния №8 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExtIO.html">17. Данные с внешних устройств - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserApp.html">18. Приложение пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">19. Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">20. Типовое содержимое архива с ПО для устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">21. Распределение параметров PDO</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">3. Словарь объектов</a><ul>
+<li><a class="reference internal" href="#canopen-ds-301">3.1. Объекты CANopen DS-301</a></li>
+<li><a class="reference internal" href="#id2">3.2. Параметры устройства</a></li>
+<li><a class="reference internal" href="#id3">3.3. Головная плата</a></li>
+<li><a class="reference internal" href="#o1">3.4. Плата расширния №1</a></li>
+<li><a class="reference internal" href="#o2">3.5. Плата расширния №2</a></li>
+<li><a class="reference internal" href="#o3">3.6. Плата расширния №3</a></li>
+<li><a class="reference internal" href="#o4">3.7. Плата расширния №4</a></li>
+<li><a class="reference internal" href="#o5">3.8. Плата расширния №5</a></li>
+<li><a class="reference internal" href="#o6">3.9. Плата расширния №6</a></li>
+<li><a class="reference internal" href="#o7">3.10. Плата расширния №7</a></li>
+<li><a class="reference internal" href="#o8">3.11. Плата расширния №8</a></li>
+<li><a class="reference internal" href="#id4">3.12. Данные с внешних устройств</a></li>
+<li><a class="reference internal" href="#id5">3.13. Приложение пользователя</a></li>
+<li><a class="reference internal" href="#id6">3.14. Данные приложения пользователя</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../written/HCR01F-user-web.html" title="Previous Chapter: 2. WEB-Интерфейс настройки устройства"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 2. WEB-Интерф...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../written/Mapping_Struct.html" title="Next Chapter: 4. Принцип отображения словаря устройства в адресное пространство протокола Modbus"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">4. Принцип от... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/generated/device_index.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="id1">
+<h1>3. Словарь объектов<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="canopen-ds-301">
+<h2>3.1. Объекты CANopen DS-301<a class="headerlink" href="#canopen-ds-301" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Индекс</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Кол-во</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1000"><span class="std std-ref">Device Type</span></a></p></td>
+<td><p>Тип профиля устройства по классификации CANopen</p></td>
+<td><p>uint32</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1001</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1001"><span class="std std-ref">Error Register</span></a></p></td>
+<td><p>Регистр ошибок</p></td>
+<td><p>uint32</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>1003</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">Pre-defined Error Field</span></a></p></td>
+<td><p>Лог ошибок</p></td>
+<td><p>Массив</p></td>
+<td><p>25</p></td>
+</tr>
+<tr class="row-odd"><td><p>1005</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1005"><span class="std std-ref">SYNC COB ID</span></a></p></td>
+<td></td>
+<td><p>uint32</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>1008</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1008"><span class="std std-ref">Manufacturer Device Name</span></a></p></td>
+<td><p>Имя устройства</p></td>
+<td><p>uint32</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1010</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1010"><span class="std std-ref">Store parameters</span></a></p></td>
+<td><p>Сохранение параметров устройства</p></td>
+<td><p>Структура</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>1011</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1011"><span class="std std-ref">Restore Default Parameters</span></a></p></td>
+<td><p>Восстановить параметры по умолчанию</p></td>
+<td><p>Структура</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>1012</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1012"><span class="std std-ref">TIME COB ID</span></a></p></td>
+<td><p>COB ID сообщения о текущем времени</p></td>
+<td><p>uint32</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>1014</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1014"><span class="std std-ref">Emergency COB ID</span></a></p></td>
+<td><p>COB ID сообщения об аварии</p></td>
+<td><p>uint32</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1016</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1016"><span class="std std-ref">Consumer Heartbeat Time</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-even"><td><p>1017</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1017"><span class="std std-ref">Producer Heartbeat Time</span></a></p></td>
+<td><p>Период отправки сообщений о исправности, мс</p></td>
+<td><p>uint32</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1018</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1018"><span class="std std-ref">Identity</span></a></p></td>
+<td><p>Идентификация устройства</p></td>
+<td><p>Структура</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>1027</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1027"><span class="std std-ref">Board List</span></a></p></td>
+<td><p>Список плат расширения</p></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>1029</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1029"><span class="std std-ref">Error Behavior</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>1200</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1200"><span class="std std-ref">Server SDO Parameter</span></a></p></td>
+<td><p>Параметры SDO</p></td>
+<td><p>Структура</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>1201</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1201"><span class="std std-ref">Additional Server SDO 1 Parameter</span></a></p></td>
+<td><p>Параметры SDO 1</p></td>
+<td><p>Структура</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>1202</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1202"><span class="std std-ref">Additional Server SDO 2 Parameter</span></a></p></td>
+<td><p>Параметры SDO 2</p></td>
+<td><p>Структура</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>1203</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1203"><span class="std std-ref">Additional Server SDO 3 Parameter</span></a></p></td>
+<td><p>Параметры SDO 3</p></td>
+<td><p>Структура</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>1204</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1204"><span class="std std-ref">Additional Server SDO 4 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>1205</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1205"><span class="std std-ref">Additional Server SDO 5 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>1400</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1400"><span class="std std-ref">Receive PDO 1 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>1401</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1401"><span class="std std-ref">Receive PDO 2 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>1402</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1402"><span class="std std-ref">Receive PDO 3 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>1403</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1403"><span class="std std-ref">Receive PDO 4 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>1404</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1404"><span class="std std-ref">Receive PDO 5 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>1405</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1405"><span class="std std-ref">Receive PDO 6 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>1600</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1600"><span class="std std-ref">Receive PDO 1 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>1601</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1601"><span class="std std-ref">Receive PDO 2 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>1602</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1602"><span class="std std-ref">Receive PDO 3 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>1603</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1603"><span class="std std-ref">Receive PDO 4 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>1604</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1604"><span class="std std-ref">Receive PDO 5 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>1605</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1605"><span class="std std-ref">Receive PDO 6 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>1800</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1800"><span class="std std-ref">Transmit PDO 1 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>1801</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1801"><span class="std std-ref">Transmit PDO 2 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>1802</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1802"><span class="std std-ref">Transmit PDO 3 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>1803</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1803"><span class="std std-ref">Transmit PDO 4 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>1804</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1804"><span class="std std-ref">Transmit PDO 5 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>1805</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1805"><span class="std std-ref">Transmit PDO 6 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>1806</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1806"><span class="std std-ref">Transmit PDO 7 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>1807</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1807"><span class="std std-ref">Transmit PDO 8 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>1808</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1808"><span class="std std-ref">Transmit PDO 9 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>1809</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1809"><span class="std std-ref">Transmit PDO 10 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>180A</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable180a"><span class="std std-ref">Transmit PDO 11 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>180B</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable180b"><span class="std std-ref">Transmit PDO 12 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>180C</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable180c"><span class="std std-ref">Transmit PDO 13 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>180D</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable180d"><span class="std std-ref">Transmit PDO 14 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>180E</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable180e"><span class="std std-ref">Transmit PDO 15 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>180F</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable180f"><span class="std std-ref">Transmit PDO 16 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>1810</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1810"><span class="std std-ref">Transmit PDO 17 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>1811</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1811"><span class="std std-ref">Transmit PDO 18 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>1812</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1812"><span class="std std-ref">Transmit PDO 19 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>1813</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1813"><span class="std std-ref">Transmit PDO 20 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>1814</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1814"><span class="std std-ref">Transmit PDO 21 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>1815</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1815"><span class="std std-ref">Transmit PDO 22 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>1816</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1816"><span class="std std-ref">Transmit PDO 23 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>1817</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1817"><span class="std std-ref">Transmit PDO 24 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>1818</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1818"><span class="std std-ref">Transmit PDO 25 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>1819</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1819"><span class="std std-ref">Transmit PDO 26 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>181A</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable181a"><span class="std std-ref">Transmit PDO 27 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>181B</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable181b"><span class="std std-ref">Transmit PDO 28 Parameter</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>1A00</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a00"><span class="std std-ref">Transmit PDO 1 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>1A01</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a01"><span class="std std-ref">Transmit PDO 2 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>1A02</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a02"><span class="std std-ref">Transmit PDO 3 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>1A03</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a03"><span class="std std-ref">Transmit PDO 4 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>1A04</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a04"><span class="std std-ref">Transmit PDO 5 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>1A05</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a05"><span class="std std-ref">Transmit PDO 6 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>1A06</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a06"><span class="std std-ref">Transmit PDO 7 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-odd"><td><p>1A07</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a07"><span class="std std-ref">Transmit PDO 8 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>1A08</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a08"><span class="std std-ref">Transmit PDO 9 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>1A09</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a09"><span class="std std-ref">Transmit PDO 10 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>1A0A</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a0a"><span class="std std-ref">Transmit PDO 11 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>1A0B</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a0b"><span class="std std-ref">Transmit PDO 12 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>1A0C</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a0c"><span class="std std-ref">Transmit PDO 13 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>1A0D</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a0d"><span class="std std-ref">Transmit PDO 14 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>1A0E</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a0e"><span class="std std-ref">Transmit PDO 15 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>1A0F</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a0f"><span class="std std-ref">Transmit PDO 16 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>1A10</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a10"><span class="std std-ref">Transmit PDO 17 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>1A11</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a11"><span class="std std-ref">Transmit PDO 18 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>1A12</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a12"><span class="std std-ref">Transmit PDO 19 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>1A13</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a13"><span class="std std-ref">Transmit PDO 20 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>1A14</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a14"><span class="std std-ref">Transmit PDO 21 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>1A15</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a15"><span class="std std-ref">Transmit PDO 22 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>1A16</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a16"><span class="std std-ref">Transmit PDO 23 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>1A17</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a17"><span class="std std-ref">Transmit PDO 24 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>1A18</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a18"><span class="std std-ref">Transmit PDO 25 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>1A19</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a19"><span class="std std-ref">Transmit PDO 26 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>1A1A</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a1a"><span class="std std-ref">Transmit PDO 27 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>1A1B</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1a1b"><span class="std std-ref">Transmit PDO 28 Mapping</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id2">
+<h2>3.2. Параметры устройства<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Индекс</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Кол-во</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2000"><span class="std std-ref">Description</span></a></p></td>
+<td><p>Описание устройства</p></td>
+<td><p>Структура</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-odd"><td><p>2001</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2001"><span class="std std-ref">Device Status</span></a></p></td>
+<td><p>Статус устройства</p></td>
+<td><p>Структура</p></td>
+<td><p>12</p></td>
+</tr>
+<tr class="row-even"><td><p>2002</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2002"><span class="std std-ref">Device Control</span></a></p></td>
+<td><p>Управление устройством</p></td>
+<td><p>Структура</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>2101</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2101"><span class="std std-ref">CAN 1 Status</span></a></p></td>
+<td><p>Статус CAN порта №1</p></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>2103</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2103"><span class="std std-ref">CAN 1 Settings</span></a></p></td>
+<td><p>Настройки CAN порта №1</p></td>
+<td><p>Структура</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>2141</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2141"><span class="std std-ref">Serial 1 Status</span></a></p></td>
+<td><p>Статус постедовательного порта №1</p></td>
+<td><p>Структура</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>2143</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2143"><span class="std std-ref">Serial 1 Settings</span></a></p></td>
+<td><p>Настройки CAN порта №1</p></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>2301</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2301"><span class="std std-ref">CANopen 1 Slave Status</span></a></p></td>
+<td><p>NMT Статус виртуальных узлов CANopen №1</p></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>2302</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2302"><span class="std std-ref">CANopen 1 Slave Control</span></a></p></td>
+<td><p>Управление виртуальными узлами CANopen №1</p></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>2303</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2303"><span class="std std-ref">CANopen 1 Slave Settings</span></a></p></td>
+<td><p>Настройки виртуальных узлов CANopen №1</p></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>2311</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2311"><span class="std std-ref">CANopen 1 Master Status</span></a></p></td>
+<td><p>Флаг отсутствия heartbeat от CANopen устройств</p></td>
+<td><p>Массив</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-odd"><td><p>2321</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2321"><span class="std std-ref">Modbus Serial 1 Slave Status</span></a></p></td>
+<td><p>Статус Modbus сервера №1</p></td>
+<td><p>Структура</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-even"><td><p>2323</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2323"><span class="std std-ref">Modbus Serial 1 Slave Settings</span></a></p></td>
+<td><p>Настройки Modbus сервера №1</p></td>
+<td><p>Структура</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>2418</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2418"><span class="std std-ref">Protocol Mappings Checksums</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h2>3.3. Головная плата<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Индекс</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Кол-во</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>3F01</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f01"><span class="std std-ref">B0 - Board Status</span></a></p></td>
+<td><p>Статус</p></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>3F03</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f03"><span class="std std-ref">B0 - Board Control</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>3F09</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f09"><span class="std std-ref">B0 - Errors</span></a></p></td>
+<td><p>Счётчики ошибок</p></td>
+<td><p>Массив</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-odd"><td><p>3F0F</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f0f"><span class="std std-ref">B0 - Channel Status</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>3F10</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f10"><span class="std std-ref">B0 - DI Read Word</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>3F11</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f11"><span class="std std-ref">B0 - DI Read Bit</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>3F12</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f12"><span class="std std-ref">B0 - DI Invert Polarity</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>3F13</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f13"><span class="std std-ref">B0 - DI Filter Time</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>3F14</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f14"><span class="std std-ref">B0 - DI Mask</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>3F15</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f15"><span class="std std-ref">B0 - DI Mag</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>3F21</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f21"><span class="std std-ref">B0 - DO Write Bit</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>3F22</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f22"><span class="std std-ref">B0 - DO Invert Polarity</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>3F23</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f23"><span class="std std-ref">B0 - DO Error Mode</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>3F24</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f24"><span class="std std-ref">B0 - DO Error Value</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>3F25</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f25"><span class="std std-ref">B0 - DO Mask</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>3F31</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f31"><span class="std std-ref">B0 - AI Read Float</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-even"><td><p>3F32</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f32"><span class="std std-ref">B0 - AI Scaling</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-odd"><td><p>3F33</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f33"><span class="std std-ref">B0 - AI Offset</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-even"><td><p>3F34</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f34"><span class="std std-ref">B0 - AI Filter Time</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-odd"><td><p>3F35</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f35"><span class="std std-ref">B0 - AI Deadband</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-even"><td><p>3F36</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f36"><span class="std std-ref">B0 - AI Upper Limit</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-odd"><td><p>3F37</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f37"><span class="std std-ref">B0 - AI Lower Limit</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-even"><td><p>3F39</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f39"><span class="std std-ref">B0 - AI Settings</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-odd"><td><p>3F3B</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f3b"><span class="std std-ref">B0 - AI Float Mag</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-even"><td><p>3F3C</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f3c"><span class="std std-ref">B0 - AI Deadband Ref</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-odd"><td><p>3FE1</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3fe1"><span class="std std-ref">B0 - IO Calibration</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>33</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="o1">
+<h2>3.4. Плата расширния №1<a class="headerlink" href="#o1" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="o2">
+<h2>3.5. Плата расширния №2<a class="headerlink" href="#o2" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="o3">
+<h2>3.6. Плата расширния №3<a class="headerlink" href="#o3" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="o4">
+<h2>3.7. Плата расширния №4<a class="headerlink" href="#o4" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="o5">
+<h2>3.8. Плата расширния №5<a class="headerlink" href="#o5" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="o6">
+<h2>3.9. Плата расширния №6<a class="headerlink" href="#o6" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="o7">
+<h2>3.10. Плата расширния №7<a class="headerlink" href="#o7" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="o8">
+<h2>3.11. Плата расширния №8<a class="headerlink" href="#o8" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="id4">
+<h2>3.12. Данные с внешних устройств<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Индекс</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Кол-во</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>4801</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4801"><span class="std std-ref">Ext IO - Board Status</span></a></p></td>
+<td><p>Статус</p></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>4803</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4803"><span class="std std-ref">Ext IO - Board Control</span></a></p></td>
+<td><p>Управление платой расширения № 1</p></td>
+<td><p>Структура</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>4807</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4807"><span class="std std-ref">Ext IO - Channel Status</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>4808</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4808"><span class="std std-ref">Ext IO - Settings</span></a></p></td>
+<td><p>Настройки</p></td>
+<td><p>Массив</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-even"><td><p>4809</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4809"><span class="std std-ref">Ext IO - Errors</span></a></p></td>
+<td><p>Счётчики ошибок</p></td>
+<td><p>Массив</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-odd"><td><p>480A</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable480a"><span class="std std-ref">Ext IO - Sensor IDs</span></a></p></td>
+<td><p>Идентификаторы</p></td>
+<td><p>Массив</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-even"><td><p>4810</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4810"><span class="std std-ref">Ext IO - DI Read Word</span></a></p></td>
+<td><p>Состояние DI, 16 бит</p></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>4811</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4811"><span class="std std-ref">Ext IO - DI Read Bit</span></a></p></td>
+<td><p>Состояние DI, 1 бит</p></td>
+<td><p>Массив</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>4812</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4812"><span class="std std-ref">Ext IO - DI Invert Polarity</span></a></p></td>
+<td><p>Смена полярности DI</p></td>
+<td><p>Массив</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>4813</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4813"><span class="std std-ref">Ext IO - DI Filter Time</span></a></p></td>
+<td><p>Настройки фильтрации DI</p></td>
+<td><p>Массив</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>4814</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4814"><span class="std std-ref">Ext IO - DI Mask</span></a></p></td>
+<td><p>Запрет событий DI</p></td>
+<td><p>Массив</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>4815</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4815"><span class="std std-ref">Ext IO - DI Mag</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>4831</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4831"><span class="std std-ref">Ext IO - AI Read Float</span></a></p></td>
+<td><p>Чтение AI, float</p></td>
+<td><p>Массив</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-odd"><td><p>4832</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4832"><span class="std std-ref">Ext IO - AI Scaling</span></a></p></td>
+<td><p>Масштабирование AI</p></td>
+<td><p>Массив</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-even"><td><p>4833</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4833"><span class="std std-ref">Ext IO - AI Offset</span></a></p></td>
+<td><p>Смещение AI</p></td>
+<td><p>Массив</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-odd"><td><p>4834</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4834"><span class="std std-ref">Ext IO - AI Filter Time</span></a></p></td>
+<td><p>Время фильтрации AI</p></td>
+<td><p>Массив</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-even"><td><p>4835</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4835"><span class="std std-ref">Ext IO - AI Deadband</span></a></p></td>
+<td><p>Зона нечувствительности AI, 0,001%%</p></td>
+<td><p>Массив</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-odd"><td><p>4836</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4836"><span class="std std-ref">Ext IO - AI Upper Limit</span></a></p></td>
+<td><p>Верхний предел AI</p></td>
+<td><p>Массив</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-even"><td><p>4837</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4837"><span class="std std-ref">Ext IO - AI Lower Limit</span></a></p></td>
+<td><p>Нижний предел AI</p></td>
+<td><p>Массив</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-odd"><td><p>4839</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4839"><span class="std std-ref">Ext IO - AI Settings</span></a></p></td>
+<td><p>Доп. настройки AI</p></td>
+<td><p>Массив</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-even"><td><p>483B</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable483b"><span class="std std-ref">Ext IO - AI Float Mag</span></a></p></td>
+<td><p>Чтение AI с учётом зоны нечувствительности, float</p></td>
+<td><p>Массив</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-odd"><td><p>483C</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable483c"><span class="std std-ref">Ext IO - AI Deadband Ref</span></a></p></td>
+<td><p>Диапазон AI</p></td>
+<td><p>Массив</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-even"><td><p>48E1</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable48e1"><span class="std std-ref">Ext IO - IO Calibration</span></a></p></td>
+<td><p>Калибровочные коэфф. AI</p></td>
+<td><p>Структура</p></td>
+<td><p>41</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>3.13. Приложение пользователя<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Индекс</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Кол-во</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>5000</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5000"><span class="std std-ref">User App Description</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>5001</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5001"><span class="std std-ref">User App Status</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>5002</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5002"><span class="std std-ref">User App Control</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>5800</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5800"><span class="std std-ref">Line 1 Description</span></a></p></td>
+<td><p>Описание</p></td>
+<td><p>Структура</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>5801</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5801"><span class="std std-ref">Line 1 Status</span></a></p></td>
+<td><p>Статус</p></td>
+<td><p>Структура</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>5802</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5802"><span class="std std-ref">Line 1 Temp Alarms</span></a></p></td>
+<td><p>Аварии температуры</p></td>
+<td><p>Структура</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-even"><td><p>5803</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5803"><span class="std std-ref">Line 1 Current Alarms</span></a></p></td>
+<td><p>Аварии токов</p></td>
+<td><p>Структура</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>5806</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5806"><span class="std std-ref">Line 1 Misc Alarms</span></a></p></td>
+<td><p>Различные аварии</p></td>
+<td><p>Структура</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>5807</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5807"><span class="std std-ref">Line 1 Temp Trip</span></a></p></td>
+<td><p>Отключение по температуре</p></td>
+<td><p>Структура</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>5808</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5808"><span class="std std-ref">Line 1 Current Trip</span></a></p></td>
+<td><p>Отключение по току</p></td>
+<td><p>Структура</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>5810</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5810"><span class="std std-ref">Line 1 Temp PV</span></a></p></td>
+<td><p>Значения температуры</p></td>
+<td><p>Структура</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>5811</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5811"><span class="std std-ref">Line 1 Current PV</span></a></p></td>
+<td><p>Значения тока</p></td>
+<td><p>Структура</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>5814</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5814"><span class="std std-ref">Line 1 Misc PV</span></a></p></td>
+<td><p>Различные значения</p></td>
+<td><p>Структура</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>5820</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5820"><span class="std std-ref">Line 1 Control</span></a></p></td>
+<td><p>Управление</p></td>
+<td><p>Структура</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>5821</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">Line 1 Settings</span></a></p></td>
+<td><p>Настройки</p></td>
+<td><p>Структура</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-odd"><td><p>5822</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5822"><span class="std std-ref">Line 1 Temp Alarm Settings</span></a></p></td>
+<td><p>Настройки аварийных пределов и сигнализации</p></td>
+<td><p>Структура</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>5823</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5823"><span class="std std-ref">Line 1 Current Alarm Settings</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>5826</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5826"><span class="std std-ref">Line 1 Misc Alarm Settings</span></a></p></td>
+<td></td>
+<td><p>Структура</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>5828</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5828"><span class="std std-ref">Line 1 Temp Trip Enable</span></a></p></td>
+<td><p>Разрешить отключение по температуре</p></td>
+<td><p>Структура</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>5829</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5829"><span class="std std-ref">Line 1 Current Trip Enable</span></a></p></td>
+<td><p>Разрешить отключение по току</p></td>
+<td><p>Структура</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>582A</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable582a"><span class="std std-ref">Line 1 Deadband Settings</span></a></p></td>
+<td><p>Настройка зон нечувствительности для отправки данных</p></td>
+<td><p>Структура</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-odd"><td><p>582B</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable582b"><span class="std std-ref">Line 1 HW Specific Settings</span></a></p></td>
+<td><p>Настройки IO каналов</p></td>
+<td><p>Структура</p></td>
+<td><p>4</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id6">
+<h2>3.14. Данные приложения пользователя<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Индекс</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Кол-во</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A480</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea480"><span class="std std-ref">1st Dynamic Integer8 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A481</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea481"><span class="std std-ref">2nd Dynamic Integer8 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A482</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea482"><span class="std std-ref">3rd Dynamic Integer8 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A483</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea483"><span class="std std-ref">4th Dynamic Integer8 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A4C0</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea4c0"><span class="std std-ref">1st Dynamic Unsigned8 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A4C1</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea4c1"><span class="std std-ref">2nd Dynamic Unsigned8 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A4C2</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea4c2"><span class="std std-ref">3nd Dynamic Unsigned8 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A4C3</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea4c3"><span class="std std-ref">4th Dynamic Unsigned8 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A500</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea500"><span class="std std-ref">1st Dynamic Boolean Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A501</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea501"><span class="std std-ref">2nd Dynamic Boolean Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A502</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea502"><span class="std std-ref">3rd Dynamic Boolean Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A503</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea503"><span class="std std-ref">4th Dynamic Boolean Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A540</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea540"><span class="std std-ref">1st Dynamic Integer16 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A541</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea541"><span class="std std-ref">2nd Dynamic Integer16 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A542</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea542"><span class="std std-ref">3rd Dynamic Integer16 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A543</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea543"><span class="std std-ref">4th Dynamic Integer16 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A580</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea580"><span class="std std-ref">1st Dynamic Unsigned16 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A581</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea581"><span class="std std-ref">2nd Dynamic Unsigned16 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A582</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea582"><span class="std std-ref">3rd Dynamic Unsigned16 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A583</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea583"><span class="std std-ref">4th Dynamic Unsigned16 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A640</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea640"><span class="std std-ref">1st Dynamic Integer32 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A641</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea641"><span class="std std-ref">2nd Dynamic Integer32 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A642</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea642"><span class="std std-ref">3rd Dynamic Integer32 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A643</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea643"><span class="std std-ref">4th Dynamic Integer32 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A680</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea680"><span class="std std-ref">1st Dynamic Unsigned32 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A681</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea681"><span class="std std-ref">2nd Dynamic Unsigned32 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A682</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea682"><span class="std std-ref">3rd Dynamic Unsigned32 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A683</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea683"><span class="std std-ref">4th Dynamic Unsigned32 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A6C0</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea6c0"><span class="std std-ref">1st Dynamic Float Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A6C1</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea6c1"><span class="std std-ref">2nd Dynamic Float Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A6C2</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea6c2"><span class="std std-ref">3rd Dynamic Float Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A6C3</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea6c3"><span class="std std-ref">4th Dynamic Float Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A880</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea880"><span class="std std-ref">1st Dynamic Integer64 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A881</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea881"><span class="std std-ref">2nd Dynamic Integer64 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A882</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea882"><span class="std std-ref">3rd Dynamic Integer64 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A883</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea883"><span class="std std-ref">4th Dynamic Integer64 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A8C0</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea8c0"><span class="std std-ref">1st Dynamic Unsigned64 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A8C1</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea8c1"><span class="std std-ref">2nd Dynamic Unsigned64 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>A8C2</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea8c2"><span class="std std-ref">3rd Dynamic Unsigned64 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>A8C3</p></td>
+<td><p><a class="reference internal" href="UserAppData.html#subtablea8c3"><span class="std std-ref">4th Dynamic Unsigned64 Output</span></a></p></td>
+<td></td>
+<td><p>Массив</p></td>
+<td><p>2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, Prom-Teq LLC.<br/>
+      Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

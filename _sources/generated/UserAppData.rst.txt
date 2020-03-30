@@ -1,0 +1,483 @@
+Данные приложения пользователя - Содержимое
+-----------------------------------------------------------------------------
+
+
+.. _subtableA480: 
+
+1st Dynamic Integer8 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA480 1st Dynamic Integer8 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,1st Dynamic Integer8 Output 1,,0, int8,rw,Нет
+
+
+
+.. _subtableA481: 
+
+2nd Dynamic Integer8 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA481 2nd Dynamic Integer8 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,2nd Dynamic Integer8 Output 1,,0, int8,rw,Нет
+
+
+
+.. _subtableA482: 
+
+3rd Dynamic Integer8 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA482 3rd Dynamic Integer8 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,3rd Dynamic Integer8 Output 1,,0, int8,rw,Нет
+
+
+
+.. _subtableA483: 
+
+4th Dynamic Integer8 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA483 4th Dynamic Integer8 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,4th Dynamic Integer8 Output 1,,0, int8,rw,Нет
+
+
+
+.. _subtableA4C0: 
+
+1st Dynamic Unsigned8 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA4C0 1st Dynamic Unsigned8 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,1st Dynamic Unsigned8 Output 1,,0, uint8,rw,Нет
+
+
+
+.. _subtableA4C1: 
+
+2nd Dynamic Unsigned8 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA4C1 2nd Dynamic Unsigned8 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,2nd Dynamic Unsigned8 Output 1,,0, uint8,rw,Нет
+
+
+
+.. _subtableA4C2: 
+
+3nd Dynamic Unsigned8 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA4C2 3nd Dynamic Unsigned8 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,3nd Dynamic Unsigned8 Output 1,,0, uint8,rw,Нет
+
+
+
+.. _subtableA4C3: 
+
+4th Dynamic Unsigned8 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA4C3 4th Dynamic Unsigned8 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,4th Dynamic Unsigned8 Output 1,,0, uint8,rw,Нет
+
+
+
+.. _subtableA500: 
+
+1st Dynamic Boolean Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA500 1st Dynamic Boolean Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,1st Dynamic Boolean Output 1,,0, bool,rw,Нет
+
+
+
+.. _subtableA501: 
+
+2nd Dynamic Boolean Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA501 2nd Dynamic Boolean Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,2nd Dynamic Boolean Output 1,,0, bool,rw,Нет
+
+
+
+.. _subtableA502: 
+
+3rd Dynamic Boolean Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA502 3rd Dynamic Boolean Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,3rd Dynamic Boolean Output 1,,0, bool,rw,Нет
+
+
+
+.. _subtableA503: 
+
+4th Dynamic Boolean Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA503 4th Dynamic Boolean Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,4th Dynamic Boolean Output 1,,0, bool,rw,Нет
+
+
+
+.. _subtableA540: 
+
+1st Dynamic Integer16 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA540 1st Dynamic Integer16 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,1st Dynamic Integer16 Output 1,,0, int16,rw,Нет
+
+
+
+.. _subtableA541: 
+
+2nd Dynamic Integer16 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA541 2nd Dynamic Integer16 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,2nd Dynamic Integer16 Output 1,,0, int16,rw,Нет
+
+
+
+.. _subtableA542: 
+
+3rd Dynamic Integer16 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA542 3rd Dynamic Integer16 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,3rd Dynamic Integer16 Output 1,,0, int16,rw,Нет
+
+
+
+.. _subtableA543: 
+
+4th Dynamic Integer16 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA543 4th Dynamic Integer16 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,4th Dynamic Integer16 Output 1,,0, int16,rw,Нет
+
+
+
+.. _subtableA580: 
+
+1st Dynamic Unsigned16 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA580 1st Dynamic Unsigned16 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,1st Dynamic Unsigned16 Output 1,,0, uint16,rw,Нет
+
+
+
+.. _subtableA581: 
+
+2nd Dynamic Unsigned16 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA581 2nd Dynamic Unsigned16 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,2nd Dynamic Unsigned16 Output 1,,0, uint16,rw,Нет
+
+
+
+.. _subtableA582: 
+
+3rd Dynamic Unsigned16 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA582 3rd Dynamic Unsigned16 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,3rd Dynamic Unsigned16 Output 1,,0, uint16,rw,Нет
+
+
+
+.. _subtableA583: 
+
+4th Dynamic Unsigned16 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA583 4th Dynamic Unsigned16 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,4th Dynamic Unsigned16 Output 1,,0, uint16,rw,Нет
+
+
+
+.. _subtableA640: 
+
+1st Dynamic Integer32 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA640 1st Dynamic Integer32 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,1st Dynamic Integer32 Output 1,,0, int32,rw,Нет
+
+
+
+.. _subtableA641: 
+
+2nd Dynamic Integer32 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA641 2nd Dynamic Integer32 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,2nd Dynamic Integer32 Output 1,,0, int32,rw,Нет
+
+
+
+.. _subtableA642: 
+
+3rd Dynamic Integer32 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA642 3rd Dynamic Integer32 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,3rd Dynamic Integer32 Output 1,,0, int32,rw,Нет
+
+
+
+.. _subtableA643: 
+
+4th Dynamic Integer32 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA643 4th Dynamic Integer32 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,4th Dynamic Integer32 Output 1,,0, int32,rw,Нет
+
+
+
+.. _subtableA680: 
+
+1st Dynamic Unsigned32 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA680 1st Dynamic Unsigned32 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,1st Dynamic Unsigned32 Output 1,,0, uint32,rw,Нет
+
+
+
+.. _subtableA681: 
+
+2nd Dynamic Unsigned32 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA681 2nd Dynamic Unsigned32 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,2nd Dynamic Unsigned32 Output 1,,0, uint32,rw,Нет
+
+
+
+.. _subtableA682: 
+
+3rd Dynamic Unsigned32 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA682 3rd Dynamic Unsigned32 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,3rd Dynamic Unsigned32 Output 1,,0, uint32,rw,Нет
+
+
+
+.. _subtableA683: 
+
+4th Dynamic Unsigned32 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA683 4th Dynamic Unsigned32 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,4th Dynamic Unsigned32 Output 1,,0, uint32,rw,Нет
+
+
+
+.. _subtableA6C0: 
+
+1st Dynamic Float Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA6C0 1st Dynamic Float Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,1st Dynamic Float Output 1,,0.0, float32,rw,Нет
+
+
+
+.. _subtableA6C1: 
+
+2nd Dynamic Float Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA6C1 2nd Dynamic Float Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,2nd Dynamic Float Output 1,,0.0, float32,rw,Нет
+
+
+
+.. _subtableA6C2: 
+
+3rd Dynamic Float Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA6C2 3rd Dynamic Float Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,3rd Dynamic Float Output 1,,0.0, float32,rw,Нет
+
+
+
+.. _subtableA6C3: 
+
+4th Dynamic Float Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA6C3 4th Dynamic Float Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,4th Dynamic Float Output 1,,0.0, float32,rw,Нет
+
+
+
+.. _subtableA880: 
+
+1st Dynamic Integer64 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA880 1st Dynamic Integer64 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,1st Dynamic Integer64 Output 1,,0, int64,rw,Нет
+
+
+
+.. _subtableA881: 
+
+2nd Dynamic Integer64 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA881 2nd Dynamic Integer64 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,2nd Dynamic Integer64 Output 1,,0, int64,rw,Нет
+
+
+
+.. _subtableA882: 
+
+3rd Dynamic Integer64 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA882 3rd Dynamic Integer64 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,3rd Dynamic Integer64 Output 1,,0, int64,rw,Нет
+
+
+
+.. _subtableA883: 
+
+4th Dynamic Integer64 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA883 4th Dynamic Integer64 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,4th Dynamic Integer64 Output 1,,0, int64,rw,Нет
+
+
+
+.. _subtableA8C0: 
+
+1st Dynamic Unsigned64 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA8C0 1st Dynamic Unsigned64 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,1st Dynamic Unsigned64 Output 1,,0, uint64,rw,Нет
+
+
+
+.. _subtableA8C1: 
+
+2nd Dynamic Unsigned64 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA8C1 2nd Dynamic Unsigned64 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,2nd Dynamic Unsigned64 Output 1,,0, uint64,rw,Нет
+
+
+
+.. _subtableA8C2: 
+
+3rd Dynamic Unsigned64 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA8C2 3rd Dynamic Unsigned64 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,3rd Dynamic Unsigned64 Output 1,,0, uint64,rw,Нет
+
+
+
+.. _subtableA8C3: 
+
+4th Dynamic Unsigned64 Output
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0xA8C3 4th Dynamic Unsigned64 Output(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,4th Dynamic Unsigned64 Output 1,,0, uint64,rw,Нет
+
+

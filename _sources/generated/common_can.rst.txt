@@ -1,0 +1,1227 @@
+Объекты CANopen DS-301 - Содержимое
+-----------------------------------------------------------------------------
+
+
+.. _subtable1000: 
+
+Device Type
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1000 Device Type(0---0)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Device Type,"Тип профиля устройства по классификации CANopen",Всего Субиндексов: 4294901760, uint32,r,Нет
+
+
+
+.. _subtable1001: 
+
+Error Register
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1001 Error Register(0---0)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Error Register,"Регистр ошибок",Всего Субиндексов: 0, uint8,r,Нет
+
++----------------+----------------------------+
+|Бит             |Назначение                  |
++================+============================+
+|0               |Общая ошибка [1]_           |
++----------------+----------------------------+
+|1               |                            |
++----------------+                            |
+|2               |                            |
++----------------+                            |
+|3               |                            |
++----------------+                            |
+|4               |                            |
++----------------+                            |
+|5               |                            |
++----------------+                            |
+|6               |                            |
++----------------+----------------------------+
+|7               |Общая ошибка [1]_           |
++----------------+----------------------------+
+
+..  [1] **Для детализации ошибок см. :ref:`subtable1002`.**
+
+
+
+.. _subtable1003: 
+
+Pre-defined Error Field
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1003 Pre-defined Error Field(0---24)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Errors,,Всего Субиндексов: 24, uint8,rw,Нет
+    1,Standard Error Field,,0, uint32,r,Нет
+
+
+
+.. _subtable1005: 
+
+SYNC COB ID
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1005 SYNC COB ID(0---0)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,SYNC COB ID,,Всего Субиндексов: 2147483776, uint32,rw,Нет
+
+
+
+.. _subtable1008: 
+
+Manufacturer Device Name
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1008 Manufacturer Device Name(0---0)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Manufacturer Device Name,"Имя устройства",Всего Субиндексов: HCR-01F, visible_str,r,Нет
+
+
+
+.. _subtable1010: 
+
+Store parameters
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1010 Store parameters(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,Save All Parameters,"Сохранить все параметры",0, uint32,rw,Нет
+
+
+
+.. _subtable1011: 
+
+Restore Default Parameters
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1011 Restore Default Parameters(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,Restore All Default Parameters,"Восстановить все параметры",0, uint32,rw,Нет
+
+
+* 1 - Restore All Default Parameters
+Для восстановления настроек по умолчанию необходимо записать число *0x64616f6c* (слово *load* в *ASCII* коде) в первый субиндекс. После этого устройство будет перезагружено с настройками по умолчанию.
+
+
+.. _subtable1012: 
+
+TIME COB ID
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1012 TIME COB ID(0---0)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,TIME COB ID,"COB ID сообщения о текущем времени",Всего Субиндексов: 0, uint32,rw,Нет
+
+
+
+.. _subtable1014: 
+
+Emergency COB ID
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1014 Emergency COB ID(0---0)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Emergency COB ID,"COB ID сообщения об аварии",Всего Субиндексов: \$NODEID+0x80, uint32,rw,Нет
+
+
+
+.. _subtable1016: 
+
+Consumer Heartbeat Time
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1016 Consumer Heartbeat Time(0---8)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 8, uint8,r,Нет
+    1,Consumer Heartbeat Time,,0, uint32,rw,Да
+
+
+
+.. _subtable1017: 
+
+Producer Heartbeat Time
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1017 Producer Heartbeat Time(0---0)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Producer Heartbeat Time,"Период отправки сообщений о исправности, мс",Всего Субиндексов: 5000, uint16,rw,Нет
+
+
+
+.. _subtable1018: 
+
+Identity
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1018 Identity(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,r,Нет
+    1,Vendor ID,"Идентификатор производителя",25591809, uint32,r,Нет
+    2,Product Code,"Код типа",16843325, uint32,r,Нет
+    3,Revision Number,"Ревизия",0, uint32,r,Нет
+    4,UID,"Серийный номер",0, uint32,r,Нет
+
+
+
+.. _subtable1027: 
+
+Board List
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1027 Board List(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Connected Boards,,Всего Субиндексов: 1, uint8,r,Нет
+    1,Board 0,"Тип головной платы",255, uint16,rw,Да
+
+
+
+.. _subtable1029: 
+
+Error Behavior
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1029 Error Behavior(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Error Classes,,Всего Субиндексов: 1, uint8,r,Нет
+    1,Communication Error,,0, uint8,rw,Нет
+
+
+
+.. _subtable1200: 
+
+Server SDO Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1200 Server SDO Parameter(0---2)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 2, uint8,r,Нет
+    1,COB ID Client to Server (Receive SDO),"COB ID запроса SDO",\$NODEID+0x600, uint32,r,Нет
+    2,COB ID Server to Client (Transmit SDO),"COB ID ответа SDO",\$NODEID+0x580, uint32,r,Нет
+
+
+
+.. _subtable1201: 
+
+Additional Server SDO 1 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1201 Additional Server SDO 1 Parameter(0---3)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 3, uint8,r,Нет
+    1,COB ID Client to Server (Receive SDO),,2147483648, uint32,r,Нет
+    2,COB ID Server to Client (Transmit SDO),,2147483648, uint32,r,Нет
+    3,Node ID of the SDO Client,,0, uint8,r,Нет
+
+
+
+.. _subtable1202: 
+
+Additional Server SDO 2 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1202 Additional Server SDO 2 Parameter(0---3)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 3, uint8,r,Нет
+    1,COB ID Client to Server (Receive SDO),,2147483648, uint32,r,Нет
+    2,COB ID Server to Client (Transmit SDO),,2147483648, uint32,r,Нет
+    3,Node ID of the SDO Client,,0, uint8,r,Нет
+
+
+
+.. _subtable1203: 
+
+Additional Server SDO 3 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1203 Additional Server SDO 3 Parameter(0---3)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 3, uint8,r,Нет
+    1,COB ID Client to Server (Receive SDO),,2147483648, uint32,r,Нет
+    2,COB ID Server to Client (Transmit SDO),,2147483648, uint32,r,Нет
+    3,Node ID of the SDO Client,,0, uint8,r,Нет
+
+
+
+.. _subtable1204: 
+
+Additional Server SDO 4 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1204 Additional Server SDO 4 Parameter(0---3)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 3, uint8,r,Нет
+    1,COB ID Client to Server (Receive SDO),,2147483648, uint32,r,Нет
+    2,COB ID Server to Client (Transmit SDO),,2147483648, uint32,r,Нет
+    3,Node ID of the SDO Client,,0, uint8,r,Нет
+
+
+
+.. _subtable1205: 
+
+Additional Server SDO 5 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1205 Additional Server SDO 5 Parameter(0---3)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 3, uint8,r,Нет
+    1,COB ID Client to Server (Receive SDO),,2147483648, uint32,r,Нет
+    2,COB ID Server to Client (Transmit SDO),,2147483648, uint32,r,Нет
+    3,Node ID of the SDO Client,,0, uint8,r,Нет
+
+
+
+.. _subtable1400: 
+
+Receive PDO 1 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1400 Receive PDO 1 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,\$NODEID+0x200, uint32,rw,Да
+    2,Transmission Type,,0, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,0, uint16,rw,Да
+
+
+
+.. _subtable1401: 
+
+Receive PDO 2 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1401 Receive PDO 2 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,\$NODEID+0x300, uint32,rw,Да
+    2,Transmission Type,,0, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,0, uint16,rw,Да
+
+
+
+.. _subtable1402: 
+
+Receive PDO 3 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1402 Receive PDO 3 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,\$NODEID+0x400, uint32,rw,Да
+    2,Transmission Type,,0, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,0, uint16,rw,Да
+
+
+
+.. _subtable1403: 
+
+Receive PDO 4 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1403 Receive PDO 4 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,\$NODEID+0x500, uint32,rw,Да
+    2,Transmission Type,,0, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,0, uint16,rw,Да
+
+
+
+.. _subtable1404: 
+
+Receive PDO 5 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1404 Receive PDO 5 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,0, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,0, uint16,rw,Да
+
+
+
+.. _subtable1405: 
+
+Receive PDO 6 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1405 Receive PDO 6 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,0, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,0, uint16,rw,Да
+
+
+
+.. _subtable1600: 
+
+Receive PDO 1 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1600 Receive PDO 1 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 1 Mapping for an application object 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1601: 
+
+Receive PDO 2 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1601 Receive PDO 2 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 2 Mapping for an application object 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1602: 
+
+Receive PDO 3 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1602 Receive PDO 3 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 3 Mapping for an application object 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1603: 
+
+Receive PDO 4 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1603 Receive PDO 4 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 4 Mapping for an application object 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1604: 
+
+Receive PDO 5 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1604 Receive PDO 5 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 5 Mapping for an application object 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1605: 
+
+Receive PDO 6 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1605 Receive PDO 6 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 6 Mapping for an application object 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1800: 
+
+Transmit PDO 1 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1800 Transmit PDO 1 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,\$NODEID+0x180, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1801: 
+
+Transmit PDO 2 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1801 Transmit PDO 2 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,\$NODEID+0x280, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1802: 
+
+Transmit PDO 3 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1802 Transmit PDO 3 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,\$NODEID+0x380, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1803: 
+
+Transmit PDO 4 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1803 Transmit PDO 4 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,\$NODEID+0x480, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1804: 
+
+Transmit PDO 5 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1804 Transmit PDO 5 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1805: 
+
+Transmit PDO 6 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1805 Transmit PDO 6 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1806: 
+
+Transmit PDO 7 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1806 Transmit PDO 7 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1807: 
+
+Transmit PDO 8 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1807 Transmit PDO 8 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1808: 
+
+Transmit PDO 9 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1808 Transmit PDO 9 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1809: 
+
+Transmit PDO 10 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1809 Transmit PDO 10 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable180A: 
+
+Transmit PDO 11 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x180A Transmit PDO 11 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable180B: 
+
+Transmit PDO 12 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x180B Transmit PDO 12 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable180C: 
+
+Transmit PDO 13 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x180C Transmit PDO 13 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable180D: 
+
+Transmit PDO 14 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x180D Transmit PDO 14 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable180E: 
+
+Transmit PDO 15 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x180E Transmit PDO 15 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable180F: 
+
+Transmit PDO 16 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x180F Transmit PDO 16 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1810: 
+
+Transmit PDO 17 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1810 Transmit PDO 17 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1811: 
+
+Transmit PDO 18 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1811 Transmit PDO 18 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1812: 
+
+Transmit PDO 19 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1812 Transmit PDO 19 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1813: 
+
+Transmit PDO 20 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1813 Transmit PDO 20 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1814: 
+
+Transmit PDO 21 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1814 Transmit PDO 21 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1815: 
+
+Transmit PDO 22 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1815 Transmit PDO 22 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1816: 
+
+Transmit PDO 23 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1816 Transmit PDO 23 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1817: 
+
+Transmit PDO 24 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1817 Transmit PDO 24 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1818: 
+
+Transmit PDO 25 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1818 Transmit PDO 25 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1819: 
+
+Transmit PDO 26 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1819 Transmit PDO 26 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable181A: 
+
+Transmit PDO 27 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x181A Transmit PDO 27 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable181B: 
+
+Transmit PDO 28 Parameter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x181B Transmit PDO 28 Parameter(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Highest SubIndex Supported,,Всего Субиндексов: 6, uint8,r,Нет
+    1,COB ID used by PDO,,2147483648, uint32,rw,Да
+    2,Transmission Type,,255, uint8,rw,Да
+    3,Inhibit Time,,0, uint16,rw,Да
+    4,,,, ,,Нет
+    5,Event Timer,,5000, uint16,rw,Да
+
+
+
+.. _subtable1A00: 
+
+Transmit PDO 1 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A00 Transmit PDO 1 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 1 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A01: 
+
+Transmit PDO 2 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A01 Transmit PDO 2 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 2 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A02: 
+
+Transmit PDO 3 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A02 Transmit PDO 3 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 3 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A03: 
+
+Transmit PDO 4 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A03 Transmit PDO 4 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 4 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A04: 
+
+Transmit PDO 5 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A04 Transmit PDO 5 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 5 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A05: 
+
+Transmit PDO 6 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A05 Transmit PDO 6 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 6 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A06: 
+
+Transmit PDO 7 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A06 Transmit PDO 7 Mapping(0---8)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 8, uint8,rw,Нет
+    1,PDO 7 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A07: 
+
+Transmit PDO 8 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A07 Transmit PDO 8 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 8 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A08: 
+
+Transmit PDO 9 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A08 Transmit PDO 9 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 9 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A09: 
+
+Transmit PDO 10 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A09 Transmit PDO 10 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 10 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A0A: 
+
+Transmit PDO 11 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A0A Transmit PDO 11 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 11 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A0B: 
+
+Transmit PDO 12 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A0B Transmit PDO 12 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 12 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A0C: 
+
+Transmit PDO 13 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A0C Transmit PDO 13 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 13 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A0D: 
+
+Transmit PDO 14 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A0D Transmit PDO 14 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 14 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A0E: 
+
+Transmit PDO 15 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A0E Transmit PDO 15 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 15 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A0F: 
+
+Transmit PDO 16 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A0F Transmit PDO 16 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 16 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A10: 
+
+Transmit PDO 17 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A10 Transmit PDO 17 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 17 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A11: 
+
+Transmit PDO 18 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A11 Transmit PDO 18 Mapping(0---4)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 4, uint8,rw,Нет
+    1,PDO 18 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A12: 
+
+Transmit PDO 19 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A12 Transmit PDO 19 Mapping(0---2)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 2, uint8,rw,Нет
+    1,PDO 19 Mapping for a process data variable 1,,0, uint32,rw,Да
+
+
+
+.. _subtable1A13: 
+
+Transmit PDO 20 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A13 Transmit PDO 20 Mapping(0---2)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 2, uint8,rw,Нет
+    1,PDO 20 Mapping for a process data variable 1,,0, uint32,rw,Нет
+
+
+
+.. _subtable1A14: 
+
+Transmit PDO 21 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A14 Transmit PDO 21 Mapping(0---2)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 2, uint8,rw,Нет
+    1,PDO 21 Mapping for a process data variable 1,,0, uint32,rw,Нет
+
+
+
+.. _subtable1A15: 
+
+Transmit PDO 22 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A15 Transmit PDO 22 Mapping(0---2)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 2, uint8,rw,Нет
+    1,PDO 22 Mapping for a process data variable 1,,0, uint32,rw,Нет
+
+
+
+.. _subtable1A16: 
+
+Transmit PDO 23 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A16 Transmit PDO 23 Mapping(0---2)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 2, uint8,rw,Нет
+    1,PDO 23 Mapping for a process data variable 1,,0, uint32,rw,Нет
+
+
+
+.. _subtable1A17: 
+
+Transmit PDO 24 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A17 Transmit PDO 24 Mapping(0---2)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 2, uint8,rw,Нет
+    1,PDO 24 Mapping for a process data variable 1,,0, uint32,rw,Нет
+
+
+
+.. _subtable1A18: 
+
+Transmit PDO 25 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A18 Transmit PDO 25 Mapping(0---2)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 2, uint8,rw,Нет
+    1,PDO 25 Mapping for a process data variable 1,,0, uint32,rw,Нет
+
+
+
+.. _subtable1A19: 
+
+Transmit PDO 26 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A19 Transmit PDO 26 Mapping(0---2)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 2, uint8,rw,Нет
+    1,PDO 26 Mapping for a process data variable 1,,0, uint32,rw,Нет
+
+
+
+.. _subtable1A1A: 
+
+Transmit PDO 27 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A1A Transmit PDO 27 Mapping(0---2)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 2, uint8,rw,Нет
+    1,PDO 27 Mapping for a process data variable 1,,0, uint32,rw,Нет
+
+
+
+.. _subtable1A1B: 
+
+Transmit PDO 28 Mapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x1A1B Transmit PDO 28 Mapping(0---2)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 2, uint8,rw,Нет
+    1,PDO 28 Mapping for a process data variable 1,,0, uint32,rw,Нет
+
+

@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>5. Отображение в адресное пространство Modbus &#8212; документация Руководство пользователя 1.0</title>
+    <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+    <link rel="next" title="6. Объекты CANopen DS-301 - Содержимое" href="common_can.html" />
+    <link rel="prev" title="4. Принцип отображения словаря устройства в адресное пространство протокола Modbus" href="../written/Mapping_Struct.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Руководство пользователя</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../written/heater_line.html">1. Описание работы линии электрообогрева</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/HCR01F-user-web.html">2. WEB-Интерфейс настройки устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_index.html">3. Словарь объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/Mapping_Struct.html">4. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Отображение в адресное пространство Modbus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common_can.html">6. Объекты CANopen DS-301 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_params.html">7. Параметры устройства - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B0.html">8. Головная плата - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B1.html">9. Плата расширния №1 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B2.html">10. Плата расширния №2 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B3.html">11. Плата расширния №3 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B4.html">12. Плата расширния №4 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B5.html">13. Плата расширния №5 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B6.html">14. Плата расширния №6 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B7.html">15. Плата расширния №7 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B8.html">16. Плата расширния №8 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExtIO.html">17. Данные с внешних устройств - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserApp.html">18. Приложение пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">19. Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">20. Типовое содержимое архива с ПО для устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">21. Распределение параметров PDO</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">5. Отображение в адресное пространство Modbus</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../written/Mapping_Struct.html" title="Previous Chapter: 4. Принцип отображения словаря устройства в адресное пространство протокола Modbus"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 4. Принцип от...</span>
+    </a>
+  </li>
+  <li>
+    <a href="common_can.html" title="Next Chapter: 6. Объекты CANopen DS-301 - Содержимое"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">6. Объекты CA... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/generated/modbus_mmappings.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="modbus">
+<h1>5. Отображение в адресное пространство Modbus<a class="headerlink" href="#modbus" title="Ссылка на этот заголовок">¶</a></h1>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Регистр</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Адрес</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1001</p></td>
+<td><p>Product Code</p></td>
+<td><p>Код типа устройства</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2000"><span class="std std-ref">0x2000:2</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1003</p></td>
+<td><p>Revision Number</p></td>
+<td><p>Ревизия аппаратной части</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2000"><span class="std std-ref">0x2000:3</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1005</p></td>
+<td><p>UID</p></td>
+<td><p>Серийный номер</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2000"><span class="std std-ref">0x2000:4</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1007</p></td>
+<td><p>Manufacturing Date</p></td>
+<td><p>Дата производства в формате BCD</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2000"><span class="std std-ref">0x2000:5</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1009</p></td>
+<td><p>SW Version</p></td>
+<td><p>Версия ПО, Десятичное число</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2000"><span class="std std-ref">0x2000:6</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1011</p></td>
+<td><p>SW Build</p></td>
+<td><p>Контрольная сумма версии сборки ПО</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2000"><span class="std std-ref">0x2000:7</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1013</p></td>
+<td><p>EDS File Checksum</p></td>
+<td><p>Контрольная сумма электронного словаря</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2000"><span class="std std-ref">0x2000:8</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1021</p></td>
+<td><p>Restart Reason</p></td>
+<td><p>Флаги причин перезагрузки</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2001"><span class="std std-ref">0x2001:1</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1022</p></td>
+<td><p>Restart Count</p></td>
+<td><p>Счётчик перезагрузок</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2001"><span class="std std-ref">0x2001:2</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1023</p></td>
+<td><p>Time From Start</p></td>
+<td><p>Время со старта, с.</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2001"><span class="std std-ref">0x2001:3</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1025</p></td>
+<td><p>Mains Detect</p></td>
+<td><p>Флаг наличия основного питания</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2001"><span class="std std-ref">0x2001:4</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1026</p></td>
+<td><p>Battery Voltage</p></td>
+<td><p>Напряжение батареи</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2001"><span class="std std-ref">0x2001:5</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1028</p></td>
+<td><p>CPU Temperature</p></td>
+<td><p>Температура устройства</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2001"><span class="std std-ref">0x2001:6</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1030</p></td>
+<td><p>Settings File Switch Count</p></td>
+<td><p>Счётчик смены файла настроек</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2001"><span class="std std-ref">0x2001:7</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1032</p></td>
+<td><p>Critical Settings Version</p></td>
+<td><p>Счётчик смены файла оперативных параметров</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2001"><span class="std std-ref">0x2001:8</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1034</p></td>
+<td><p>Access Level</p></td>
+<td><p>Уровень доступа. 0 - Контроль отключен. 1 - Доступ запрещён. 2 - Доступ разрешён.</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2001"><span class="std std-ref">0x2001:9</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>1035</p></td>
+<td><p>Settings Checksum</p></td>
+<td><p>Контрольная сумма настроек</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2001"><span class="std std-ref">0x2001:10</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1101</p></td>
+<td><p>Command</p></td>
+<td><p>Перезагрузка</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2002"><span class="std std-ref">0x2002:1</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1103</p></td>
+<td><p>Password</p></td>
+<td><p>Ввод пароля</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2002"><span class="std std-ref">0x2002:2</span></a></p></td>
+<td><p>uint64</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>1111</p></td>
+<td><p>Error Register</p></td>
+<td><p>Регистр ошибок</p></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1001"><span class="std std-ref">0x1001:0</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1121</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:1</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1123</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:2</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1125</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:3</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1127</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:4</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1129</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:5</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1131</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:6</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1133</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:7</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1135</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:8</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1137</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:9</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1139</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:10</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1141</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:11</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1143</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:12</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1145</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:13</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1147</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:14</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1149</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:15</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1151</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:16</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1153</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:17</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1155</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:18</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1157</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:19</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1159</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:20</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1161</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:21</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1163</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:22</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>1165</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:23</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1167</p></td>
+<td><p>Standard Error Field</p></td>
+<td></td>
+<td><p><a class="reference internal" href="common_can.html#subtable1003"><span class="std std-ref">0x1003:24</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2019</p></td>
+<td><p>Current Trips Word</p></td>
+<td><p>Сводный регистр срабатывания защит по току</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5808"><span class="std std-ref">0x5808:1</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>2101</p></td>
+<td><p>RX Count</p></td>
+<td><p>Кол-во принятых пакетов</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2101"><span class="std std-ref">0x2101:1</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2103</p></td>
+<td><p>TX Count</p></td>
+<td><p>Кол-во отправленых пакетов</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2101"><span class="std std-ref">0x2101:2</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>2105</p></td>
+<td><p>RX Error Counter</p></td>
+<td><p>Кол-во ошибок приёма</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2101"><span class="std std-ref">0x2101:3</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2106</p></td>
+<td><p>TX Error Counter</p></td>
+<td><p>Кол-во ошибок передачи</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2101"><span class="std std-ref">0x2101:4</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>2107</p></td>
+<td><p>Error Code</p></td>
+<td><p>Код ошибки</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2101"><span class="std std-ref">0x2101:5</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2121</p></td>
+<td><p>Enable</p></td>
+<td><p>Включить порт</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2103"><span class="std std-ref">0x2103:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>2122</p></td>
+<td><p>Baudrate</p></td>
+<td><p>Скорость, бит/с</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2103"><span class="std std-ref">0x2103:2</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2124</p></td>
+<td><p>Filter Enable</p></td>
+<td><p>Включить фильтр</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2103"><span class="std std-ref">0x2103:3</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>2125</p></td>
+<td><p>Sample-Point</p></td>
+<td><p>Точка взятия бита, 0,01%%</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2103"><span class="std std-ref">0x2103:4</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2131</p></td>
+<td><p>CANopen 1 Slave Status 1</p></td>
+<td><p>Статус узла №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2301"><span class="std std-ref">0x2301:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>2132</p></td>
+<td><p>CANopen 1 Slave Status 1</p></td>
+<td><p>Статус узла №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2301"><span class="std std-ref">0x2301:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2133</p></td>
+<td><p>CANopen 1 Slave Status 1</p></td>
+<td><p>Статус узла №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2301"><span class="std std-ref">0x2301:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>2134</p></td>
+<td><p>CANopen 1 Slave Status 1</p></td>
+<td><p>Статус узла №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2301"><span class="std std-ref">0x2301:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2135</p></td>
+<td><p>CANopen 1 Slave Status 1</p></td>
+<td><p>Статус узла №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2301"><span class="std std-ref">0x2301:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>2136</p></td>
+<td><p>CANopen 1 Slave Status 1</p></td>
+<td><p>Статус узла №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2301"><span class="std std-ref">0x2301:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2151</p></td>
+<td><p>CANopen 1 Slave Control 1</p></td>
+<td><p>Включить узел №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2302"><span class="std std-ref">0x2302:1</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>2152</p></td>
+<td><p>CANopen 1 Slave Control 1</p></td>
+<td><p>Включить узел №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2302"><span class="std std-ref">0x2302:1</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2153</p></td>
+<td><p>CANopen 1 Slave Control 1</p></td>
+<td><p>Включить узел №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2302"><span class="std std-ref">0x2302:1</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>2154</p></td>
+<td><p>CANopen 1 Slave Control 1</p></td>
+<td><p>Включить узел №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2302"><span class="std std-ref">0x2302:1</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2155</p></td>
+<td><p>CANopen 1 Slave Control 1</p></td>
+<td><p>Включить узел №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2302"><span class="std std-ref">0x2302:1</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>2156</p></td>
+<td><p>CANopen 1 Slave Control 1</p></td>
+<td><p>Включить узел №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2302"><span class="std std-ref">0x2302:1</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2171</p></td>
+<td><p>CANopen 1 Slave Settings 1</p></td>
+<td><p>NodeID Узла №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2303"><span class="std std-ref">0x2303:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>2172</p></td>
+<td><p>CANopen 1 Slave Settings 1</p></td>
+<td><p>NodeID Узла №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2303"><span class="std std-ref">0x2303:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2173</p></td>
+<td><p>CANopen 1 Slave Settings 1</p></td>
+<td><p>NodeID Узла №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2303"><span class="std std-ref">0x2303:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>2174</p></td>
+<td><p>CANopen 1 Slave Settings 1</p></td>
+<td><p>NodeID Узла №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2303"><span class="std std-ref">0x2303:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2175</p></td>
+<td><p>CANopen 1 Slave Settings 1</p></td>
+<td><p>NodeID Узла №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2303"><span class="std std-ref">0x2303:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>2176</p></td>
+<td><p>CANopen 1 Slave Settings 1</p></td>
+<td><p>NodeID Узла №1</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2303"><span class="std std-ref">0x2303:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2401</p></td>
+<td><p>Overrun Error Count</p></td>
+<td><p>Количество пропущеных кадров</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2141"><span class="std std-ref">0x2141:1</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>2403</p></td>
+<td><p>Frame Error Count</p></td>
+<td><p>Количество ошибочных кадров</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2141"><span class="std std-ref">0x2141:2</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2405</p></td>
+<td><p>Parity Error Count</p></td>
+<td><p>Количество пакетов с неверной CRC</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2141"><span class="std std-ref">0x2141:3</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>2411</p></td>
+<td><p>Enable</p></td>
+<td><p>Вклюсчить</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2143"><span class="std std-ref">0x2143:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2412</p></td>
+<td><p>Baudrate</p></td>
+<td><p>Скорость, бит/с</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2143"><span class="std std-ref">0x2143:2</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>2414</p></td>
+<td><p>Data bits</p></td>
+<td><p>Количество бит данных</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2143"><span class="std std-ref">0x2143:3</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2415</p></td>
+<td><p>Parity</p></td>
+<td><p>Чётность(0 - нет, 1 - Чёт, 2 -  Нечет)</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2143"><span class="std std-ref">0x2143:4</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>2416</p></td>
+<td><p>Stop bits</p></td>
+<td><p>Количество стоповых бит</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2143"><span class="std std-ref">0x2143:5</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2421</p></td>
+<td><p>RX Frame Count</p></td>
+<td><p>Количество принятых пакетов</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2321"><span class="std std-ref">0x2321:1</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>2423</p></td>
+<td><p>TX Frame Count</p></td>
+<td><p>Количество отправленых пакетов</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2321"><span class="std std-ref">0x2321:2</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2425</p></td>
+<td><p>CRC Error Count</p></td>
+<td><p>Количество ошибок CRC</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2321"><span class="std std-ref">0x2321:3</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>2427</p></td>
+<td><p>Invalid Frame Count</p></td>
+<td><p>Количество повреждёных пакетов</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2321"><span class="std std-ref">0x2321:4</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2429</p></td>
+<td><p>Timeout Count</p></td>
+<td><p>Количество срабатываний тайм-аута опроса</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2321"><span class="std std-ref">0x2321:5</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>2431</p></td>
+<td><p>Time Without Poll</p></td>
+<td><p>Время без опроса, с</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2321"><span class="std std-ref">0x2321:6</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2433</p></td>
+<td><p>Poll Failure</p></td>
+<td><p>Флаг отсутствия опроса</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2321"><span class="std std-ref">0x2321:7</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>2441</p></td>
+<td><p>Enable</p></td>
+<td><p>Включить</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2323"><span class="std std-ref">0x2323:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2442</p></td>
+<td><p>Device Address</p></td>
+<td><p>Адрес</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2323"><span class="std std-ref">0x2323:2</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>2443</p></td>
+<td><p>Answer Delay</p></td>
+<td><p>Дополнительный тайм-аут ответа</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2323"><span class="std std-ref">0x2323:3</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2444</p></td>
+<td><p>Poll Timeout</p></td>
+<td><p>Тайм-аут опроса мастером, с</p></td>
+<td><p><a class="reference internal" href="device_params.html#subtable2323"><span class="std std-ref">0x2323:4</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>9001</p></td>
+<td><p>Board Errors</p></td>
+<td><p>Статус-флаги платы</p></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f01"><span class="std std-ref">0x3F01:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>9051</p></td>
+<td><p>Command</p></td>
+<td></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f03"><span class="std std-ref">0x3F03:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>9101</p></td>
+<td><p>B0 - DI Read Word 1</p></td>
+<td></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f10"><span class="std std-ref">0x3F10:1</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>9131</p></td>
+<td><p>B0 - AI Read Float 1</p></td>
+<td></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f31"><span class="std std-ref">0x3F31:1</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>9133</p></td>
+<td><p>B0 - AI Read Float 2</p></td>
+<td></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f31"><span class="std std-ref">0x3F31:2</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>9135</p></td>
+<td><p>B0 - AI Read Float 3</p></td>
+<td></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f31"><span class="std std-ref">0x3F31:3</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>9137</p></td>
+<td><p>B0 - AI Read Float 4</p></td>
+<td></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f31"><span class="std std-ref">0x3F31:4</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>9139</p></td>
+<td><p>B0 - AI Read Float 5</p></td>
+<td></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f31"><span class="std std-ref">0x3F31:5</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>9141</p></td>
+<td><p>B0 - AI Read Float 6</p></td>
+<td></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f31"><span class="std std-ref">0x3F31:6</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>9143</p></td>
+<td><p>B0 - AI Read Float 7</p></td>
+<td></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f31"><span class="std std-ref">0x3F31:7</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>9145</p></td>
+<td><p>B0 - AI Read Float 8</p></td>
+<td></td>
+<td><p><a class="reference internal" href="B0.html#subtable3f31"><span class="std std-ref">0x3F31:8</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>18001</p></td>
+<td><p>Board Errors</p></td>
+<td><p>Статус-флаги платы</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4801"><span class="std std-ref">0x4801:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>18051</p></td>
+<td><p>Command</p></td>
+<td><p>Команда управления платой</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4803"><span class="std std-ref">0x4803:1</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>18101</p></td>
+<td><p>Ext IO - DI Read Word 1</p></td>
+<td><p>Слово состояния входов 1-10</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4810"><span class="std std-ref">0x4810:1</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>18131</p></td>
+<td><p>Ext IO - AI Read Float 1</p></td>
+<td><p>вх.  1</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4831"><span class="std std-ref">0x4831:1</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>18133</p></td>
+<td><p>Ext IO - AI Read Float 2</p></td>
+<td><p>вх.  2</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4831"><span class="std std-ref">0x4831:2</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>18135</p></td>
+<td><p>Ext IO - AI Read Float 3</p></td>
+<td><p>вх.  3</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4831"><span class="std std-ref">0x4831:3</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>18137</p></td>
+<td><p>Ext IO - AI Read Float 4</p></td>
+<td><p>вх.  4</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4831"><span class="std std-ref">0x4831:4</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>18139</p></td>
+<td><p>Ext IO - AI Read Float 5</p></td>
+<td><p>вх.  5</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4831"><span class="std std-ref">0x4831:5</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>18141</p></td>
+<td><p>Ext IO - AI Read Float 6</p></td>
+<td><p>вх.  6</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4831"><span class="std std-ref">0x4831:6</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>18143</p></td>
+<td><p>Ext IO - AI Read Float 7</p></td>
+<td><p>вх.  7</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4831"><span class="std std-ref">0x4831:7</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>18145</p></td>
+<td><p>Ext IO - AI Read Float 8</p></td>
+<td><p>вх.  8</p></td>
+<td><p><a class="reference internal" href="ExtIO.html#subtable4831"><span class="std std-ref">0x4831:8</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>20101</p></td>
+<td><p>Fault</p></td>
+<td><p>Присутствует Авария</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5801"><span class="std std-ref">0x5801:1</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>20102</p></td>
+<td><p>Actual Control Mode</p></td>
+<td><p>Текущий режим управления/регулирования: 0 - нагрев выкл., 1 - нагрев вкл., 2 - дистанционный, 3 - периодический (ШИМ), 4 - релейный по температуре, 5 - пропорциональный периодический (ШИМ) по температуре</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5801"><span class="std std-ref">0x5801:2</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>20103</p></td>
+<td><p>Safe Mode On</p></td>
+<td><p>Произошёл переход в безопасный режим</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5801"><span class="std std-ref">0x5801:3</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>20104</p></td>
+<td><p>Output State</p></td>
+<td><p>Состояние выхода</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5801"><span class="std std-ref">0x5801:4</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>20105</p></td>
+<td><p>Temp Alarms Word</p></td>
+<td><p>Сводный регистр аварийных событий по температуре</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5802"><span class="std std-ref">0x5802:1</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>20106</p></td>
+<td><p>Current Alarms Word</p></td>
+<td><p>Сводный регистр аварийных событий по току</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5803"><span class="std std-ref">0x5803:1</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>20107</p></td>
+<td><p>Misc Alarms Word</p></td>
+<td><p>Сводный регистр прочих аварийных событий</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5806"><span class="std std-ref">0x5806:1</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>20108</p></td>
+<td><p>Temp Trips Word</p></td>
+<td><p>Сводный регистр срабатывания защит по температуре</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5807"><span class="std std-ref">0x5807:1</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>20201</p></td>
+<td><p>Process Temp</p></td>
+<td><p>Расчетная температура линии [°C]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5810"><span class="std std-ref">0x5810:1</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>20203</p></td>
+<td><p>Temp 1</p></td>
+<td><p>Температура 1 [°C]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5810"><span class="std std-ref">0x5810:2</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>20205</p></td>
+<td><p>Temp 2</p></td>
+<td><p>Температура 2 [°C]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5810"><span class="std std-ref">0x5810:3</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>20207</p></td>
+<td><p>Load Current</p></td>
+<td><p>Ток нагрузки [А]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5811"><span class="std std-ref">0x5811:1</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>20209</p></td>
+<td><p>Leakage Current</p></td>
+<td><p>Ток утечки [мА]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5811"><span class="std std-ref">0x5811:2</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>20211</p></td>
+<td><p>PWM Val</p></td>
+<td><p>Текущий рабочий цикл периодического режима (ШИМ) [%]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5814"><span class="std std-ref">0x5814:1</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>20213</p></td>
+<td><p>PWM Val</p></td>
+<td><p>Текущий рабочий цикл периодического режима (ШИМ) [%]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5814"><span class="std std-ref">0x5814:1</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>20215</p></td>
+<td><p>PWM Val</p></td>
+<td><p>Текущий рабочий цикл периодического режима (ШИМ) [%]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5814"><span class="std std-ref">0x5814:1</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>21301</p></td>
+<td><p>Command</p></td>
+<td><p>Команда</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5820"><span class="std std-ref">0x5820:1</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>21302</p></td>
+<td><p>Remote Output Control</p></td>
+<td><p>Дистанционное управление</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5820"><span class="std std-ref">0x5820:2</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>21303</p></td>
+<td><p>Enable</p></td>
+<td><p>Ввод линии в работу</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">0x5821:1</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>21304</p></td>
+<td><p>Startup Delay</p></td>
+<td><p>Задержка первого включения [c]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">0x5821:2</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21305</p></td>
+<td><p>Control Mode</p></td>
+<td><p>Режим управления/регулирования: 0 - нагрев выкл., 1 - нагрев вкл., 2 - дистанционный, 3 - периодический (ШИМ), 4 - релейный по температуре, 5 - пропорциональный периодический (ШИМ) по температуре</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">0x5821:3</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>21306</p></td>
+<td><p>Safe Mode</p></td>
+<td><p>Безопасный режим при отказе датчиков температуры, потери связи в дистанционном режиме управления.</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">0x5821:4</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21307</p></td>
+<td><p>PWM Period</p></td>
+<td><p>Период ШИМ [сек]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">0x5821:5</span></a></p></td>
+<td><p>uint32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>21309</p></td>
+<td><p>PWM Safety Val</p></td>
+<td><p>Рабочий цикл ШИМ в безопасном режиме и по умолчанию в периодическом режиме [%]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">0x5821:6</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21311</p></td>
+<td><p>Process Temperature Calc Mode</p></td>
+<td><p>Режим расчета температуры процесса.: 0 - выкл., 1 - первый датчик, 2 - второй, 3 - среднее, 4 - мин, 5 - макс</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">0x5821:7</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>21312</p></td>
+<td><p>Allow Incomplete Sensors</p></td>
+<td><p>Разрешение работы при отказе одного датчика</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">0x5821:8</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21313</p></td>
+<td><p>Process Temp Set-point</p></td>
+<td><p>Уставка температуры Релейный режим [°C]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">0x5821:9</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>21315</p></td>
+<td><p>Hysteresis Positive</p></td>
+<td><p>Гистерезис + [°C] уставки температуры Релейный режим</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">0x5821:10</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21317</p></td>
+<td><p>Hysteresis Negative</p></td>
+<td><p>Гистерезис - [°C] уставки температуры Релейный режим</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">0x5821:11</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>21319</p></td>
+<td><p>Proportional Hi Temp</p></td>
+<td><p>Верхняя граница температуры Пропорциональный режим [°C]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">0x5821:12</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21321</p></td>
+<td><p>Proportional Hi PWM Val</p></td>
+<td><p>Рабочий цикл ШИМ для верхней границы температуры Пропорциональный режим [%]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">0x5821:13</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>21323</p></td>
+<td><p>Proportional Lo Temp</p></td>
+<td><p>Нижняя граница температуры Пропорциональный режим [°C]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">0x5821:14</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21325</p></td>
+<td><p>Proportional Lo PWM Val</p></td>
+<td><p>Рабочий цикл ШИМ для нижней границы температуры Пропорциональный режим [%]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5821"><span class="std std-ref">0x5821:15</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>21327</p></td>
+<td><p>Temp Hi</p></td>
+<td><p>Уставка Температура Верхний предел [°C]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5822"><span class="std std-ref">0x5822:1</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21329</p></td>
+<td><p>Temp Lo</p></td>
+<td><p>Уставка Температура Нижний предел [°C]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5822"><span class="std std-ref">0x5822:2</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>21331</p></td>
+<td><p>Load Current Hi</p></td>
+<td><p>Уставка Ток нагрузки Верхний предел [А]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5823"><span class="std std-ref">0x5823:1</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21333</p></td>
+<td><p>Load Current Lo</p></td>
+<td><p>Уставка Ток нагрузки Нижний предел [А]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5823"><span class="std std-ref">0x5823:2</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>21335</p></td>
+<td><p>Leakage Current Hi</p></td>
+<td><p>Уставка Ток утечки Верхний предел [мА]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5823"><span class="std std-ref">0x5823:3</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21337</p></td>
+<td><p>Output Off Current Hi</p></td>
+<td><p>Уставка Ток при отключенном выходе Верхний предел [мА]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5823"><span class="std std-ref">0x5823:4</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>21339</p></td>
+<td><p>Alarm Hold Time</p></td>
+<td><p>Минимальное время удержания флагов аварий [с]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5826"><span class="std std-ref">0x5826:1</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21340</p></td>
+<td><p>Temp 1 Hi</p></td>
+<td><p>Включить защиту Тепература 1 Верхний предел</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5828"><span class="std std-ref">0x5828:1</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>21341</p></td>
+<td><p>Temp 2 Hi</p></td>
+<td><p>Включить защиту Тепература 2 Верхний предел</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5828"><span class="std std-ref">0x5828:2</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21342</p></td>
+<td><p>Load Current Hi</p></td>
+<td><p>Включить защиту Ток нагрузки Верхний предел</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5829"><span class="std std-ref">0x5829:1</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>21343</p></td>
+<td><p>Leakage Current Hi</p></td>
+<td><p>Включить защиту Ток утечки Верхний предел</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable5829"><span class="std std-ref">0x5829:2</span></a></p></td>
+<td><p>bool</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21344</p></td>
+<td><p>Temp Deadband Ref</p></td>
+<td><p>Опорный диапазон нечувствительности по температуре [°C]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable582a"><span class="std std-ref">0x582A:1</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>21346</p></td>
+<td><p>Temp Deadband</p></td>
+<td><p>Зона нечувствительности по температуре [%]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable582a"><span class="std std-ref">0x582A:2</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21348</p></td>
+<td><p>Load Current Deadband Ref</p></td>
+<td><p>Опорный диапазон нечувствительности по току нагрузки [А]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable582a"><span class="std std-ref">0x582A:3</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>21350</p></td>
+<td><p>Load Current Deadband</p></td>
+<td><p>Зона нечувствительности по току нагрузки [%]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable582a"><span class="std std-ref">0x582A:4</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21352</p></td>
+<td><p>Leakage Current Deadband Ref</p></td>
+<td><p>Опорный диапазон нечувствительности по току утечки [мА]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable582a"><span class="std std-ref">0x582A:5</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>21354</p></td>
+<td><p>Leakage Current Deadband</p></td>
+<td><p>Зона нечувствительности по току утечки [%]</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable582a"><span class="std std-ref">0x582A:6</span></a></p></td>
+<td><p>float32</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21356</p></td>
+<td><p>Min Output Hold Time</p></td>
+<td><p>Минимальное время удержания выхода</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable582b"><span class="std std-ref">0x582B:1</span></a></p></td>
+<td><p>uint16</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>21357</p></td>
+<td><p>Temp 1 input</p></td>
+<td><p>Выбор входа Температура 1</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable582b"><span class="std std-ref">0x582B:2</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>21358</p></td>
+<td><p>Temp 2 input</p></td>
+<td><p>Выбор входа Температура 2</p></td>
+<td><p><a class="reference internal" href="UserApp.html#subtable582b"><span class="std std-ref">0x582B:3</span></a></p></td>
+<td><p>uint8</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, Prom-Teq LLC.<br/>
+      Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

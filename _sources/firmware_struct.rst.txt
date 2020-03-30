@@ -1,0 +1,56 @@
+Типовое содержимое архива с ПО для устройства
+------------------------------------------------
+
+::
+
+    .
+    ├── firmware
+    │   ├── settings.json
+    │   ├── system_app
+    │   │   └── MCU-xTx_6040008_0xfd2cf5f0.dfu
+    │   ├── system_app_erase
+    │   │   └── erase_2Mb.dfu
+    │   ├── user_app
+    │   │   └── user_app.dfu
+    │   └── user_app_erase
+    │       └── erase_128K.dfu
+    ├── ObjDict
+    │   ├── eds_file_crc.h
+    │   ├── MCU-xTx.eds
+    │   └── MCU-xTx_exp.eds
+    └── resources
+        ├── modbus_mappings.cfg
+        └── www
+            ├── eds_json.js.gz
+            ├── external
+            │   ├── jquery
+            │   │   └── jquery.js
+            │   └── validation
+            │       ├── additional-methods.js
+            │       ├── jquery.validate.js
+            │       └── localization
+            │           ├── messages_ru.js
+            │           └── messages_uk.js
+            ├── images
+            │   ├── ui-bg_diagonals-thick_18_b81900_40x40.png
+            │   ├── ui-bg_diagonals-thick_20_666666_40x40.png
+            │   ├── ui-bg_glass_100_f6f6f6_1x400.png
+            │   ├── ui-bg_glass_100_fdf5ce_1x400.png
+            │   ├── ui-bg_glass_65_ffffff_1x400.png
+            │   ├── ui-bg_gloss-wave_35_f6a828_500x100.png
+            │   ├── ui-bg_highlight-soft_100_eeeeee_1x100.png
+            │   ├── ui-bg_highlight-soft_75_ffe45c_1x100.png
+            │   ├── ui-icons_222222_256x240.png
+            │   ├── ui-icons_228ef1_256x240.png
+            │   ├── ui-icons_ef8c08_256x240.png
+            │   ├── ui-icons_ffd27a_256x240.png
+            │   └── ui-icons_ffffff_256x240.png
+            ├── index.shtm
+            ├── jquery-ui.css
+            ├── jquery-ui.js
+            ├── jquery-ui.structure.css
+            ├── jquery-ui.theme.css
+            ├── main.js
+            ├── package.json
+            ├── raw_access.shtm
+            └── style.css

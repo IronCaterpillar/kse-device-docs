@@ -1,0 +1,538 @@
+Данные с внешних устройств - Содержимое
+-----------------------------------------------------------------------------
+
+
+.. _subtable4801: 
+
+Ext IO - Board Status
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4801 Ext IO - Board Status(0---5)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 5, uint8,r,Нет
+    1,Board Errors,"Статус-флаги платы",1, uint8,r,Нет
+    2,Processing Time Last,"Время обработки",0, uint32,r,Нет
+    3,Processing Time AVG,"Среднее время обработки",0, uint32,r,Нет
+    4,Processing Time Max,"Максимальное время обработки",0, uint32,r,Нет
+    5,Recent Poll Time,"Время последнего опроса",0, uint64,r,Нет
+
+
+
+.. _subtable4803: 
+
+Ext IO - Board Control
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4803 Ext IO - Board Control(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,Command,"Команда управления платой",0, uint8,rw,Нет
+
+
+
+.. _subtable4807: 
+
+Ext IO - Channel Status
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4807 Ext IO - Channel Status(0---10)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 10, uint8,r,Нет
+    1,Ext IO - Channel Status 1,,1, uint8,r,Нет
+
+
+
+.. _subtable4808: 
+
+Ext IO - Settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4808 Ext IO - Settings(0---16)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 16, uint8,r,Нет
+    1,Ext IO - Settings 1,"Настройки 1",0, uint64,rw,Да
+    2,Ext IO - Settings 2,"Настройки 2",0, uint64,rw,Да
+    3,Ext IO - Settings 3,"Настройки 3",0, uint64,rw,Да
+    4,Ext IO - Settings 4,"Настройки 4",0, uint64,rw,Да
+    5,Ext IO - Settings 5,"Настройки 5",0, uint64,rw,Да
+    6,Ext IO - Settings 6,"Настройки 6",0, uint64,rw,Да
+    7,Ext IO - Settings 7,"Настройки 7",0, uint64,rw,Да
+    8,Ext IO - Settings 8,"Настройки 8",0, uint64,rw,Да
+    9,Ext IO - Settings 9,"Настройки 9",0, uint64,rw,Да
+    10,Ext IO - Settings 10,"Настройки 10",0, uint64,rw,Да
+    11,Ext IO - Settings 11,"Настройки 11",0, uint64,rw,Да
+    12,Ext IO - Settings 12,"Настройки 12",0, uint64,rw,Да
+    13,Ext IO - Settings 13,"Настройки 13",0, uint64,rw,Да
+    14,Ext IO - Settings 14,"Настройки 14",0, uint64,rw,Да
+    15,Ext IO - Settings 15,"Настройки 15",0, uint64,rw,Да
+    16,Ext IO - Settings 16,"Настройки 16",0, uint64,rw,Да
+
+
+
+.. _subtable4809: 
+
+Ext IO - Errors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4809 Ext IO - Errors(0---16)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 16, uint8,r,Нет
+    1,Ext IO - Errors 1,"Ошибки 1",0, uint8,r,Нет
+    2,Ext IO - Errors 2,"Ошибки 2",0, uint8,r,Нет
+    3,Ext IO - Errors 3,"Ошибки 3",0, uint8,r,Нет
+    4,Ext IO - Errors 4,"Ошибки 4",0, uint8,r,Нет
+    5,Ext IO - Errors 5,"Ошибки 5",0, uint8,r,Нет
+    6,Ext IO - Errors 6,"Ошибки 6",0, uint8,r,Нет
+    7,Ext IO - Errors 7,"Ошибки 7",0, uint8,r,Нет
+    8,Ext IO - Errors 8,"Ошибки 8",0, uint8,r,Нет
+    9,Ext IO - Errors 9,"Ошибки 9",0, uint8,r,Нет
+    10,Ext IO - Errors 10,"Ошибки 10",0, uint8,r,Нет
+    11,Ext IO - Errors 11,"Ошибки 11",0, uint8,r,Нет
+    12,Ext IO - Errors 12,"Ошибки 12",0, uint8,r,Нет
+    13,Ext IO - Errors 13,"Ошибки 13",0, uint8,r,Нет
+    14,Ext IO - Errors 14,"Ошибки 14",0, uint8,r,Нет
+    15,Ext IO - Errors 15,"Ошибки 15",0, uint8,r,Нет
+    16,Ext IO - Errors 16,"Ошибки 16",0, uint8,r,Нет
+
+
+
+.. _subtable480A: 
+
+Ext IO - Sensor IDs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x480A Ext IO - Sensor IDs(0---16)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 16, uint8,r,Нет
+    1,Ext IO - Sensor IDs 1,"Идентификатор 1",0, uint64,r,Нет
+    2,Ext IO - Sensor IDs 2,"Идентификатор 2",0, uint64,r,Нет
+    3,Ext IO - Sensor IDs 3,"Идентификатор 3",0, uint64,r,Нет
+    4,Ext IO - Sensor IDs 4,"Идентификатор 4",0, uint64,r,Нет
+    5,Ext IO - Sensor IDs 5,"Идентификатор 5",0, uint64,r,Нет
+    6,Ext IO - Sensor IDs 6,"Идентификатор 6",0, uint64,r,Нет
+    7,Ext IO - Sensor IDs 7,"Идентификатор 7",0, uint64,r,Нет
+    8,Ext IO - Sensor IDs 8,"Идентификатор 8",0, uint64,r,Нет
+    9,Ext IO - Sensor IDs 9,"Идентификатор 9",0, uint64,r,Нет
+    10,Ext IO - Sensor IDs 10,"Идентификатор 10",0, uint64,r,Нет
+    11,Ext IO - Sensor IDs 11,"Идентификатор 11",0, uint64,r,Нет
+    12,Ext IO - Sensor IDs 12,"Идентификатор 12",0, uint64,r,Нет
+    13,Ext IO - Sensor IDs 13,"Идентификатор 13",0, uint64,r,Нет
+    14,Ext IO - Sensor IDs 14,"Идентификатор 14",0, uint64,r,Нет
+    15,Ext IO - Sensor IDs 15,"Идентификатор 15",0, uint64,r,Нет
+    16,Ext IO - Sensor IDs 16,"Идентификатор 16",0, uint64,r,Нет
+
+
+
+.. _subtable4810: 
+
+Ext IO - DI Read Word
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4810 Ext IO - DI Read Word(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,Ext IO - DI Read Word 1,"Слово состояния входов 1-10",0, uint16,r,Нет
+
+
+
+.. _subtable4811: 
+
+Ext IO - DI Read Bit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4811 Ext IO - DI Read Bit(0---10)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 10, uint8,r,Нет
+    1,Ext IO - DI Read Bit 1,"Состояния вх.  1",0, bool,r,Нет
+    2,Ext IO - DI Read Bit 2,"Состояния вх.  2",0, bool,r,Нет
+    3,Ext IO - DI Read Bit 3,"Состояния вх.  3",0, bool,r,Нет
+    4,Ext IO - DI Read Bit 4,"Состояния вх.  4",0, bool,r,Нет
+    5,Ext IO - DI Read Bit 5,"Состояния вх.  5",0, bool,r,Нет
+    6,Ext IO - DI Read Bit 6,"Состояния вх.  6",0, bool,r,Нет
+    7,Ext IO - DI Read Bit 7,"Состояния вх.  7",0, bool,r,Нет
+    8,Ext IO - DI Read Bit 8,"Состояния вх.  8",0, bool,r,Нет
+    9,Ext IO - DI Read Bit 9,"Состояния вх.  9",0, bool,r,Нет
+    10,Ext IO - DI Read Bit 10,"Состояния вх.  10",0, bool,r,Нет
+
+
+
+.. _subtable4812: 
+
+Ext IO - DI Invert Polarity
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4812 Ext IO - DI Invert Polarity(0---10)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 10, uint8,r,Нет
+    1,Ext IO - DI Invert Polarity 1,"Смена полярности вх.  1",0, bool,rw,Да
+    2,Ext IO - DI Invert Polarity 2,"Смена полярности вх.  2",0, bool,rw,Да
+    3,Ext IO - DI Invert Polarity 3,"Смена полярности вх.  3",0, bool,rw,Да
+    4,Ext IO - DI Invert Polarity 4,"Смена полярности вх.  4",0, bool,rw,Да
+    5,Ext IO - DI Invert Polarity 5,"Смена полярности вх.  5",0, bool,rw,Да
+    6,Ext IO - DI Invert Polarity 6,"Смена полярности вх.  6",0, bool,rw,Да
+    7,Ext IO - DI Invert Polarity 7,"Смена полярности вх.  7",0, bool,rw,Да
+    8,Ext IO - DI Invert Polarity 8,"Смена полярности вх.  8",0, bool,rw,Да
+    9,Ext IO - DI Invert Polarity 9,"Смена полярности вх.  9",0, bool,rw,Да
+    10,Ext IO - DI Invert Polarity 10,"Смена полярности вх.  10",0, bool,rw,Да
+
+
+
+.. _subtable4813: 
+
+Ext IO - DI Filter Time
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4813 Ext IO - DI Filter Time(0---10)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 10, uint8,r,Нет
+    1,Ext IO - DI Filter Time 1,"Время фильтрации вх.  1",20, uint8,rw,Да
+    2,Ext IO - DI Filter Time 2,"Время фильтрации вх.  2",20, uint8,rw,Да
+    3,Ext IO - DI Filter Time 3,"Время фильтрации вх.  3",20, uint8,rw,Да
+    4,Ext IO - DI Filter Time 4,"Время фильтрации вх.  4",20, uint8,rw,Да
+    5,Ext IO - DI Filter Time 5,"Время фильтрации вх.  5",20, uint8,rw,Да
+    6,Ext IO - DI Filter Time 6,"Время фильтрации вх.  6",20, uint8,rw,Да
+    7,Ext IO - DI Filter Time 7,"Время фильтрации вх.  7",20, uint8,rw,Да
+    8,Ext IO - DI Filter Time 8,"Время фильтрации вх.  8",20, uint8,rw,Да
+    9,Ext IO - DI Filter Time 9,"Время фильтрации вх.  9",20, uint8,rw,Да
+    10,Ext IO - DI Filter Time 10,"Время фильтрации вх.  10",20, uint8,rw,Да
+
+
+
+.. _subtable4814: 
+
+Ext IO - DI Mask
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4814 Ext IO - DI Mask(0---10)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 10, uint8,r,Нет
+    1,Ext IO - DI Mask 1,"Запрет событий вх.  1",0, bool,rw,Да
+    2,Ext IO - DI Mask 2,"Запрет событий вх.  2",0, bool,rw,Да
+    3,Ext IO - DI Mask 3,"Запрет событий вх.  3",0, bool,rw,Да
+    4,Ext IO - DI Mask 4,"Запрет событий вх.  4",0, bool,rw,Да
+    5,Ext IO - DI Mask 5,"Запрет событий вх.  5",0, bool,rw,Да
+    6,Ext IO - DI Mask 6,"Запрет событий вх.  6",0, bool,rw,Да
+    7,Ext IO - DI Mask 7,"Запрет событий вх.  7",0, bool,rw,Да
+    8,Ext IO - DI Mask 8,"Запрет событий вх.  8",0, bool,rw,Да
+    9,Ext IO - DI Mask 9,"Запрет событий вх.  9",0, bool,rw,Да
+    10,Ext IO - DI Mask 10,"Запрет событий вх.  10",0, bool,rw,Да
+
+
+
+.. _subtable4815: 
+
+Ext IO - DI Mag
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4815 Ext IO - DI Mag(0---1)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 1, uint8,r,Нет
+    1,Ext IO - DI Mag 1,,0, uint16,r,Нет
+
+
+
+.. _subtable4831: 
+
+Ext IO - AI Read Float
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4831 Ext IO - AI Read Float(0---16)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 16, uint8,r,Нет
+    1,Ext IO - AI Read Float 1,"вх.  1",nan, float32,r,Нет
+    2,Ext IO - AI Read Float 2,"вх.  2",nan, float32,r,Нет
+    3,Ext IO - AI Read Float 3,"вх.  3",nan, float32,r,Нет
+    4,Ext IO - AI Read Float 4,"вх.  4",nan, float32,r,Нет
+    5,Ext IO - AI Read Float 5,"вх.  5",nan, float32,r,Нет
+    6,Ext IO - AI Read Float 6,"вх.  6",nan, float32,r,Нет
+    7,Ext IO - AI Read Float 7,"вх.  7",nan, float32,r,Нет
+    8,Ext IO - AI Read Float 8,"вх.  8",nan, float32,r,Нет
+    9,Ext IO - AI Read Float 9,"вх.  9",nan, float32,r,Нет
+    10,Ext IO - AI Read Float 10,"вх.  10",nan, float32,r,Нет
+    11,Ext IO - AI Read Float 11,"вх.  11",nan, float32,r,Нет
+    12,Ext IO - AI Read Float 12,"вх.  12",nan, float32,r,Нет
+    13,Ext IO - AI Read Float 13,"вх.  13",nan, float32,r,Нет
+    14,Ext IO - AI Read Float 14,"вх.  14",nan, float32,r,Нет
+    15,Ext IO - AI Read Float 15,"вх.  15",nan, float32,r,Нет
+    16,Ext IO - AI Read Float 16,"вх.  16",nan, float32,r,Нет
+
+
+
+.. _subtable4832: 
+
+Ext IO - AI Scaling
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4832 Ext IO - AI Scaling(0---16)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 16, uint8,r,Нет
+    1,Ext IO - AI Scaling 1,"Масштабирование вх. 1",1.0, float32,rw,Да
+    2,Ext IO - AI Scaling 2,"Масштабирование вх. 2",1.0, float32,rw,Да
+    3,Ext IO - AI Scaling 3,"Масштабирование вх. 3",1.0, float32,rw,Да
+    4,Ext IO - AI Scaling 4,"Масштабирование вх. 4",1.0, float32,rw,Да
+    5,Ext IO - AI Scaling 5,"Масштабирование вх. 5",1.0, float32,rw,Да
+    6,Ext IO - AI Scaling 6,"Масштабирование вх. 6",1.0, float32,rw,Да
+    7,Ext IO - AI Scaling 7,"Масштабирование вх. 7",1.0, float32,rw,Да
+    8,Ext IO - AI Scaling 8,"Масштабирование вх. 8",1.0, float32,rw,Да
+    9,Ext IO - AI Scaling 9,"Масштабирование вх. 9",1.0, float32,rw,Да
+    10,Ext IO - AI Scaling 10,"Масштабирование вх. 10",1.0, float32,rw,Да
+    11,Ext IO - AI Scaling 11,"Масштабирование вх. 11",1.0, float32,rw,Да
+    12,Ext IO - AI Scaling 12,"Масштабирование вх. 12",1.0, float32,rw,Да
+    13,Ext IO - AI Scaling 13,"Масштабирование вх. 13",1.0, float32,rw,Да
+    14,Ext IO - AI Scaling 14,"Масштабирование вх. 14",1.0, float32,rw,Да
+    15,Ext IO - AI Scaling 15,"Масштабирование вх. 15",1.0, float32,rw,Да
+    16,Ext IO - AI Scaling 16,"Масштабирование вх. 16",1.0, float32,rw,Да
+
+
+
+.. _subtable4833: 
+
+Ext IO - AI Offset
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4833 Ext IO - AI Offset(0---16)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 16, uint8,r,Нет
+    1,Ext IO - AI Offset 1,"Смещение вх.  1",0.0, float32,rw,Да
+    2,Ext IO - AI Offset 2,"Смещение вх.  2",0.0, float32,rw,Да
+    3,Ext IO - AI Offset 3,"Смещение вх.  3",0.0, float32,rw,Да
+    4,Ext IO - AI Offset 4,"Смещение вх.  4",0.0, float32,rw,Да
+    5,Ext IO - AI Offset 5,"Смещение вх.  5",0.0, float32,rw,Да
+    6,Ext IO - AI Offset 6,"Смещение вх.  6",0.0, float32,rw,Да
+    7,Ext IO - AI Offset 7,"Смещение вх.  7",0.0, float32,rw,Да
+    8,Ext IO - AI Offset 8,"Смещение вх.  8",0.0, float32,rw,Да
+    9,Ext IO - AI Offset 9,"Смещение вх.  9",0.0, float32,rw,Да
+    10,Ext IO - AI Offset 10,"Смещение вх.  10",0.0, float32,rw,Да
+    11,Ext IO - AI Offset 11,"Смещение вх.  11",0.0, float32,rw,Да
+    12,Ext IO - AI Offset 12,"Смещение вх.  12",0.0, float32,rw,Да
+    13,Ext IO - AI Offset 13,"Смещение вх.  13",0.0, float32,rw,Да
+    14,Ext IO - AI Offset 14,"Смещение вх.  14",0.0, float32,rw,Да
+    15,Ext IO - AI Offset 15,"Смещение вх.  15",0.0, float32,rw,Да
+    16,Ext IO - AI Offset 16,"Смещение вх.  16",0.0, float32,rw,Да
+
+
+
+.. _subtable4834: 
+
+Ext IO - AI Filter Time
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4834 Ext IO - AI Filter Time(0---16)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 16, uint8,r,Нет
+    1,Ext IO - AI Filter Time 1,"Время фильтрации вх.  1",0, uint8,rw,Да
+    2,Ext IO - AI Filter Time 2,"Время фильтрации вх.  2",0, uint8,rw,Да
+    3,Ext IO - AI Filter Time 3,"Время фильтрации вх.  3",0, uint8,rw,Да
+    4,Ext IO - AI Filter Time 4,"Время фильтрации вх.  4",0, uint8,rw,Да
+    5,Ext IO - AI Filter Time 5,"Время фильтрации вх.  5",0, uint8,rw,Да
+    6,Ext IO - AI Filter Time 6,"Время фильтрации вх.  6",0, uint8,rw,Да
+    7,Ext IO - AI Filter Time 7,"Время фильтрации вх.  7",0, uint8,rw,Да
+    8,Ext IO - AI Filter Time 8,"Время фильтрации вх.  8",0, uint8,rw,Да
+    9,Ext IO - AI Filter Time 9,"Время фильтрации вх.  9",0, uint8,rw,Да
+    10,Ext IO - AI Filter Time 10,"Время фильтрации вх.  10",0, uint8,rw,Да
+    11,Ext IO - AI Filter Time 11,"Время фильтрации вх.  11",0, uint8,rw,Да
+    12,Ext IO - AI Filter Time 12,"Время фильтрации вх.  12",0, uint8,rw,Да
+    13,Ext IO - AI Filter Time 13,"Время фильтрации вх.  13",0, uint8,rw,Да
+    14,Ext IO - AI Filter Time 14,"Время фильтрации вх.  14",0, uint8,rw,Да
+    15,Ext IO - AI Filter Time 15,"Время фильтрации вх.  15",0, uint8,rw,Да
+    16,Ext IO - AI Filter Time 16,"Время фильтрации вх.  16",0, uint8,rw,Да
+
+
+
+.. _subtable4835: 
+
+Ext IO - AI Deadband
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4835 Ext IO - AI Deadband(0---16)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 16, uint8,r,Нет
+    1,Ext IO - AI Deadband 1,"Зона нечувств. вх. 1",500, uint32,rw,Да
+    2,Ext IO - AI Deadband 2,"Зона нечувств. вх. 2",500, uint32,rw,Да
+    3,Ext IO - AI Deadband 3,"Зона нечувств. вх. 3",500, uint32,rw,Да
+    4,Ext IO - AI Deadband 4,"Зона нечувств. вх. 4",500, uint32,rw,Да
+    5,Ext IO - AI Deadband 5,"Зона нечувств. вх. 5",500, uint32,rw,Да
+    6,Ext IO - AI Deadband 6,"Зона нечувств. вх. 6",500, uint32,rw,Да
+    7,Ext IO - AI Deadband 7,"Зона нечувств. вх. 7",500, uint32,rw,Да
+    8,Ext IO - AI Deadband 8,"Зона нечувств. вх. 8",500, uint32,rw,Да
+    9,Ext IO - AI Deadband 9,"Зона нечувств. вх. 9",500, uint32,rw,Да
+    10,Ext IO - AI Deadband 10,"Зона нечувств. вх. 10",500, uint32,rw,Да
+    11,Ext IO - AI Deadband 11,"Зона нечувств. вх. 11",500, uint32,rw,Да
+    12,Ext IO - AI Deadband 12,"Зона нечувств. вх. 12",500, uint32,rw,Да
+    13,Ext IO - AI Deadband 13,"Зона нечувств. вх. 13",500, uint32,rw,Да
+    14,Ext IO - AI Deadband 14,"Зона нечувств. вх. 14",500, uint32,rw,Да
+    15,Ext IO - AI Deadband 15,"Зона нечувств. вх. 15",500, uint32,rw,Да
+    16,Ext IO - AI Deadband 16,"Зона нечувств. вх. 16",500, uint32,rw,Да
+
+
+
+.. _subtable4836: 
+
+Ext IO - AI Upper Limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4836 Ext IO - AI Upper Limit(0---16)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 16, uint8,r,Нет
+    1,Ext IO - AI Upper Limit 1,"Верхний предел вх. 1",0.0, float32,rw,Да
+    2,Ext IO - AI Upper Limit 2,"Верхний предел вх. 2",0.0, float32,rw,Да
+    3,Ext IO - AI Upper Limit 3,"Верхний предел вх. 3",0.0, float32,rw,Да
+    4,Ext IO - AI Upper Limit 4,"Верхний предел вх. 4",0.0, float32,rw,Да
+    5,Ext IO - AI Upper Limit 5,"Верхний предел вх. 5",0.0, float32,rw,Да
+    6,Ext IO - AI Upper Limit 6,"Верхний предел вх. 6",0.0, float32,rw,Да
+    7,Ext IO - AI Upper Limit 7,"Верхний предел вх. 7",0.0, float32,rw,Да
+    8,Ext IO - AI Upper Limit 8,"Верхний предел вх. 8",0.0, float32,rw,Да
+    9,Ext IO - AI Upper Limit 9,"Верхний предел вх. 9",0.0, float32,rw,Да
+    10,Ext IO - AI Upper Limit 10,"Верхний предел вх. 10",0.0, float32,rw,Да
+    11,Ext IO - AI Upper Limit 11,"Верхний предел вх. 11",0.0, float32,rw,Да
+    12,Ext IO - AI Upper Limit 12,"Верхний предел вх. 12",0.0, float32,rw,Да
+    13,Ext IO - AI Upper Limit 13,"Верхний предел вх. 13",0.0, float32,rw,Да
+    14,Ext IO - AI Upper Limit 14,"Верхний предел вх. 14",0.0, float32,rw,Да
+    15,Ext IO - AI Upper Limit 15,"Верхний предел вх. 15",0.0, float32,rw,Да
+    16,Ext IO - AI Upper Limit 16,"Верхний предел вх. 16",0.0, float32,rw,Да
+
+
+
+.. _subtable4837: 
+
+Ext IO - AI Lower Limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4837 Ext IO - AI Lower Limit(0---16)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 16, uint8,r,Нет
+    1,Ext IO - AI Lower Limit 1,"Нижний предел вх. 1",0.0, float32,rw,Да
+    2,Ext IO - AI Lower Limit 2,"Нижний предел вх. 2",0.0, float32,rw,Да
+    3,Ext IO - AI Lower Limit 3,"Нижний предел вх. 3",0.0, float32,rw,Да
+    4,Ext IO - AI Lower Limit 4,"Нижний предел вх. 4",0.0, float32,rw,Да
+    5,Ext IO - AI Lower Limit 5,"Нижний предел вх. 5",0.0, float32,rw,Да
+    6,Ext IO - AI Lower Limit 6,"Нижний предел вх. 6",0.0, float32,rw,Да
+    7,Ext IO - AI Lower Limit 7,"Нижний предел вх. 7",0.0, float32,rw,Да
+    8,Ext IO - AI Lower Limit 8,"Нижний предел вх. 8",0.0, float32,rw,Да
+    9,Ext IO - AI Lower Limit 9,"Нижний предел вх. 9",0.0, float32,rw,Да
+    10,Ext IO - AI Lower Limit 10,"Нижний предел вх. 10",0.0, float32,rw,Да
+    11,Ext IO - AI Lower Limit 11,"Нижний предел вх. 11",0.0, float32,rw,Да
+    12,Ext IO - AI Lower Limit 12,"Нижний предел вх. 12",0.0, float32,rw,Да
+    13,Ext IO - AI Lower Limit 13,"Нижний предел вх. 13",0.0, float32,rw,Да
+    14,Ext IO - AI Lower Limit 14,"Нижний предел вх. 14",0.0, float32,rw,Да
+    15,Ext IO - AI Lower Limit 15,"Нижний предел вх. 15",0.0, float32,rw,Да
+    16,Ext IO - AI Lower Limit 16,"Нижний предел вх. 16",0.0, float32,rw,Да
+
+
+
+.. _subtable4839: 
+
+Ext IO - AI Settings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x4839 Ext IO - AI Settings(0---16)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 16, uint8,r,Нет
+    1,Ext IO - AI Settings 1,,100, uint8,rw,Да
+
+
+
+.. _subtable483B: 
+
+Ext IO - AI Float Mag
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x483B Ext IO - AI Float Mag(0---16)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 16, uint8,r,Нет
+    1,Ext IO - AI Float Mag 1,"Вх. 1",0.0, float32,r,Нет
+    2,Ext IO - AI Float Mag 2,"Вх. 2",0.0, float32,r,Нет
+    3,Ext IO - AI Float Mag 3,"Вх. 3",0.0, float32,r,Нет
+    4,Ext IO - AI Float Mag 4,"Вх. 4",0.0, float32,r,Нет
+    5,Ext IO - AI Float Mag 5,"Вх. 5",0.0, float32,r,Нет
+    6,Ext IO - AI Float Mag 6,"Вх. 6",0.0, float32,r,Нет
+    7,Ext IO - AI Float Mag 7,"Вх. 7",0.0, float32,r,Нет
+    8,Ext IO - AI Float Mag 8,"Вх. 8",0.0, float32,r,Нет
+    9,Ext IO - AI Float Mag 9,"Вх. 9",0.0, float32,r,Нет
+    10,Ext IO - AI Float Mag 10,"Вх. 10",0.0, float32,r,Нет
+    11,Ext IO - AI Float Mag 11,"Вх. 11",0.0, float32,r,Нет
+    12,Ext IO - AI Float Mag 12,"Вх. 12",0.0, float32,r,Нет
+    13,Ext IO - AI Float Mag 13,"Вх. 13",0.0, float32,r,Нет
+    14,Ext IO - AI Float Mag 14,"Вх. 14",0.0, float32,r,Нет
+    15,Ext IO - AI Float Mag 15,"Вх. 15",0.0, float32,r,Нет
+    16,Ext IO - AI Float Mag 16,"Вх. 16",0.0, float32,r,Нет
+
+
+
+.. _subtable483C: 
+
+Ext IO - AI Deadband Ref
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x483C Ext IO - AI Deadband Ref(0---16)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 16, uint8,r,Нет
+    1,Ext IO - AI Deadband Ref 1,"Диапазон вх. 1",0.0, float32,r,Нет
+    2,Ext IO - AI Deadband Ref 2,"Диапазон вх. 2",0.0, float32,r,Нет
+    3,Ext IO - AI Deadband Ref 3,"Диапазон вх. 3",0.0, float32,r,Нет
+    4,Ext IO - AI Deadband Ref 4,"Диапазон вх. 4",0.0, float32,r,Нет
+    5,Ext IO - AI Deadband Ref 5,"Диапазон вх. 5",0.0, float32,r,Нет
+    6,Ext IO - AI Deadband Ref 6,"Диапазон вх. 6",0.0, float32,r,Нет
+    7,Ext IO - AI Deadband Ref 7,"Диапазон вх. 7",0.0, float32,r,Нет
+    8,Ext IO - AI Deadband Ref 8,"Диапазон вх. 8",0.0, float32,r,Нет
+    9,Ext IO - AI Deadband Ref 9,"Диапазон вх. 9",0.0, float32,r,Нет
+    10,Ext IO - AI Deadband Ref 10,"Диапазон вх. 10",0.0, float32,r,Нет
+    11,Ext IO - AI Deadband Ref 11,"Диапазон вх. 11",0.0, float32,r,Нет
+    12,Ext IO - AI Deadband Ref 12,"Диапазон вх. 12",0.0, float32,r,Нет
+    13,Ext IO - AI Deadband Ref 13,"Диапазон вх. 13",0.0, float32,r,Нет
+    14,Ext IO - AI Deadband Ref 14,"Диапазон вх. 14",0.0, float32,r,Нет
+    15,Ext IO - AI Deadband Ref 15,"Диапазон вх. 15",0.0, float32,r,Нет
+    16,Ext IO - AI Deadband Ref 16,"Диапазон вх. 16",0.0, float32,r,Нет
+
+
+
+.. _subtable48E1: 
+
+Ext IO - IO Calibration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Субиндексы 0x48E1 Ext IO - IO Calibration(0---40)
+    :header: Subindex,Название,Описание,Значение,Тип,Доступ, Сохранение
+
+    0,Number of Entries,,Всего Субиндексов: 40, uint8,r,Нет
+    1,Ext IO - Calibration 1,,1, int32,r,Нет
+    2,Ext IO - Calibration 2,,1, int32,r,Нет
+    3,Ext IO - Calibration 3,,0, int32,r,Нет
+    4,Ext IO - Calibration 4,,0, int32,r,Нет
+    5,Ext IO - Calibration 5,,1, int32,r,Нет
+    6,Ext IO - Calibration 6,,1, int32,r,Нет
+    7,Ext IO - Calibration 7,,0, int32,r,Нет
+    8,Ext IO - Calibration 8,,0, int32,r,Нет
+    9,Ext IO - Calibration 9,,1, int32,r,Нет
+    10,Ext IO - Calibration 10,,1, int32,r,Нет
+    11,Ext IO - Calibration 11,,0, int32,r,Нет
+    12,Ext IO - Calibration 12,,0, int32,r,Нет
+    13,Ext IO - Calibration 13,,1, int32,r,Нет
+    14,Ext IO - Calibration 14,,1, int32,r,Нет
+    15,Ext IO - Calibration 15,,0, int32,r,Нет
+    16,Ext IO - Calibration 16,,0, int32,r,Нет
+    17,Ext IO - Calibration 17,,1, int32,r,Нет
+    18,Ext IO - Calibration 18,,1, int32,r,Нет
+    19,Ext IO - Calibration 19,,0, int32,r,Нет
+    20,Ext IO - Calibration 20,,0, int32,r,Нет
+    21,Ext IO - Calibration 21,,1, int32,r,Нет
+    22,Ext IO - Calibration 22,,1, int32,r,Нет
+    23,Ext IO - Calibration 23,,0, int32,r,Нет
+    24,Ext IO - Calibration 24,,0, int32,r,Нет
+    25,Ext IO - Calibration 25,,1, int32,r,Нет
+    26,Ext IO - Calibration 26,,1, int32,r,Нет
+    27,Ext IO - Calibration 27,,0, int32,r,Нет
+    28,Ext IO - Calibration 28,,0, int32,r,Нет
+    29,Ext IO - Calibration 29,,1, int32,r,Нет
+    30,Ext IO - Calibration 30,,1, int32,r,Нет
+    31,Ext IO - Calibration 31,,0, int32,r,Нет
+    32,Ext IO - Calibration 32,,0, int32,r,Нет
+    33,Ext IO - Calibration 33,,1, int32,r,Нет
+    34,Ext IO - Calibration 34,,1, int32,r,Нет
+    35,Ext IO - Calibration 35,,0, int32,r,Нет
+    36,Ext IO - Calibration 36,,0, int32,r,Нет
+    37,Ext IO - Calibration 37,,1, int32,r,Нет
+    38,Ext IO - Calibration 38,,1, int32,r,Нет
+    39,Ext IO - Calibration 39,,0, int32,r,Нет
+    40,Ext IO - Calibration 40,,0, int32,r,Нет
+
+
