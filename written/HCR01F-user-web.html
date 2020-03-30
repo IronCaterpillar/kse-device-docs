@@ -109,6 +109,7 @@
 <li><a class="reference internal" href="#id8">2.1.5.2. Просмотр флагов ошибок и защитного отключения</a></li>
 <li><a class="reference internal" href="#id9">2.1.5.3. Настройки параметров линии</a></li>
 <li><a class="reference internal" href="#id10">2.1.5.4. Настройки аварийных пределов</a></li>
+<li><a class="reference internal" href="#id11">2.1.5.5. Настройка каналов ввода-вывода</a></li>
 </ul>
 </li>
 </ul>
@@ -172,9 +173,9 @@
 <h3>2.1.1. Общий вид страницы настройки<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Страница настройки состоит из заголовка, блока общих параметров, блока настроек интерфейсов и протоколов,
 а так же блока управления индивидуальными параметрами устройства.</p>
-<div class="figure align-center" id="id11">
+<div class="figure align-center" id="id12">
 <img alt="Общий вид страницы быстрой настройки" src="../_images/general-1.png" />
-<p class="caption"><span class="caption-text">Общий вид страницы быстрой настройки</span><a class="headerlink" href="#id11" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Общий вид страницы быстрой настройки</span><a class="headerlink" href="#id12" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 </div>
 <div class="section" id="id3">
@@ -186,9 +187,9 @@
 <li><p><em>User</em> - контроль доступа включен, вход не выполнен, доступ ограничен</p></li>
 <li><p><em>Admin</em> - контроль доступа включен, вход выполнен, полный доступ</p></li>
 </ul>
-<div class="figure align-center" id="id12">
+<div class="figure align-center" id="id13">
 <img alt="Управление обновлением и состояние системы контроля доступа" src="../_images/update.png" />
-<p class="caption"><span class="caption-text">Раздел автообновления и состояния контроля доступа</span><a class="headerlink" href="#id12" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Раздел автообновления и состояния контроля доступа</span><a class="headerlink" href="#id13" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Внимание</p>
@@ -212,9 +213,9 @@
 <li><p>поле ввода пароля</p></li>
 <li><p>поле сброса к настройкам по умолчанию</p></li>
 </ul>
-<div class="figure align-center" id="id13">
+<div class="figure align-center" id="id14">
 <img alt="Команды управления устройством и управление доступом" src="../_images/commands-1.png" />
-<p class="caption"><span class="caption-text">Команды и управление доступом</span><a class="headerlink" href="#id13" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Команды и управление доступом</span><a class="headerlink" href="#id14" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 <p>Поддерживаются следующие команды:</p>
 <ul class="simple">
@@ -255,9 +256,9 @@
 обработке ответа после выдачи запроса)</p></li>
 <li><p>тайм-аут опроса, по прошествии которого принимается решение о том, что отсутствует опрос со стороны <em>Мастера</em></p></li>
 </ul>
-<div class="figure align-center" id="id14">
+<div class="figure align-center" id="id15">
 <img alt="Настройка последовательного интерфейса RS-485 и протокола Modbus" src="../_images/rs485-1.png" />
-<p class="caption"><span class="caption-text">Настройка Modbus RS-485</span><a class="headerlink" href="#id14" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Настройка Modbus RS-485</span><a class="headerlink" href="#id15" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 </div>
 <div class="section" id="can-canopen">
@@ -268,9 +269,9 @@
 <li><p>скорость передачи данных</p></li>
 <li><p><em>NodeID</em> в сети <em>CANopen</em></p></li>
 </ul>
-<div class="figure align-center" id="id15">
+<div class="figure align-center" id="id16">
 <img alt="Настройка интерфейса CAN и протокола CANopen" src="../_images/can-1.png" />
-<p class="caption"><span class="caption-text">Настройка CANopen</span><a class="headerlink" href="#id15" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Настройка CANopen</span><a class="headerlink" href="#id16" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 </div>
 </div>
@@ -288,21 +289,33 @@
 <h4>2.1.5.1. Текущие параметры<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h4>
 <p>Раздел используется для онлайн просмотра текущих параметров линии электрообогрева.
 Содержит значения температур, токов, состояние выхода, текущий режим работы и другие параметры.
-Позволяет управлять выходом линии в режиме дистанционного управления(в целях отладки).</p>
-<div class="figure align-center" id="id16">
+Позволяет управлять выходом линии в режиме дистанционного управления(в целях отладки).
+Так же в данном разделе осуществляется квитирование при аварийном отключении.</p>
+<div class="figure align-center" id="id17">
 <img alt="Просмотр текущих параметров линии электрообогрева" src="../_images/heating-live.png" />
-<p class="caption"><span class="caption-text">Текущие параметры линии электрообогрева</span><a class="headerlink" href="#id16" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Текущие параметры линии электрообогрева</span><a class="headerlink" href="#id17" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 </div>
 <div class="section" id="id8">
 <h4>2.1.5.2. Просмотр флагов ошибок и защитного отключения<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h4>
-<div class="figure align-center" id="id17">
-<img alt="Флаги ошибок линии электрообогрева" src="../_images/heating-alarms.png" />
-<p class="caption"><span class="caption-text">Флаги ошибок линии электрообогрева</span><a class="headerlink" href="#id17" title="Постоянная ссылка на рисунок">¶</a></p>
-</div>
+<p>Раздел содержит флаги текущих активных ошибок, а так же флаги защитного отключения.
+.. figure:: /img/web/heating-alarms.png</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">align</dt>
+<dd class="field-odd"><p>center</p>
+</dd>
+<dt class="field-even">alt</dt>
+<dd class="field-even"><p>Флаги ошибок линии электрообогрева</p>
+</dd>
+</dl>
+<p>Флаги ошибок линии электрообогрева</p>
+</div></blockquote>
 </div>
 <div class="section" id="id9">
 <h4>2.1.5.3. Настройки параметров линии<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h4>
+<p>Содержит настройки линии: текущий режим управления, настройки режимов, режим расчёта температуры процесса,
+зоны нечувствительности для отправки аналоговых данных.</p>
 <div class="figure align-center" id="id18">
 <img alt="Настройка параметров линии" src="../_images/heating-settings-1.png" />
 <p class="caption"><span class="caption-text">Настройка параметров линии</span><a class="headerlink" href="#id18" title="Постоянная ссылка на рисунок">¶</a></p>
@@ -314,10 +327,17 @@
 </div>
 <div class="section" id="id10">
 <h4>2.1.5.4. Настройки аварийных пределов<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h4>
+<p>Содержит настройки пределов сигнализации, а так же пределы защитного отключения.
+Параметр <em>Alarm</em> <em>Hold</em> <em>Time</em> служит для задания времени удержания флагов ошибок в случае их
+кратковременного возникновения и пропадания.</p>
 <div class="figure align-center" id="id20">
 <img alt="Настройка аварийных пределов" src="../_images/heating-alarm-settings.png" />
 <p class="caption"><span class="caption-text">Настройка аварийных пределов</span><a class="headerlink" href="#id20" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
+</div>
+<div class="section" id="id11">
+<h4>2.1.5.5. Настройка каналов ввода-вывода<a class="headerlink" href="#id11" title="Ссылка на этот заголовок">¶</a></h4>
+<p>Содержит настройки номеров каналов, настройки фильтрации аналоговых данных,а так же типы аналоговых датчиков.</p>
 <div class="figure align-center" id="id21">
 <img alt="Настройка каналов ввода-вывода" src="../_images/heating-hw-settings.png" />
 <p class="caption"><span class="caption-text">Настройка каналов ввода-вывода</span><a class="headerlink" href="#id21" title="Постоянная ссылка на рисунок">¶</a></p>

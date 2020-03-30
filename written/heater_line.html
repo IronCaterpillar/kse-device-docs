@@ -212,10 +212,12 @@
 <div class="section" id="id9">
 <h4>1.3.2.3. Дистанционное управление линией<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h4>
 <p>В данном режиме управление линией происходит посредством интерфейсов связи. Конкретные интерфейсы зависят от типа устройства.</p>
-<div class="admonition attention">
-<p class="admonition-title">Внимание</p>
-<p>При отсутствии связи с <em>Master</em> устройством происходит перевод линии в безопасный режим, выбранный пользователем.</p>
-</div>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">include-source</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</div></blockquote>
 </div>
 <div class="section" id="id10">
 <h4>1.3.2.4. Режим ШИМ<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h4>
@@ -227,6 +229,10 @@
 <a class="reference internal" href="#id5">Вычисление температуры процесса</a> ведётся в соответствии с настройками.
 Уставка желаемой температуры задаётся в градусах, так же настраивается зона нечувствительности в положительном и отрицательном направлении.
 Включение производится, когда линия остывает ниже температуры уставки за вычетом отрицательного гистерезиса, отключение же производится, когда температура превысит уставку плюс положительный гистерезис.</p>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>При невозможности вычислить температуру процесса происходит перевод линии в безопасный режим, выбранный пользователем.</p>
+</div>
 </div>
 <div class="section" id="id12">
 <h4>1.3.2.6. Пропорциональный ШИМ<a class="headerlink" href="#id12" title="Ссылка на этот заголовок">¶</a></h4>
@@ -239,17 +245,24 @@
 <div class="docutils container">
 <img alt="../_images/heater_line_0_0.png" src="../_images/heater_line_0_0.png" />
 </div>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>При невозможности вычислить температуру процесса происходит перевод линии в безопасный режим, выбранный пользователем.</p>
+</div>
 </div>
 </div>
 <div class="section" id="id13">
 <h3>1.3.3. Аварийное отключение<a class="headerlink" href="#id13" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Аварийное отключение линии производится при выходе тока или температуры за заданные пределы. Функции аварийного отключения по превышению допустимого тока и температуры
-могут быть независимо деактивированы, в таком случае аварийное отключение по превышению параметром предела не выполняется.
-.. attention:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Функция</span> <span class="n">аварийного</span> <span class="n">отключения</span> <span class="n">по</span> <span class="n">превышению</span> <span class="n">температуры</span> <span class="n">учитывает</span> <span class="n">температуру</span> <span class="n">датчиков</span><span class="p">,</span> <span class="n">но</span> <span class="n">не</span> <span class="n">расчитаную</span> <span class="n">температуру</span> <span class="n">процесса</span>
-</pre></div>
+могут быть независимо деактивированы, в таком случае аварийное отключение по превышению параметром предела не выполняется.</p>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>Функция аварийного отключения по превышению температуры учитывает температуру датчиков, но не расчитаную температуру процесса</p>
 </div>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
 <p>После срабатывания функции ввод линии в работу возможен только после квитирования пользователем, либо после вывода/ввода линии в/из работы.</p>
+</div>
 </div>
 <div class="section" id="id14">
 <h3>1.3.4. Переход в безопасный режим<a class="headerlink" href="#id14" title="Ссылка на этот заголовок">¶</a></h3>
