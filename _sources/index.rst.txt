@@ -3,10 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Описание внутренней структуры объектов устройств серии MCU
-===========================================================
+|Project_Device| Руководство пользователя
+==========================================================
 
-|Project_Device|
 
 .. toctree::
    :numbered:
@@ -35,12 +34,6 @@
    generated/UserAppData
    firmware_struct
    written/CAN_PDO_Mappings
-
-
-
-
-
-
 
 .. Таблицы и Индексы
    ==================

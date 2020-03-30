@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>20. Приложение пользователя - Содержимое &#8212; документация Руководство пользователя 1.0</title>
+    <title>12. Приложение пользователя - Содержимое &#8212; документация Руководство пользователя 1.0</title>
     <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
@@ -19,8 +19,8 @@
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
     <link rel="search" title="Поиск" href="../search.html" />
-    <link rel="next" title="21. Данные приложения пользователя - Содержимое" href="UserAppData.html" />
-    <link rel="prev" title="19. Данные с внешних устройств - Содержимое" href="ExtIO.html" />
+    <link rel="next" title="13. Данные приложения пользователя - Содержимое" href="UserAppData.html" />
+    <link rel="prev" title="11. Данные с внешних устройств - Содержимое" href="ExtIO.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -70,19 +70,11 @@
 <li class="toctree-l1"><a class="reference internal" href="common_can.html">8. Объекты CANopen DS-301 - Содержимое</a></li>
 <li class="toctree-l1"><a class="reference internal" href="device_params.html">9. Параметры устройства - Содержимое</a></li>
 <li class="toctree-l1"><a class="reference internal" href="B0.html">10. Головная плата - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B1.html">11. Плата расширния №1 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B2.html">12. Плата расширния №2 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B3.html">13. Плата расширния №3 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B4.html">14. Плата расширния №4 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B5.html">15. Плата расширния №5 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B6.html">16. Плата расширния №6 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B7.html">17. Плата расширния №7 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B8.html">18. Плата расширния №8 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ExtIO.html">19. Данные с внешних устройств - Содержимое</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">20. Приложение пользователя - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">21. Данные приложения пользователя - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">22. Типовое содержимое архива с ПО для устройства</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">23. Распределение параметров PDO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExtIO.html">11. Данные с внешних устройств - Содержимое</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12. Приложение пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">13. Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">14. Типовое содержимое архива с ПО для устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">15. Распределение параметров PDO</a></li>
 </ul>
 </ul>
 </li>
@@ -96,29 +88,29 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">20. Приложение пользователя - Содержимое</a><ul>
-<li><a class="reference internal" href="#user-app-description">20.1. User App Description</a></li>
-<li><a class="reference internal" href="#user-app-status">20.2. User App Status</a></li>
-<li><a class="reference internal" href="#user-app-control">20.3. User App Control</a></li>
-<li><a class="reference internal" href="#line-1-description">20.4. Line 1 Description</a></li>
-<li><a class="reference internal" href="#line-1-status">20.5. Line 1 Status</a></li>
-<li><a class="reference internal" href="#line-1-temp-alarms">20.6. Line 1 Temp Alarms</a></li>
-<li><a class="reference internal" href="#line-1-current-alarms">20.7. Line 1 Current Alarms</a></li>
-<li><a class="reference internal" href="#line-1-misc-alarms">20.8. Line 1 Misc Alarms</a></li>
-<li><a class="reference internal" href="#line-1-temp-trip">20.9. Line 1 Temp Trip</a></li>
-<li><a class="reference internal" href="#line-1-current-trip">20.10. Line 1 Current Trip</a></li>
-<li><a class="reference internal" href="#line-1-temp-pv">20.11. Line 1 Temp PV</a></li>
-<li><a class="reference internal" href="#line-1-current-pv">20.12. Line 1 Current PV</a></li>
-<li><a class="reference internal" href="#line-1-misc-pv">20.13. Line 1 Misc PV</a></li>
-<li><a class="reference internal" href="#line-1-control">20.14. Line 1 Control</a></li>
-<li><a class="reference internal" href="#line-1-settings">20.15. Line 1 Settings</a></li>
-<li><a class="reference internal" href="#line-1-temp-alarm-settings">20.16. Line 1 Temp Alarm Settings</a></li>
-<li><a class="reference internal" href="#line-1-current-alarm-settings">20.17. Line 1 Current Alarm Settings</a></li>
-<li><a class="reference internal" href="#line-1-misc-alarm-settings">20.18. Line 1 Misc Alarm Settings</a></li>
-<li><a class="reference internal" href="#line-1-temp-trip-enable">20.19. Line 1 Temp Trip Enable</a></li>
-<li><a class="reference internal" href="#line-1-current-trip-enable">20.20. Line 1 Current Trip Enable</a></li>
-<li><a class="reference internal" href="#line-1-deadband-settings">20.21. Line 1 Deadband Settings</a></li>
-<li><a class="reference internal" href="#line-1-hw-specific-settings">20.22. Line 1 HW Specific Settings</a></li>
+<li><a class="reference internal" href="#">12. Приложение пользователя - Содержимое</a><ul>
+<li><a class="reference internal" href="#user-app-description">12.1. User App Description</a></li>
+<li><a class="reference internal" href="#user-app-status">12.2. User App Status</a></li>
+<li><a class="reference internal" href="#user-app-control">12.3. User App Control</a></li>
+<li><a class="reference internal" href="#line-1-description">12.4. Line 1 Description</a></li>
+<li><a class="reference internal" href="#line-1-status">12.5. Line 1 Status</a></li>
+<li><a class="reference internal" href="#line-1-temp-alarms">12.6. Line 1 Temp Alarms</a></li>
+<li><a class="reference internal" href="#line-1-current-alarms">12.7. Line 1 Current Alarms</a></li>
+<li><a class="reference internal" href="#line-1-misc-alarms">12.8. Line 1 Misc Alarms</a></li>
+<li><a class="reference internal" href="#line-1-temp-trip">12.9. Line 1 Temp Trip</a></li>
+<li><a class="reference internal" href="#line-1-current-trip">12.10. Line 1 Current Trip</a></li>
+<li><a class="reference internal" href="#line-1-temp-pv">12.11. Line 1 Temp PV</a></li>
+<li><a class="reference internal" href="#line-1-current-pv">12.12. Line 1 Current PV</a></li>
+<li><a class="reference internal" href="#line-1-misc-pv">12.13. Line 1 Misc PV</a></li>
+<li><a class="reference internal" href="#line-1-control">12.14. Line 1 Control</a></li>
+<li><a class="reference internal" href="#line-1-settings">12.15. Line 1 Settings</a></li>
+<li><a class="reference internal" href="#line-1-temp-alarm-settings">12.16. Line 1 Temp Alarm Settings</a></li>
+<li><a class="reference internal" href="#line-1-current-alarm-settings">12.17. Line 1 Current Alarm Settings</a></li>
+<li><a class="reference internal" href="#line-1-misc-alarm-settings">12.18. Line 1 Misc Alarm Settings</a></li>
+<li><a class="reference internal" href="#line-1-temp-trip-enable">12.19. Line 1 Temp Trip Enable</a></li>
+<li><a class="reference internal" href="#line-1-current-trip-enable">12.20. Line 1 Current Trip Enable</a></li>
+<li><a class="reference internal" href="#line-1-deadband-settings">12.21. Line 1 Deadband Settings</a></li>
+<li><a class="reference internal" href="#line-1-hw-specific-settings">12.22. Line 1 HW Specific Settings</a></li>
 </ul>
 </li>
 </ul>
@@ -130,11 +122,11 @@
               
                 
   <li>
-    <a href="ExtIO.html" title="Previous Chapter: 19. Данные с внешних устройств - Содержимое"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 19. Данные с ...</span>
+    <a href="ExtIO.html" title="Previous Chapter: 11. Данные с внешних устройств - Содержимое"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 11. Данные с ...</span>
     </a>
   </li>
   <li>
-    <a href="UserAppData.html" title="Next Chapter: 21. Данные приложения пользователя - Содержимое"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">21. Данные пр... &raquo;</span>
+    <a href="UserAppData.html" title="Next Chapter: 13. Данные приложения пользователя - Содержимое"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">13. Данные пр... &raquo;</span>
     </a>
   </li>
               
@@ -169,9 +161,9 @@
     <div class="body col-md-12 content" role="main">
       
   <div class="section" id="id1">
-<h1>20. Приложение пользователя - Содержимое<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>12. Приложение пользователя - Содержимое<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="user-app-description">
-<span id="subtable5000"></span><h2>20.1. User App Description<a class="headerlink" href="#user-app-description" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5000"></span><h2>12.1. User App Description<a class="headerlink" href="#user-app-description" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id2">
 <caption><span class="caption-text">Субиндексы 0x5000 User App Description(0—4)</span><a class="headerlink" href="#id2" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -238,7 +230,7 @@
 </table>
 </div>
 <div class="section" id="user-app-status">
-<span id="subtable5001"></span><h2>20.2. User App Status<a class="headerlink" href="#user-app-status" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5001"></span><h2>12.2. User App Status<a class="headerlink" href="#user-app-status" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id3">
 <caption><span class="caption-text">Субиндексы 0x5001 User App Status(0—4)</span><a class="headerlink" href="#id3" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -305,7 +297,7 @@
 </table>
 </div>
 <div class="section" id="user-app-control">
-<span id="subtable5002"></span><h2>20.3. User App Control<a class="headerlink" href="#user-app-control" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5002"></span><h2>12.3. User App Control<a class="headerlink" href="#user-app-control" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id4">
 <caption><span class="caption-text">Субиндексы 0x5002 User App Control(0—1)</span><a class="headerlink" href="#id4" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -348,7 +340,7 @@
 </table>
 </div>
 <div class="section" id="line-1-description">
-<span id="subtable5800"></span><h2>20.4. Line 1 Description<a class="headerlink" href="#line-1-description" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5800"></span><h2>12.4. Line 1 Description<a class="headerlink" href="#line-1-description" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id5">
 <caption><span class="caption-text">Субиндексы 0x5800 Line 1 Description(0—1)</span><a class="headerlink" href="#id5" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -391,7 +383,7 @@
 </table>
 </div>
 <div class="section" id="line-1-status">
-<span id="subtable5801"></span><h2>20.5. Line 1 Status<a class="headerlink" href="#line-1-status" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5801"></span><h2>12.5. Line 1 Status<a class="headerlink" href="#line-1-status" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id6">
 <caption><span class="caption-text">Субиндексы 0x5801 Line 1 Status(0—4)</span><a class="headerlink" href="#id6" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -508,7 +500,7 @@
 * Отсутствие опроса при работе в дистанционном режиме</p>
 </div>
 <div class="section" id="line-1-temp-alarms">
-<span id="subtable5802"></span><h2>20.6. Line 1 Temp Alarms<a class="headerlink" href="#line-1-temp-alarms" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5802"></span><h2>12.6. Line 1 Temp Alarms<a class="headerlink" href="#line-1-temp-alarms" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id8">
 <caption><span class="caption-text">Субиндексы 0x5802 Line 1 Temp Alarms(0—8)</span><a class="headerlink" href="#id8" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -607,7 +599,7 @@
 </table>
 </div>
 <div class="section" id="line-1-current-alarms">
-<span id="subtable5803"></span><h2>20.7. Line 1 Current Alarms<a class="headerlink" href="#line-1-current-alarms" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5803"></span><h2>12.7. Line 1 Current Alarms<a class="headerlink" href="#line-1-current-alarms" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id9">
 <caption><span class="caption-text">Субиндексы 0x5803 Line 1 Current Alarms(0—5)</span><a class="headerlink" href="#id9" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -682,7 +674,7 @@
 </table>
 </div>
 <div class="section" id="line-1-misc-alarms">
-<span id="subtable5806"></span><h2>20.8. Line 1 Misc Alarms<a class="headerlink" href="#line-1-misc-alarms" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5806"></span><h2>12.8. Line 1 Misc Alarms<a class="headerlink" href="#line-1-misc-alarms" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id10">
 <caption><span class="caption-text">Субиндексы 0x5806 Line 1 Misc Alarms(0—2)</span><a class="headerlink" href="#id10" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -733,7 +725,7 @@
 </table>
 </div>
 <div class="section" id="line-1-temp-trip">
-<span id="subtable5807"></span><h2>20.9. Line 1 Temp Trip<a class="headerlink" href="#line-1-temp-trip" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5807"></span><h2>12.9. Line 1 Temp Trip<a class="headerlink" href="#line-1-temp-trip" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id11">
 <caption><span class="caption-text">Субиндексы 0x5807 Line 1 Temp Trip(0—3)</span><a class="headerlink" href="#id11" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -792,7 +784,7 @@
 </table>
 </div>
 <div class="section" id="line-1-current-trip">
-<span id="subtable5808"></span><h2>20.10. Line 1 Current Trip<a class="headerlink" href="#line-1-current-trip" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5808"></span><h2>12.10. Line 1 Current Trip<a class="headerlink" href="#line-1-current-trip" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id12">
 <caption><span class="caption-text">Субиндексы 0x5808 Line 1 Current Trip(0—3)</span><a class="headerlink" href="#id12" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -851,7 +843,7 @@
 </table>
 </div>
 <div class="section" id="line-1-temp-pv">
-<span id="subtable5810"></span><h2>20.11. Line 1 Temp PV<a class="headerlink" href="#line-1-temp-pv" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5810"></span><h2>12.11. Line 1 Temp PV<a class="headerlink" href="#line-1-temp-pv" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id13">
 <caption><span class="caption-text">Субиндексы 0x5810 Line 1 Temp PV(0—3)</span><a class="headerlink" href="#id13" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -914,7 +906,7 @@
 <p>Температура рассчитывается в соответствии с выбраным алгоритмом. см. 0x5821:7 <a class="reference internal" href="#subtable5821"><span class="std std-ref">Line 1 Settings</span></a></p>
 </div>
 <div class="section" id="line-1-current-pv">
-<span id="subtable5811"></span><h2>20.12. Line 1 Current PV<a class="headerlink" href="#line-1-current-pv" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5811"></span><h2>12.12. Line 1 Current PV<a class="headerlink" href="#line-1-current-pv" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id14">
 <caption><span class="caption-text">Субиндексы 0x5811 Line 1 Current PV(0—2)</span><a class="headerlink" href="#id14" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -965,7 +957,7 @@
 </table>
 </div>
 <div class="section" id="line-1-misc-pv">
-<span id="subtable5814"></span><h2>20.13. Line 1 Misc PV<a class="headerlink" href="#line-1-misc-pv" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5814"></span><h2>12.13. Line 1 Misc PV<a class="headerlink" href="#line-1-misc-pv" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id15">
 <caption><span class="caption-text">Субиндексы 0x5814 Line 1 Misc PV(0—1)</span><a class="headerlink" href="#id15" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1008,7 +1000,7 @@
 </table>
 </div>
 <div class="section" id="line-1-control">
-<span id="subtable5820"></span><h2>20.14. Line 1 Control<a class="headerlink" href="#line-1-control" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5820"></span><h2>12.14. Line 1 Control<a class="headerlink" href="#line-1-control" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id16">
 <caption><span class="caption-text">Субиндексы 0x5820 Line 1 Control(0—2)</span><a class="headerlink" href="#id16" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1084,7 +1076,7 @@
 <p>В данный параметр должна осуществляться запись желаемого состояния выхода линии в дистанционном режиме.</p>
 </div>
 <div class="section" id="line-1-settings">
-<span id="subtable5821"></span><h2>20.15. Line 1 Settings<a class="headerlink" href="#line-1-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5821"></span><h2>12.15. Line 1 Settings<a class="headerlink" href="#line-1-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id18">
 <caption><span class="caption-text">Субиндексы 0x5821 Line 1 Settings(0—15)</span><a class="headerlink" href="#id18" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1250,7 +1242,7 @@
 </ul>
 </div>
 <div class="section" id="line-1-temp-alarm-settings">
-<span id="subtable5822"></span><h2>20.16. Line 1 Temp Alarm Settings<a class="headerlink" href="#line-1-temp-alarm-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5822"></span><h2>12.16. Line 1 Temp Alarm Settings<a class="headerlink" href="#line-1-temp-alarm-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id19">
 <caption><span class="caption-text">Субиндексы 0x5822 Line 1 Temp Alarm Settings(0—2)</span><a class="headerlink" href="#id19" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1301,7 +1293,7 @@
 </table>
 </div>
 <div class="section" id="line-1-current-alarm-settings">
-<span id="subtable5823"></span><h2>20.17. Line 1 Current Alarm Settings<a class="headerlink" href="#line-1-current-alarm-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5823"></span><h2>12.17. Line 1 Current Alarm Settings<a class="headerlink" href="#line-1-current-alarm-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id20">
 <caption><span class="caption-text">Субиндексы 0x5823 Line 1 Current Alarm Settings(0—4)</span><a class="headerlink" href="#id20" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1368,7 +1360,7 @@
 </table>
 </div>
 <div class="section" id="line-1-misc-alarm-settings">
-<span id="subtable5826"></span><h2>20.18. Line 1 Misc Alarm Settings<a class="headerlink" href="#line-1-misc-alarm-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5826"></span><h2>12.18. Line 1 Misc Alarm Settings<a class="headerlink" href="#line-1-misc-alarm-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id21">
 <caption><span class="caption-text">Субиндексы 0x5826 Line 1 Misc Alarm Settings(0—1)</span><a class="headerlink" href="#id21" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1411,7 +1403,7 @@
 </table>
 </div>
 <div class="section" id="line-1-temp-trip-enable">
-<span id="subtable5828"></span><h2>20.19. Line 1 Temp Trip Enable<a class="headerlink" href="#line-1-temp-trip-enable" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5828"></span><h2>12.19. Line 1 Temp Trip Enable<a class="headerlink" href="#line-1-temp-trip-enable" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id22">
 <caption><span class="caption-text">Субиндексы 0x5828 Line 1 Temp Trip Enable(0—2)</span><a class="headerlink" href="#id22" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1462,7 +1454,7 @@
 </table>
 </div>
 <div class="section" id="line-1-current-trip-enable">
-<span id="subtable5829"></span><h2>20.20. Line 1 Current Trip Enable<a class="headerlink" href="#line-1-current-trip-enable" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable5829"></span><h2>12.20. Line 1 Current Trip Enable<a class="headerlink" href="#line-1-current-trip-enable" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id23">
 <caption><span class="caption-text">Субиндексы 0x5829 Line 1 Current Trip Enable(0—2)</span><a class="headerlink" href="#id23" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1513,7 +1505,7 @@
 </table>
 </div>
 <div class="section" id="line-1-deadband-settings">
-<span id="subtable582a"></span><h2>20.21. Line 1 Deadband Settings<a class="headerlink" href="#line-1-deadband-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable582a"></span><h2>12.21. Line 1 Deadband Settings<a class="headerlink" href="#line-1-deadband-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id24">
 <caption><span class="caption-text">Субиндексы 0x582A Line 1 Deadband Settings(0—6)</span><a class="headerlink" href="#id24" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1596,7 +1588,7 @@
 </table>
 </div>
 <div class="section" id="line-1-hw-specific-settings">
-<span id="subtable582b"></span><h2>20.22. Line 1 HW Specific Settings<a class="headerlink" href="#line-1-hw-specific-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable582b"></span><h2>12.22. Line 1 HW Specific Settings<a class="headerlink" href="#line-1-hw-specific-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id25">
 <caption><span class="caption-text">Субиндексы 0x582B Line 1 HW Specific Settings(0—3)</span><a class="headerlink" href="#id25" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>

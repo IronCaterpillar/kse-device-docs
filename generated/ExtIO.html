@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>19. Данные с внешних устройств - Содержимое &#8212; документация Руководство пользователя 1.0</title>
+    <title>11. Данные с внешних устройств - Содержимое &#8212; документация Руководство пользователя 1.0</title>
     <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
@@ -19,8 +19,8 @@
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
     <link rel="search" title="Поиск" href="../search.html" />
-    <link rel="next" title="20. Приложение пользователя - Содержимое" href="UserApp.html" />
-    <link rel="prev" title="18. Плата расширния №8 - Содержимое" href="B8.html" />
+    <link rel="next" title="12. Приложение пользователя - Содержимое" href="UserApp.html" />
+    <link rel="prev" title="10. Головная плата - Содержимое" href="B0.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -70,19 +70,11 @@
 <li class="toctree-l1"><a class="reference internal" href="common_can.html">8. Объекты CANopen DS-301 - Содержимое</a></li>
 <li class="toctree-l1"><a class="reference internal" href="device_params.html">9. Параметры устройства - Содержимое</a></li>
 <li class="toctree-l1"><a class="reference internal" href="B0.html">10. Головная плата - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B1.html">11. Плата расширния №1 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B2.html">12. Плата расширния №2 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B3.html">13. Плата расширния №3 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B4.html">14. Плата расширния №4 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B5.html">15. Плата расширния №5 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B6.html">16. Плата расширния №6 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B7.html">17. Плата расширния №7 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B8.html">18. Плата расширния №8 - Содержимое</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">19. Данные с внешних устройств - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UserApp.html">20. Приложение пользователя - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">21. Данные приложения пользователя - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">22. Типовое содержимое архива с ПО для устройства</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">23. Распределение параметров PDO</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Данные с внешних устройств - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserApp.html">12. Приложение пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">13. Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">14. Типовое содержимое архива с ПО для устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">15. Распределение параметров PDO</a></li>
 </ul>
 </ul>
 </li>
@@ -96,30 +88,30 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">19. Данные с внешних устройств - Содержимое</a><ul>
-<li><a class="reference internal" href="#ext-io-board-status">19.1. Ext IO - Board Status</a></li>
-<li><a class="reference internal" href="#ext-io-board-control">19.2. Ext IO - Board Control</a></li>
-<li><a class="reference internal" href="#ext-io-channel-status">19.3. Ext IO - Channel Status</a></li>
-<li><a class="reference internal" href="#ext-io-settings">19.4. Ext IO - Settings</a></li>
-<li><a class="reference internal" href="#ext-io-errors">19.5. Ext IO - Errors</a></li>
-<li><a class="reference internal" href="#ext-io-sensor-ids">19.6. Ext IO - Sensor IDs</a></li>
-<li><a class="reference internal" href="#ext-io-di-read-word">19.7. Ext IO - DI Read Word</a></li>
-<li><a class="reference internal" href="#ext-io-di-read-bit">19.8. Ext IO - DI Read Bit</a></li>
-<li><a class="reference internal" href="#ext-io-di-invert-polarity">19.9. Ext IO - DI Invert Polarity</a></li>
-<li><a class="reference internal" href="#ext-io-di-filter-time">19.10. Ext IO - DI Filter Time</a></li>
-<li><a class="reference internal" href="#ext-io-di-mask">19.11. Ext IO - DI Mask</a></li>
-<li><a class="reference internal" href="#ext-io-di-mag">19.12. Ext IO - DI Mag</a></li>
-<li><a class="reference internal" href="#ext-io-ai-read-float">19.13. Ext IO - AI Read Float</a></li>
-<li><a class="reference internal" href="#ext-io-ai-scaling">19.14. Ext IO - AI Scaling</a></li>
-<li><a class="reference internal" href="#ext-io-ai-offset">19.15. Ext IO - AI Offset</a></li>
-<li><a class="reference internal" href="#ext-io-ai-filter-time">19.16. Ext IO - AI Filter Time</a></li>
-<li><a class="reference internal" href="#ext-io-ai-deadband">19.17. Ext IO - AI Deadband</a></li>
-<li><a class="reference internal" href="#ext-io-ai-upper-limit">19.18. Ext IO - AI Upper Limit</a></li>
-<li><a class="reference internal" href="#ext-io-ai-lower-limit">19.19. Ext IO - AI Lower Limit</a></li>
-<li><a class="reference internal" href="#ext-io-ai-settings">19.20. Ext IO - AI Settings</a></li>
-<li><a class="reference internal" href="#ext-io-ai-float-mag">19.21. Ext IO - AI Float Mag</a></li>
-<li><a class="reference internal" href="#ext-io-ai-deadband-ref">19.22. Ext IO - AI Deadband Ref</a></li>
-<li><a class="reference internal" href="#ext-io-io-calibration">19.23. Ext IO - IO Calibration</a></li>
+<li><a class="reference internal" href="#">11. Данные с внешних устройств - Содержимое</a><ul>
+<li><a class="reference internal" href="#ext-io-board-status">11.1. Ext IO - Board Status</a></li>
+<li><a class="reference internal" href="#ext-io-board-control">11.2. Ext IO - Board Control</a></li>
+<li><a class="reference internal" href="#ext-io-channel-status">11.3. Ext IO - Channel Status</a></li>
+<li><a class="reference internal" href="#ext-io-settings">11.4. Ext IO - Settings</a></li>
+<li><a class="reference internal" href="#ext-io-errors">11.5. Ext IO - Errors</a></li>
+<li><a class="reference internal" href="#ext-io-sensor-ids">11.6. Ext IO - Sensor IDs</a></li>
+<li><a class="reference internal" href="#ext-io-di-read-word">11.7. Ext IO - DI Read Word</a></li>
+<li><a class="reference internal" href="#ext-io-di-read-bit">11.8. Ext IO - DI Read Bit</a></li>
+<li><a class="reference internal" href="#ext-io-di-invert-polarity">11.9. Ext IO - DI Invert Polarity</a></li>
+<li><a class="reference internal" href="#ext-io-di-filter-time">11.10. Ext IO - DI Filter Time</a></li>
+<li><a class="reference internal" href="#ext-io-di-mask">11.11. Ext IO - DI Mask</a></li>
+<li><a class="reference internal" href="#ext-io-di-mag">11.12. Ext IO - DI Mag</a></li>
+<li><a class="reference internal" href="#ext-io-ai-read-float">11.13. Ext IO - AI Read Float</a></li>
+<li><a class="reference internal" href="#ext-io-ai-scaling">11.14. Ext IO - AI Scaling</a></li>
+<li><a class="reference internal" href="#ext-io-ai-offset">11.15. Ext IO - AI Offset</a></li>
+<li><a class="reference internal" href="#ext-io-ai-filter-time">11.16. Ext IO - AI Filter Time</a></li>
+<li><a class="reference internal" href="#ext-io-ai-deadband">11.17. Ext IO - AI Deadband</a></li>
+<li><a class="reference internal" href="#ext-io-ai-upper-limit">11.18. Ext IO - AI Upper Limit</a></li>
+<li><a class="reference internal" href="#ext-io-ai-lower-limit">11.19. Ext IO - AI Lower Limit</a></li>
+<li><a class="reference internal" href="#ext-io-ai-settings">11.20. Ext IO - AI Settings</a></li>
+<li><a class="reference internal" href="#ext-io-ai-float-mag">11.21. Ext IO - AI Float Mag</a></li>
+<li><a class="reference internal" href="#ext-io-ai-deadband-ref">11.22. Ext IO - AI Deadband Ref</a></li>
+<li><a class="reference internal" href="#ext-io-io-calibration">11.23. Ext IO - IO Calibration</a></li>
 </ul>
 </li>
 </ul>
@@ -131,11 +123,11 @@
               
                 
   <li>
-    <a href="B8.html" title="Previous Chapter: 18. Плата расширния №8 - Содержимое"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 18. Плата рас...</span>
+    <a href="B0.html" title="Previous Chapter: 10. Головная плата - Содержимое"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 10. Головная ...</span>
     </a>
   </li>
   <li>
-    <a href="UserApp.html" title="Next Chapter: 20. Приложение пользователя - Содержимое"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">20. Приложени... &raquo;</span>
+    <a href="UserApp.html" title="Next Chapter: 12. Приложение пользователя - Содержимое"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">12. Приложени... &raquo;</span>
     </a>
   </li>
               
@@ -170,9 +162,9 @@
     <div class="body col-md-12 content" role="main">
       
   <div class="section" id="id1">
-<h1>19. Данные с внешних устройств - Содержимое<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>11. Данные с внешних устройств - Содержимое<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="ext-io-board-status">
-<span id="subtable4801"></span><h2>19.1. Ext IO - Board Status<a class="headerlink" href="#ext-io-board-status" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4801"></span><h2>11.1. Ext IO - Board Status<a class="headerlink" href="#ext-io-board-status" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id2">
 <caption><span class="caption-text">Субиндексы 0x4801 Ext IO - Board Status(0—5)</span><a class="headerlink" href="#id2" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -247,7 +239,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-board-control">
-<span id="subtable4803"></span><h2>19.2. Ext IO - Board Control<a class="headerlink" href="#ext-io-board-control" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4803"></span><h2>11.2. Ext IO - Board Control<a class="headerlink" href="#ext-io-board-control" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id3">
 <caption><span class="caption-text">Субиндексы 0x4803 Ext IO - Board Control(0—1)</span><a class="headerlink" href="#id3" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -290,7 +282,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-channel-status">
-<span id="subtable4807"></span><h2>19.3. Ext IO - Channel Status<a class="headerlink" href="#ext-io-channel-status" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4807"></span><h2>11.3. Ext IO - Channel Status<a class="headerlink" href="#ext-io-channel-status" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id4">
 <caption><span class="caption-text">Субиндексы 0x4807 Ext IO - Channel Status(0—10)</span><a class="headerlink" href="#id4" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -333,7 +325,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-settings">
-<span id="subtable4808"></span><h2>19.4. Ext IO - Settings<a class="headerlink" href="#ext-io-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4808"></span><h2>11.4. Ext IO - Settings<a class="headerlink" href="#ext-io-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id5">
 <caption><span class="caption-text">Субиндексы 0x4808 Ext IO - Settings(0—16)</span><a class="headerlink" href="#id5" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -496,7 +488,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-errors">
-<span id="subtable4809"></span><h2>19.5. Ext IO - Errors<a class="headerlink" href="#ext-io-errors" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4809"></span><h2>11.5. Ext IO - Errors<a class="headerlink" href="#ext-io-errors" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id6">
 <caption><span class="caption-text">Субиндексы 0x4809 Ext IO - Errors(0—16)</span><a class="headerlink" href="#id6" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -659,7 +651,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-sensor-ids">
-<span id="subtable480a"></span><h2>19.6. Ext IO - Sensor IDs<a class="headerlink" href="#ext-io-sensor-ids" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable480a"></span><h2>11.6. Ext IO - Sensor IDs<a class="headerlink" href="#ext-io-sensor-ids" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id7">
 <caption><span class="caption-text">Субиндексы 0x480A Ext IO - Sensor IDs(0—16)</span><a class="headerlink" href="#id7" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -822,7 +814,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-di-read-word">
-<span id="subtable4810"></span><h2>19.7. Ext IO - DI Read Word<a class="headerlink" href="#ext-io-di-read-word" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4810"></span><h2>11.7. Ext IO - DI Read Word<a class="headerlink" href="#ext-io-di-read-word" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id8">
 <caption><span class="caption-text">Субиндексы 0x4810 Ext IO - DI Read Word(0—1)</span><a class="headerlink" href="#id8" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -865,7 +857,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-di-read-bit">
-<span id="subtable4811"></span><h2>19.8. Ext IO - DI Read Bit<a class="headerlink" href="#ext-io-di-read-bit" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4811"></span><h2>11.8. Ext IO - DI Read Bit<a class="headerlink" href="#ext-io-di-read-bit" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id9">
 <caption><span class="caption-text">Субиндексы 0x4811 Ext IO - DI Read Bit(0—10)</span><a class="headerlink" href="#id9" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -980,7 +972,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-di-invert-polarity">
-<span id="subtable4812"></span><h2>19.9. Ext IO - DI Invert Polarity<a class="headerlink" href="#ext-io-di-invert-polarity" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4812"></span><h2>11.9. Ext IO - DI Invert Polarity<a class="headerlink" href="#ext-io-di-invert-polarity" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id10">
 <caption><span class="caption-text">Субиндексы 0x4812 Ext IO - DI Invert Polarity(0—10)</span><a class="headerlink" href="#id10" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1095,7 +1087,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-di-filter-time">
-<span id="subtable4813"></span><h2>19.10. Ext IO - DI Filter Time<a class="headerlink" href="#ext-io-di-filter-time" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4813"></span><h2>11.10. Ext IO - DI Filter Time<a class="headerlink" href="#ext-io-di-filter-time" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id11">
 <caption><span class="caption-text">Субиндексы 0x4813 Ext IO - DI Filter Time(0—10)</span><a class="headerlink" href="#id11" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1210,7 +1202,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-di-mask">
-<span id="subtable4814"></span><h2>19.11. Ext IO - DI Mask<a class="headerlink" href="#ext-io-di-mask" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4814"></span><h2>11.11. Ext IO - DI Mask<a class="headerlink" href="#ext-io-di-mask" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id12">
 <caption><span class="caption-text">Субиндексы 0x4814 Ext IO - DI Mask(0—10)</span><a class="headerlink" href="#id12" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1325,7 +1317,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-di-mag">
-<span id="subtable4815"></span><h2>19.12. Ext IO - DI Mag<a class="headerlink" href="#ext-io-di-mag" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4815"></span><h2>11.12. Ext IO - DI Mag<a class="headerlink" href="#ext-io-di-mag" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id13">
 <caption><span class="caption-text">Субиндексы 0x4815 Ext IO - DI Mag(0—1)</span><a class="headerlink" href="#id13" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1368,7 +1360,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-ai-read-float">
-<span id="subtable4831"></span><h2>19.13. Ext IO - AI Read Float<a class="headerlink" href="#ext-io-ai-read-float" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4831"></span><h2>11.13. Ext IO - AI Read Float<a class="headerlink" href="#ext-io-ai-read-float" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id14">
 <caption><span class="caption-text">Субиндексы 0x4831 Ext IO - AI Read Float(0—16)</span><a class="headerlink" href="#id14" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1531,7 +1523,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-ai-scaling">
-<span id="subtable4832"></span><h2>19.14. Ext IO - AI Scaling<a class="headerlink" href="#ext-io-ai-scaling" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4832"></span><h2>11.14. Ext IO - AI Scaling<a class="headerlink" href="#ext-io-ai-scaling" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id15">
 <caption><span class="caption-text">Субиндексы 0x4832 Ext IO - AI Scaling(0—16)</span><a class="headerlink" href="#id15" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1694,7 +1686,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-ai-offset">
-<span id="subtable4833"></span><h2>19.15. Ext IO - AI Offset<a class="headerlink" href="#ext-io-ai-offset" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4833"></span><h2>11.15. Ext IO - AI Offset<a class="headerlink" href="#ext-io-ai-offset" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id16">
 <caption><span class="caption-text">Субиндексы 0x4833 Ext IO - AI Offset(0—16)</span><a class="headerlink" href="#id16" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1857,7 +1849,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-ai-filter-time">
-<span id="subtable4834"></span><h2>19.16. Ext IO - AI Filter Time<a class="headerlink" href="#ext-io-ai-filter-time" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4834"></span><h2>11.16. Ext IO - AI Filter Time<a class="headerlink" href="#ext-io-ai-filter-time" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id17">
 <caption><span class="caption-text">Субиндексы 0x4834 Ext IO - AI Filter Time(0—16)</span><a class="headerlink" href="#id17" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2020,7 +2012,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-ai-deadband">
-<span id="subtable4835"></span><h2>19.17. Ext IO - AI Deadband<a class="headerlink" href="#ext-io-ai-deadband" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4835"></span><h2>11.17. Ext IO - AI Deadband<a class="headerlink" href="#ext-io-ai-deadband" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id18">
 <caption><span class="caption-text">Субиндексы 0x4835 Ext IO - AI Deadband(0—16)</span><a class="headerlink" href="#id18" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2183,7 +2175,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-ai-upper-limit">
-<span id="subtable4836"></span><h2>19.18. Ext IO - AI Upper Limit<a class="headerlink" href="#ext-io-ai-upper-limit" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4836"></span><h2>11.18. Ext IO - AI Upper Limit<a class="headerlink" href="#ext-io-ai-upper-limit" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id19">
 <caption><span class="caption-text">Субиндексы 0x4836 Ext IO - AI Upper Limit(0—16)</span><a class="headerlink" href="#id19" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2346,7 +2338,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-ai-lower-limit">
-<span id="subtable4837"></span><h2>19.19. Ext IO - AI Lower Limit<a class="headerlink" href="#ext-io-ai-lower-limit" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4837"></span><h2>11.19. Ext IO - AI Lower Limit<a class="headerlink" href="#ext-io-ai-lower-limit" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id20">
 <caption><span class="caption-text">Субиндексы 0x4837 Ext IO - AI Lower Limit(0—16)</span><a class="headerlink" href="#id20" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2509,7 +2501,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-ai-settings">
-<span id="subtable4839"></span><h2>19.20. Ext IO - AI Settings<a class="headerlink" href="#ext-io-ai-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable4839"></span><h2>11.20. Ext IO - AI Settings<a class="headerlink" href="#ext-io-ai-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id21">
 <caption><span class="caption-text">Субиндексы 0x4839 Ext IO - AI Settings(0—16)</span><a class="headerlink" href="#id21" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2552,7 +2544,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-ai-float-mag">
-<span id="subtable483b"></span><h2>19.21. Ext IO - AI Float Mag<a class="headerlink" href="#ext-io-ai-float-mag" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable483b"></span><h2>11.21. Ext IO - AI Float Mag<a class="headerlink" href="#ext-io-ai-float-mag" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id22">
 <caption><span class="caption-text">Субиндексы 0x483B Ext IO - AI Float Mag(0—16)</span><a class="headerlink" href="#id22" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2715,7 +2707,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-ai-deadband-ref">
-<span id="subtable483c"></span><h2>19.22. Ext IO - AI Deadband Ref<a class="headerlink" href="#ext-io-ai-deadband-ref" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable483c"></span><h2>11.22. Ext IO - AI Deadband Ref<a class="headerlink" href="#ext-io-ai-deadband-ref" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id23">
 <caption><span class="caption-text">Субиндексы 0x483C Ext IO - AI Deadband Ref(0—16)</span><a class="headerlink" href="#id23" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2878,7 +2870,7 @@
 </table>
 </div>
 <div class="section" id="ext-io-io-calibration">
-<span id="subtable48e1"></span><h2>19.23. Ext IO - IO Calibration<a class="headerlink" href="#ext-io-io-calibration" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable48e1"></span><h2>11.23. Ext IO - IO Calibration<a class="headerlink" href="#ext-io-io-calibration" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id24">
 <caption><span class="caption-text">Субиндексы 0x48E1 Ext IO - IO Calibration(0—40)</span><a class="headerlink" href="#id24" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
