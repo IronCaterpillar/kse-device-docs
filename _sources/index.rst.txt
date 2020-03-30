@@ -13,6 +13,7 @@
    :maxdepth: 1
    :caption: Содержание:
 
+   written/description
    written/heater_line
    written/HCR01F-user-web
    generated/device_index
