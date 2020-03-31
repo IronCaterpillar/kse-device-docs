@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>9. Параметры устройства - Содержимое &#8212; документация Руководство пользователя 1.0</title>
+    <title>7. Параметры устройства - Содержимое &#8212; документация Руководство пользователя 1.0</title>
     <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
@@ -19,8 +19,8 @@
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
     <link rel="search" title="Поиск" href="../search.html" />
-    <link rel="next" title="10. Головная плата - Содержимое" href="B0.html" />
-    <link rel="prev" title="8. Объекты CANopen DS-301 - Содержимое" href="common_can.html" />
+    <link rel="next" title="8. Головная плата - Содержимое" href="B0.html" />
+    <link rel="prev" title="6. Объекты CANopen DS-301 - Содержимое" href="common_can.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -65,14 +65,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../written/heater_line.html">3. Описание работы линии электрообогрева</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../written/HCR01F-user-web.html">4. WEB-Интерфейс настройки устройства</a></li>
 <li class="toctree-l1"><a class="reference internal" href="device_index.html">5. Словарь объектов</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../written/Mapping_Struct.html">6. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="modbus_mmappings.html">7. Отображение в адресное пространство Modbus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common_can.html">8. Объекты CANopen DS-301 - Содержимое</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Параметры устройства - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B0.html">10. Головная плата - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ExtIO.html">11. Данные с внешних устройств - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UserApp.html">12. Приложение пользователя - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">13. Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common_can.html">6. Объекты CANopen DS-301 - Содержимое</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Параметры устройства - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B0.html">8. Головная плата - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExtIO.html">9. Данные с внешних устройств - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserApp.html">10. Приложение пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">11. Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/Mapping_Struct.html">12. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="modbus_mmappings.html">13. Отображение в адресное пространство Modbus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">14. Типовое содержимое архива с ПО для устройства</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">15. Распределение параметров PDO</a></li>
 </ul>
@@ -88,21 +88,21 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">9. Параметры устройства - Содержимое</a><ul>
-<li><a class="reference internal" href="#description">9.1. Description</a></li>
-<li><a class="reference internal" href="#device-status">9.2. Device Status</a></li>
-<li><a class="reference internal" href="#device-control">9.3. Device Control</a></li>
-<li><a class="reference internal" href="#can-1-status">9.4. CAN 1 Status</a></li>
-<li><a class="reference internal" href="#can-1-settings">9.5. CAN 1 Settings</a></li>
-<li><a class="reference internal" href="#serial-1-status">9.6. Serial 1 Status</a></li>
-<li><a class="reference internal" href="#serial-1-settings">9.7. Serial 1 Settings</a></li>
-<li><a class="reference internal" href="#canopen-1-slave-status">9.8. CANopen 1 Slave Status</a></li>
-<li><a class="reference internal" href="#canopen-1-slave-control">9.9. CANopen 1 Slave Control</a></li>
-<li><a class="reference internal" href="#canopen-1-slave-settings">9.10. CANopen 1 Slave Settings</a></li>
-<li><a class="reference internal" href="#canopen-1-master-status">9.11. CANopen 1 Master Status</a></li>
-<li><a class="reference internal" href="#modbus-serial-1-slave-status">9.12. Modbus Serial 1 Slave Status</a></li>
-<li><a class="reference internal" href="#modbus-serial-1-slave-settings">9.13. Modbus Serial 1 Slave Settings</a></li>
-<li><a class="reference internal" href="#protocol-mappings-checksums">9.14. Protocol Mappings Checksums</a></li>
+<li><a class="reference internal" href="#">7. Параметры устройства - Содержимое</a><ul>
+<li><a class="reference internal" href="#description">7.1. Description</a></li>
+<li><a class="reference internal" href="#device-status">7.2. Device Status</a></li>
+<li><a class="reference internal" href="#device-control">7.3. Device Control</a></li>
+<li><a class="reference internal" href="#can-1-status">7.4. CAN 1 Status</a></li>
+<li><a class="reference internal" href="#can-1-settings">7.5. CAN 1 Settings</a></li>
+<li><a class="reference internal" href="#serial-1-status">7.6. Serial 1 Status</a></li>
+<li><a class="reference internal" href="#serial-1-settings">7.7. Serial 1 Settings</a></li>
+<li><a class="reference internal" href="#canopen-1-slave-status">7.8. CANopen 1 Slave Status</a></li>
+<li><a class="reference internal" href="#canopen-1-slave-control">7.9. CANopen 1 Slave Control</a></li>
+<li><a class="reference internal" href="#canopen-1-slave-settings">7.10. CANopen 1 Slave Settings</a></li>
+<li><a class="reference internal" href="#canopen-1-master-status">7.11. CANopen 1 Master Status</a></li>
+<li><a class="reference internal" href="#modbus-serial-1-slave-status">7.12. Modbus Serial 1 Slave Status</a></li>
+<li><a class="reference internal" href="#modbus-serial-1-slave-settings">7.13. Modbus Serial 1 Slave Settings</a></li>
+<li><a class="reference internal" href="#protocol-mappings-checksums">7.14. Protocol Mappings Checksums</a></li>
 </ul>
 </li>
 </ul>
@@ -114,11 +114,11 @@
               
                 
   <li>
-    <a href="common_can.html" title="Previous Chapter: 8. Объекты CANopen DS-301 - Содержимое"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 8. Объекты CA...</span>
+    <a href="common_can.html" title="Previous Chapter: 6. Объекты CANopen DS-301 - Содержимое"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 6. Объекты CA...</span>
     </a>
   </li>
   <li>
-    <a href="B0.html" title="Next Chapter: 10. Головная плата - Содержимое"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">10. Головная ... &raquo;</span>
+    <a href="B0.html" title="Next Chapter: 8. Головная плата - Содержимое"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">8. Головная п... &raquo;</span>
     </a>
   </li>
               
@@ -153,9 +153,9 @@
     <div class="body col-md-12 content" role="main">
       
   <div class="section" id="id1">
-<h1>9. Параметры устройства - Содержимое<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>7. Параметры устройства - Содержимое<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="description">
-<span id="subtable2000"></span><h2>9.1. Description<a class="headerlink" href="#description" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable2000"></span><h2>7.1. Description<a class="headerlink" href="#description" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id2">
 <caption><span class="caption-text">Субиндексы 0x2000 Description(0—8)</span><a class="headerlink" href="#id2" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -266,7 +266,7 @@
 </ul>
 </div>
 <div class="section" id="device-status">
-<span id="subtable2001"></span><h2>9.2. Device Status<a class="headerlink" href="#device-status" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable2001"></span><h2>7.2. Device Status<a class="headerlink" href="#device-status" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id3">
 <caption><span class="caption-text">Субиндексы 0x2001 Device Status(0—11)</span><a class="headerlink" href="#id3" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -389,7 +389,7 @@
 </table>
 </div>
 <div class="section" id="device-control">
-<span id="subtable2002"></span><h2>9.3. Device Control<a class="headerlink" href="#device-control" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable2002"></span><h2>7.3. Device Control<a class="headerlink" href="#device-control" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id4">
 <caption><span class="caption-text">Субиндексы 0x2002 Device Control(0—2)</span><a class="headerlink" href="#id4" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -444,7 +444,7 @@
 <p>Для перезагрузки устройства необходимо записать число <em>0x746f6f62</em> (слово <em>boot</em> в <em>ASCII</em> коде) в первый субиндекс. После этого устройство будет перезагружено.</p>
 </div>
 <div class="section" id="can-1-status">
-<span id="subtable2101"></span><h2>9.4. CAN 1 Status<a class="headerlink" href="#can-1-status" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable2101"></span><h2>7.4. CAN 1 Status<a class="headerlink" href="#can-1-status" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id5">
 <caption><span class="caption-text">Субиндексы 0x2101 CAN 1 Status(0—5)</span><a class="headerlink" href="#id5" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -519,7 +519,7 @@
 </table>
 </div>
 <div class="section" id="can-1-settings">
-<span id="subtable2103"></span><h2>9.5. CAN 1 Settings<a class="headerlink" href="#can-1-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable2103"></span><h2>7.5. CAN 1 Settings<a class="headerlink" href="#can-1-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id6">
 <caption><span class="caption-text">Субиндексы 0x2103 CAN 1 Settings(0—4)</span><a class="headerlink" href="#id6" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -586,7 +586,7 @@
 </table>
 </div>
 <div class="section" id="serial-1-status">
-<span id="subtable2141"></span><h2>9.6. Serial 1 Status<a class="headerlink" href="#serial-1-status" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable2141"></span><h2>7.6. Serial 1 Status<a class="headerlink" href="#serial-1-status" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id7">
 <caption><span class="caption-text">Субиндексы 0x2141 Serial 1 Status(0—3)</span><a class="headerlink" href="#id7" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -645,7 +645,7 @@
 </table>
 </div>
 <div class="section" id="serial-1-settings">
-<span id="subtable2143"></span><h2>9.7. Serial 1 Settings<a class="headerlink" href="#serial-1-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable2143"></span><h2>7.7. Serial 1 Settings<a class="headerlink" href="#serial-1-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id8">
 <caption><span class="caption-text">Субиндексы 0x2143 Serial 1 Settings(0—5)</span><a class="headerlink" href="#id8" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -720,7 +720,7 @@
 </table>
 </div>
 <div class="section" id="canopen-1-slave-status">
-<span id="subtable2301"></span><h2>9.8. CANopen 1 Slave Status<a class="headerlink" href="#canopen-1-slave-status" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable2301"></span><h2>7.8. CANopen 1 Slave Status<a class="headerlink" href="#canopen-1-slave-status" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id9">
 <caption><span class="caption-text">Субиндексы 0x2301 CANopen 1 Slave Status(0—1)</span><a class="headerlink" href="#id9" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -769,7 +769,7 @@
 </ul>
 </div>
 <div class="section" id="canopen-1-slave-control">
-<span id="subtable2302"></span><h2>9.9. CANopen 1 Slave Control<a class="headerlink" href="#canopen-1-slave-control" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable2302"></span><h2>7.9. CANopen 1 Slave Control<a class="headerlink" href="#canopen-1-slave-control" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id10">
 <caption><span class="caption-text">Субиндексы 0x2302 CANopen 1 Slave Control(0—1)</span><a class="headerlink" href="#id10" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -813,7 +813,7 @@
 <p>Данный индекс служит для включения/отключения виртуальных узлов сети <em>CANopen</em>. Управляется автоматически в зависимости от подключеных плат расширения. При необходимости может управляться вручную.</p>
 </div>
 <div class="section" id="canopen-1-slave-settings">
-<span id="subtable2303"></span><h2>9.10. CANopen 1 Slave Settings<a class="headerlink" href="#canopen-1-slave-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable2303"></span><h2>7.10. CANopen 1 Slave Settings<a class="headerlink" href="#canopen-1-slave-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id11">
 <caption><span class="caption-text">Субиндексы 0x2303 CANopen 1 Slave Settings(0—1)</span><a class="headerlink" href="#id11" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -857,7 +857,7 @@
 <p>Индекс служит для задания адресов основному и дополнительным(виртуальным) узлам сети <em>CANopen</em>.</p>
 </div>
 <div class="section" id="canopen-1-master-status">
-<span id="subtable2311"></span><h2>9.11. CANopen 1 Master Status<a class="headerlink" href="#canopen-1-master-status" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable2311"></span><h2>7.11. CANopen 1 Master Status<a class="headerlink" href="#canopen-1-master-status" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id12">
 <caption><span class="caption-text">Субиндексы 0x2311 CANopen 1 Master Status(0—8)</span><a class="headerlink" href="#id12" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -900,7 +900,7 @@
 </table>
 </div>
 <div class="section" id="modbus-serial-1-slave-status">
-<span id="subtable2321"></span><h2>9.12. Modbus Serial 1 Slave Status<a class="headerlink" href="#modbus-serial-1-slave-status" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable2321"></span><h2>7.12. Modbus Serial 1 Slave Status<a class="headerlink" href="#modbus-serial-1-slave-status" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id13">
 <caption><span class="caption-text">Субиндексы 0x2321 Modbus Serial 1 Slave Status(0—7)</span><a class="headerlink" href="#id13" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -991,7 +991,7 @@
 </table>
 </div>
 <div class="section" id="modbus-serial-1-slave-settings">
-<span id="subtable2323"></span><h2>9.13. Modbus Serial 1 Slave Settings<a class="headerlink" href="#modbus-serial-1-slave-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable2323"></span><h2>7.13. Modbus Serial 1 Slave Settings<a class="headerlink" href="#modbus-serial-1-slave-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id14">
 <caption><span class="caption-text">Субиндексы 0x2323 Modbus Serial 1 Slave Settings(0—4)</span><a class="headerlink" href="#id14" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1062,7 +1062,7 @@
 <p>Субиндекс служит для добавления паузы перед ответом на запрос <em>мастера</em>. Это необходимо для мастер-устройств, которые удерживают линию в состоянии передачи дольше, чем это определено стандартом <em>Modbus</em>, либо для устройств, которые не могут за установленое время перейти из режима передачи в режим приёма.</p>
 </div>
 <div class="section" id="protocol-mappings-checksums">
-<span id="subtable2418"></span><h2>9.14. Protocol Mappings Checksums<a class="headerlink" href="#protocol-mappings-checksums" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable2418"></span><h2>7.14. Protocol Mappings Checksums<a class="headerlink" href="#protocol-mappings-checksums" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id15">
 <caption><span class="caption-text">Субиндексы 0x2418 Protocol Mappings Checksums(0—2)</span><a class="headerlink" href="#id15" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>

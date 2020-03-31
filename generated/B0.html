@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>10. Головная плата - Содержимое &#8212; документация Руководство пользователя 1.0</title>
+    <title>8. Головная плата - Содержимое &#8212; документация Руководство пользователя 1.0</title>
     <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
@@ -19,8 +19,8 @@
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
     <link rel="search" title="Поиск" href="../search.html" />
-    <link rel="next" title="11. Данные с внешних устройств - Содержимое" href="ExtIO.html" />
-    <link rel="prev" title="9. Параметры устройства - Содержимое" href="device_params.html" />
+    <link rel="next" title="9. Данные с внешних устройств - Содержимое" href="ExtIO.html" />
+    <link rel="prev" title="7. Параметры устройства - Содержимое" href="device_params.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -65,14 +65,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../written/heater_line.html">3. Описание работы линии электрообогрева</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../written/HCR01F-user-web.html">4. WEB-Интерфейс настройки устройства</a></li>
 <li class="toctree-l1"><a class="reference internal" href="device_index.html">5. Словарь объектов</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../written/Mapping_Struct.html">6. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="modbus_mmappings.html">7. Отображение в адресное пространство Modbus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common_can.html">8. Объекты CANopen DS-301 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="device_params.html">9. Параметры устройства - Содержимое</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Головная плата - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ExtIO.html">11. Данные с внешних устройств - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UserApp.html">12. Приложение пользователя - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">13. Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common_can.html">6. Объекты CANopen DS-301 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_params.html">7. Параметры устройства - Содержимое</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Головная плата - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExtIO.html">9. Данные с внешних устройств - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserApp.html">10. Приложение пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">11. Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/Mapping_Struct.html">12. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="modbus_mmappings.html">13. Отображение в адресное пространство Modbus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">14. Типовое содержимое архива с ПО для устройства</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">15. Распределение параметров PDO</a></li>
 </ul>
@@ -88,33 +88,33 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">10. Головная плата - Содержимое</a><ul>
-<li><a class="reference internal" href="#b0-board-status">10.1. B0 - Board Status</a></li>
-<li><a class="reference internal" href="#b0-board-control">10.2. B0 - Board Control</a></li>
-<li><a class="reference internal" href="#b0-errors">10.3. B0 - Errors</a></li>
-<li><a class="reference internal" href="#b0-channel-status">10.4. B0 - Channel Status</a></li>
-<li><a class="reference internal" href="#b0-di-read-word">10.5. B0 - DI Read Word</a></li>
-<li><a class="reference internal" href="#b0-di-read-bit">10.6. B0 - DI Read Bit</a></li>
-<li><a class="reference internal" href="#b0-di-invert-polarity">10.7. B0 - DI Invert Polarity</a></li>
-<li><a class="reference internal" href="#b0-di-filter-time">10.8. B0 - DI Filter Time</a></li>
-<li><a class="reference internal" href="#b0-di-mask">10.9. B0 - DI Mask</a></li>
-<li><a class="reference internal" href="#b0-di-mag">10.10. B0 - DI Mag</a></li>
-<li><a class="reference internal" href="#b0-do-write-bit">10.11. B0 - DO Write Bit</a></li>
-<li><a class="reference internal" href="#b0-do-invert-polarity">10.12. B0 - DO Invert Polarity</a></li>
-<li><a class="reference internal" href="#b0-do-error-mode">10.13. B0 - DO Error Mode</a></li>
-<li><a class="reference internal" href="#b0-do-error-value">10.14. B0 - DO Error Value</a></li>
-<li><a class="reference internal" href="#b0-do-mask">10.15. B0 - DO Mask</a></li>
-<li><a class="reference internal" href="#b0-ai-read-float">10.16. B0 - AI Read Float</a></li>
-<li><a class="reference internal" href="#b0-ai-scaling">10.17. B0 - AI Scaling</a></li>
-<li><a class="reference internal" href="#b0-ai-offset">10.18. B0 - AI Offset</a></li>
-<li><a class="reference internal" href="#b0-ai-filter-time">10.19. B0 - AI Filter Time</a></li>
-<li><a class="reference internal" href="#b0-ai-deadband">10.20. B0 - AI Deadband</a></li>
-<li><a class="reference internal" href="#b0-ai-upper-limit">10.21. B0 - AI Upper Limit</a></li>
-<li><a class="reference internal" href="#b0-ai-lower-limit">10.22. B0 - AI Lower Limit</a></li>
-<li><a class="reference internal" href="#b0-ai-settings">10.23. B0 - AI Settings</a></li>
-<li><a class="reference internal" href="#b0-ai-float-mag">10.24. B0 - AI Float Mag</a></li>
-<li><a class="reference internal" href="#b0-ai-deadband-ref">10.25. B0 - AI Deadband Ref</a></li>
-<li><a class="reference internal" href="#b0-io-calibration">10.26. B0 - IO Calibration</a></li>
+<li><a class="reference internal" href="#">8. Головная плата - Содержимое</a><ul>
+<li><a class="reference internal" href="#b0-board-status">8.1. B0 - Board Status</a></li>
+<li><a class="reference internal" href="#b0-board-control">8.2. B0 - Board Control</a></li>
+<li><a class="reference internal" href="#b0-errors">8.3. B0 - Errors</a></li>
+<li><a class="reference internal" href="#b0-channel-status">8.4. B0 - Channel Status</a></li>
+<li><a class="reference internal" href="#b0-di-read-word">8.5. B0 - DI Read Word</a></li>
+<li><a class="reference internal" href="#b0-di-read-bit">8.6. B0 - DI Read Bit</a></li>
+<li><a class="reference internal" href="#b0-di-invert-polarity">8.7. B0 - DI Invert Polarity</a></li>
+<li><a class="reference internal" href="#b0-di-filter-time">8.8. B0 - DI Filter Time</a></li>
+<li><a class="reference internal" href="#b0-di-mask">8.9. B0 - DI Mask</a></li>
+<li><a class="reference internal" href="#b0-di-mag">8.10. B0 - DI Mag</a></li>
+<li><a class="reference internal" href="#b0-do-write-bit">8.11. B0 - DO Write Bit</a></li>
+<li><a class="reference internal" href="#b0-do-invert-polarity">8.12. B0 - DO Invert Polarity</a></li>
+<li><a class="reference internal" href="#b0-do-error-mode">8.13. B0 - DO Error Mode</a></li>
+<li><a class="reference internal" href="#b0-do-error-value">8.14. B0 - DO Error Value</a></li>
+<li><a class="reference internal" href="#b0-do-mask">8.15. B0 - DO Mask</a></li>
+<li><a class="reference internal" href="#b0-ai-read-float">8.16. B0 - AI Read Float</a></li>
+<li><a class="reference internal" href="#b0-ai-scaling">8.17. B0 - AI Scaling</a></li>
+<li><a class="reference internal" href="#b0-ai-offset">8.18. B0 - AI Offset</a></li>
+<li><a class="reference internal" href="#b0-ai-filter-time">8.19. B0 - AI Filter Time</a></li>
+<li><a class="reference internal" href="#b0-ai-deadband">8.20. B0 - AI Deadband</a></li>
+<li><a class="reference internal" href="#b0-ai-upper-limit">8.21. B0 - AI Upper Limit</a></li>
+<li><a class="reference internal" href="#b0-ai-lower-limit">8.22. B0 - AI Lower Limit</a></li>
+<li><a class="reference internal" href="#b0-ai-settings">8.23. B0 - AI Settings</a></li>
+<li><a class="reference internal" href="#b0-ai-float-mag">8.24. B0 - AI Float Mag</a></li>
+<li><a class="reference internal" href="#b0-ai-deadband-ref">8.25. B0 - AI Deadband Ref</a></li>
+<li><a class="reference internal" href="#b0-io-calibration">8.26. B0 - IO Calibration</a></li>
 </ul>
 </li>
 </ul>
@@ -126,11 +126,11 @@
               
                 
   <li>
-    <a href="device_params.html" title="Previous Chapter: 9. Параметры устройства - Содержимое"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 9. Параметры ...</span>
+    <a href="device_params.html" title="Previous Chapter: 7. Параметры устройства - Содержимое"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 7. Параметры ...</span>
     </a>
   </li>
   <li>
-    <a href="ExtIO.html" title="Next Chapter: 11. Данные с внешних устройств - Содержимое"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">11. Данные с ... &raquo;</span>
+    <a href="ExtIO.html" title="Next Chapter: 9. Данные с внешних устройств - Содержимое"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">9. Данные с в... &raquo;</span>
     </a>
   </li>
               
@@ -165,9 +165,9 @@
     <div class="body col-md-12 content" role="main">
       
   <div class="section" id="id1">
-<h1>10. Головная плата - Содержимое<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>8. Головная плата - Содержимое<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="b0-board-status">
-<span id="subtable3f01"></span><h2>10.1. B0 - Board Status<a class="headerlink" href="#b0-board-status" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f01"></span><h2>8.1. B0 - Board Status<a class="headerlink" href="#b0-board-status" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id2">
 <caption><span class="caption-text">Субиндексы 0x3F01 B0 - Board Status(0—5)</span><a class="headerlink" href="#id2" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -242,7 +242,7 @@
 </table>
 </div>
 <div class="section" id="b0-board-control">
-<span id="subtable3f03"></span><h2>10.2. B0 - Board Control<a class="headerlink" href="#b0-board-control" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f03"></span><h2>8.2. B0 - Board Control<a class="headerlink" href="#b0-board-control" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id3">
 <caption><span class="caption-text">Субиндексы 0x3F03 B0 - Board Control(0—1)</span><a class="headerlink" href="#id3" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -285,7 +285,7 @@
 </table>
 </div>
 <div class="section" id="b0-errors">
-<span id="subtable3f09"></span><h2>10.3. B0 - Errors<a class="headerlink" href="#b0-errors" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f09"></span><h2>8.3. B0 - Errors<a class="headerlink" href="#b0-errors" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id4">
 <caption><span class="caption-text">Субиндексы 0x3F09 B0 - Errors(0—16)</span><a class="headerlink" href="#id4" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -448,7 +448,7 @@
 </table>
 </div>
 <div class="section" id="b0-channel-status">
-<span id="subtable3f0f"></span><h2>10.4. B0 - Channel Status<a class="headerlink" href="#b0-channel-status" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f0f"></span><h2>8.4. B0 - Channel Status<a class="headerlink" href="#b0-channel-status" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id5">
 <caption><span class="caption-text">Субиндексы 0x3F0F B0 - Channel Status(0—10)</span><a class="headerlink" href="#id5" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -491,7 +491,7 @@
 </table>
 </div>
 <div class="section" id="b0-di-read-word">
-<span id="subtable3f10"></span><h2>10.5. B0 - DI Read Word<a class="headerlink" href="#b0-di-read-word" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f10"></span><h2>8.5. B0 - DI Read Word<a class="headerlink" href="#b0-di-read-word" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id6">
 <caption><span class="caption-text">Субиндексы 0x3F10 B0 - DI Read Word(0—1)</span><a class="headerlink" href="#id6" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -534,7 +534,7 @@
 </table>
 </div>
 <div class="section" id="b0-di-read-bit">
-<span id="subtable3f11"></span><h2>10.6. B0 - DI Read Bit<a class="headerlink" href="#b0-di-read-bit" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f11"></span><h2>8.6. B0 - DI Read Bit<a class="headerlink" href="#b0-di-read-bit" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id7">
 <caption><span class="caption-text">Субиндексы 0x3F11 B0 - DI Read Bit(0—10)</span><a class="headerlink" href="#id7" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -577,7 +577,7 @@
 </table>
 </div>
 <div class="section" id="b0-di-invert-polarity">
-<span id="subtable3f12"></span><h2>10.7. B0 - DI Invert Polarity<a class="headerlink" href="#b0-di-invert-polarity" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f12"></span><h2>8.7. B0 - DI Invert Polarity<a class="headerlink" href="#b0-di-invert-polarity" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id8">
 <caption><span class="caption-text">Субиндексы 0x3F12 B0 - DI Invert Polarity(0—10)</span><a class="headerlink" href="#id8" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -620,7 +620,7 @@
 </table>
 </div>
 <div class="section" id="b0-di-filter-time">
-<span id="subtable3f13"></span><h2>10.8. B0 - DI Filter Time<a class="headerlink" href="#b0-di-filter-time" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f13"></span><h2>8.8. B0 - DI Filter Time<a class="headerlink" href="#b0-di-filter-time" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id9">
 <caption><span class="caption-text">Субиндексы 0x3F13 B0 - DI Filter Time(0—10)</span><a class="headerlink" href="#id9" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -666,7 +666,7 @@
 * Для плат <strong>220В</strong> если более 1/2 выборок имеют логический уровень <strong>1</strong>, то итоговое значение принимается равным <strong>1</strong>, если менее 1/10 значений имеют логический уровень <strong>1</strong>, то итоговое значение принимается равным <strong>0</strong>, в промежуточном случае значение не меняется.</p>
 </div>
 <div class="section" id="b0-di-mask">
-<span id="subtable3f14"></span><h2>10.9. B0 - DI Mask<a class="headerlink" href="#b0-di-mask" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f14"></span><h2>8.9. B0 - DI Mask<a class="headerlink" href="#b0-di-mask" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id10">
 <caption><span class="caption-text">Субиндексы 0x3F14 B0 - DI Mask(0—10)</span><a class="headerlink" href="#id10" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -709,7 +709,7 @@
 </table>
 </div>
 <div class="section" id="b0-di-mag">
-<span id="subtable3f15"></span><h2>10.10. B0 - DI Mag<a class="headerlink" href="#b0-di-mag" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f15"></span><h2>8.10. B0 - DI Mag<a class="headerlink" href="#b0-di-mag" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id11">
 <caption><span class="caption-text">Субиндексы 0x3F15 B0 - DI Mag(0—1)</span><a class="headerlink" href="#id11" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -752,7 +752,7 @@
 </table>
 </div>
 <div class="section" id="b0-do-write-bit">
-<span id="subtable3f21"></span><h2>10.11. B0 - DO Write Bit<a class="headerlink" href="#b0-do-write-bit" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f21"></span><h2>8.11. B0 - DO Write Bit<a class="headerlink" href="#b0-do-write-bit" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id12">
 <caption><span class="caption-text">Субиндексы 0x3F21 B0 - DO Write Bit(0—10)</span><a class="headerlink" href="#id12" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -795,7 +795,7 @@
 </table>
 </div>
 <div class="section" id="b0-do-invert-polarity">
-<span id="subtable3f22"></span><h2>10.12. B0 - DO Invert Polarity<a class="headerlink" href="#b0-do-invert-polarity" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f22"></span><h2>8.12. B0 - DO Invert Polarity<a class="headerlink" href="#b0-do-invert-polarity" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id13">
 <caption><span class="caption-text">Субиндексы 0x3F22 B0 - DO Invert Polarity(0—10)</span><a class="headerlink" href="#id13" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -838,7 +838,7 @@
 </table>
 </div>
 <div class="section" id="b0-do-error-mode">
-<span id="subtable3f23"></span><h2>10.13. B0 - DO Error Mode<a class="headerlink" href="#b0-do-error-mode" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f23"></span><h2>8.13. B0 - DO Error Mode<a class="headerlink" href="#b0-do-error-mode" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id14">
 <caption><span class="caption-text">Субиндексы 0x3F23 B0 - DO Error Mode(0—10)</span><a class="headerlink" href="#id14" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -882,7 +882,7 @@
 <p>Используется для перевода дискретного выхода в безопасное состояние в случае ошибки(см.  <span class="xref std std-ref">subtable2012</span>  ). Если значение параметра <strong>True</strong>, то параметр принимает значение в соответствии с <em>0x4n24</em> (см.  <a class="reference internal" href="#subtable3f24"><span class="std std-ref">B0 - DO Error Value</span></a> ), где <em>n</em> принимает значение от 0 до 7, в зависимости от номера платы. Если же значение <strong>False</strong>, выход не меняет своего состояния.</p>
 </div>
 <div class="section" id="b0-do-error-value">
-<span id="subtable3f24"></span><h2>10.14. B0 - DO Error Value<a class="headerlink" href="#b0-do-error-value" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f24"></span><h2>8.14. B0 - DO Error Value<a class="headerlink" href="#b0-do-error-value" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id15">
 <caption><span class="caption-text">Субиндексы 0x3F24 B0 - DO Error Value(0—10)</span><a class="headerlink" href="#id15" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -926,7 +926,7 @@
 <p>Используется для определения безопасного состояния дискретного выхода в случае ошибки(см.  <span class="xref std std-ref">subtable2012</span> ,   <a class="reference internal" href="#subtable3f23"><span class="std std-ref">B0 - DO Error Mode</span></a> ).</p>
 </div>
 <div class="section" id="b0-do-mask">
-<span id="subtable3f25"></span><h2>10.15. B0 - DO Mask<a class="headerlink" href="#b0-do-mask" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f25"></span><h2>8.15. B0 - DO Mask<a class="headerlink" href="#b0-do-mask" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id16">
 <caption><span class="caption-text">Субиндексы 0x3F25 B0 - DO Mask(0—10)</span><a class="headerlink" href="#id16" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -969,7 +969,7 @@
 </table>
 </div>
 <div class="section" id="b0-ai-read-float">
-<span id="subtable3f31"></span><h2>10.16. B0 - AI Read Float<a class="headerlink" href="#b0-ai-read-float" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f31"></span><h2>8.16. B0 - AI Read Float<a class="headerlink" href="#b0-ai-read-float" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id17">
 <caption><span class="caption-text">Субиндексы 0x3F31 B0 - AI Read Float(0—8)</span><a class="headerlink" href="#id17" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1012,7 +1012,7 @@
 </table>
 </div>
 <div class="section" id="b0-ai-scaling">
-<span id="subtable3f32"></span><h2>10.17. B0 - AI Scaling<a class="headerlink" href="#b0-ai-scaling" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f32"></span><h2>8.17. B0 - AI Scaling<a class="headerlink" href="#b0-ai-scaling" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id18">
 <caption><span class="caption-text">Субиндексы 0x3F32 B0 - AI Scaling(0—8)</span><a class="headerlink" href="#id18" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1055,7 +1055,7 @@
 </table>
 </div>
 <div class="section" id="b0-ai-offset">
-<span id="subtable3f33"></span><h2>10.18. B0 - AI Offset<a class="headerlink" href="#b0-ai-offset" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f33"></span><h2>8.18. B0 - AI Offset<a class="headerlink" href="#b0-ai-offset" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id19">
 <caption><span class="caption-text">Субиндексы 0x3F33 B0 - AI Offset(0—8)</span><a class="headerlink" href="#id19" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1098,7 +1098,7 @@
 </table>
 </div>
 <div class="section" id="b0-ai-filter-time">
-<span id="subtable3f34"></span><h2>10.19. B0 - AI Filter Time<a class="headerlink" href="#b0-ai-filter-time" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f34"></span><h2>8.19. B0 - AI Filter Time<a class="headerlink" href="#b0-ai-filter-time" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id20">
 <caption><span class="caption-text">Субиндексы 0x3F34 B0 - AI Filter Time(0—8)</span><a class="headerlink" href="#id20" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1142,7 +1142,7 @@
 <p>Время фильтрации <em>AI</em> задаётся в периодах напряжения в сети 230В(1 период - 20мС).</p>
 </div>
 <div class="section" id="b0-ai-deadband">
-<span id="subtable3f35"></span><h2>10.20. B0 - AI Deadband<a class="headerlink" href="#b0-ai-deadband" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f35"></span><h2>8.20. B0 - AI Deadband<a class="headerlink" href="#b0-ai-deadband" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id21">
 <caption><span class="caption-text">Субиндексы 0x3F35 B0 - AI Deadband(0—8)</span><a class="headerlink" href="#id21" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1186,7 +1186,7 @@
 <p>Зона нечувствительности задаётся в тысячных долях процента. После обработки значение записывается в 0x4n3A, 0x4n3B соответственно(<span class="xref std std-ref">subtable3F3A</span>, <a class="reference internal" href="#subtable3f3b"><span class="std std-ref">B0 - AI Float Mag</span></a>). Если значение превышает пределы, заданные в <a class="reference internal" href="#subtable3f36"><span class="std std-ref">B0 - AI Upper Limit</span></a> и <a class="reference internal" href="#subtable3f37"><span class="std std-ref">B0 - AI Lower Limit</span></a>, то значение в <span class="xref std std-ref">subtable3F3A</span> и <a class="reference internal" href="#subtable3f3b"><span class="std std-ref">B0 - AI Float Mag</span></a> меняется независимо от зоны нечувствительности.</p>
 </div>
 <div class="section" id="b0-ai-upper-limit">
-<span id="subtable3f36"></span><h2>10.21. B0 - AI Upper Limit<a class="headerlink" href="#b0-ai-upper-limit" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f36"></span><h2>8.21. B0 - AI Upper Limit<a class="headerlink" href="#b0-ai-upper-limit" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id22">
 <caption><span class="caption-text">Субиндексы 0x3F36 B0 - AI Upper Limit(0—8)</span><a class="headerlink" href="#id22" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1230,7 +1230,7 @@
 <p>Верхний предел значения. Проверка на «≥» значению предела. Если значение больше или равно пределу, выставляется соответствующий бит в <a class="reference internal" href="#subtable3f01"><span class="std std-ref">B0 - Board Status</span></a> и изменение обработанных значений <span class="xref std std-ref">subtable3F3A</span> и <a class="reference internal" href="#subtable3f3b"><span class="std std-ref">B0 - AI Float Mag</span></a> просходит независимо от зоны нечувствительности <a class="reference internal" href="#subtable3f35"><span class="std std-ref">B0 - AI Deadband</span></a>.</p>
 </div>
 <div class="section" id="b0-ai-lower-limit">
-<span id="subtable3f37"></span><h2>10.22. B0 - AI Lower Limit<a class="headerlink" href="#b0-ai-lower-limit" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f37"></span><h2>8.22. B0 - AI Lower Limit<a class="headerlink" href="#b0-ai-lower-limit" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id23">
 <caption><span class="caption-text">Субиндексы 0x3F37 B0 - AI Lower Limit(0—8)</span><a class="headerlink" href="#id23" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1274,7 +1274,7 @@
 <p>Нижний предел значения. Проверка на «&lt;» значению предела. Если значение меньше предела, выставляется соответствующий бит в <a class="reference internal" href="#subtable3f01"><span class="std std-ref">B0 - Board Status</span></a> и изменение обработанных значений <span class="xref std std-ref">subtable3F3A</span> и <a class="reference internal" href="#subtable3f3b"><span class="std std-ref">B0 - AI Float Mag</span></a> просходит независимо от зоны нечувствительности <a class="reference internal" href="#subtable3f35"><span class="std std-ref">B0 - AI Deadband</span></a>.</p>
 </div>
 <div class="section" id="b0-ai-settings">
-<span id="subtable3f39"></span><h2>10.23. B0 - AI Settings<a class="headerlink" href="#b0-ai-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f39"></span><h2>8.23. B0 - AI Settings<a class="headerlink" href="#b0-ai-settings" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id24">
 <caption><span class="caption-text">Субиндексы 0x3F39 B0 - AI Settings(0—8)</span><a class="headerlink" href="#id24" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1360,7 +1360,7 @@
 </table>
 </div>
 <div class="section" id="b0-ai-float-mag">
-<span id="subtable3f3b"></span><h2>10.24. B0 - AI Float Mag<a class="headerlink" href="#b0-ai-float-mag" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f3b"></span><h2>8.24. B0 - AI Float Mag<a class="headerlink" href="#b0-ai-float-mag" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id25">
 <caption><span class="caption-text">Субиндексы 0x3F3B B0 - AI Float Mag(0—8)</span><a class="headerlink" href="#id25" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1404,7 +1404,7 @@
 <p>В данном индексе хранятся значения формате <em>«float»</em>, обработанные с учётом зоны нечувствительности <a class="reference internal" href="#subtable3f35"><span class="std std-ref">B0 - AI Deadband</span></a> и пределов <a class="reference internal" href="#subtable3f36"><span class="std std-ref">B0 - AI Upper Limit</span></a>, <a class="reference internal" href="#subtable3f37"><span class="std std-ref">B0 - AI Lower Limit</span></a>.</p>
 </div>
 <div class="section" id="b0-ai-deadband-ref">
-<span id="subtable3f3c"></span><h2>10.25. B0 - AI Deadband Ref<a class="headerlink" href="#b0-ai-deadband-ref" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3f3c"></span><h2>8.25. B0 - AI Deadband Ref<a class="headerlink" href="#b0-ai-deadband-ref" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id26">
 <caption><span class="caption-text">Субиндексы 0x3F3C B0 - AI Deadband Ref(0—8)</span><a class="headerlink" href="#id26" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1448,7 +1448,7 @@
 <p>Диапазон значений, относительно которого вычисляется <a class="reference internal" href="#subtable3f35"><span class="std std-ref">B0 - AI Deadband</span></a>. Связан с аппаратными особенностями платы расширения и типом подключенного датчика и не может быть изменён. Автоматически масштабируется при изменении <a class="reference internal" href="#subtable3f32"><span class="std std-ref">B0 - AI Scaling</span></a>.</p>
 </div>
 <div class="section" id="b0-io-calibration">
-<span id="subtable3fe1"></span><h2>10.26. B0 - IO Calibration<a class="headerlink" href="#b0-io-calibration" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable3fe1"></span><h2>8.26. B0 - IO Calibration<a class="headerlink" href="#b0-io-calibration" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id27">
 <caption><span class="caption-text">Субиндексы 0x3FE1 B0 - IO Calibration(0—32)</span><a class="headerlink" href="#id27" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>

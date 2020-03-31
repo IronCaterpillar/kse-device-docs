@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>8. Объекты CANopen DS-301 - Содержимое &#8212; документация Руководство пользователя 1.0</title>
+    <title>6. Объекты CANopen DS-301 - Содержимое &#8212; документация Руководство пользователя 1.0</title>
     <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
@@ -19,8 +19,8 @@
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
     <link rel="search" title="Поиск" href="../search.html" />
-    <link rel="next" title="9. Параметры устройства - Содержимое" href="device_params.html" />
-    <link rel="prev" title="7. Отображение в адресное пространство Modbus" href="modbus_mmappings.html" />
+    <link rel="next" title="7. Параметры устройства - Содержимое" href="device_params.html" />
+    <link rel="prev" title="5. Словарь объектов" href="device_index.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -65,14 +65,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../written/heater_line.html">3. Описание работы линии электрообогрева</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../written/HCR01F-user-web.html">4. WEB-Интерфейс настройки устройства</a></li>
 <li class="toctree-l1"><a class="reference internal" href="device_index.html">5. Словарь объектов</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../written/Mapping_Struct.html">6. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="modbus_mmappings.html">7. Отображение в адресное пространство Modbus</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Объекты CANopen DS-301 - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="device_params.html">9. Параметры устройства - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="B0.html">10. Головная плата - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ExtIO.html">11. Данные с внешних устройств - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UserApp.html">12. Приложение пользователя - Содержимое</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">13. Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Объекты CANopen DS-301 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_params.html">7. Параметры устройства - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B0.html">8. Головная плата - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExtIO.html">9. Данные с внешних устройств - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserApp.html">10. Приложение пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">11. Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/Mapping_Struct.html">12. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="modbus_mmappings.html">13. Отображение в адресное пространство Modbus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">14. Типовое содержимое архива с ПО для устройства</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">15. Распределение параметров PDO</a></li>
 </ul>
@@ -88,95 +88,95 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">8. Объекты CANopen DS-301 - Содержимое</a><ul>
-<li><a class="reference internal" href="#device-type">8.1. Device Type</a></li>
-<li><a class="reference internal" href="#error-register">8.2. Error Register</a></li>
-<li><a class="reference internal" href="#pre-defined-error-field">8.3. Pre-defined Error Field</a></li>
-<li><a class="reference internal" href="#sync-cob-id">8.4. SYNC COB ID</a></li>
-<li><a class="reference internal" href="#manufacturer-device-name">8.5. Manufacturer Device Name</a></li>
-<li><a class="reference internal" href="#store-parameters">8.6. Store parameters</a></li>
-<li><a class="reference internal" href="#restore-default-parameters">8.7. Restore Default Parameters</a></li>
-<li><a class="reference internal" href="#time-cob-id">8.8. TIME COB ID</a></li>
-<li><a class="reference internal" href="#emergency-cob-id">8.9. Emergency COB ID</a></li>
-<li><a class="reference internal" href="#consumer-heartbeat-time">8.10. Consumer Heartbeat Time</a></li>
-<li><a class="reference internal" href="#producer-heartbeat-time">8.11. Producer Heartbeat Time</a></li>
-<li><a class="reference internal" href="#subtable1018">8.12. Identity</a></li>
-<li><a class="reference internal" href="#board-list">8.13. Board List</a></li>
-<li><a class="reference internal" href="#error-behavior">8.14. Error Behavior</a></li>
-<li><a class="reference internal" href="#server-sdo-parameter">8.15. Server SDO Parameter</a></li>
-<li><a class="reference internal" href="#additional-server-sdo-1-parameter">8.16. Additional Server SDO 1 Parameter</a></li>
-<li><a class="reference internal" href="#additional-server-sdo-2-parameter">8.17. Additional Server SDO 2 Parameter</a></li>
-<li><a class="reference internal" href="#additional-server-sdo-3-parameter">8.18. Additional Server SDO 3 Parameter</a></li>
-<li><a class="reference internal" href="#additional-server-sdo-4-parameter">8.19. Additional Server SDO 4 Parameter</a></li>
-<li><a class="reference internal" href="#additional-server-sdo-5-parameter">8.20. Additional Server SDO 5 Parameter</a></li>
-<li><a class="reference internal" href="#receive-pdo-1-parameter">8.21. Receive PDO 1 Parameter</a></li>
-<li><a class="reference internal" href="#receive-pdo-2-parameter">8.22. Receive PDO 2 Parameter</a></li>
-<li><a class="reference internal" href="#receive-pdo-3-parameter">8.23. Receive PDO 3 Parameter</a></li>
-<li><a class="reference internal" href="#receive-pdo-4-parameter">8.24. Receive PDO 4 Parameter</a></li>
-<li><a class="reference internal" href="#receive-pdo-5-parameter">8.25. Receive PDO 5 Parameter</a></li>
-<li><a class="reference internal" href="#receive-pdo-6-parameter">8.26. Receive PDO 6 Parameter</a></li>
-<li><a class="reference internal" href="#receive-pdo-1-mapping">8.27. Receive PDO 1 Mapping</a></li>
-<li><a class="reference internal" href="#receive-pdo-2-mapping">8.28. Receive PDO 2 Mapping</a></li>
-<li><a class="reference internal" href="#receive-pdo-3-mapping">8.29. Receive PDO 3 Mapping</a></li>
-<li><a class="reference internal" href="#receive-pdo-4-mapping">8.30. Receive PDO 4 Mapping</a></li>
-<li><a class="reference internal" href="#receive-pdo-5-mapping">8.31. Receive PDO 5 Mapping</a></li>
-<li><a class="reference internal" href="#receive-pdo-6-mapping">8.32. Receive PDO 6 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-1-parameter">8.33. Transmit PDO 1 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-2-parameter">8.34. Transmit PDO 2 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-3-parameter">8.35. Transmit PDO 3 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-4-parameter">8.36. Transmit PDO 4 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-5-parameter">8.37. Transmit PDO 5 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-6-parameter">8.38. Transmit PDO 6 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-7-parameter">8.39. Transmit PDO 7 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-8-parameter">8.40. Transmit PDO 8 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-9-parameter">8.41. Transmit PDO 9 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-10-parameter">8.42. Transmit PDO 10 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-11-parameter">8.43. Transmit PDO 11 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-12-parameter">8.44. Transmit PDO 12 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-13-parameter">8.45. Transmit PDO 13 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-14-parameter">8.46. Transmit PDO 14 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-15-parameter">8.47. Transmit PDO 15 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-16-parameter">8.48. Transmit PDO 16 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-17-parameter">8.49. Transmit PDO 17 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-18-parameter">8.50. Transmit PDO 18 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-19-parameter">8.51. Transmit PDO 19 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-20-parameter">8.52. Transmit PDO 20 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-21-parameter">8.53. Transmit PDO 21 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-22-parameter">8.54. Transmit PDO 22 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-23-parameter">8.55. Transmit PDO 23 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-24-parameter">8.56. Transmit PDO 24 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-25-parameter">8.57. Transmit PDO 25 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-26-parameter">8.58. Transmit PDO 26 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-27-parameter">8.59. Transmit PDO 27 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-28-parameter">8.60. Transmit PDO 28 Parameter</a></li>
-<li><a class="reference internal" href="#transmit-pdo-1-mapping">8.61. Transmit PDO 1 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-2-mapping">8.62. Transmit PDO 2 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-3-mapping">8.63. Transmit PDO 3 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-4-mapping">8.64. Transmit PDO 4 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-5-mapping">8.65. Transmit PDO 5 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-6-mapping">8.66. Transmit PDO 6 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-7-mapping">8.67. Transmit PDO 7 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-8-mapping">8.68. Transmit PDO 8 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-9-mapping">8.69. Transmit PDO 9 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-10-mapping">8.70. Transmit PDO 10 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-11-mapping">8.71. Transmit PDO 11 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-12-mapping">8.72. Transmit PDO 12 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-13-mapping">8.73. Transmit PDO 13 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-14-mapping">8.74. Transmit PDO 14 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-15-mapping">8.75. Transmit PDO 15 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-16-mapping">8.76. Transmit PDO 16 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-17-mapping">8.77. Transmit PDO 17 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-18-mapping">8.78. Transmit PDO 18 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-19-mapping">8.79. Transmit PDO 19 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-20-mapping">8.80. Transmit PDO 20 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-21-mapping">8.81. Transmit PDO 21 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-22-mapping">8.82. Transmit PDO 22 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-23-mapping">8.83. Transmit PDO 23 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-24-mapping">8.84. Transmit PDO 24 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-25-mapping">8.85. Transmit PDO 25 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-26-mapping">8.86. Transmit PDO 26 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-27-mapping">8.87. Transmit PDO 27 Mapping</a></li>
-<li><a class="reference internal" href="#transmit-pdo-28-mapping">8.88. Transmit PDO 28 Mapping</a></li>
+<li><a class="reference internal" href="#">6. Объекты CANopen DS-301 - Содержимое</a><ul>
+<li><a class="reference internal" href="#device-type">6.1. Device Type</a></li>
+<li><a class="reference internal" href="#error-register">6.2. Error Register</a></li>
+<li><a class="reference internal" href="#pre-defined-error-field">6.3. Pre-defined Error Field</a></li>
+<li><a class="reference internal" href="#sync-cob-id">6.4. SYNC COB ID</a></li>
+<li><a class="reference internal" href="#manufacturer-device-name">6.5. Manufacturer Device Name</a></li>
+<li><a class="reference internal" href="#store-parameters">6.6. Store parameters</a></li>
+<li><a class="reference internal" href="#restore-default-parameters">6.7. Restore Default Parameters</a></li>
+<li><a class="reference internal" href="#time-cob-id">6.8. TIME COB ID</a></li>
+<li><a class="reference internal" href="#emergency-cob-id">6.9. Emergency COB ID</a></li>
+<li><a class="reference internal" href="#consumer-heartbeat-time">6.10. Consumer Heartbeat Time</a></li>
+<li><a class="reference internal" href="#producer-heartbeat-time">6.11. Producer Heartbeat Time</a></li>
+<li><a class="reference internal" href="#subtable1018">6.12. Identity</a></li>
+<li><a class="reference internal" href="#board-list">6.13. Board List</a></li>
+<li><a class="reference internal" href="#error-behavior">6.14. Error Behavior</a></li>
+<li><a class="reference internal" href="#server-sdo-parameter">6.15. Server SDO Parameter</a></li>
+<li><a class="reference internal" href="#additional-server-sdo-1-parameter">6.16. Additional Server SDO 1 Parameter</a></li>
+<li><a class="reference internal" href="#additional-server-sdo-2-parameter">6.17. Additional Server SDO 2 Parameter</a></li>
+<li><a class="reference internal" href="#additional-server-sdo-3-parameter">6.18. Additional Server SDO 3 Parameter</a></li>
+<li><a class="reference internal" href="#additional-server-sdo-4-parameter">6.19. Additional Server SDO 4 Parameter</a></li>
+<li><a class="reference internal" href="#additional-server-sdo-5-parameter">6.20. Additional Server SDO 5 Parameter</a></li>
+<li><a class="reference internal" href="#receive-pdo-1-parameter">6.21. Receive PDO 1 Parameter</a></li>
+<li><a class="reference internal" href="#receive-pdo-2-parameter">6.22. Receive PDO 2 Parameter</a></li>
+<li><a class="reference internal" href="#receive-pdo-3-parameter">6.23. Receive PDO 3 Parameter</a></li>
+<li><a class="reference internal" href="#receive-pdo-4-parameter">6.24. Receive PDO 4 Parameter</a></li>
+<li><a class="reference internal" href="#receive-pdo-5-parameter">6.25. Receive PDO 5 Parameter</a></li>
+<li><a class="reference internal" href="#receive-pdo-6-parameter">6.26. Receive PDO 6 Parameter</a></li>
+<li><a class="reference internal" href="#receive-pdo-1-mapping">6.27. Receive PDO 1 Mapping</a></li>
+<li><a class="reference internal" href="#receive-pdo-2-mapping">6.28. Receive PDO 2 Mapping</a></li>
+<li><a class="reference internal" href="#receive-pdo-3-mapping">6.29. Receive PDO 3 Mapping</a></li>
+<li><a class="reference internal" href="#receive-pdo-4-mapping">6.30. Receive PDO 4 Mapping</a></li>
+<li><a class="reference internal" href="#receive-pdo-5-mapping">6.31. Receive PDO 5 Mapping</a></li>
+<li><a class="reference internal" href="#receive-pdo-6-mapping">6.32. Receive PDO 6 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-1-parameter">6.33. Transmit PDO 1 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-2-parameter">6.34. Transmit PDO 2 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-3-parameter">6.35. Transmit PDO 3 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-4-parameter">6.36. Transmit PDO 4 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-5-parameter">6.37. Transmit PDO 5 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-6-parameter">6.38. Transmit PDO 6 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-7-parameter">6.39. Transmit PDO 7 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-8-parameter">6.40. Transmit PDO 8 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-9-parameter">6.41. Transmit PDO 9 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-10-parameter">6.42. Transmit PDO 10 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-11-parameter">6.43. Transmit PDO 11 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-12-parameter">6.44. Transmit PDO 12 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-13-parameter">6.45. Transmit PDO 13 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-14-parameter">6.46. Transmit PDO 14 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-15-parameter">6.47. Transmit PDO 15 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-16-parameter">6.48. Transmit PDO 16 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-17-parameter">6.49. Transmit PDO 17 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-18-parameter">6.50. Transmit PDO 18 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-19-parameter">6.51. Transmit PDO 19 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-20-parameter">6.52. Transmit PDO 20 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-21-parameter">6.53. Transmit PDO 21 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-22-parameter">6.54. Transmit PDO 22 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-23-parameter">6.55. Transmit PDO 23 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-24-parameter">6.56. Transmit PDO 24 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-25-parameter">6.57. Transmit PDO 25 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-26-parameter">6.58. Transmit PDO 26 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-27-parameter">6.59. Transmit PDO 27 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-28-parameter">6.60. Transmit PDO 28 Parameter</a></li>
+<li><a class="reference internal" href="#transmit-pdo-1-mapping">6.61. Transmit PDO 1 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-2-mapping">6.62. Transmit PDO 2 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-3-mapping">6.63. Transmit PDO 3 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-4-mapping">6.64. Transmit PDO 4 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-5-mapping">6.65. Transmit PDO 5 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-6-mapping">6.66. Transmit PDO 6 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-7-mapping">6.67. Transmit PDO 7 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-8-mapping">6.68. Transmit PDO 8 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-9-mapping">6.69. Transmit PDO 9 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-10-mapping">6.70. Transmit PDO 10 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-11-mapping">6.71. Transmit PDO 11 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-12-mapping">6.72. Transmit PDO 12 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-13-mapping">6.73. Transmit PDO 13 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-14-mapping">6.74. Transmit PDO 14 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-15-mapping">6.75. Transmit PDO 15 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-16-mapping">6.76. Transmit PDO 16 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-17-mapping">6.77. Transmit PDO 17 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-18-mapping">6.78. Transmit PDO 18 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-19-mapping">6.79. Transmit PDO 19 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-20-mapping">6.80. Transmit PDO 20 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-21-mapping">6.81. Transmit PDO 21 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-22-mapping">6.82. Transmit PDO 22 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-23-mapping">6.83. Transmit PDO 23 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-24-mapping">6.84. Transmit PDO 24 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-25-mapping">6.85. Transmit PDO 25 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-26-mapping">6.86. Transmit PDO 26 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-27-mapping">6.87. Transmit PDO 27 Mapping</a></li>
+<li><a class="reference internal" href="#transmit-pdo-28-mapping">6.88. Transmit PDO 28 Mapping</a></li>
 </ul>
 </li>
 </ul>
@@ -188,11 +188,11 @@
               
                 
   <li>
-    <a href="modbus_mmappings.html" title="Previous Chapter: 7. Отображение в адресное пространство Modbus"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 7. Отображени...</span>
+    <a href="device_index.html" title="Previous Chapter: 5. Словарь объектов"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 5. Словарь объектов</span>
     </a>
   </li>
   <li>
-    <a href="device_params.html" title="Next Chapter: 9. Параметры устройства - Содержимое"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">9. Параметры ... &raquo;</span>
+    <a href="device_params.html" title="Next Chapter: 7. Параметры устройства - Содержимое"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">7. Параметры ... &raquo;</span>
     </a>
   </li>
               
@@ -227,9 +227,9 @@
     <div class="body col-md-12 content" role="main">
       
   <div class="section" id="canopen-ds-301">
-<h1>8. Объекты CANopen DS-301 - Содержимое<a class="headerlink" href="#canopen-ds-301" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>6. Объекты CANopen DS-301 - Содержимое<a class="headerlink" href="#canopen-ds-301" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="device-type">
-<span id="subtable1000"></span><h2>8.1. Device Type<a class="headerlink" href="#device-type" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1000"></span><h2>6.1. Device Type<a class="headerlink" href="#device-type" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id4">
 <caption><span class="caption-text">Субиндексы 0x1000 Device Type(0—0)</span><a class="headerlink" href="#id4" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -264,7 +264,7 @@
 </table>
 </div>
 <div class="section" id="error-register">
-<span id="subtable1001"></span><h2>8.2. Error Register<a class="headerlink" href="#error-register" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1001"></span><h2>6.2. Error Register<a class="headerlink" href="#error-register" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id5">
 <caption><span class="caption-text">Субиндексы 0x1001 Error Register(0—0)</span><a class="headerlink" href="#id5" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -336,7 +336,7 @@
 </dl>
 </div>
 <div class="section" id="pre-defined-error-field">
-<span id="subtable1003"></span><h2>8.3. Pre-defined Error Field<a class="headerlink" href="#pre-defined-error-field" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1003"></span><h2>6.3. Pre-defined Error Field<a class="headerlink" href="#pre-defined-error-field" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id6">
 <caption><span class="caption-text">Субиндексы 0x1003 Pre-defined Error Field(0—24)</span><a class="headerlink" href="#id6" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -379,7 +379,7 @@
 </table>
 </div>
 <div class="section" id="sync-cob-id">
-<span id="subtable1005"></span><h2>8.4. SYNC COB ID<a class="headerlink" href="#sync-cob-id" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1005"></span><h2>6.4. SYNC COB ID<a class="headerlink" href="#sync-cob-id" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id7">
 <caption><span class="caption-text">Субиндексы 0x1005 SYNC COB ID(0—0)</span><a class="headerlink" href="#id7" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -414,7 +414,7 @@
 </table>
 </div>
 <div class="section" id="manufacturer-device-name">
-<span id="subtable1008"></span><h2>8.5. Manufacturer Device Name<a class="headerlink" href="#manufacturer-device-name" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1008"></span><h2>6.5. Manufacturer Device Name<a class="headerlink" href="#manufacturer-device-name" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id8">
 <caption><span class="caption-text">Субиндексы 0x1008 Manufacturer Device Name(0—0)</span><a class="headerlink" href="#id8" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -449,7 +449,7 @@
 </table>
 </div>
 <div class="section" id="store-parameters">
-<span id="subtable1010"></span><h2>8.6. Store parameters<a class="headerlink" href="#store-parameters" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1010"></span><h2>6.6. Store parameters<a class="headerlink" href="#store-parameters" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id9">
 <caption><span class="caption-text">Субиндексы 0x1010 Store parameters(0—1)</span><a class="headerlink" href="#id9" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -492,7 +492,7 @@
 </table>
 </div>
 <div class="section" id="restore-default-parameters">
-<span id="subtable1011"></span><h2>8.7. Restore Default Parameters<a class="headerlink" href="#restore-default-parameters" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1011"></span><h2>6.7. Restore Default Parameters<a class="headerlink" href="#restore-default-parameters" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id10">
 <caption><span class="caption-text">Субиндексы 0x1011 Restore Default Parameters(0—1)</span><a class="headerlink" href="#id10" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -539,7 +539,7 @@
 <p>Для восстановления настроек по умолчанию необходимо записать число <em>0x64616f6c</em> (слово <em>load</em> в <em>ASCII</em> коде) в первый субиндекс. После этого устройство будет перезагружено с настройками по умолчанию.</p>
 </div>
 <div class="section" id="time-cob-id">
-<span id="subtable1012"></span><h2>8.8. TIME COB ID<a class="headerlink" href="#time-cob-id" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1012"></span><h2>6.8. TIME COB ID<a class="headerlink" href="#time-cob-id" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id11">
 <caption><span class="caption-text">Субиндексы 0x1012 TIME COB ID(0—0)</span><a class="headerlink" href="#id11" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -574,7 +574,7 @@
 </table>
 </div>
 <div class="section" id="emergency-cob-id">
-<span id="subtable1014"></span><h2>8.9. Emergency COB ID<a class="headerlink" href="#emergency-cob-id" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1014"></span><h2>6.9. Emergency COB ID<a class="headerlink" href="#emergency-cob-id" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id12">
 <caption><span class="caption-text">Субиндексы 0x1014 Emergency COB ID(0—0)</span><a class="headerlink" href="#id12" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -609,7 +609,7 @@
 </table>
 </div>
 <div class="section" id="consumer-heartbeat-time">
-<span id="subtable1016"></span><h2>8.10. Consumer Heartbeat Time<a class="headerlink" href="#consumer-heartbeat-time" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1016"></span><h2>6.10. Consumer Heartbeat Time<a class="headerlink" href="#consumer-heartbeat-time" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id13">
 <caption><span class="caption-text">Субиндексы 0x1016 Consumer Heartbeat Time(0—8)</span><a class="headerlink" href="#id13" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -652,7 +652,7 @@
 </table>
 </div>
 <div class="section" id="producer-heartbeat-time">
-<span id="subtable1017"></span><h2>8.11. Producer Heartbeat Time<a class="headerlink" href="#producer-heartbeat-time" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1017"></span><h2>6.11. Producer Heartbeat Time<a class="headerlink" href="#producer-heartbeat-time" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id14">
 <caption><span class="caption-text">Субиндексы 0x1017 Producer Heartbeat Time(0—0)</span><a class="headerlink" href="#id14" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -687,7 +687,7 @@
 </table>
 </div>
 <div class="section" id="subtable1018">
-<span id="identity"></span><h2>8.12. Identity<a class="headerlink" href="#subtable1018" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="identity"></span><h2>6.12. Identity<a class="headerlink" href="#subtable1018" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id15">
 <caption><span class="caption-text">Субиндексы 0x1018 Identity(0—4)</span><a class="headerlink" href="#id15" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -754,7 +754,7 @@
 </table>
 </div>
 <div class="section" id="board-list">
-<span id="subtable1027"></span><h2>8.13. Board List<a class="headerlink" href="#board-list" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1027"></span><h2>6.13. Board List<a class="headerlink" href="#board-list" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id16">
 <caption><span class="caption-text">Субиндексы 0x1027 Board List(0—1)</span><a class="headerlink" href="#id16" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -797,7 +797,7 @@
 </table>
 </div>
 <div class="section" id="error-behavior">
-<span id="subtable1029"></span><h2>8.14. Error Behavior<a class="headerlink" href="#error-behavior" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1029"></span><h2>6.14. Error Behavior<a class="headerlink" href="#error-behavior" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id17">
 <caption><span class="caption-text">Субиндексы 0x1029 Error Behavior(0—1)</span><a class="headerlink" href="#id17" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -840,7 +840,7 @@
 </table>
 </div>
 <div class="section" id="server-sdo-parameter">
-<span id="subtable1200"></span><h2>8.15. Server SDO Parameter<a class="headerlink" href="#server-sdo-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1200"></span><h2>6.15. Server SDO Parameter<a class="headerlink" href="#server-sdo-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id18">
 <caption><span class="caption-text">Субиндексы 0x1200 Server SDO Parameter(0—2)</span><a class="headerlink" href="#id18" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -891,7 +891,7 @@
 </table>
 </div>
 <div class="section" id="additional-server-sdo-1-parameter">
-<span id="subtable1201"></span><h2>8.16. Additional Server SDO 1 Parameter<a class="headerlink" href="#additional-server-sdo-1-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1201"></span><h2>6.16. Additional Server SDO 1 Parameter<a class="headerlink" href="#additional-server-sdo-1-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id19">
 <caption><span class="caption-text">Субиндексы 0x1201 Additional Server SDO 1 Parameter(0—3)</span><a class="headerlink" href="#id19" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -950,7 +950,7 @@
 </table>
 </div>
 <div class="section" id="additional-server-sdo-2-parameter">
-<span id="subtable1202"></span><h2>8.17. Additional Server SDO 2 Parameter<a class="headerlink" href="#additional-server-sdo-2-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1202"></span><h2>6.17. Additional Server SDO 2 Parameter<a class="headerlink" href="#additional-server-sdo-2-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id20">
 <caption><span class="caption-text">Субиндексы 0x1202 Additional Server SDO 2 Parameter(0—3)</span><a class="headerlink" href="#id20" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1009,7 +1009,7 @@
 </table>
 </div>
 <div class="section" id="additional-server-sdo-3-parameter">
-<span id="subtable1203"></span><h2>8.18. Additional Server SDO 3 Parameter<a class="headerlink" href="#additional-server-sdo-3-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1203"></span><h2>6.18. Additional Server SDO 3 Parameter<a class="headerlink" href="#additional-server-sdo-3-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id21">
 <caption><span class="caption-text">Субиндексы 0x1203 Additional Server SDO 3 Parameter(0—3)</span><a class="headerlink" href="#id21" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1068,7 +1068,7 @@
 </table>
 </div>
 <div class="section" id="additional-server-sdo-4-parameter">
-<span id="subtable1204"></span><h2>8.19. Additional Server SDO 4 Parameter<a class="headerlink" href="#additional-server-sdo-4-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1204"></span><h2>6.19. Additional Server SDO 4 Parameter<a class="headerlink" href="#additional-server-sdo-4-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id22">
 <caption><span class="caption-text">Субиндексы 0x1204 Additional Server SDO 4 Parameter(0—3)</span><a class="headerlink" href="#id22" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1127,7 +1127,7 @@
 </table>
 </div>
 <div class="section" id="additional-server-sdo-5-parameter">
-<span id="subtable1205"></span><h2>8.20. Additional Server SDO 5 Parameter<a class="headerlink" href="#additional-server-sdo-5-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1205"></span><h2>6.20. Additional Server SDO 5 Parameter<a class="headerlink" href="#additional-server-sdo-5-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id23">
 <caption><span class="caption-text">Субиндексы 0x1205 Additional Server SDO 5 Parameter(0—3)</span><a class="headerlink" href="#id23" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1186,7 +1186,7 @@
 </table>
 </div>
 <div class="section" id="receive-pdo-1-parameter">
-<span id="subtable1400"></span><h2>8.21. Receive PDO 1 Parameter<a class="headerlink" href="#receive-pdo-1-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1400"></span><h2>6.21. Receive PDO 1 Parameter<a class="headerlink" href="#receive-pdo-1-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id24">
 <caption><span class="caption-text">Субиндексы 0x1400 Receive PDO 1 Parameter(0—5)</span><a class="headerlink" href="#id24" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1261,7 +1261,7 @@
 </table>
 </div>
 <div class="section" id="receive-pdo-2-parameter">
-<span id="subtable1401"></span><h2>8.22. Receive PDO 2 Parameter<a class="headerlink" href="#receive-pdo-2-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1401"></span><h2>6.22. Receive PDO 2 Parameter<a class="headerlink" href="#receive-pdo-2-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id25">
 <caption><span class="caption-text">Субиндексы 0x1401 Receive PDO 2 Parameter(0—5)</span><a class="headerlink" href="#id25" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1336,7 +1336,7 @@
 </table>
 </div>
 <div class="section" id="receive-pdo-3-parameter">
-<span id="subtable1402"></span><h2>8.23. Receive PDO 3 Parameter<a class="headerlink" href="#receive-pdo-3-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1402"></span><h2>6.23. Receive PDO 3 Parameter<a class="headerlink" href="#receive-pdo-3-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id26">
 <caption><span class="caption-text">Субиндексы 0x1402 Receive PDO 3 Parameter(0—5)</span><a class="headerlink" href="#id26" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1411,7 +1411,7 @@
 </table>
 </div>
 <div class="section" id="receive-pdo-4-parameter">
-<span id="subtable1403"></span><h2>8.24. Receive PDO 4 Parameter<a class="headerlink" href="#receive-pdo-4-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1403"></span><h2>6.24. Receive PDO 4 Parameter<a class="headerlink" href="#receive-pdo-4-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id27">
 <caption><span class="caption-text">Субиндексы 0x1403 Receive PDO 4 Parameter(0—5)</span><a class="headerlink" href="#id27" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1486,7 +1486,7 @@
 </table>
 </div>
 <div class="section" id="receive-pdo-5-parameter">
-<span id="subtable1404"></span><h2>8.25. Receive PDO 5 Parameter<a class="headerlink" href="#receive-pdo-5-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1404"></span><h2>6.25. Receive PDO 5 Parameter<a class="headerlink" href="#receive-pdo-5-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id28">
 <caption><span class="caption-text">Субиндексы 0x1404 Receive PDO 5 Parameter(0—5)</span><a class="headerlink" href="#id28" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1561,7 +1561,7 @@
 </table>
 </div>
 <div class="section" id="receive-pdo-6-parameter">
-<span id="subtable1405"></span><h2>8.26. Receive PDO 6 Parameter<a class="headerlink" href="#receive-pdo-6-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1405"></span><h2>6.26. Receive PDO 6 Parameter<a class="headerlink" href="#receive-pdo-6-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id29">
 <caption><span class="caption-text">Субиндексы 0x1405 Receive PDO 6 Parameter(0—5)</span><a class="headerlink" href="#id29" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1636,7 +1636,7 @@
 </table>
 </div>
 <div class="section" id="receive-pdo-1-mapping">
-<span id="subtable1600"></span><h2>8.27. Receive PDO 1 Mapping<a class="headerlink" href="#receive-pdo-1-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1600"></span><h2>6.27. Receive PDO 1 Mapping<a class="headerlink" href="#receive-pdo-1-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id30">
 <caption><span class="caption-text">Субиндексы 0x1600 Receive PDO 1 Mapping(0—4)</span><a class="headerlink" href="#id30" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1679,7 +1679,7 @@
 </table>
 </div>
 <div class="section" id="receive-pdo-2-mapping">
-<span id="subtable1601"></span><h2>8.28. Receive PDO 2 Mapping<a class="headerlink" href="#receive-pdo-2-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1601"></span><h2>6.28. Receive PDO 2 Mapping<a class="headerlink" href="#receive-pdo-2-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id31">
 <caption><span class="caption-text">Субиндексы 0x1601 Receive PDO 2 Mapping(0—4)</span><a class="headerlink" href="#id31" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1722,7 +1722,7 @@
 </table>
 </div>
 <div class="section" id="receive-pdo-3-mapping">
-<span id="subtable1602"></span><h2>8.29. Receive PDO 3 Mapping<a class="headerlink" href="#receive-pdo-3-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1602"></span><h2>6.29. Receive PDO 3 Mapping<a class="headerlink" href="#receive-pdo-3-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id32">
 <caption><span class="caption-text">Субиндексы 0x1602 Receive PDO 3 Mapping(0—4)</span><a class="headerlink" href="#id32" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1765,7 +1765,7 @@
 </table>
 </div>
 <div class="section" id="receive-pdo-4-mapping">
-<span id="subtable1603"></span><h2>8.30. Receive PDO 4 Mapping<a class="headerlink" href="#receive-pdo-4-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1603"></span><h2>6.30. Receive PDO 4 Mapping<a class="headerlink" href="#receive-pdo-4-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id33">
 <caption><span class="caption-text">Субиндексы 0x1603 Receive PDO 4 Mapping(0—4)</span><a class="headerlink" href="#id33" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1808,7 +1808,7 @@
 </table>
 </div>
 <div class="section" id="receive-pdo-5-mapping">
-<span id="subtable1604"></span><h2>8.31. Receive PDO 5 Mapping<a class="headerlink" href="#receive-pdo-5-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1604"></span><h2>6.31. Receive PDO 5 Mapping<a class="headerlink" href="#receive-pdo-5-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id34">
 <caption><span class="caption-text">Субиндексы 0x1604 Receive PDO 5 Mapping(0—4)</span><a class="headerlink" href="#id34" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1851,7 +1851,7 @@
 </table>
 </div>
 <div class="section" id="receive-pdo-6-mapping">
-<span id="subtable1605"></span><h2>8.32. Receive PDO 6 Mapping<a class="headerlink" href="#receive-pdo-6-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1605"></span><h2>6.32. Receive PDO 6 Mapping<a class="headerlink" href="#receive-pdo-6-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id35">
 <caption><span class="caption-text">Субиндексы 0x1605 Receive PDO 6 Mapping(0—4)</span><a class="headerlink" href="#id35" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1894,7 +1894,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-1-parameter">
-<span id="subtable1800"></span><h2>8.33. Transmit PDO 1 Parameter<a class="headerlink" href="#transmit-pdo-1-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1800"></span><h2>6.33. Transmit PDO 1 Parameter<a class="headerlink" href="#transmit-pdo-1-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id36">
 <caption><span class="caption-text">Субиндексы 0x1800 Transmit PDO 1 Parameter(0—5)</span><a class="headerlink" href="#id36" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -1969,7 +1969,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-2-parameter">
-<span id="subtable1801"></span><h2>8.34. Transmit PDO 2 Parameter<a class="headerlink" href="#transmit-pdo-2-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1801"></span><h2>6.34. Transmit PDO 2 Parameter<a class="headerlink" href="#transmit-pdo-2-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id37">
 <caption><span class="caption-text">Субиндексы 0x1801 Transmit PDO 2 Parameter(0—5)</span><a class="headerlink" href="#id37" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2044,7 +2044,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-3-parameter">
-<span id="subtable1802"></span><h2>8.35. Transmit PDO 3 Parameter<a class="headerlink" href="#transmit-pdo-3-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1802"></span><h2>6.35. Transmit PDO 3 Parameter<a class="headerlink" href="#transmit-pdo-3-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id38">
 <caption><span class="caption-text">Субиндексы 0x1802 Transmit PDO 3 Parameter(0—5)</span><a class="headerlink" href="#id38" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2119,7 +2119,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-4-parameter">
-<span id="subtable1803"></span><h2>8.36. Transmit PDO 4 Parameter<a class="headerlink" href="#transmit-pdo-4-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1803"></span><h2>6.36. Transmit PDO 4 Parameter<a class="headerlink" href="#transmit-pdo-4-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id39">
 <caption><span class="caption-text">Субиндексы 0x1803 Transmit PDO 4 Parameter(0—5)</span><a class="headerlink" href="#id39" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2194,7 +2194,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-5-parameter">
-<span id="subtable1804"></span><h2>8.37. Transmit PDO 5 Parameter<a class="headerlink" href="#transmit-pdo-5-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1804"></span><h2>6.37. Transmit PDO 5 Parameter<a class="headerlink" href="#transmit-pdo-5-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id40">
 <caption><span class="caption-text">Субиндексы 0x1804 Transmit PDO 5 Parameter(0—5)</span><a class="headerlink" href="#id40" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2269,7 +2269,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-6-parameter">
-<span id="subtable1805"></span><h2>8.38. Transmit PDO 6 Parameter<a class="headerlink" href="#transmit-pdo-6-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1805"></span><h2>6.38. Transmit PDO 6 Parameter<a class="headerlink" href="#transmit-pdo-6-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id41">
 <caption><span class="caption-text">Субиндексы 0x1805 Transmit PDO 6 Parameter(0—5)</span><a class="headerlink" href="#id41" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2344,7 +2344,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-7-parameter">
-<span id="subtable1806"></span><h2>8.39. Transmit PDO 7 Parameter<a class="headerlink" href="#transmit-pdo-7-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1806"></span><h2>6.39. Transmit PDO 7 Parameter<a class="headerlink" href="#transmit-pdo-7-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id42">
 <caption><span class="caption-text">Субиндексы 0x1806 Transmit PDO 7 Parameter(0—5)</span><a class="headerlink" href="#id42" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2419,7 +2419,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-8-parameter">
-<span id="subtable1807"></span><h2>8.40. Transmit PDO 8 Parameter<a class="headerlink" href="#transmit-pdo-8-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1807"></span><h2>6.40. Transmit PDO 8 Parameter<a class="headerlink" href="#transmit-pdo-8-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id43">
 <caption><span class="caption-text">Субиндексы 0x1807 Transmit PDO 8 Parameter(0—5)</span><a class="headerlink" href="#id43" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2494,7 +2494,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-9-parameter">
-<span id="subtable1808"></span><h2>8.41. Transmit PDO 9 Parameter<a class="headerlink" href="#transmit-pdo-9-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1808"></span><h2>6.41. Transmit PDO 9 Parameter<a class="headerlink" href="#transmit-pdo-9-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id44">
 <caption><span class="caption-text">Субиндексы 0x1808 Transmit PDO 9 Parameter(0—5)</span><a class="headerlink" href="#id44" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2569,7 +2569,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-10-parameter">
-<span id="subtable1809"></span><h2>8.42. Transmit PDO 10 Parameter<a class="headerlink" href="#transmit-pdo-10-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1809"></span><h2>6.42. Transmit PDO 10 Parameter<a class="headerlink" href="#transmit-pdo-10-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id45">
 <caption><span class="caption-text">Субиндексы 0x1809 Transmit PDO 10 Parameter(0—5)</span><a class="headerlink" href="#id45" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2644,7 +2644,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-11-parameter">
-<span id="subtable180a"></span><h2>8.43. Transmit PDO 11 Parameter<a class="headerlink" href="#transmit-pdo-11-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable180a"></span><h2>6.43. Transmit PDO 11 Parameter<a class="headerlink" href="#transmit-pdo-11-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id46">
 <caption><span class="caption-text">Субиндексы 0x180A Transmit PDO 11 Parameter(0—5)</span><a class="headerlink" href="#id46" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2719,7 +2719,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-12-parameter">
-<span id="subtable180b"></span><h2>8.44. Transmit PDO 12 Parameter<a class="headerlink" href="#transmit-pdo-12-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable180b"></span><h2>6.44. Transmit PDO 12 Parameter<a class="headerlink" href="#transmit-pdo-12-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id47">
 <caption><span class="caption-text">Субиндексы 0x180B Transmit PDO 12 Parameter(0—5)</span><a class="headerlink" href="#id47" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2794,7 +2794,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-13-parameter">
-<span id="subtable180c"></span><h2>8.45. Transmit PDO 13 Parameter<a class="headerlink" href="#transmit-pdo-13-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable180c"></span><h2>6.45. Transmit PDO 13 Parameter<a class="headerlink" href="#transmit-pdo-13-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id48">
 <caption><span class="caption-text">Субиндексы 0x180C Transmit PDO 13 Parameter(0—5)</span><a class="headerlink" href="#id48" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2869,7 +2869,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-14-parameter">
-<span id="subtable180d"></span><h2>8.46. Transmit PDO 14 Parameter<a class="headerlink" href="#transmit-pdo-14-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable180d"></span><h2>6.46. Transmit PDO 14 Parameter<a class="headerlink" href="#transmit-pdo-14-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id49">
 <caption><span class="caption-text">Субиндексы 0x180D Transmit PDO 14 Parameter(0—5)</span><a class="headerlink" href="#id49" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -2944,7 +2944,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-15-parameter">
-<span id="subtable180e"></span><h2>8.47. Transmit PDO 15 Parameter<a class="headerlink" href="#transmit-pdo-15-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable180e"></span><h2>6.47. Transmit PDO 15 Parameter<a class="headerlink" href="#transmit-pdo-15-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id50">
 <caption><span class="caption-text">Субиндексы 0x180E Transmit PDO 15 Parameter(0—5)</span><a class="headerlink" href="#id50" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -3019,7 +3019,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-16-parameter">
-<span id="subtable180f"></span><h2>8.48. Transmit PDO 16 Parameter<a class="headerlink" href="#transmit-pdo-16-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable180f"></span><h2>6.48. Transmit PDO 16 Parameter<a class="headerlink" href="#transmit-pdo-16-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id51">
 <caption><span class="caption-text">Субиндексы 0x180F Transmit PDO 16 Parameter(0—5)</span><a class="headerlink" href="#id51" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -3094,7 +3094,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-17-parameter">
-<span id="subtable1810"></span><h2>8.49. Transmit PDO 17 Parameter<a class="headerlink" href="#transmit-pdo-17-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1810"></span><h2>6.49. Transmit PDO 17 Parameter<a class="headerlink" href="#transmit-pdo-17-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id52">
 <caption><span class="caption-text">Субиндексы 0x1810 Transmit PDO 17 Parameter(0—5)</span><a class="headerlink" href="#id52" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -3169,7 +3169,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-18-parameter">
-<span id="subtable1811"></span><h2>8.50. Transmit PDO 18 Parameter<a class="headerlink" href="#transmit-pdo-18-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1811"></span><h2>6.50. Transmit PDO 18 Parameter<a class="headerlink" href="#transmit-pdo-18-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id53">
 <caption><span class="caption-text">Субиндексы 0x1811 Transmit PDO 18 Parameter(0—5)</span><a class="headerlink" href="#id53" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -3244,7 +3244,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-19-parameter">
-<span id="subtable1812"></span><h2>8.51. Transmit PDO 19 Parameter<a class="headerlink" href="#transmit-pdo-19-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1812"></span><h2>6.51. Transmit PDO 19 Parameter<a class="headerlink" href="#transmit-pdo-19-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id54">
 <caption><span class="caption-text">Субиндексы 0x1812 Transmit PDO 19 Parameter(0—5)</span><a class="headerlink" href="#id54" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -3319,7 +3319,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-20-parameter">
-<span id="subtable1813"></span><h2>8.52. Transmit PDO 20 Parameter<a class="headerlink" href="#transmit-pdo-20-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1813"></span><h2>6.52. Transmit PDO 20 Parameter<a class="headerlink" href="#transmit-pdo-20-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id55">
 <caption><span class="caption-text">Субиндексы 0x1813 Transmit PDO 20 Parameter(0—5)</span><a class="headerlink" href="#id55" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -3394,7 +3394,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-21-parameter">
-<span id="subtable1814"></span><h2>8.53. Transmit PDO 21 Parameter<a class="headerlink" href="#transmit-pdo-21-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1814"></span><h2>6.53. Transmit PDO 21 Parameter<a class="headerlink" href="#transmit-pdo-21-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id56">
 <caption><span class="caption-text">Субиндексы 0x1814 Transmit PDO 21 Parameter(0—5)</span><a class="headerlink" href="#id56" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -3469,7 +3469,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-22-parameter">
-<span id="subtable1815"></span><h2>8.54. Transmit PDO 22 Parameter<a class="headerlink" href="#transmit-pdo-22-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1815"></span><h2>6.54. Transmit PDO 22 Parameter<a class="headerlink" href="#transmit-pdo-22-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id57">
 <caption><span class="caption-text">Субиндексы 0x1815 Transmit PDO 22 Parameter(0—5)</span><a class="headerlink" href="#id57" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -3544,7 +3544,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-23-parameter">
-<span id="subtable1816"></span><h2>8.55. Transmit PDO 23 Parameter<a class="headerlink" href="#transmit-pdo-23-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1816"></span><h2>6.55. Transmit PDO 23 Parameter<a class="headerlink" href="#transmit-pdo-23-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id58">
 <caption><span class="caption-text">Субиндексы 0x1816 Transmit PDO 23 Parameter(0—5)</span><a class="headerlink" href="#id58" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -3619,7 +3619,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-24-parameter">
-<span id="subtable1817"></span><h2>8.56. Transmit PDO 24 Parameter<a class="headerlink" href="#transmit-pdo-24-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1817"></span><h2>6.56. Transmit PDO 24 Parameter<a class="headerlink" href="#transmit-pdo-24-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id59">
 <caption><span class="caption-text">Субиндексы 0x1817 Transmit PDO 24 Parameter(0—5)</span><a class="headerlink" href="#id59" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -3694,7 +3694,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-25-parameter">
-<span id="subtable1818"></span><h2>8.57. Transmit PDO 25 Parameter<a class="headerlink" href="#transmit-pdo-25-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1818"></span><h2>6.57. Transmit PDO 25 Parameter<a class="headerlink" href="#transmit-pdo-25-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id60">
 <caption><span class="caption-text">Субиндексы 0x1818 Transmit PDO 25 Parameter(0—5)</span><a class="headerlink" href="#id60" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -3769,7 +3769,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-26-parameter">
-<span id="subtable1819"></span><h2>8.58. Transmit PDO 26 Parameter<a class="headerlink" href="#transmit-pdo-26-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1819"></span><h2>6.58. Transmit PDO 26 Parameter<a class="headerlink" href="#transmit-pdo-26-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id61">
 <caption><span class="caption-text">Субиндексы 0x1819 Transmit PDO 26 Parameter(0—5)</span><a class="headerlink" href="#id61" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -3844,7 +3844,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-27-parameter">
-<span id="subtable181a"></span><h2>8.59. Transmit PDO 27 Parameter<a class="headerlink" href="#transmit-pdo-27-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable181a"></span><h2>6.59. Transmit PDO 27 Parameter<a class="headerlink" href="#transmit-pdo-27-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id62">
 <caption><span class="caption-text">Субиндексы 0x181A Transmit PDO 27 Parameter(0—5)</span><a class="headerlink" href="#id62" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -3919,7 +3919,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-28-parameter">
-<span id="subtable181b"></span><h2>8.60. Transmit PDO 28 Parameter<a class="headerlink" href="#transmit-pdo-28-parameter" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable181b"></span><h2>6.60. Transmit PDO 28 Parameter<a class="headerlink" href="#transmit-pdo-28-parameter" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id63">
 <caption><span class="caption-text">Субиндексы 0x181B Transmit PDO 28 Parameter(0—5)</span><a class="headerlink" href="#id63" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -3994,7 +3994,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-1-mapping">
-<span id="subtable1a00"></span><h2>8.61. Transmit PDO 1 Mapping<a class="headerlink" href="#transmit-pdo-1-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a00"></span><h2>6.61. Transmit PDO 1 Mapping<a class="headerlink" href="#transmit-pdo-1-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id64">
 <caption><span class="caption-text">Субиндексы 0x1A00 Transmit PDO 1 Mapping(0—4)</span><a class="headerlink" href="#id64" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4037,7 +4037,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-2-mapping">
-<span id="subtable1a01"></span><h2>8.62. Transmit PDO 2 Mapping<a class="headerlink" href="#transmit-pdo-2-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a01"></span><h2>6.62. Transmit PDO 2 Mapping<a class="headerlink" href="#transmit-pdo-2-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id65">
 <caption><span class="caption-text">Субиндексы 0x1A01 Transmit PDO 2 Mapping(0—4)</span><a class="headerlink" href="#id65" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4080,7 +4080,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-3-mapping">
-<span id="subtable1a02"></span><h2>8.63. Transmit PDO 3 Mapping<a class="headerlink" href="#transmit-pdo-3-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a02"></span><h2>6.63. Transmit PDO 3 Mapping<a class="headerlink" href="#transmit-pdo-3-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id66">
 <caption><span class="caption-text">Субиндексы 0x1A02 Transmit PDO 3 Mapping(0—4)</span><a class="headerlink" href="#id66" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4123,7 +4123,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-4-mapping">
-<span id="subtable1a03"></span><h2>8.64. Transmit PDO 4 Mapping<a class="headerlink" href="#transmit-pdo-4-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a03"></span><h2>6.64. Transmit PDO 4 Mapping<a class="headerlink" href="#transmit-pdo-4-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id67">
 <caption><span class="caption-text">Субиндексы 0x1A03 Transmit PDO 4 Mapping(0—4)</span><a class="headerlink" href="#id67" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4166,7 +4166,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-5-mapping">
-<span id="subtable1a04"></span><h2>8.65. Transmit PDO 5 Mapping<a class="headerlink" href="#transmit-pdo-5-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a04"></span><h2>6.65. Transmit PDO 5 Mapping<a class="headerlink" href="#transmit-pdo-5-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id68">
 <caption><span class="caption-text">Субиндексы 0x1A04 Transmit PDO 5 Mapping(0—4)</span><a class="headerlink" href="#id68" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4209,7 +4209,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-6-mapping">
-<span id="subtable1a05"></span><h2>8.66. Transmit PDO 6 Mapping<a class="headerlink" href="#transmit-pdo-6-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a05"></span><h2>6.66. Transmit PDO 6 Mapping<a class="headerlink" href="#transmit-pdo-6-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id69">
 <caption><span class="caption-text">Субиндексы 0x1A05 Transmit PDO 6 Mapping(0—4)</span><a class="headerlink" href="#id69" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4252,7 +4252,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-7-mapping">
-<span id="subtable1a06"></span><h2>8.67. Transmit PDO 7 Mapping<a class="headerlink" href="#transmit-pdo-7-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a06"></span><h2>6.67. Transmit PDO 7 Mapping<a class="headerlink" href="#transmit-pdo-7-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id70">
 <caption><span class="caption-text">Субиндексы 0x1A06 Transmit PDO 7 Mapping(0—8)</span><a class="headerlink" href="#id70" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4295,7 +4295,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-8-mapping">
-<span id="subtable1a07"></span><h2>8.68. Transmit PDO 8 Mapping<a class="headerlink" href="#transmit-pdo-8-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a07"></span><h2>6.68. Transmit PDO 8 Mapping<a class="headerlink" href="#transmit-pdo-8-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id71">
 <caption><span class="caption-text">Субиндексы 0x1A07 Transmit PDO 8 Mapping(0—4)</span><a class="headerlink" href="#id71" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4338,7 +4338,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-9-mapping">
-<span id="subtable1a08"></span><h2>8.69. Transmit PDO 9 Mapping<a class="headerlink" href="#transmit-pdo-9-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a08"></span><h2>6.69. Transmit PDO 9 Mapping<a class="headerlink" href="#transmit-pdo-9-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id72">
 <caption><span class="caption-text">Субиндексы 0x1A08 Transmit PDO 9 Mapping(0—4)</span><a class="headerlink" href="#id72" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4381,7 +4381,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-10-mapping">
-<span id="subtable1a09"></span><h2>8.70. Transmit PDO 10 Mapping<a class="headerlink" href="#transmit-pdo-10-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a09"></span><h2>6.70. Transmit PDO 10 Mapping<a class="headerlink" href="#transmit-pdo-10-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id73">
 <caption><span class="caption-text">Субиндексы 0x1A09 Transmit PDO 10 Mapping(0—4)</span><a class="headerlink" href="#id73" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4424,7 +4424,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-11-mapping">
-<span id="subtable1a0a"></span><h2>8.71. Transmit PDO 11 Mapping<a class="headerlink" href="#transmit-pdo-11-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a0a"></span><h2>6.71. Transmit PDO 11 Mapping<a class="headerlink" href="#transmit-pdo-11-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id74">
 <caption><span class="caption-text">Субиндексы 0x1A0A Transmit PDO 11 Mapping(0—4)</span><a class="headerlink" href="#id74" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4467,7 +4467,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-12-mapping">
-<span id="subtable1a0b"></span><h2>8.72. Transmit PDO 12 Mapping<a class="headerlink" href="#transmit-pdo-12-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a0b"></span><h2>6.72. Transmit PDO 12 Mapping<a class="headerlink" href="#transmit-pdo-12-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id75">
 <caption><span class="caption-text">Субиндексы 0x1A0B Transmit PDO 12 Mapping(0—4)</span><a class="headerlink" href="#id75" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4510,7 +4510,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-13-mapping">
-<span id="subtable1a0c"></span><h2>8.73. Transmit PDO 13 Mapping<a class="headerlink" href="#transmit-pdo-13-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a0c"></span><h2>6.73. Transmit PDO 13 Mapping<a class="headerlink" href="#transmit-pdo-13-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id76">
 <caption><span class="caption-text">Субиндексы 0x1A0C Transmit PDO 13 Mapping(0—4)</span><a class="headerlink" href="#id76" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4553,7 +4553,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-14-mapping">
-<span id="subtable1a0d"></span><h2>8.74. Transmit PDO 14 Mapping<a class="headerlink" href="#transmit-pdo-14-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a0d"></span><h2>6.74. Transmit PDO 14 Mapping<a class="headerlink" href="#transmit-pdo-14-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id77">
 <caption><span class="caption-text">Субиндексы 0x1A0D Transmit PDO 14 Mapping(0—4)</span><a class="headerlink" href="#id77" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4596,7 +4596,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-15-mapping">
-<span id="subtable1a0e"></span><h2>8.75. Transmit PDO 15 Mapping<a class="headerlink" href="#transmit-pdo-15-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a0e"></span><h2>6.75. Transmit PDO 15 Mapping<a class="headerlink" href="#transmit-pdo-15-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id78">
 <caption><span class="caption-text">Субиндексы 0x1A0E Transmit PDO 15 Mapping(0—4)</span><a class="headerlink" href="#id78" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4639,7 +4639,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-16-mapping">
-<span id="subtable1a0f"></span><h2>8.76. Transmit PDO 16 Mapping<a class="headerlink" href="#transmit-pdo-16-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a0f"></span><h2>6.76. Transmit PDO 16 Mapping<a class="headerlink" href="#transmit-pdo-16-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id79">
 <caption><span class="caption-text">Субиндексы 0x1A0F Transmit PDO 16 Mapping(0—4)</span><a class="headerlink" href="#id79" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4682,7 +4682,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-17-mapping">
-<span id="subtable1a10"></span><h2>8.77. Transmit PDO 17 Mapping<a class="headerlink" href="#transmit-pdo-17-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a10"></span><h2>6.77. Transmit PDO 17 Mapping<a class="headerlink" href="#transmit-pdo-17-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id80">
 <caption><span class="caption-text">Субиндексы 0x1A10 Transmit PDO 17 Mapping(0—4)</span><a class="headerlink" href="#id80" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4725,7 +4725,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-18-mapping">
-<span id="subtable1a11"></span><h2>8.78. Transmit PDO 18 Mapping<a class="headerlink" href="#transmit-pdo-18-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a11"></span><h2>6.78. Transmit PDO 18 Mapping<a class="headerlink" href="#transmit-pdo-18-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id81">
 <caption><span class="caption-text">Субиндексы 0x1A11 Transmit PDO 18 Mapping(0—4)</span><a class="headerlink" href="#id81" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4768,7 +4768,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-19-mapping">
-<span id="subtable1a12"></span><h2>8.79. Transmit PDO 19 Mapping<a class="headerlink" href="#transmit-pdo-19-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a12"></span><h2>6.79. Transmit PDO 19 Mapping<a class="headerlink" href="#transmit-pdo-19-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id82">
 <caption><span class="caption-text">Субиндексы 0x1A12 Transmit PDO 19 Mapping(0—2)</span><a class="headerlink" href="#id82" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4811,7 +4811,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-20-mapping">
-<span id="subtable1a13"></span><h2>8.80. Transmit PDO 20 Mapping<a class="headerlink" href="#transmit-pdo-20-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a13"></span><h2>6.80. Transmit PDO 20 Mapping<a class="headerlink" href="#transmit-pdo-20-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id83">
 <caption><span class="caption-text">Субиндексы 0x1A13 Transmit PDO 20 Mapping(0—2)</span><a class="headerlink" href="#id83" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4854,7 +4854,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-21-mapping">
-<span id="subtable1a14"></span><h2>8.81. Transmit PDO 21 Mapping<a class="headerlink" href="#transmit-pdo-21-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a14"></span><h2>6.81. Transmit PDO 21 Mapping<a class="headerlink" href="#transmit-pdo-21-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id84">
 <caption><span class="caption-text">Субиндексы 0x1A14 Transmit PDO 21 Mapping(0—2)</span><a class="headerlink" href="#id84" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4897,7 +4897,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-22-mapping">
-<span id="subtable1a15"></span><h2>8.82. Transmit PDO 22 Mapping<a class="headerlink" href="#transmit-pdo-22-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a15"></span><h2>6.82. Transmit PDO 22 Mapping<a class="headerlink" href="#transmit-pdo-22-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id85">
 <caption><span class="caption-text">Субиндексы 0x1A15 Transmit PDO 22 Mapping(0—2)</span><a class="headerlink" href="#id85" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4940,7 +4940,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-23-mapping">
-<span id="subtable1a16"></span><h2>8.83. Transmit PDO 23 Mapping<a class="headerlink" href="#transmit-pdo-23-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a16"></span><h2>6.83. Transmit PDO 23 Mapping<a class="headerlink" href="#transmit-pdo-23-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id86">
 <caption><span class="caption-text">Субиндексы 0x1A16 Transmit PDO 23 Mapping(0—2)</span><a class="headerlink" href="#id86" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -4983,7 +4983,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-24-mapping">
-<span id="subtable1a17"></span><h2>8.84. Transmit PDO 24 Mapping<a class="headerlink" href="#transmit-pdo-24-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a17"></span><h2>6.84. Transmit PDO 24 Mapping<a class="headerlink" href="#transmit-pdo-24-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id87">
 <caption><span class="caption-text">Субиндексы 0x1A17 Transmit PDO 24 Mapping(0—2)</span><a class="headerlink" href="#id87" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -5026,7 +5026,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-25-mapping">
-<span id="subtable1a18"></span><h2>8.85. Transmit PDO 25 Mapping<a class="headerlink" href="#transmit-pdo-25-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a18"></span><h2>6.85. Transmit PDO 25 Mapping<a class="headerlink" href="#transmit-pdo-25-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id88">
 <caption><span class="caption-text">Субиндексы 0x1A18 Transmit PDO 25 Mapping(0—2)</span><a class="headerlink" href="#id88" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -5069,7 +5069,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-26-mapping">
-<span id="subtable1a19"></span><h2>8.86. Transmit PDO 26 Mapping<a class="headerlink" href="#transmit-pdo-26-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a19"></span><h2>6.86. Transmit PDO 26 Mapping<a class="headerlink" href="#transmit-pdo-26-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id89">
 <caption><span class="caption-text">Субиндексы 0x1A19 Transmit PDO 26 Mapping(0—2)</span><a class="headerlink" href="#id89" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -5112,7 +5112,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-27-mapping">
-<span id="subtable1a1a"></span><h2>8.87. Transmit PDO 27 Mapping<a class="headerlink" href="#transmit-pdo-27-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a1a"></span><h2>6.87. Transmit PDO 27 Mapping<a class="headerlink" href="#transmit-pdo-27-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id90">
 <caption><span class="caption-text">Субиндексы 0x1A1A Transmit PDO 27 Mapping(0—2)</span><a class="headerlink" href="#id90" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -5155,7 +5155,7 @@
 </table>
 </div>
 <div class="section" id="transmit-pdo-28-mapping">
-<span id="subtable1a1b"></span><h2>8.88. Transmit PDO 28 Mapping<a class="headerlink" href="#transmit-pdo-28-mapping" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="subtable1a1b"></span><h2>6.88. Transmit PDO 28 Mapping<a class="headerlink" href="#transmit-pdo-28-mapping" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default" id="id91">
 <caption><span class="caption-text">Субиндексы 0x1A1B Transmit PDO 28 Mapping(0—2)</span><a class="headerlink" href="#id91" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
