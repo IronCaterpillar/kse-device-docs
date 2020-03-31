@@ -16,20 +16,6 @@
    written/heater_line
    written/HCR01F-user-web
    generated/device_index
-   generated/common_can
-   generated/device_params
-   generated/B0
-   generated/B1
-   generated/B2
-   generated/B3
-   generated/B4
-   generated/B5
-   generated/B6
-   generated/B7
-   generated/B8
-   generated/ExtIO
-   generated/UserApp
-   generated/UserAppData
    written/Mapping_Struct
    generated/modbus_mmappings
    firmware_struct
