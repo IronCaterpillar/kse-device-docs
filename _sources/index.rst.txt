@@ -15,6 +15,7 @@
    written/description
    written/heater_line
    written/HCR01F-user-web
+   written/Common_Structure
    generated/device_index
    written/Mapping_Struct
    generated/modbus_mmappings
