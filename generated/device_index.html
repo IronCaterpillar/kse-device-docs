@@ -68,7 +68,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../written/Mapping_Struct.html">6. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
 <li class="toctree-l1"><a class="reference internal" href="modbus_mmappings.html">7. Отображение в адресное пространство Modbus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">8. Типовое содержимое архива с ПО для устройства</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">9. Распределение параметров PDO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">9. Распределение параметров CANopen PDO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="B0.html">Головная плата - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExtIO.html">Данные с внешних устройств - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserApp.html">Приложение пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common_can.html">Объекты CANopen DS-301 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_params.html">Параметры устройства - Содержимое</a></li>
 </ul>
 </ul>
 </li>
@@ -84,11 +92,11 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">5. Словарь объектов</a><ul>
 <li><a class="reference internal" href="#canopen-ds-301">5.1. Объекты CANopen DS-301</a></li>
-<li><a class="reference internal" href="#id2">5.2. Параметры устройства</a></li>
-<li><a class="reference internal" href="#id3">5.3. Головная плата</a></li>
-<li><a class="reference internal" href="#id4">5.4. Данные с внешних устройств</a></li>
-<li><a class="reference internal" href="#id5">5.5. Приложение пользователя</a></li>
-<li><a class="reference internal" href="#id6">5.6. Данные приложения пользователя</a></li>
+<li><a class="reference internal" href="#device-params">5.2. Параметры устройства</a></li>
+<li><a class="reference internal" href="#b0">5.3. Головная плата</a></li>
+<li><a class="reference internal" href="#extio">5.4. Данные с внешних устройств</a></li>
+<li><a class="reference internal" href="#userapp">5.5. Приложение пользователя</a></li>
+<li><a class="reference internal" href="#userappdata">5.6. Данные приложения пользователя</a></li>
 </ul>
 </li>
 </ul>
@@ -138,10 +146,10 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <div class="section" id="id1">
-<h1>5. Словарь объектов<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+  <div class="section" id="device-dictionary">
+<span id="id1"></span><h1>5. Словарь объектов<a class="headerlink" href="#device-dictionary" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="canopen-ds-301">
-<h2>5.1. Объекты CANopen DS-301<a class="headerlink" href="#canopen-ds-301" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="common-can"></span><h2>5.1. Объекты CANopen DS-301<a class="headerlink" href="#canopen-ds-301" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />
@@ -690,8 +698,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id2">
-<h2>5.2. Параметры устройства<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="device-params">
+<span id="id2"></span><h2>5.2. Параметры устройства<a class="headerlink" href="#device-params" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />
@@ -796,8 +804,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id3">
-<h2>5.3. Головная плата<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="b0">
+<span id="id3"></span><h2>5.3. Головная плата<a class="headerlink" href="#b0" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />
@@ -974,8 +982,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id4">
-<h2>5.4. Данные с внешних устройств<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="extio">
+<span id="id4"></span><h2>5.4. Данные с внешних устройств<a class="headerlink" href="#extio" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />
@@ -1134,8 +1142,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id5">
-<h2>5.5. Приложение пользователя<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="userapp">
+<span id="id5"></span><h2>5.5. Приложение пользователя<a class="headerlink" href="#userapp" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />
@@ -1288,8 +1296,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id6">
-<h2>5.6. Данные приложения пользователя<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="userappdata">
+<span id="id6"></span><h2>5.6. Данные приложения пользователя<a class="headerlink" href="#userappdata" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />

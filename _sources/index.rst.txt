@@ -22,6 +22,19 @@
    firmware_struct
    written/CAN_PDO_Mappings
 
+.. toctree::
+   :hidden:
+
+   generated/B0
+   generated/ExtIO
+   generated/UserApp
+   generated/UserAppData
+   generated/common_can
+   generated/device_params
+   
+
+   
+
 .. Таблицы и Индексы
    ==================
    * :ref:`genindex`

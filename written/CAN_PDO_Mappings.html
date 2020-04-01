@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>9. Распределение параметров PDO &#8212; документация Руководство пользователя 1.0</title>
+    <title>9. Распределение параметров CANopen PDO &#8212; документация Руководство пользователя 1.0</title>
     <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
@@ -62,12 +62,12 @@
 <li class="toctree-l1"><a class="reference internal" href="description.html">1. Введение</a></li>
 <li class="toctree-l1"><a class="reference internal" href="heater_line.html">2. Описание работы линии электрообогрева</a></li>
 <li class="toctree-l1"><a class="reference internal" href="HCR01F-user-web.html">3. WEB-Интерфейс настройки устройства</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Common_Structure.html">4. Устройство внутреннего словаря объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Common_Structure.html">4. Устройство словаря объектов</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../generated/device_index.html">5. Словарь объектов</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Mapping_Struct.html">6. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../generated/modbus_mmappings.html">7. Отображение в адресное пространство Modbus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">8. Типовое содержимое архива с ПО для устройства</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Распределение параметров PDO</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Распределение параметров CANopen PDO</a></li>
 </ul>
 </ul>
 </li>
@@ -81,33 +81,33 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">9. Распределение параметров PDO</a><ul>
+<li><a class="reference internal" href="#">9. Распределение параметров CANopen PDO</a><ul>
 <li><a class="reference internal" href="#id1">9.1. Общие положения</a></li>
-<li><a class="reference internal" href="#id2">9.2. Содержание PDO по платам</a><ul>
-<li><a class="reference internal" href="#id3">9.2.1. Головная плата</a></li>
+<li><a class="reference internal" href="#pdo">9.2. Содержание PDO по платам</a><ul>
+<li><a class="reference internal" href="#id2">9.2.1. Головная плата</a></li>
 <li><a class="reference internal" href="#di-pdo">9.2.2. Отображение параметров плат DI в PDO</a><ul>
 <li><a class="reference internal" href="#tpdo">9.2.2.1. TPDO</a></li>
 <li><a class="reference internal" href="#rpdo">9.2.2.2. RPDO</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#do-pdo">9.2.3. Отображение параметров плат DO в PDO</a><ul>
-<li><a class="reference internal" href="#id4">9.2.3.1. TPDO</a></li>
-<li><a class="reference internal" href="#id5">9.2.3.2. RPDO</a></li>
+<li><a class="reference internal" href="#id3">9.2.3.1. TPDO</a></li>
+<li><a class="reference internal" href="#id4">9.2.3.2. RPDO</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#ai-pdo">9.2.4. Отображение параметров плат AI в PDO</a><ul>
-<li><a class="reference internal" href="#id6">9.2.4.1. TPDO</a></li>
-<li><a class="reference internal" href="#id7">9.2.4.2. RPDO</a></li>
+<li><a class="reference internal" href="#id5">9.2.4.1. TPDO</a></li>
+<li><a class="reference internal" href="#id6">9.2.4.2. RPDO</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#ao-pdo">9.2.5. Отображение параметров плат AO в PDO</a><ul>
-<li><a class="reference internal" href="#id8">9.2.5.1. TPDO</a></li>
-<li><a class="reference internal" href="#id9">9.2.5.2. RPDO</a></li>
+<li><a class="reference internal" href="#id7">9.2.5.1. TPDO</a></li>
+<li><a class="reference internal" href="#id8">9.2.5.2. RPDO</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#pm-pdo">9.2.6. Отображение параметров плат PM в PDO</a><ul>
-<li><a class="reference internal" href="#id10">9.2.6.1. TPDO</a></li>
-<li><a class="reference internal" href="#id11">9.2.6.2. RPDO</a></li>
+<li><a class="reference internal" href="#id9">9.2.6.1. TPDO</a></li>
+<li><a class="reference internal" href="#id10">9.2.6.2. RPDO</a></li>
 </ul>
 </li>
 </ul>
@@ -157,8 +157,8 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <div class="section" id="pdo">
-<h1>9. Распределение параметров PDO<a class="headerlink" href="#pdo" title="Ссылка на этот заголовок">¶</a></h1>
+  <div class="section" id="canopen-pdo">
+<h1>9. Распределение параметров CANopen PDO<a class="headerlink" href="#canopen-pdo" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="admonition attention">
 <p class="admonition-title">Внимание</p>
 <p>В PDO дочерних плат, где идёт ссылка на ошибки первой платы имеются ввиду ошибки соответствующей платы(0-8, Ext IO)</p>
@@ -181,16 +181,16 @@
 <li><p>Остальным платам IO выделено 5 PDO: 4 для TPDO и 1 для RPDO;</p></li>
 </ul>
 </div>
+<div class="section" id="pdo">
+<h2>9.2. Содержание PDO по платам<a class="headerlink" href="#pdo" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="id2">
-<h2>9.2. Содержание PDO по платам<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
-<div class="section" id="id3">
-<h3>9.2.1. Головная плата<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>9.2.1. Головная плата<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
 <p>Если плата является первой, то присутствует PDO 7</p>
 </div>
-<table class="docutils align-default" id="id12">
-<caption><span class="caption-text"><strong>MCU-A(D)T(M)</strong> PDO 7(NODE-ID+0x400)</span><a class="headerlink" href="#id12" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id11">
+<caption><span class="caption-text"><strong>MCU-A(D)T(M)</strong> PDO 7(NODE-ID+0x400)</span><a class="headerlink" href="#id11" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 24%" />
 <col style="width: 76%" />
@@ -236,8 +236,8 @@
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id13">
-<caption><span class="caption-text"><strong>MCU-A(D)M(W)</strong> PDO 7(NODE-ID+0x400)</span><a class="headerlink" href="#id13" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id12">
+<caption><span class="caption-text"><strong>MCU-A(D)M(W)</strong> PDO 7(NODE-ID+0x400)</span><a class="headerlink" href="#id12" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 24%" />
 <col style="width: 76%" />
@@ -282,8 +282,8 @@
 <h3>9.2.2. Отображение параметров плат DI в PDO<a class="headerlink" href="#di-pdo" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="section" id="tpdo">
 <h4>9.2.2.1. TPDO<a class="headerlink" href="#tpdo" title="Ссылка на этот заголовок">¶</a></h4>
-<table class="docutils align-default" id="id14">
-<caption><span class="caption-text">PDO 1(NODE-ID+0x180)</span><a class="headerlink" href="#id14" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id13">
+<caption><span class="caption-text">PDO 1(NODE-ID+0x180)</span><a class="headerlink" href="#id13" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 24%" />
 <col style="width: 76%" />
@@ -313,10 +313,10 @@
 </div>
 <div class="section" id="do-pdo">
 <h3>9.2.3. Отображение параметров плат DO в PDO<a class="headerlink" href="#do-pdo" title="Ссылка на этот заголовок">¶</a></h3>
-<div class="section" id="id4">
-<h4>9.2.3.1. TPDO<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h4>
-<table class="docutils align-default" id="id15">
-<caption><span class="caption-text">PDO 1 (NODE-ID+0x180)</span><a class="headerlink" href="#id15" title="Постоянная ссылка на таблицу">¶</a></caption>
+<div class="section" id="id3">
+<h4>9.2.3.1. TPDO<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h4>
+<table class="docutils align-default" id="id14">
+<caption><span class="caption-text">PDO 1 (NODE-ID+0x180)</span><a class="headerlink" href="#id14" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 24%" />
 <col style="width: 76%" />
@@ -339,10 +339,10 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id5">
-<h4>9.2.3.2. RPDO<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h4>
-<table class="docutils align-default" id="id16">
-<caption><span class="caption-text">PDO 8(NODE-ID+0x500)</span><a class="headerlink" href="#id16" title="Постоянная ссылка на таблицу">¶</a></caption>
+<div class="section" id="id4">
+<h4>9.2.3.2. RPDO<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h4>
+<table class="docutils align-default" id="id15">
+<caption><span class="caption-text">PDO 8(NODE-ID+0x500)</span><a class="headerlink" href="#id15" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -365,10 +365,10 @@
 </div>
 <div class="section" id="ai-pdo">
 <h3>9.2.4. Отображение параметров плат AI в PDO<a class="headerlink" href="#ai-pdo" title="Ссылка на этот заголовок">¶</a></h3>
-<div class="section" id="id6">
-<h4>9.2.4.1. TPDO<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h4>
-<table class="docutils align-default" id="id17">
-<caption><span class="caption-text">PDO 1(NODE-ID+0x180)</span><a class="headerlink" href="#id17" title="Постоянная ссылка на таблицу">¶</a></caption>
+<div class="section" id="id5">
+<h4>9.2.4.1. TPDO<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h4>
+<table class="docutils align-default" id="id16">
+<caption><span class="caption-text">PDO 1(NODE-ID+0x180)</span><a class="headerlink" href="#id16" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -388,8 +388,8 @@
 </tbody>
 </table>
 <hr class="docutils" />
-<table class="docutils align-default" id="id18">
-<caption><span class="caption-text">PDO 2(NODE-ID+0x280)</span><a class="headerlink" href="#id18" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id17">
+<caption><span class="caption-text">PDO 2(NODE-ID+0x280)</span><a class="headerlink" href="#id17" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -409,8 +409,8 @@
 </tbody>
 </table>
 <hr class="docutils" />
-<table class="docutils align-default" id="id19">
-<caption><span class="caption-text">PDO 3(NODE-ID+0x380) (только для плат с 8 входами)</span><a class="headerlink" href="#id19" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id18">
+<caption><span class="caption-text">PDO 3(NODE-ID+0x380) (только для плат с 8 входами)</span><a class="headerlink" href="#id18" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -430,8 +430,8 @@
 </tbody>
 </table>
 <hr class="docutils" />
-<table class="docutils align-default" id="id20">
-<caption><span class="caption-text">PDO 4(NODE-ID+0x480)  (только для плат с 8 входами)</span><a class="headerlink" href="#id20" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id19">
+<caption><span class="caption-text">PDO 4(NODE-ID+0x480)  (только для плат с 8 входами)</span><a class="headerlink" href="#id19" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -451,17 +451,17 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id7">
-<h4>9.2.4.2. RPDO<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h4>
+<div class="section" id="id6">
+<h4>9.2.4.2. RPDO<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h4>
 <p>Отсутствуют.</p>
 </div>
 </div>
 <div class="section" id="ao-pdo">
 <h3>9.2.5. Отображение параметров плат AO в PDO<a class="headerlink" href="#ao-pdo" title="Ссылка на этот заголовок">¶</a></h3>
-<div class="section" id="id8">
-<h4>9.2.5.1. TPDO<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h4>
-<table class="docutils align-default" id="id21">
-<caption><span class="caption-text">PDO 1(NODE-ID+0x180)</span><a class="headerlink" href="#id21" title="Постоянная ссылка на таблицу">¶</a></caption>
+<div class="section" id="id7">
+<h4>9.2.5.1. TPDO<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h4>
+<table class="docutils align-default" id="id20">
+<caption><span class="caption-text">PDO 1(NODE-ID+0x180)</span><a class="headerlink" href="#id20" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -481,8 +481,8 @@
 </tbody>
 </table>
 <hr class="docutils" />
-<table class="docutils align-default" id="id22">
-<caption><span class="caption-text">PDO 1(NODE-ID+0x280)</span><a class="headerlink" href="#id22" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id21">
+<caption><span class="caption-text">PDO 1(NODE-ID+0x280)</span><a class="headerlink" href="#id21" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 24%" />
 <col style="width: 76%" />
@@ -502,10 +502,10 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id9">
-<h4>9.2.5.2. RPDO<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h4>
-<table class="docutils align-default" id="id23">
-<caption><span class="caption-text">PDO 8(NODE-ID+0x500)</span><a class="headerlink" href="#id23" title="Постоянная ссылка на таблицу">¶</a></caption>
+<div class="section" id="id8">
+<h4>9.2.5.2. RPDO<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h4>
+<table class="docutils align-default" id="id22">
+<caption><span class="caption-text">PDO 8(NODE-ID+0x500)</span><a class="headerlink" href="#id22" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -528,10 +528,10 @@
 </div>
 <div class="section" id="pm-pdo">
 <h3>9.2.6. Отображение параметров плат PM в PDO<a class="headerlink" href="#pm-pdo" title="Ссылка на этот заголовок">¶</a></h3>
-<div class="section" id="id10">
-<h4>9.2.6.1. TPDO<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h4>
-<table class="docutils align-default" id="id24">
-<caption><span class="caption-text">PDO 1(NODE-ID+0x180)</span><a class="headerlink" href="#id24" title="Постоянная ссылка на таблицу">¶</a></caption>
+<div class="section" id="id9">
+<h4>9.2.6.1. TPDO<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h4>
+<table class="docutils align-default" id="id23">
+<caption><span class="caption-text">PDO 1(NODE-ID+0x180)</span><a class="headerlink" href="#id23" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -551,8 +551,8 @@
 </tbody>
 </table>
 <hr class="docutils" />
-<table class="docutils align-default" id="id25">
-<caption><span class="caption-text">PDO 2(NODE-ID+0x280)</span><a class="headerlink" href="#id25" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id24">
+<caption><span class="caption-text">PDO 2(NODE-ID+0x280)</span><a class="headerlink" href="#id24" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -572,8 +572,8 @@
 </tbody>
 </table>
 <hr class="docutils" />
-<table class="docutils align-default" id="id26">
-<caption><span class="caption-text">PDO 3(NODE-ID+0x180)</span><a class="headerlink" href="#id26" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id25">
+<caption><span class="caption-text">PDO 3(NODE-ID+0x180)</span><a class="headerlink" href="#id25" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -593,8 +593,8 @@
 </tbody>
 </table>
 <hr class="docutils" />
-<table class="docutils align-default" id="id27">
-<caption><span class="caption-text">PDO 4(NODE-ID+0x280)</span><a class="headerlink" href="#id27" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id26">
+<caption><span class="caption-text">PDO 4(NODE-ID+0x280)</span><a class="headerlink" href="#id26" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -614,8 +614,8 @@
 </tbody>
 </table>
 <hr class="docutils" />
-<table class="docutils align-default" id="id28">
-<caption><span class="caption-text">PDO 5(NODE-ID+0x200)</span><a class="headerlink" href="#id28" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id27">
+<caption><span class="caption-text">PDO 5(NODE-ID+0x200)</span><a class="headerlink" href="#id27" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -635,8 +635,8 @@
 </tbody>
 </table>
 <hr class="docutils" />
-<table class="docutils align-default" id="id29">
-<caption><span class="caption-text">PDO 6(NODE-ID+0x300)</span><a class="headerlink" href="#id29" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id28">
+<caption><span class="caption-text">PDO 6(NODE-ID+0x300)</span><a class="headerlink" href="#id28" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -656,8 +656,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id11">
-<h4>9.2.6.2. RPDO<a class="headerlink" href="#id11" title="Ссылка на этот заголовок">¶</a></h4>
+<div class="section" id="id10">
+<h4>9.2.6.2. RPDO<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h4>
 <p>Отсутствуют.</p>
 </div>
 </div>

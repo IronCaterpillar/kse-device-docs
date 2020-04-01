@@ -20,7 +20,7 @@
     <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
     <link rel="search" title="Поиск" href="../search.html" />
     <link rel="next" title="2. Описание работы линии электрообогрева" href="heater_line.html" />
-    <link rel="prev" title="HCR01F Руководство пользователя" href="../index.html" />
+    <link rel="prev" title="HCR-01F Руководство пользователя" href="../index.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -63,11 +63,20 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. Введение</a></li>
 <li class="toctree-l1"><a class="reference internal" href="heater_line.html">2. Описание работы линии электрообогрева</a></li>
 <li class="toctree-l1"><a class="reference internal" href="HCR01F-user-web.html">3. WEB-Интерфейс настройки устройства</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../generated/device_index.html">4. Словарь объектов</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Mapping_Struct.html">5. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="../generated/modbus_mmappings.html">6. Отображение в адресное пространство Modbus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">7. Типовое содержимое архива с ПО для устройства</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CAN_PDO_Mappings.html">8. Распределение параметров PDO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Common_Structure.html">4. Устройство словаря объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/device_index.html">5. Словарь объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapping_Struct.html">6. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/modbus_mmappings.html">7. Отображение в адресное пространство Modbus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">8. Типовое содержимое архива с ПО для устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CAN_PDO_Mappings.html">9. Распределение параметров CANopen PDO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B0.html">Головная плата - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/ExtIO.html">Данные с внешних устройств - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/UserApp.html">Приложение пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/UserAppData.html">Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/common_can.html">Объекты CANopen DS-301 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/device_params.html">Параметры устройства - Содержимое</a></li>
 </ul>
 </ul>
 </li>
@@ -84,7 +93,7 @@
 <li><a class="reference internal" href="#">1. Введение</a><ul>
 <li><a class="reference internal" href="#id2">1.1. Общие принципы работы</a><ul>
 <li><a class="reference internal" href="#id3">1.1.1. Системное ПО</a></li>
-<li><a class="reference internal" href="#id4">1.1.2. Приложение управления электрообогревом</a></li>
+<li><a class="reference internal" href="#id4">1.1.2. Прикладное ПО</a></li>
 </ul>
 </li>
 </ul>
@@ -98,7 +107,7 @@
               
                 
   <li>
-    <a href="../index.html" title="Previous Chapter: HCR01F Руководство пользователя"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; HCR01F Руково...</span>
+    <a href="../index.html" title="Previous Chapter: HCR-01F Руководство пользователя"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; HCR-01F Руков...</span>
     </a>
   </li>
   <li>
@@ -138,27 +147,27 @@
       
   <div class="section" id="id1">
 <h1>1. Введение<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Данное руководство содержит краткую инструкцию по работе с ПО устройства, а так же объясняет
-принципы его функционирования, внутреннюю организацию и описание работы веб-интерфейса настройки.</p>
+<p>Данное руководство содержит инструкцию по работе с устройством управления электрообогревом, его ПО, а так же объясняет
+принципы его функционирования, внутреннюю организацию и описание работы веб-интерфейса настройки и процесс обновления ПО.</p>
 <div class="section" id="id2">
 <h2>1.1. Общие принципы работы<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
-<p>ПО устройства подразделяется на <em>системное</em> <em>ПО</em> и <em>приложение управления электрообогревом</em>. Системное ПО отвечает за загрузку устройства, работу файловой системы,
-контроль состояния, индикацию, обработку каналов ввода-вывода, работу сетевых интерфейсов. Приложение отвечает за задачу регулирования,
-контроля тока, защитное отключение в случае превышения допустимых пределов токов/температуры. Настройка устройства ведётся
-с помощью встроенного в устройство веб-интерфейса.</p>
+<p>ПО устройства подразделяется на <em>системное</em> <em>ПО</em> и <em>прикладное ПО</em>. Настройка устройства выполняется
+с помощью встроенного в устройство WEB-интерфейса.</p>
 <div class="section" id="id3">
 <h3>1.1.1. Системное ПО<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Системное ПО устанавливается в процессе производства. При необходимости устройство проходит заводскую калибровку каналов аналогового ввода.
-Системное ПО может быть при необходимости обновлено для актуализации, либо для получения дополнительных возможностей. Основой системного ПО
-является словарь объектов, где отображаются текущие данные, параметры и настройки устройства. Подробное содержание словаря находится в соответствующем разделе.
+<p>Системное ПО отвечает за загрузку устройства, работу файловой системы,
+контроль состояния, индикацию, обработку каналов ввода-вывода, работу сетевых интерфейсов.
+Системное ПО может быть при необходимости обновлено для актуализации, либо для получения дополнительных возможностей, добавленных после выпуска устройства.
+Основой системного ПО является словарь объектов, где отображаются текущие данные, параметры и настройки устройства. Общее описание словаря: <a class="reference internal" href="Common_Structure.html#common-struct"><span class="std std-ref">Устройство словаря объектов</span></a>.
+Подробное содержание словаря: <a class="reference internal" href="../generated/device_index.html#device-dictionary"><span class="std std-ref">Словарь объектов</span></a>.
 Словарь объектов является так же источником информации для отправки по интерфейсам связи. Для этого служат файлы настройки отображения.
 Каждому протоколу передачи данных соответствует свой файл/файлы настройки отображения, например, для протокола <em>Modbus</em> служит файл
 <em>modbus_mappings.cfg</em>. Описание процесса настройки отображения и настройку по умолчанию можно найти в соответствующих разделах.</p>
 </div>
 <div class="section" id="id4">
-<h3>1.1.2. Приложение управления электрообогревом<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Приложение так же устанавливается в процессе производства и может быть заменено независимо от системного ПО. Осуществляет управление линией электрообогрева, контроль
-параметров и защитное отключение нагрузки.</p>
+<h3>1.1.2. Прикладное ПО<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Прикладное ПО отвечает за задачу регулирования, контроля тока, защитное отключение в случае превышения допустимых пределов токов/температуры.
+Прикладное ПО устанавливается в процессе производства и может быть заменено независимо от системного ПО.</p>
 </div>
 </div>
 </div>
