@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>7. Принцип отображения словаря устройства в адресное пространство протокола Modbus &#8212; документация Руководство пользователя 1.0</title>
+    <title>6. FTP-сервер устройства &#8212; документация Руководство пользователя 1.0</title>
     <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
@@ -19,8 +19,8 @@
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
     <link rel="search" title="Поиск" href="../search.html" />
-    <link rel="next" title="8. Отображение в адресное пространство Modbus" href="../generated/modbus_mmappings.html" />
-    <link rel="prev" title="6. Словарь объектов" href="../generated/device_index.html" />
+    <link rel="next" title="7. Принцип отображения словаря устройства в адресное пространство протокола Modbus" href="Mapping_Struct.html" />
+    <link rel="prev" title="5. WEB-Интерфейс настройки устройства" href="HCR01F-user-web.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -61,12 +61,12 @@
       aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Содержание:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="description.html">1. Введение</a></li>
-<li class="toctree-l1"><a class="reference internal" href="heater_line.html">2. Описание работы линии электрообогрева</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HCR01F-user-web.html">3. WEB-Интерфейс настройки устройства</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FTP.html">4. FTP-сервер устройства</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Common_Structure.html">5. Устройство словаря объектов</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../generated/device_index.html">6. Словарь объектов</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Common_Structure.html">2. Устройство словаря объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/device_index.html">3. Словарь объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="heater_line.html">4. Описание работы линии электрообогрева</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HCR01F-user-web.html">5. WEB-Интерфейс настройки устройства</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. FTP-сервер устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapping_Struct.html">7. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../generated/modbus_mmappings.html">8. Отображение в адресное пространство Modbus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">9. Типовое содержимое архива с ПО для устройства</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CAN_PDO_Mappings.html">10. Распределение параметров CANopen PDO</a></li>
@@ -91,7 +91,11 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">7. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
+<li><a class="reference internal" href="#">6. FTP-сервер устройства</a><ul>
+<li><a class="reference internal" href="#id1">6.1. Доступ к FTP-серверу</a></li>
+<li><a class="reference internal" href="#id2">6.2. Содержимое файловой системы устройства</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -101,11 +105,11 @@
               
                 
   <li>
-    <a href="../generated/device_index.html" title="Previous Chapter: 6. Словарь объектов"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 6. Словарь объектов</span>
+    <a href="HCR01F-user-web.html" title="Previous Chapter: 5. WEB-Интерфейс настройки устройства"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 5. WEB-Интерф...</span>
     </a>
   </li>
   <li>
-    <a href="../generated/modbus_mmappings.html" title="Next Chapter: 8. Отображение в адресное пространство Modbus"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">8. Отображени... &raquo;</span>
+    <a href="Mapping_Struct.html" title="Next Chapter: 7. Принцип отображения словаря устройства в адресное пространство протокола Modbus"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">7. Принцип от... &raquo;</span>
     </a>
   </li>
               
@@ -115,7 +119,7 @@
             
               <li class="hidden-sm">
 <div id="sourcelink">
-  <a href="../_sources/written/Mapping_Struct.rst.txt"
+  <a href="../_sources/written/FTP.rst.txt"
      rel="nofollow">Source</a>
 </div></li>
             
@@ -139,23 +143,25 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <div class="section" id="modbus">
-<h1>7. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em><a class="headerlink" href="#modbus" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Адресное пространство протокола <em>Modbus</em> формируется «на лету» по запросу. Настройка отображения адресного пространства внутреннего словаря в адресное пространство протокола <em>Modbus</em> осуществляется с помощью файла «modbus_mapping.cfg», находящегося в корне файловой системы. Настройка одного отображения осуществляется следующим образом:</p>
-<div class="math notranslate nohighlight">
-\[ABCD=0xZXCV[Y]:X\]</div>
-<p>где <em>ABCD</em> - адрес <em>Modbus</em> в <strong>десятичной</strong> форме, нумерация с единицы, <em>0xZXCV</em> - индекс внутреннего словаря объектов устройства в <strong>шестнадцатиричной</strong> форме, <em>Y</em> - начальный субиндекс, X - количество субиндексов, которые надо отобразить. Количество занимаемых регистров <em>Modbus</em> рассчитывается автоматически. Необходимо учитывать, что в адресном пространстве <em>Modbus</em> адресация ведётся в 16-битных регистрах, то есть если происходит отображение данных типа <em>bool</em>, то каждый субиндекс займёт один регистр, если же происходит отображения данных типа <em>UINT64</em>, то один субиндекс займёт 4 регистра <em>Modbus</em>.</p>
-<div class="admonition note">
-<p class="admonition-title">Примечание</p>
-<p>На данный момент поддерживается отображение только в <strong>Holding</strong> <strong>Registers</strong>, что соответствует <em>Modbus</em> функциям <strong>3</strong>, <strong>6</strong> и <strong>16</strong>.</p>
+  <div class="section" id="ftp">
+<h1>6. FTP-сервер устройства<a class="headerlink" href="#ftp" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="id1">
+<h2>6.1. Доступ к FTP-серверу<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+<p>При подключении устройства к компьютеру с помощью USB кабеля в системе должно появиться
+сетевое устройство. Драйвер в операционных системах <em>Windows</em> и <em>Linux</em> должен устанавливаться автоматически.
+Доступ к FTP-серверу осуществляется по адресу <a class="reference external" href="ftp://169.254.241.1">ftp://169.254.241.1</a>.
+Имя пользователя, которому разрешена запись - <strong>admin</strong>, пароль по умолчанию - <strong>0000</strong>.</p>
 </div>
-<div class="admonition attention">
-<p class="admonition-title">Внимание</p>
-<p>Изменившийся файл <em>modbus_mappings.cfg</em> применяется только после перезагрузки устройства</p>
+<div class="section" id="id2">
+<h2>6.2. Содержимое файловой системы устройства<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── download - папка для выгрузки настроек с устройства
+├── upload - папка для загрузки настроек в устройство
+├── modbus_mappings.cfg - файл настройки отображения внутреннего словаря адресное пространство протокола Modbus
+├── settings1.bin - основной файл настроек
+├── settings2.bin - резервный файл настроек
+└── www - папка, содержащая WEB-интерфейс
+</pre></div>
 </div>
-<div class="admonition attention">
-<p class="admonition-title">Внимание</p>
-<p>Нумерация регистров протокола Modbus ведётся <strong>с</strong> <strong>единицы</strong></p>
 </div>
 </div>
 

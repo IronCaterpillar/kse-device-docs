@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>5. Словарь объектов &#8212; документация Руководство пользователя 1.0</title>
+    <title>3. Словарь объектов &#8212; документация Руководство пользователя 1.0</title>
     <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
@@ -19,8 +19,8 @@
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
     <link rel="search" title="Поиск" href="../search.html" />
-    <link rel="next" title="6. Принцип отображения словаря устройства в адресное пространство протокола Modbus" href="../written/Mapping_Struct.html" />
-    <link rel="prev" title="4. Устройство словаря объектов" href="../written/Common_Structure.html" />
+    <link rel="next" title="4. Описание работы линии электрообогрева" href="../written/heater_line.html" />
+    <link rel="prev" title="2. Устройство словаря объектов" href="../written/Common_Structure.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -61,14 +61,15 @@
       aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Содержание:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../written/description.html">1. Введение</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../written/heater_line.html">2. Описание работы линии электрообогрева</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../written/HCR01F-user-web.html">3. WEB-Интерфейс настройки устройства</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../written/Common_Structure.html">4. Устройство словаря объектов</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Словарь объектов</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../written/Mapping_Struct.html">6. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
-<li class="toctree-l1"><a class="reference internal" href="modbus_mmappings.html">7. Отображение в адресное пространство Modbus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">8. Типовое содержимое архива с ПО для устройства</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">9. Распределение параметров CANopen PDO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/Common_Structure.html">2. Устройство словаря объектов</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Словарь объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/heater_line.html">4. Описание работы линии электрообогрева</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/HCR01F-user-web.html">5. WEB-Интерфейс настройки устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/FTP.html">6. FTP-сервер устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/Mapping_Struct.html">7. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="modbus_mmappings.html">8. Отображение в адресное пространство Modbus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">9. Типовое содержимое архива с ПО для устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">10. Распределение параметров CANopen PDO</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="B0.html">Головная плата - Содержимое</a></li>
@@ -90,13 +91,13 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">5. Словарь объектов</a><ul>
-<li><a class="reference internal" href="#canopen-ds-301">5.1. Объекты CANopen DS-301</a></li>
-<li><a class="reference internal" href="#device-params">5.2. Параметры устройства</a></li>
-<li><a class="reference internal" href="#b0">5.3. Головная плата</a></li>
-<li><a class="reference internal" href="#extio">5.4. Данные с внешних устройств</a></li>
-<li><a class="reference internal" href="#userapp">5.5. Приложение пользователя</a></li>
-<li><a class="reference internal" href="#userappdata">5.6. Данные приложения пользователя</a></li>
+<li><a class="reference internal" href="#">3. Словарь объектов</a><ul>
+<li><a class="reference internal" href="#canopen-ds-301">3.1. Объекты CANopen DS-301</a></li>
+<li><a class="reference internal" href="#device-params">3.2. Параметры устройства</a></li>
+<li><a class="reference internal" href="#b0">3.3. Головная плата</a></li>
+<li><a class="reference internal" href="#extio">3.4. Данные с внешних устройств</a></li>
+<li><a class="reference internal" href="#userapp">3.5. Приложение пользователя</a></li>
+<li><a class="reference internal" href="#userappdata">3.6. Данные приложения пользователя</a></li>
 </ul>
 </li>
 </ul>
@@ -108,11 +109,11 @@
               
                 
   <li>
-    <a href="../written/Common_Structure.html" title="Previous Chapter: 4. Устройство словаря объектов"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 4. Устройство...</span>
+    <a href="../written/Common_Structure.html" title="Previous Chapter: 2. Устройство словаря объектов"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 2. Устройство...</span>
     </a>
   </li>
   <li>
-    <a href="../written/Mapping_Struct.html" title="Next Chapter: 6. Принцип отображения словаря устройства в адресное пространство протокола Modbus"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">6. Принцип от... &raquo;</span>
+    <a href="../written/heater_line.html" title="Next Chapter: 4. Описание работы линии электрообогрева"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">4. Описание р... &raquo;</span>
     </a>
   </li>
               
@@ -147,9 +148,9 @@
     <div class="body col-md-12 content" role="main">
       
   <div class="section" id="device-dictionary">
-<span id="id1"></span><h1>5. Словарь объектов<a class="headerlink" href="#device-dictionary" title="Ссылка на этот заголовок">¶</a></h1>
+<span id="id1"></span><h1>3. Словарь объектов<a class="headerlink" href="#device-dictionary" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="canopen-ds-301">
-<span id="common-can"></span><h2>5.1. Объекты CANopen DS-301<a class="headerlink" href="#canopen-ds-301" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="common-can"></span><h2>3.1. Объекты CANopen DS-301<a class="headerlink" href="#canopen-ds-301" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />
@@ -699,7 +700,7 @@
 </table>
 </div>
 <div class="section" id="device-params">
-<span id="id2"></span><h2>5.2. Параметры устройства<a class="headerlink" href="#device-params" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="id2"></span><h2>3.2. Параметры устройства<a class="headerlink" href="#device-params" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />
@@ -805,7 +806,7 @@
 </table>
 </div>
 <div class="section" id="b0">
-<span id="id3"></span><h2>5.3. Головная плата<a class="headerlink" href="#b0" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="id3"></span><h2>3.3. Головная плата<a class="headerlink" href="#b0" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />
@@ -983,7 +984,7 @@
 </table>
 </div>
 <div class="section" id="extio">
-<span id="id4"></span><h2>5.4. Данные с внешних устройств<a class="headerlink" href="#extio" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="id4"></span><h2>3.4. Данные с внешних устройств<a class="headerlink" href="#extio" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />
@@ -1143,7 +1144,7 @@
 </table>
 </div>
 <div class="section" id="userapp">
-<span id="id5"></span><h2>5.5. Приложение пользователя<a class="headerlink" href="#userapp" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="id5"></span><h2>3.5. Приложение пользователя<a class="headerlink" href="#userapp" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />
@@ -1297,7 +1298,7 @@
 </table>
 </div>
 <div class="section" id="userappdata">
-<span id="id6"></span><h2>5.6. Данные приложения пользователя<a class="headerlink" href="#userappdata" title="Ссылка на этот заголовок">¶</a></h2>
+<span id="id6"></span><h2>3.6. Данные приложения пользователя<a class="headerlink" href="#userappdata" title="Ссылка на этот заголовок">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />
