@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>4. Описание работы линии электрообогрева &#8212; документация Руководство пользователя 1.0</title>
+    <title>4. Описание работы линии электрообогрева &#8212; документация Руководство пользователя 61.0.0.1</title>
     <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
@@ -218,9 +218,9 @@
 Уставка температуры задаётся в градусах, так же настраивается зона нечувствительности в положительном и отрицательном направлении.
 Пределы температуры включения/отключения:</p>
 <div class="math notranslate nohighlight">
-\[T_{включения} = Т_{уставки} - Гистерезис_{отрицательный}\]</div>
+\[T_{ON} = T_{SETPOINT} - Hysteresis_{NEGATIVE}\]</div>
 <div class="math notranslate nohighlight">
-\[T_{отключения} = Т_{уставки} + Гистерезис_{положительный}\]</div>
+\[T_{OFF} = T_{SETPOINT} + Hysteresis_{POSITIVE}\]</div>
 <div class="admonition attention">
 <p class="admonition-title">Внимание</p>
 <p>При невозможности вычислить температуру процесса происходит перевод линии в безопасный режим, выбранный пользователем.</p>
