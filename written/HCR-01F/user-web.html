@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>WEB-Интерфейс настройки устройства &#8212; документация Руководство пользователя 61.0.0.1</title>
+    <link rel="stylesheet" href="../../_static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          Руководство пользователя</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../description.html">1. Введение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Common_Structure.html">2. Устройство словаря объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/device_index.html">3. Словарь объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../heater_line.html">4. Описание работы линии электрообогрева</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-web.html">5. WEB-Интерфейс настройки устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FTP.html">6. FTP-сервер устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Mapping_Struct.html">7. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/modbus_mmappings.html">8. Отображение в адресное пространство Modbus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware_struct.html">9. Типовое содержимое архива с ПО для устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CAN_PDO_Mappings.html">10. Распределение параметров CANopen PDO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B0.html">Головная плата - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B1.html">Плата расширния №1 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B2.html">Плата расширния №2 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B3.html">Плата расширния №3 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B4.html">Плата расширния №4 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B5.html">Плата расширния №5 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B6.html">Плата расширния №6 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B7.html">Плата расширния №7 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B8.html">Плата расширния №8 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/ExtIO.html">Данные с внешних устройств - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/UserApp.html">Приложение пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/UserAppData.html">Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/common_can.html">Объекты CANopen DS-301 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/device_params.html">Параметры устройства - Содержимое</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">WEB-Интерфейс настройки устройства</a><ul>
+<li><a class="reference internal" href="#id1">Доступ к WEB-интерфейсу</a></li>
+<li><a class="reference internal" href="#id2">Страница быстрой настройки</a><ul>
+<li><a class="reference internal" href="#id3">Общий вид страницы настройки</a></li>
+<li><a class="reference internal" href="#id4">Раздел управления автообновлением</a></li>
+<li><a class="reference internal" href="#id5">Раздел общих параметров</a></li>
+<li><a class="reference internal" href="#id6">Раздел настройки сетевых интерфейсов и протоколов</a><ul>
+<li><a class="reference internal" href="#rs-485-modbus">Настройка интерфейса RS-485 и протокола Modbus</a></li>
+<li><a class="reference internal" href="#can-canopen">Настройка интерфейса CAN и протокола CANopen</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7">Раздел параметров линии электрообогрева</a><ul>
+<li><a class="reference internal" href="#id8">Текущие параметры</a></li>
+<li><a class="reference internal" href="#id9">Просмотр флагов ошибок и защитного отключения</a></li>
+<li><a class="reference internal" href="#id10">Настройки параметров линии</a></li>
+<li><a class="reference internal" href="#id11">Настройки аварийных пределов</a></li>
+<li><a class="reference internal" href="#id12">Настройка каналов ввода-вывода</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../../_sources/written/HCR-01F/user-web.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="web">
+<h1>WEB-Интерфейс настройки устройства<a class="headerlink" href="#web" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="id1">
+<h2>Доступ к WEB-интерфейсу<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+<p>При подключении устройства к компьютеру с помощью USB кабеля в системе должно появиться
+сетевое устройство. Драйвер в операционных системах <em>Windows</em> и <em>Linux</em> должен устанавливаться автоматически.
+Доступ к WEB-интерфейсу осуществляется по адресу <a class="reference external" href="http://169.254.241.1">http://169.254.241.1</a>.</p>
+</div>
+<div class="section" id="id2">
+<h2>Страница быстрой настройки<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Страница быстрой настройки предназначена для ускорения ввода устройства в эксплуатацию,
+а так же для упрощения работы по настройке устройства в процессе работы.</p>
+<div class="section" id="id3">
+<h3>Общий вид страницы настройки<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Страница настройки состоит из раздела управления автообновлением,
+раздела общих параметров, раздела настроек сетевых интерфейсов и протоколов,
+а так же блока управления индивидуальными параметрами устройства.</p>
+<div class="figure align-center" id="id13">
+<img alt="Общий вид страницы быстрой настройки" src="../../_images/general-1.png" />
+<p class="caption"><span class="caption-text">Общий вид страницы быстрой настройки</span><a class="headerlink" href="#id13" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Раздел управления автообновлением<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Предназначен для включения/отключения автообновления параметров устройства с помощью соответствующего переключателя,
+при включенном переключателе обновление выполняется каждые 2-3 секунды, при отключенном
+переключателе обновление происходит однократно при загрузке страницы.
+Раздел так же содержит информацию о текущем уровне доступа:</p>
+<ul class="simple">
+<li><p><em>Off</em> - контроль доступа отключен, полный доступ, можно менять любые параметры устройства</p></li>
+<li><p><em>User</em> - контроль доступа включен, вход не выполнен, доступ ограничен, можно менять только текущие оперативные параметры, настройки доступны только для чтения</p></li>
+<li><p><em>Admin</em> - контроль доступа включен, вход выполнен, полный доступ, можно изменять любые параметры</p></li>
+</ul>
+<div class="figure align-center" id="id14">
+<img alt="Управление обновлением и состояние системы контроля доступа" src="../../_images/update.png" />
+<p class="caption"><span class="caption-text">Раздел автообновления и состояния контроля доступа</span><a class="headerlink" href="#id14" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>Автообновление может отключиться при потере связи с устройством. Если это произошло, необходимо вручную включить автообновление.
+В редких случаях при ошибках связи с устройством может потребоваться перезагрузка страницы(<em>Ctrl-F5</em>).</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Раздел общих параметров<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Данный раздел делится на область информации и область команд.
+Раздел информации содержит:</p>
+<ul class="simple">
+<li><p>Код продукта</p></li>
+<li><p>Уникальный номер устройства(UID)</p></li>
+<li><p>Версия ПО</p></li>
+<li><p>Версия прикладного приложения(при наличии)</p></li>
+</ul>
+<p>Раздел команд содержит:</p>
+<ul class="simple">
+<li><p>поле выбора и исполнения команды</p></li>
+<li><p>поле ввода пароля</p></li>
+<li><p>поле сброса к настройкам по умолчанию</p></li>
+</ul>
+<div class="figure align-center" id="id15">
+<img alt="Команды управления устройством и управление доступом" src="../../_images/commands-1.png" />
+<p class="caption"><span class="caption-text">Команды и управление доступом</span><a class="headerlink" href="#id15" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>Поддерживаются следующие команды:</p>
+<ul class="simple">
+<li><p>Включение контроля доступа</p></li>
+<li><p>Отключение контроля доступа</p></li>
+<li><p>Сброс текущего уровня доступа</p></li>
+<li><p>Перезагрузка устройства</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>При включенном контроле доступа исполнение команд возможно только в режиме полного доступа после ввода пароля</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Для сброса к настройкам по умолчанию введите слово <em>load</em> в поле ввода и нажмите кнопку <em>apply</em></p>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>Раздел настройки сетевых интерфейсов и протоколов<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="section" id="rs-485-modbus">
+<h4>Настройка интерфейса RS-485 и протокола Modbus<a class="headerlink" href="#rs-485-modbus" title="Ссылка на этот заголовок">¶</a></h4>
+<p>Раздел содержит параметры последовательного порта и параметры протокола Modbus Slave.
+Параметры последовательного порта:</p>
+<ul class="simple">
+<li><p>включение/отключение интерфейса</p></li>
+<li><p>скорость передачи данных</p></li>
+<li><p>проверка чётности</p></li>
+<li><p>количество стоповых бит</p></li>
+</ul>
+<p>Параметры Modbus Slave:</p>
+<ul class="simple">
+<li><p>адрес Slave устройства в сети</p></li>
+<li><p>дополнительный тайм-аут ответа(для поддержки устаревших устройств, которые не могут немедленно приступить к
+обработке ответа после выдачи запроса)</p></li>
+<li><p>тайм-аут опроса, по прошествии которого принимается решение о том, что отсутствует опрос со стороны <em>Мастера</em></p></li>
+</ul>
+<div class="figure align-center" id="id16">
+<img alt="Настройка последовательного интерфейса RS-485 и протокола Modbus" src="../../_images/rs485-1.png" />
+<p class="caption"><span class="caption-text">Настройка Modbus RS-485</span><a class="headerlink" href="#id16" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+</div>
+<div class="section" id="can-canopen">
+<h4>Настройка интерфейса CAN и протокола CANopen<a class="headerlink" href="#can-canopen" title="Ссылка на этот заголовок">¶</a></h4>
+<p>Раздел содержит параметры <em>CAN</em> и параметры протокола <em>CANopen</em>:</p>
+<ul class="simple">
+<li><p>включение/отключение интерфейса</p></li>
+<li><p>скорость передачи данных</p></li>
+<li><p><em>NodeID</em> в сети <em>CANopen</em></p></li>
+</ul>
+<div class="figure align-center" id="id17">
+<img alt="Настройка интерфейса CAN и протокола CANopen" src="../../_images/can-1.png" />
+<p class="caption"><span class="caption-text">Настройка CANopen</span><a class="headerlink" href="#id17" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>Раздел параметров линии электрообогрева<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Параметры в разделе линии электрообогрева разделены на следующие группы:</p>
+<ul class="simple">
+<li><p>Текущие параметры</p></li>
+<li><p>Просмотр флагов ошибок и защитного отключения</p></li>
+<li><p>Настройки параметров линии</p></li>
+<li><p>Настройки аварийных пределов</p></li>
+<li><p>Настройка каналов ввода-вывода</p></li>
+</ul>
+<p>Подробное описание параметров линии находится в соответствующем разделе описания словаря: <a class="reference internal" href="../../generated/UserApp.html#subtable5800"><span class="std std-ref">Line 1 Description</span></a></p>
+<div class="section" id="id8">
+<h4>Текущие параметры<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h4>
+<p>Раздел используется для онлайн просмотра текущих параметров линии электрообогрева.
+Содержит значения температур, токов, состояние выхода, текущий режим работы и другие параметры.
+Позволяет управлять выходом линии в режиме дистанционного управления(в целях отладки).
+Так же в данном разделе осуществляется квитирование при аварийном отключении.</p>
+<div class="figure align-center" id="id18">
+<img alt="Просмотр текущих параметров линии электрообогрева" src="../../_images/heating-live.png" />
+<p class="caption"><span class="caption-text">Текущие параметры линии электрообогрева</span><a class="headerlink" href="#id18" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+</div>
+<div class="section" id="id9">
+<h4>Просмотр флагов ошибок и защитного отключения<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h4>
+<p>Раздел содержит флаги текущих активных ошибок, а так же флаги защитного отключения.</p>
+<div class="figure align-center" id="id19">
+<img alt="Флаги ошибок линии электрообогрева" src="../../_images/heating-alarms.png" />
+<p class="caption"><span class="caption-text">Флаги ошибок линии электрообогрева</span><a class="headerlink" href="#id19" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+</div>
+<div class="section" id="id10">
+<h4>Настройки параметров линии<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h4>
+<p>Содержит настройки линии: текущий режим управления, настройки режимов, режим расчёта температуры процесса,
+зоны нечувствительности для отправки аналоговых данных.</p>
+<div class="figure align-center" id="id20">
+<img alt="Настройка параметров линии" src="../../_images/heating-settings-1.png" />
+<p class="caption"><span class="caption-text">Настройка параметров линии</span><a class="headerlink" href="#id20" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<div class="figure align-center" id="id21">
+<img alt="Настройка зоны нечувствительности при отправке аналоговых данных" src="../../_images/heating-settings-deadband.png" />
+<p class="caption"><span class="caption-text">Зона нечувствительности при отправке</span><a class="headerlink" href="#id21" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+</div>
+<div class="section" id="id11">
+<h4>Настройки аварийных пределов<a class="headerlink" href="#id11" title="Ссылка на этот заголовок">¶</a></h4>
+<p>Содержит настройки пределов сигнализации, а так же пределы защитного отключения.
+Параметр <em>Alarm</em> <em>Hold</em> <em>Time</em> служит для задания времени удержания флагов ошибок в случае их
+кратковременного возникновения и пропадания.</p>
+<div class="figure align-center" id="id22">
+<img alt="Настройка аварийных пределов" src="../../_images/heating-alarm-settings.png" />
+<p class="caption"><span class="caption-text">Настройка аварийных пределов</span><a class="headerlink" href="#id22" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+</div>
+<div class="section" id="id12">
+<h4>Настройка каналов ввода-вывода<a class="headerlink" href="#id12" title="Ссылка на этот заголовок">¶</a></h4>
+<p>Содержит настройки номеров каналов, настройки фильтрации аналоговых данных,а так же типы аналоговых датчиков.</p>
+<div class="figure align-center" id="id23">
+<img alt="Настройка каналов ввода-вывода" src="../../_images/heating-hw-settings.png" />
+<p class="caption"><span class="caption-text">Настройка каналов ввода-вывода</span><a class="headerlink" href="#id23" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, Prom-Teq LLC.<br/>
+      Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

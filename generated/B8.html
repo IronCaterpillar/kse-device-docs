@@ -1,0 +1,5054 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Плата расширния №8 - Содержимое &#8212; документация Руководство пользователя 61.0.0.1</title>
+    <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Руководство пользователя</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../written/description.html">1. Введение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/Common_Structure.html">2. Устройство словаря объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_index.html">3. Словарь объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/heater_line.html">4. Описание работы линии электрообогрева</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/HCR01F-user-web.html">5. WEB-Интерфейс настройки устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/FTP.html">6. FTP-сервер устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/Mapping_Struct.html">7. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="modbus_mmappings.html">8. Отображение в адресное пространство Modbus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">9. Типовое содержимое архива с ПО для устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">10. Распределение параметров CANopen PDO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="B0.html">Головная плата - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ExtIO.html">Данные с внешних устройств - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserApp.html">Приложение пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserAppData.html">Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common_can.html">Объекты CANopen DS-301 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device_params.html">Параметры устройства - Содержимое</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Плата расширния №8 - Содержимое</a><ul>
+<li><a class="reference internal" href="#b8-description">B8 - Description</a></li>
+<li><a class="reference internal" href="#b8-board-status">B8 - Board Status</a></li>
+<li><a class="reference internal" href="#b8-channel-status">B8 - Channel Status</a></li>
+<li><a class="reference internal" href="#b8-board-control">B8 - Board Control</a></li>
+<li><a class="reference internal" href="#b8-di-read-word">B8 - DI Read Word</a></li>
+<li><a class="reference internal" href="#b8-di-read-bit">B8 - DI Read Bit</a></li>
+<li><a class="reference internal" href="#b8-di-invert-polarity">B8 - DI Invert Polarity</a></li>
+<li><a class="reference internal" href="#b8-di-filter-time">B8 - DI Filter Time</a></li>
+<li><a class="reference internal" href="#b8-di-mask">B8 - DI Mask</a></li>
+<li><a class="reference internal" href="#b8-di-mag">B8 - DI Mag</a></li>
+<li><a class="reference internal" href="#b8-do-write-word">B8 - DO Write Word</a></li>
+<li><a class="reference internal" href="#b8-do-write-bit">B8 - DO Write Bit</a></li>
+<li><a class="reference internal" href="#b8-do-invert-polarity">B8 - DO Invert Polarity</a></li>
+<li><a class="reference internal" href="#b8-do-error-mode">B8 - DO Error Mode</a></li>
+<li><a class="reference internal" href="#b8-do-error-value">B8 - DO Error Value</a></li>
+<li><a class="reference internal" href="#b8-do-mask">B8 - DO Mask</a></li>
+<li><a class="reference internal" href="#b8-ai-read-short">B8 - AI Read Short</a></li>
+<li><a class="reference internal" href="#b8-ai-read-float">B8 - AI Read Float</a></li>
+<li><a class="reference internal" href="#b8-ai-scaling">B8 - AI Scaling</a></li>
+<li><a class="reference internal" href="#b8-ai-offset">B8 - AI Offset</a></li>
+<li><a class="reference internal" href="#b8-ai-filter-time">B8 - AI Filter Time</a></li>
+<li><a class="reference internal" href="#b8-ai-deadband">B8 - AI Deadband</a></li>
+<li><a class="reference internal" href="#b8-ai-upper-limit">B8 - AI Upper Limit</a></li>
+<li><a class="reference internal" href="#b8-ai-lower-limit">B8 - AI Lower Limit</a></li>
+<li><a class="reference internal" href="#b8-ai-trigger-select">B8 - AI Trigger Select</a></li>
+<li><a class="reference internal" href="#b8-ai-settings">B8 - AI Settings</a></li>
+<li><a class="reference internal" href="#b8-ai-short-processed">B8 - AI Short Processed</a></li>
+<li><a class="reference internal" href="#b8-ai-float-mag">B8 - AI Float Mag</a></li>
+<li><a class="reference internal" href="#b8-ai-deadband-ref">B8 - AI Deadband Ref</a></li>
+<li><a class="reference internal" href="#b8-ao-write-short">B8 - AO Write Short</a></li>
+<li><a class="reference internal" href="#b8-ao-write-float">B8 - AO Write Float</a></li>
+<li><a class="reference internal" href="#b8-ao-offset">B8 - AO Offset</a></li>
+<li><a class="reference internal" href="#b8-ao-scaling">B8 - AO Scaling</a></li>
+<li><a class="reference internal" href="#b8-ao-error-mode">B8 - AO Error Mode</a></li>
+<li><a class="reference internal" href="#b8-ao-error-value">B8 - AO Error Value</a></li>
+<li><a class="reference internal" href="#b8-pm-settings">B8 - PM Settings</a></li>
+<li><a class="reference internal" href="#b8-pm-current">B8 - PM Current</a></li>
+<li><a class="reference internal" href="#b8-pm-voltage">B8 - PM Voltage</a></li>
+<li><a class="reference internal" href="#b8-pm-power">B8 - PM Power</a></li>
+<li><a class="reference internal" href="#b8-pm-energy">B8 - PM Energy</a></li>
+<li><a class="reference internal" href="#b8-pm-quality">B8 - PM Quality</a></li>
+<li><a class="reference internal" href="#b8-pm-current-mag">B8 - PM Current Mag</a></li>
+<li><a class="reference internal" href="#b8-pm-voltage-mag">B8 - PM Voltage Mag</a></li>
+<li><a class="reference internal" href="#b8-pm-power-mag">B8 - PM Power Mag</a></li>
+<li><a class="reference internal" href="#b8-pm-quality-mag">B8 - PM Quality Mag</a></li>
+<li><a class="reference internal" href="#b8-pm-current-deadband">B8 - PM Current Deadband</a></li>
+<li><a class="reference internal" href="#b8-pm-voltage-deadband">B8 - PM Voltage Deadband</a></li>
+<li><a class="reference internal" href="#b8-pm-power-deadband">B8 - PM Power Deadband</a></li>
+<li><a class="reference internal" href="#b8-pm-quality-deadband">B8 - PM Quality Deadband</a></li>
+<li><a class="reference internal" href="#b8-pm-current-deadband-ref">B8 - PM Current Deadband Ref</a></li>
+<li><a class="reference internal" href="#b8-pm-voltage-deadband-ref">B8 - PM Voltage Deadband Ref</a></li>
+<li><a class="reference internal" href="#b8-pm-power-deadband-ref">B8 - PM Power Deadband Ref</a></li>
+<li><a class="reference internal" href="#b8-pm-quality-deadband-ref">B8 - PM Quality Deadband Ref</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/generated/B8.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="o8">
+<h1>Плата расширния №8 - Содержимое<a class="headerlink" href="#o8" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="b8-description">
+<span id="subtable4700"></span><h2>B8 - Description<a class="headerlink" href="#b8-description" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Субиндексы 0x4700 B8 - Description(0—7)</span><a class="headerlink" href="#id1" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 7</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Name</p></td>
+<td><p>Имя</p></td>
+<td></td>
+<td><p>visible_str</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Type</p></td>
+<td><p>Тип</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>HW Revision</p></td>
+<td><p>Ревизия платы</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Serial</p></td>
+<td><p>Серийный номер</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Manufacture Date</p></td>
+<td><p>Дата производства в формате BCD</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>Calibration Date</p></td>
+<td><p>Дата калибровки в формате BCD</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>Calibration Version</p></td>
+<td><p>Счётчик калибровки</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-board-status">
+<span id="subtable4701"></span><h2>B8 - Board Status<a class="headerlink" href="#b8-board-status" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Субиндексы 0x4701 B8 - Board Status(0—5)</span><a class="headerlink" href="#id2" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 5</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Board Errors</p></td>
+<td><p>Статус-флаги платы</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Processing Time Last</p></td>
+<td><p>Время обработки</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Processing Time AVG</p></td>
+<td><p>Среднее время обработки</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Processing Time Max</p></td>
+<td><p>Максимальное время обработки</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Recent Poll Time</p></td>
+<td><p>Время последнего опроса</p></td>
+<td><p>0</p></td>
+<td><p>uint64</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>1 - Board Errors</p></li>
+</ul>
+<p>Слово состояния платы состоит из следующих полей:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 87%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>№ Бита</p></th>
+<th class="head"><p>Значение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Общая ошибка платы</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Плата не найдена на старте</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Ошибка в ходе обработки даных</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Общая ошибка платы</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td rowspan="5"><p>Зарезервировано</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td rowspan="7"><p>Зарезервировано</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>Ошибка канала 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>Выход за верхний предел канала 1</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>Выход за нижний предел канала 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>Ошибка канала 2</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>Выход за верхний предел канала 2</p></td>
+</tr>
+<tr class="row-odd"><td><p>21</p></td>
+<td><p>Выход за нижний предел канала 2</p></td>
+</tr>
+<tr class="row-even"><td><p>22</p></td>
+<td><p>Ошибка канала 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>23</p></td>
+<td><p>Выход за верхний предел канала 3</p></td>
+</tr>
+<tr class="row-even"><td><p>24</p></td>
+<td><p>Выход за нижний предел канала 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>25</p></td>
+<td><p>Ошибка канала 4</p></td>
+</tr>
+<tr class="row-even"><td><p>26</p></td>
+<td><p>Выход за верхний предел канала 4</p></td>
+</tr>
+<tr class="row-odd"><td><p>27</p></td>
+<td><p>Выход за нижний предел канала 4</p></td>
+</tr>
+<tr class="row-even"><td><p>28</p></td>
+<td><p>Ошибка канала 5</p></td>
+</tr>
+<tr class="row-odd"><td><p>29</p></td>
+<td><p>Выход за верхний предел канала 5</p></td>
+</tr>
+<tr class="row-even"><td><p>30</p></td>
+<td><p>Выход за нижний предел канала 5</p></td>
+</tr>
+<tr class="row-odd"><td><p>31</p></td>
+<td><p>Ошибка канала 6</p></td>
+</tr>
+<tr class="row-even"><td><p>32</p></td>
+<td><p>Выход за верхний предел канала 6</p></td>
+</tr>
+<tr class="row-odd"><td><p>33</p></td>
+<td><p>Выход за нижний предел канала 6</p></td>
+</tr>
+<tr class="row-even"><td><p>34</p></td>
+<td><p>Ошибка канала 7</p></td>
+</tr>
+<tr class="row-odd"><td><p>35</p></td>
+<td><p>Выход за верхний предел канала 7</p></td>
+</tr>
+<tr class="row-even"><td><p>36</p></td>
+<td><p>Выход за нижний предел канала 7</p></td>
+</tr>
+<tr class="row-odd"><td><p>37</p></td>
+<td><p>Ошибка канала 8</p></td>
+</tr>
+<tr class="row-even"><td><p>38</p></td>
+<td><p>Выход за верхний предел канала 8</p></td>
+</tr>
+<tr class="row-odd"><td><p>39</p></td>
+<td><p>Выход за нижний предел канала 8</p></td>
+</tr>
+<tr class="row-even"><td><p>40</p></td>
+<td><p>Ошибка канала 9</p></td>
+</tr>
+<tr class="row-odd"><td><p>41</p></td>
+<td><p>Выход за верхний предел канала 9</p></td>
+</tr>
+<tr class="row-even"><td><p>42</p></td>
+<td><p>Выход за нижний предел канала 9</p></td>
+</tr>
+<tr class="row-odd"><td><p>43</p></td>
+<td><p>Ошибка канала 10</p></td>
+</tr>
+<tr class="row-even"><td><p>44</p></td>
+<td><p>Выход за верхний предел канала 10</p></td>
+</tr>
+<tr class="row-odd"><td><p>45</p></td>
+<td><p>Выход за нижний предел канала 10</p></td>
+</tr>
+<tr class="row-even"><td><p>46</p></td>
+<td><p>Ошибка канала 11</p></td>
+</tr>
+<tr class="row-odd"><td><p>47</p></td>
+<td><p>Выход за верхний предел канала 11</p></td>
+</tr>
+<tr class="row-even"><td><p>48</p></td>
+<td><p>Выход за нижний предел канала 11</p></td>
+</tr>
+<tr class="row-odd"><td><p>49</p></td>
+<td><p>Ошибка канала 12</p></td>
+</tr>
+<tr class="row-even"><td><p>50</p></td>
+<td><p>Выход за верхний предел канала 12</p></td>
+</tr>
+<tr class="row-odd"><td><p>51</p></td>
+<td><p>Выход за нижний предел канала 12</p></td>
+</tr>
+<tr class="row-even"><td><p>52</p></td>
+<td><p>Ошибка канала 13</p></td>
+</tr>
+<tr class="row-odd"><td><p>53</p></td>
+<td><p>Выход за верхний предел канала 13</p></td>
+</tr>
+<tr class="row-even"><td><p>54</p></td>
+<td><p>Выход за нижний предел канала 13</p></td>
+</tr>
+<tr class="row-odd"><td><p>55</p></td>
+<td><p>Ошибка канала 14</p></td>
+</tr>
+<tr class="row-even"><td><p>56</p></td>
+<td><p>Выход за верхний предел канала 14</p></td>
+</tr>
+<tr class="row-odd"><td><p>57</p></td>
+<td><p>Выход за нижний предел канала 14</p></td>
+</tr>
+<tr class="row-even"><td><p>58</p></td>
+<td><p>Ошибка канала 15</p></td>
+</tr>
+<tr class="row-odd"><td><p>59</p></td>
+<td><p>Выход за верхний предел канала 15</p></td>
+</tr>
+<tr class="row-even"><td><p>60</p></td>
+<td><p>Выход за нижний предел канала 15</p></td>
+</tr>
+<tr class="row-odd"><td><p>61</p></td>
+<td><p>Ошибка канала 16</p></td>
+</tr>
+<tr class="row-even"><td><p>62</p></td>
+<td><p>Выход за верхний предел канала 16</p></td>
+</tr>
+<tr class="row-odd"><td><p>63</p></td>
+<td><p>Выход за нижний предел канала 16</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-channel-status">
+<span id="subtable4702"></span><h2>B8 - Channel Status<a class="headerlink" href="#b8-channel-status" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Субиндексы 0x4702 B8 - Channel Status(0—10)</span><a class="headerlink" href="#id3" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - Channel Status 1</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-board-control">
+<span id="subtable4703"></span><h2>B8 - Board Control<a class="headerlink" href="#b8-board-control" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Субиндексы 0x4703 B8 - Board Control(0—1)</span><a class="headerlink" href="#id4" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Command</p></td>
+<td><p>Команда управления платой</p></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-di-read-word">
+<span id="subtable4710"></span><h2>B8 - DI Read Word<a class="headerlink" href="#b8-di-read-word" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-text">Субиндексы 0x4710 B8 - DI Read Word(0—1)</span><a class="headerlink" href="#id5" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - DI Read Word 1</p></td>
+<td><p>Слово состояния входов 1-10</p></td>
+<td><p>0</p></td>
+<td><p>uint16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-di-read-bit">
+<span id="subtable4711"></span><h2>B8 - DI Read Bit<a class="headerlink" href="#b8-di-read-bit" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">Субиндексы 0x4711 B8 - DI Read Bit(0—10)</span><a class="headerlink" href="#id6" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - DI Read Bit 1</p></td>
+<td><p>Состояния вх.  1</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - DI Read Bit 2</p></td>
+<td><p>Состояния вх.  2</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - DI Read Bit 3</p></td>
+<td><p>Состояния вх.  3</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - DI Read Bit 4</p></td>
+<td><p>Состояния вх.  4</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - DI Read Bit 5</p></td>
+<td><p>Состояния вх.  5</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - DI Read Bit 6</p></td>
+<td><p>Состояния вх.  6</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - DI Read Bit 7</p></td>
+<td><p>Состояния вх.  7</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - DI Read Bit 8</p></td>
+<td><p>Состояния вх.  8</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>B8 - DI Read Bit 9</p></td>
+<td><p>Состояния вх.  9</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>B8 - DI Read Bit 10</p></td>
+<td><p>Состояния вх.  10</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-di-invert-polarity">
+<span id="subtable4712"></span><h2>B8 - DI Invert Polarity<a class="headerlink" href="#b8-di-invert-polarity" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-text">Субиндексы 0x4712 B8 - DI Invert Polarity(0—10)</span><a class="headerlink" href="#id7" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - DI Invert Polarity 1</p></td>
+<td><p>Смена полярности вх.  1</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - DI Invert Polarity 2</p></td>
+<td><p>Смена полярности вх.  2</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - DI Invert Polarity 3</p></td>
+<td><p>Смена полярности вх.  3</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - DI Invert Polarity 4</p></td>
+<td><p>Смена полярности вх.  4</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - DI Invert Polarity 5</p></td>
+<td><p>Смена полярности вх.  5</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - DI Invert Polarity 6</p></td>
+<td><p>Смена полярности вх.  6</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - DI Invert Polarity 7</p></td>
+<td><p>Смена полярности вх.  7</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - DI Invert Polarity 8</p></td>
+<td><p>Смена полярности вх.  8</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>B8 - DI Invert Polarity 9</p></td>
+<td><p>Смена полярности вх.  9</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>B8 - DI Invert Polarity 10</p></td>
+<td><p>Смена полярности вх.  10</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-di-filter-time">
+<span id="subtable4713"></span><h2>B8 - DI Filter Time<a class="headerlink" href="#b8-di-filter-time" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-text">Субиндексы 0x4713 B8 - DI Filter Time(0—10)</span><a class="headerlink" href="#id8" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - DI Filter Time 1</p></td>
+<td><p>Время фильтрации вх.  1</p></td>
+<td><p>20</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - DI Filter Time 2</p></td>
+<td><p>Время фильтрации вх.  2</p></td>
+<td><p>20</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - DI Filter Time 3</p></td>
+<td><p>Время фильтрации вх.  3</p></td>
+<td><p>20</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - DI Filter Time 4</p></td>
+<td><p>Время фильтрации вх.  4</p></td>
+<td><p>20</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - DI Filter Time 5</p></td>
+<td><p>Время фильтрации вх.  5</p></td>
+<td><p>20</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - DI Filter Time 6</p></td>
+<td><p>Время фильтрации вх.  6</p></td>
+<td><p>20</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - DI Filter Time 7</p></td>
+<td><p>Время фильтрации вх.  7</p></td>
+<td><p>20</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - DI Filter Time 8</p></td>
+<td><p>Время фильтрации вх.  8</p></td>
+<td><p>20</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>B8 - DI Filter Time 9</p></td>
+<td><p>Время фильтрации вх.  9</p></td>
+<td><p>20</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>B8 - DI Filter Time 10</p></td>
+<td><p>Время фильтрации вх.  10</p></td>
+<td><p>20</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Размерность время фильтра зависит оттипа платы дискретного ввода. Для платы 24В единица времени составляет 0,3мС, для платы 230В единица времени составляет 2мС. При вычислении значения сигнала происходит накопление значений на временном интервале фильтра. Если более 2/3 значений имеют логический уровень <strong>1</strong>, то итоговое значение принимается равным <strong>1</strong>, если менее 1/3 значений имеют логический уровень <strong>1</strong>, то итоговое значение принимается равным <strong>0</strong>, в промежуточном случае значение не меняется.</p>
+</div>
+<div class="section" id="b8-di-mask">
+<span id="subtable4714"></span><h2>B8 - DI Mask<a class="headerlink" href="#b8-di-mask" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id9">
+<caption><span class="caption-text">Субиндексы 0x4714 B8 - DI Mask(0—10)</span><a class="headerlink" href="#id9" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - DI Mask 1</p></td>
+<td><p>Запрет событий вх.  1</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - DI Mask 2</p></td>
+<td><p>Запрет событий вх.  2</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - DI Mask 3</p></td>
+<td><p>Запрет событий вх.  3</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - DI Mask 4</p></td>
+<td><p>Запрет событий вх.  4</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - DI Mask 5</p></td>
+<td><p>Запрет событий вх.  5</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - DI Mask 6</p></td>
+<td><p>Запрет событий вх.  6</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - DI Mask 7</p></td>
+<td><p>Запрет событий вх.  7</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - DI Mask 8</p></td>
+<td><p>Запрет событий вх.  8</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>B8 - DI Mask 9</p></td>
+<td><p>Запрет событий вх.  9</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>B8 - DI Mask 10</p></td>
+<td><p>Запрет событий вх.  10</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-di-mag">
+<span id="subtable4715"></span><h2>B8 - DI Mag<a class="headerlink" href="#b8-di-mag" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id10">
+<caption><span class="caption-text">Субиндексы 0x4715 B8 - DI Mag(0—1)</span><a class="headerlink" href="#id10" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - DI Mag 1</p></td>
+<td></td>
+<td><p>0</p></td>
+<td><p>uint16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-do-write-word">
+<span id="subtable4720"></span><h2>B8 - DO Write Word<a class="headerlink" href="#b8-do-write-word" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id11">
+<caption><span class="caption-text">Субиндексы 0x4720 B8 - DO Write Word(0—1)</span><a class="headerlink" href="#id11" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - DO Write Word 1</p></td>
+<td><p>Управление выходами 1-10</p></td>
+<td><p>0</p></td>
+<td><p>uint16</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-do-write-bit">
+<span id="subtable4721"></span><h2>B8 - DO Write Bit<a class="headerlink" href="#b8-do-write-bit" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id12">
+<caption><span class="caption-text">Субиндексы 0x4721 B8 - DO Write Bit(0—10)</span><a class="headerlink" href="#id12" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - DO Write Bit 1</p></td>
+<td><p>Управление вых.  1</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - DO Write Bit 2</p></td>
+<td><p>Управление вых.  2</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - DO Write Bit 3</p></td>
+<td><p>Управление вых.  3</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - DO Write Bit 4</p></td>
+<td><p>Управление вых.  4</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - DO Write Bit 5</p></td>
+<td><p>Управление вых.  5</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - DO Write Bit 6</p></td>
+<td><p>Управление вых.  6</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - DO Write Bit 7</p></td>
+<td><p>Управление вых.  7</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - DO Write Bit 8</p></td>
+<td><p>Управление вых.  8</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>B8 - DO Write Bit 9</p></td>
+<td><p>Управление вых.  9</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>B8 - DO Write Bit 10</p></td>
+<td><p>Управление вых.  10</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-do-invert-polarity">
+<span id="subtable4722"></span><h2>B8 - DO Invert Polarity<a class="headerlink" href="#b8-do-invert-polarity" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id13">
+<caption><span class="caption-text">Субиндексы 0x4722 B8 - DO Invert Polarity(0—10)</span><a class="headerlink" href="#id13" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - DO Invert Polarity 1</p></td>
+<td><p>Смена полярности вых. 1</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - DO Invert Polarity 2</p></td>
+<td><p>Смена полярности вых. 2</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - DO Invert Polarity 3</p></td>
+<td><p>Смена полярности вых. 3</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - DO Invert Polarity 4</p></td>
+<td><p>Смена полярности вых. 4</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - DO Invert Polarity 5</p></td>
+<td><p>Смена полярности вых. 5</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - DO Invert Polarity 6</p></td>
+<td><p>Смена полярности вых. 6</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - DO Invert Polarity 7</p></td>
+<td><p>Смена полярности вых. 7</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - DO Invert Polarity 8</p></td>
+<td><p>Смена полярности вых. 8</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>B8 - DO Invert Polarity 9</p></td>
+<td><p>Смена полярности вых.  9</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>B8 - DO Invert Polarity 10</p></td>
+<td><p>Смена полярности вых. 10</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-do-error-mode">
+<span id="subtable4723"></span><h2>B8 - DO Error Mode<a class="headerlink" href="#b8-do-error-mode" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id14">
+<caption><span class="caption-text">Субиндексы 0x4723 B8 - DO Error Mode(0—10)</span><a class="headerlink" href="#id14" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - DO Error Mode 1</p></td>
+<td><p>Сменить состояние вых.  1</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - DO Error Mode 2</p></td>
+<td><p>Сменить состояние вых.  2</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - DO Error Mode 3</p></td>
+<td><p>Сменить состояние вых.  3</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - DO Error Mode 4</p></td>
+<td><p>Сменить состояние вых.  4</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - DO Error Mode 5</p></td>
+<td><p>Сменить состояние вых.  5</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - DO Error Mode 6</p></td>
+<td><p>Сменить состояние вых.  6</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - DO Error Mode 7</p></td>
+<td><p>Сменить состояние вых.  7</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - DO Error Mode 8</p></td>
+<td><p>Сменить состояние вых.  8</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>B8 - DO Error Mode 9</p></td>
+<td><p>Сменить состояние вых.  9</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>B8 - DO Error Mode 10</p></td>
+<td><p>Сменить состояние вых.  10</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Используется для перевода дискретного выхода в безопасное состояние в случае ошибки(см.  <span class="xref std std-ref">subtable2012</span>  ). Если значение параметра <strong>True</strong>, то параметр принимает значение в соответствии с <em>0x4n24</em> (см.  <a class="reference internal" href="#subtable4724"><span class="std std-ref">B8 - DO Error Value</span></a> ), где <em>n</em> принимает значение от 0 до 7, в зависимости от номера платы. Если же значение <strong>False</strong>, выход не меняет своего состояния.</p>
+</div>
+<div class="section" id="b8-do-error-value">
+<span id="subtable4724"></span><h2>B8 - DO Error Value<a class="headerlink" href="#b8-do-error-value" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id15">
+<caption><span class="caption-text">Субиндексы 0x4724 B8 - DO Error Value(0—10)</span><a class="headerlink" href="#id15" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - DO Error Value 1</p></td>
+<td><p>Безопасное состояние вых.  1</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - DO Error Value 2</p></td>
+<td><p>Безопасное состояние вых.  2</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - DO Error Value 3</p></td>
+<td><p>Безопасное состояние вых.  3</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - DO Error Value 4</p></td>
+<td><p>Безопасное состояние вых.  4</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - DO Error Value 5</p></td>
+<td><p>Безопасное состояние вых.  5</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - DO Error Value 6</p></td>
+<td><p>Безопасное состояние вых.  6</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - DO Error Value 7</p></td>
+<td><p>Безопасное состояние вых.  7</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - DO Error Value 8</p></td>
+<td><p>Безопасное состояние вых.  8</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>B8 - DO Error Value 9</p></td>
+<td><p>Безопасное состояние вых.  9</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>B8 - DO Error Value 10</p></td>
+<td><p>Безопасное состояние вых.  10</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Используется для определения безопасного состояния дискретного выхода в случае ошибки(см.  <span class="xref std std-ref">subtable2012</span> ,   <a class="reference internal" href="#subtable4723"><span class="std std-ref">B8 - DO Error Mode</span></a> ).</p>
+</div>
+<div class="section" id="b8-do-mask">
+<span id="subtable4725"></span><h2>B8 - DO Mask<a class="headerlink" href="#b8-do-mask" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id16">
+<caption><span class="caption-text">Субиндексы 0x4725 B8 - DO Mask(0—10)</span><a class="headerlink" href="#id16" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 10</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - DO Mask 1</p></td>
+<td><p>Маскирование управления вых.  1</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - DO Mask 2</p></td>
+<td><p>Маскирование управления вых.  2</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - DO Mask 3</p></td>
+<td><p>Маскирование управления вых.  3</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - DO Mask 4</p></td>
+<td><p>Маскирование управления вых.  4</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - DO Mask 5</p></td>
+<td><p>Маскирование управления вых.  5</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - DO Mask 6</p></td>
+<td><p>Маскирование управления вых.  6</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - DO Mask 7</p></td>
+<td><p>Маскирование управления вых.  7</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - DO Mask 8</p></td>
+<td><p>Маскирование управления вых.  8</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>B8 - DO Mask 9</p></td>
+<td><p>Маскирование управления вых.  9</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>B8 - DO Mask 10</p></td>
+<td><p>Маскирование управления вых.  10</p></td>
+<td><p>0</p></td>
+<td><p>bool</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-ai-read-short">
+<span id="subtable4730"></span><h2>B8 - AI Read Short<a class="headerlink" href="#b8-ai-read-short" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id17">
+<caption><span class="caption-text">Субиндексы 0x4730 B8 - AI Read Short(0—8)</span><a class="headerlink" href="#id17" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AI Read Short 1</p></td>
+<td><p>вх.  1</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AI Read Short 2</p></td>
+<td><p>вх.  2</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - AI Read Short 3</p></td>
+<td><p>вх.  3</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - AI Read Short 4</p></td>
+<td><p>вх.  4</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - AI Read Short 5</p></td>
+<td><p>вх.  5</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - AI Read Short 6</p></td>
+<td><p>вх.  6</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - AI Read Short 7</p></td>
+<td><p>вх.  7</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - AI Read Short 8</p></td>
+<td><p>вх.  8</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-ai-read-float">
+<span id="subtable4731"></span><h2>B8 - AI Read Float<a class="headerlink" href="#b8-ai-read-float" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id18">
+<caption><span class="caption-text">Субиндексы 0x4731 B8 - AI Read Float(0—8)</span><a class="headerlink" href="#id18" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AI Read Float 1</p></td>
+<td><p>вх.  1</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AI Read Float 2</p></td>
+<td><p>вх.  2</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - AI Read Float 3</p></td>
+<td><p>вх.  3</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - AI Read Float 4</p></td>
+<td><p>вх.  4</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - AI Read Float 5</p></td>
+<td><p>вх.  5</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - AI Read Float 6</p></td>
+<td><p>вх.  6</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - AI Read Float 7</p></td>
+<td><p>вх.  7</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - AI Read Float 8</p></td>
+<td><p>вх.  8</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-ai-scaling">
+<span id="subtable4732"></span><h2>B8 - AI Scaling<a class="headerlink" href="#b8-ai-scaling" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id19">
+<caption><span class="caption-text">Субиндексы 0x4732 B8 - AI Scaling(0—8)</span><a class="headerlink" href="#id19" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AI Scaling 1</p></td>
+<td><p>Масштабирование вх. 1</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AI Scaling 2</p></td>
+<td><p>Масштабирование вх. 2</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - AI Scaling 3</p></td>
+<td><p>Масштабирование вх. 3</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - AI Scaling 4</p></td>
+<td><p>Масштабирование вх. 4</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - AI Scaling 5</p></td>
+<td><p>Масштабирование вх. 5</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - AI Scaling 6</p></td>
+<td><p>Масштабирование вх. 6</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - AI Scaling 7</p></td>
+<td><p>Масштабирование вх. 7</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - AI Scaling 8</p></td>
+<td><p>Масштабирование вх. 8</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-ai-offset">
+<span id="subtable4733"></span><h2>B8 - AI Offset<a class="headerlink" href="#b8-ai-offset" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id20">
+<caption><span class="caption-text">Субиндексы 0x4733 B8 - AI Offset(0—8)</span><a class="headerlink" href="#id20" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AI Offset 1</p></td>
+<td><p>Смещение вх.  1</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AI Offset 2</p></td>
+<td><p>Смещение вх.  2</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - AI Offset 3</p></td>
+<td><p>Смещение вх.  3</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - AI Offset 4</p></td>
+<td><p>Смещение вх.  4</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - AI Offset 5</p></td>
+<td><p>Смещение вх.  5</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - AI Offset 6</p></td>
+<td><p>Смещение вх.  6</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - AI Offset 7</p></td>
+<td><p>Смещение вх.  7</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - AI Offset 8</p></td>
+<td><p>Смещение вх.  8</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-ai-filter-time">
+<span id="subtable4734"></span><h2>B8 - AI Filter Time<a class="headerlink" href="#b8-ai-filter-time" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id21">
+<caption><span class="caption-text">Субиндексы 0x4734 B8 - AI Filter Time(0—8)</span><a class="headerlink" href="#id21" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AI Filter Time 1</p></td>
+<td><p>Время фильтрации вх.  1</p></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AI Filter Time 2</p></td>
+<td><p>Время фильтрации вх.  2</p></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - AI Filter Time 3</p></td>
+<td><p>Время фильтрации вх.  3</p></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - AI Filter Time 4</p></td>
+<td><p>Время фильтрации вх.  4</p></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - AI Filter Time 5</p></td>
+<td><p>Время фильтрации вх.  5</p></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - AI Filter Time 6</p></td>
+<td><p>Время фильтрации вх.  6</p></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - AI Filter Time 7</p></td>
+<td><p>Время фильтрации вх.  7</p></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - AI Filter Time 8</p></td>
+<td><p>Время фильтрации вх.  8</p></td>
+<td><p>0</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Время фильтрации <em>AI</em> задаётся в периодах напряжения в сети 230В(1 период - 20мС).</p>
+</div>
+<div class="section" id="b8-ai-deadband">
+<span id="subtable4735"></span><h2>B8 - AI Deadband<a class="headerlink" href="#b8-ai-deadband" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id22">
+<caption><span class="caption-text">Субиндексы 0x4735 B8 - AI Deadband(0—8)</span><a class="headerlink" href="#id22" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AI Deadband 1</p></td>
+<td><p>Зона нечувств. вх. 1</p></td>
+<td><p>0.5</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AI Deadband 2</p></td>
+<td><p>Зона нечувств. вх. 2</p></td>
+<td><p>0.5</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - AI Deadband 3</p></td>
+<td><p>Зона нечувств. вх. 3</p></td>
+<td><p>0.5</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - AI Deadband 4</p></td>
+<td><p>Зона нечувств. вх. 4</p></td>
+<td><p>0.5</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - AI Deadband 5</p></td>
+<td><p>Зона нечувств. вх. 5</p></td>
+<td><p>0.5</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - AI Deadband 6</p></td>
+<td><p>Зона нечувств. вх. 6</p></td>
+<td><p>0.5</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - AI Deadband 7</p></td>
+<td><p>Зона нечувств. вх. 7</p></td>
+<td><p>0.5</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - AI Deadband 8</p></td>
+<td><p>Зона нечувств. вх. 8</p></td>
+<td><p>0.5</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Зона нечувствительности задаётся в тысячных долях процента. После обработки значение записывается в 0x4n3A, 0x4n3B соответственно(<a class="reference internal" href="#subtable473a"><span class="std std-ref">B8 - AI Short Processed</span></a>, <a class="reference internal" href="#subtable473b"><span class="std std-ref">B8 - AI Float Mag</span></a>). Если значение превышает пределы, заданные в <a class="reference internal" href="#subtable4736"><span class="std std-ref">B8 - AI Upper Limit</span></a> и <a class="reference internal" href="#subtable4737"><span class="std std-ref">B8 - AI Lower Limit</span></a>, то значение в <a class="reference internal" href="#subtable473a"><span class="std std-ref">B8 - AI Short Processed</span></a> и <a class="reference internal" href="#subtable473b"><span class="std std-ref">B8 - AI Float Mag</span></a> меняется независимо от зоны нечувствительности.</p>
+</div>
+<div class="section" id="b8-ai-upper-limit">
+<span id="subtable4736"></span><h2>B8 - AI Upper Limit<a class="headerlink" href="#b8-ai-upper-limit" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id23">
+<caption><span class="caption-text">Субиндексы 0x4736 B8 - AI Upper Limit(0—8)</span><a class="headerlink" href="#id23" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AI Upper Limit 1</p></td>
+<td><p>Верхний предел вх. 1</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AI Upper Limit 2</p></td>
+<td><p>Верхний предел вх. 2</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - AI Upper Limit 3</p></td>
+<td><p>Верхний предел вх. 3</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - AI Upper Limit 4</p></td>
+<td><p>Верхний предел вх. 4</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - AI Upper Limit 5</p></td>
+<td><p>Верхний предел вх. 5</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - AI Upper Limit 6</p></td>
+<td><p>Верхний предел вх. 6</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - AI Upper Limit 7</p></td>
+<td><p>Верхний предел вх. 7</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - AI Upper Limit 8</p></td>
+<td><p>Верхний предел вх. 8</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Верхний предел значения. Проверка на «≥» значению предела. Если значение больше или равно пределу, выставляется соответствующий бит в <a class="reference internal" href="#subtable4701"><span class="std std-ref">B8 - Board Status</span></a> и изменение обработанных значений <a class="reference internal" href="#subtable473a"><span class="std std-ref">B8 - AI Short Processed</span></a> и <a class="reference internal" href="#subtable473b"><span class="std std-ref">B8 - AI Float Mag</span></a> просходит независимо от зоны нечувствительности <a class="reference internal" href="#subtable4735"><span class="std std-ref">B8 - AI Deadband</span></a>.</p>
+</div>
+<div class="section" id="b8-ai-lower-limit">
+<span id="subtable4737"></span><h2>B8 - AI Lower Limit<a class="headerlink" href="#b8-ai-lower-limit" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id24">
+<caption><span class="caption-text">Субиндексы 0x4737 B8 - AI Lower Limit(0—8)</span><a class="headerlink" href="#id24" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AI Lower Limit 1</p></td>
+<td><p>Нижний предел вх. 1</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AI Lower Limit 2</p></td>
+<td><p>Нижний предел вх. 2</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - AI Lower Limit 3</p></td>
+<td><p>Нижний предел вх. 3</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - AI Lower Limit 4</p></td>
+<td><p>Нижний предел вх. 4</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - AI Lower Limit 5</p></td>
+<td><p>Нижний предел вх. 5</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - AI Lower Limit 6</p></td>
+<td><p>Нижний предел вх. 6</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - AI Lower Limit 7</p></td>
+<td><p>Нижний предел вх. 7</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - AI Lower Limit 8</p></td>
+<td><p>Нижний предел вх. 8</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Нижний предел значения. Проверка на «&lt;» значению предела. Если значение меньше предела, выставляется соответствующий бит в <a class="reference internal" href="#subtable4701"><span class="std std-ref">B8 - Board Status</span></a> и изменение обработанных значений <a class="reference internal" href="#subtable473a"><span class="std std-ref">B8 - AI Short Processed</span></a> и <a class="reference internal" href="#subtable473b"><span class="std std-ref">B8 - AI Float Mag</span></a> просходит независимо от зоны нечувствительности <a class="reference internal" href="#subtable4735"><span class="std std-ref">B8 - AI Deadband</span></a>.</p>
+</div>
+<div class="section" id="b8-ai-trigger-select">
+<span id="subtable4738"></span><h2>B8 - AI Trigger Select<a class="headerlink" href="#b8-ai-trigger-select" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id25">
+<caption><span class="caption-text">Субиндексы 0x4738 B8 - AI Trigger Select(0—8)</span><a class="headerlink" href="#id25" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AI Trigger Select 1</p></td>
+<td><p>Выбор событий вх. 1</p></td>
+<td><p>7</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AI Trigger Select 2</p></td>
+<td><p>Выбор событий вх. 2</p></td>
+<td><p>7</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - AI Trigger Select 3</p></td>
+<td><p>Выбор событий вх. 3</p></td>
+<td><p>7</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - AI Trigger Select 4</p></td>
+<td><p>Выбор событий вх. 4</p></td>
+<td><p>7</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - AI Trigger Select 5</p></td>
+<td><p>Выбор событий вх. 5</p></td>
+<td><p>7</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - AI Trigger Select 6</p></td>
+<td><p>Выбор событий вх. 6</p></td>
+<td><p>7</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - AI Trigger Select 7</p></td>
+<td><p>Выбор событий вх. 7</p></td>
+<td><p>7</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - AI Trigger Select 8</p></td>
+<td><p>Выбор событий вх. 8</p></td>
+<td><p>7</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Выбор источника событий задаётся с помощью битовой маски:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 87%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>№ Бита</p></th>
+<th class="head"><p>Тип события</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Верхний предел</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Нижний предел</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Превышение зоны нечувствительности</p></td>
+</tr>
+</tbody>
+</table>
+<p>Если бит установлен в <em>«1»</em>, то соответствующее событие вызывает отправку данных, если выбранный протокол передачи данных предусматривает отправку данных по событию. <strong>По умолчанию все события включены</strong>.</p>
+</div>
+<div class="section" id="b8-ai-settings">
+<span id="subtable4739"></span><h2>B8 - AI Settings<a class="headerlink" href="#b8-ai-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id26">
+<caption><span class="caption-text">Субиндексы 0x4739 B8 - AI Settings(0—8)</span><a class="headerlink" href="#id26" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AI Settings 1</p></td>
+<td></td>
+<td><p>3</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Настройки каналов аналогового ввода(<em>AI</em>). Актуальны для плат температурного ввода, где с помощью данного параметра настраивается тип температурного датчика в соответствии с <em>ГОСТ 6651—2009</em>:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 18%" />
+<col style="width: 35%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Код типа</p></th>
+<th class="head"><p>Материал датчика</p></th>
+<th class="head"><p>Сопротивление при 0 ° C</p></th>
+<th class="head"><p>Температурный коэфициент α</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Медь</p></td>
+<td><p>50 Ом</p></td>
+<td><p>0,00428</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Платина</p></td>
+<td><p>50 Ом</p></td>
+<td><p>0,00385</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Платина</p></td>
+<td><p>100 Ом</p></td>
+<td><p>0,00385</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Платина</p></td>
+<td><p>50 Ом</p></td>
+<td><p>0,00391</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Платина</p></td>
+<td><p>100 Ом</p></td>
+<td><p>0,00391</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-ai-short-processed">
+<span id="subtable473a"></span><h2>B8 - AI Short Processed<a class="headerlink" href="#b8-ai-short-processed" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id27">
+<caption><span class="caption-text">Субиндексы 0x473A B8 - AI Short Processed(0—8)</span><a class="headerlink" href="#id27" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AI Short Processed 1</p></td>
+<td><p>Вх. 1</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AI Short Processed 2</p></td>
+<td><p>Вх. 2</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - AI Short Processed 3</p></td>
+<td><p>Вх. 3</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - AI Short Processed 4</p></td>
+<td><p>Вх. 4</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - AI Short Processed 5</p></td>
+<td><p>Вх. 5</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - AI Short Processed 6</p></td>
+<td><p>Вх. 6</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - AI Short Processed 7</p></td>
+<td><p>Вх. 7</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - AI Short Processed 8</p></td>
+<td><p>Вх. 8</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>В данном индексе хранятся значения в целочисленном 16-битном формате , обработанные с учётом зоны нечувствительности <a class="reference internal" href="#subtable4735"><span class="std std-ref">B8 - AI Deadband</span></a> и пределов <a class="reference internal" href="#subtable4736"><span class="std std-ref">B8 - AI Upper Limit</span></a>, <a class="reference internal" href="#subtable4737"><span class="std std-ref">B8 - AI Lower Limit</span></a>.</p>
+</div>
+<div class="section" id="b8-ai-float-mag">
+<span id="subtable473b"></span><h2>B8 - AI Float Mag<a class="headerlink" href="#b8-ai-float-mag" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id28">
+<caption><span class="caption-text">Субиндексы 0x473B B8 - AI Float Mag(0—8)</span><a class="headerlink" href="#id28" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AI Float Mag 1</p></td>
+<td><p>Вх. 1</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AI Float Mag 2</p></td>
+<td><p>Вх. 2</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - AI Float Mag 3</p></td>
+<td><p>Вх. 3</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - AI Float Mag 4</p></td>
+<td><p>Вх. 4</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - AI Float Mag 5</p></td>
+<td><p>Вх. 5</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - AI Float Mag 6</p></td>
+<td><p>Вх. 6</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - AI Float Mag 7</p></td>
+<td><p>Вх. 7</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - AI Float Mag 8</p></td>
+<td><p>Вх. 8</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>В данном индексе хранятся значения формате <em>«float»</em>, обработанные с учётом зоны нечувствительности <a class="reference internal" href="#subtable4735"><span class="std std-ref">B8 - AI Deadband</span></a> и пределов <a class="reference internal" href="#subtable4736"><span class="std std-ref">B8 - AI Upper Limit</span></a>, <a class="reference internal" href="#subtable4737"><span class="std std-ref">B8 - AI Lower Limit</span></a>.</p>
+</div>
+<div class="section" id="b8-ai-deadband-ref">
+<span id="subtable473c"></span><h2>B8 - AI Deadband Ref<a class="headerlink" href="#b8-ai-deadband-ref" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id29">
+<caption><span class="caption-text">Субиндексы 0x473C B8 - AI Deadband Ref(0—8)</span><a class="headerlink" href="#id29" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AI Deadband Ref 1</p></td>
+<td><p>Диапазон вх. 1</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AI Deadband Ref 2</p></td>
+<td><p>Диапазон вх. 2</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>B8 - AI Deadband Ref 3</p></td>
+<td><p>Диапазон вх. 3</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>B8 - AI Deadband Ref 4</p></td>
+<td><p>Диапазон вх. 4</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>B8 - AI Deadband Ref 5</p></td>
+<td><p>Диапазон вх. 5</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>B8 - AI Deadband Ref 6</p></td>
+<td><p>Диапазон вх. 6</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>B8 - AI Deadband Ref 7</p></td>
+<td><p>Диапазон вх. 7</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>B8 - AI Deadband Ref 8</p></td>
+<td><p>Диапазон вх. 8</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>Диапазон значений, относительно которого вычисляется <a class="reference internal" href="#subtable4735"><span class="std std-ref">B8 - AI Deadband</span></a>. Связан с аппаратными особенностями платы расширения и типом подключенного датчика и не может быть изменён. Автоматически масштабируется при изменении <a class="reference internal" href="#subtable4732"><span class="std std-ref">B8 - AI Scaling</span></a>.</p>
+</div>
+<div class="section" id="b8-ao-write-short">
+<span id="subtable4740"></span><h2>B8 - AO Write Short<a class="headerlink" href="#b8-ao-write-short" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id30">
+<caption><span class="caption-text">Субиндексы 0x4740 B8 - AO Write Short(0—2)</span><a class="headerlink" href="#id30" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AO Write Short 1</p></td>
+<td><p>Вых. 1</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AO Write Short 2</p></td>
+<td><p>Вых. 2</p></td>
+<td><p>0</p></td>
+<td><p>int16</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-ao-write-float">
+<span id="subtable4741"></span><h2>B8 - AO Write Float<a class="headerlink" href="#b8-ao-write-float" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id31">
+<caption><span class="caption-text">Субиндексы 0x4741 B8 - AO Write Float(0—2)</span><a class="headerlink" href="#id31" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AO Write Float 1</p></td>
+<td><p>Вых. 1</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AO Write Float 2</p></td>
+<td><p>Вых. 2</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-ao-offset">
+<span id="subtable4742"></span><h2>B8 - AO Offset<a class="headerlink" href="#b8-ao-offset" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id32">
+<caption><span class="caption-text">Субиндексы 0x4742 B8 - AO Offset(0—2)</span><a class="headerlink" href="#id32" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AO Offset 1</p></td>
+<td><p>Смещение вых. 1</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AO Offset 2</p></td>
+<td><p>Смещение вых. 2</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-ao-scaling">
+<span id="subtable4743"></span><h2>B8 - AO Scaling<a class="headerlink" href="#b8-ao-scaling" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id33">
+<caption><span class="caption-text">Субиндексы 0x4743 B8 - AO Scaling(0—2)</span><a class="headerlink" href="#id33" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AO Scaling 1</p></td>
+<td><p>Масштабирование вых. 1</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AO Scaling 2</p></td>
+<td><p>Масштабирование вых. 2</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-ao-error-mode">
+<span id="subtable4744"></span><h2>B8 - AO Error Mode<a class="headerlink" href="#b8-ao-error-mode" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id34">
+<caption><span class="caption-text">Субиндексы 0x4744 B8 - AO Error Mode(0—2)</span><a class="headerlink" href="#id34" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AO Error Mode 1</p></td>
+<td><p>Смена состояния вых. 1</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AO Error Mode 2</p></td>
+<td><p>Смена состояния вых. 2</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Используется для перевода аналогового выхода в безопасное состояние в случае ошибки(см.  <span class="xref std std-ref">subtable2012</span>  ). Если значение параметра <strong>True</strong>, то параметр принимает значение в соответствии с <em>0x4n44</em> (см.  <a class="reference internal" href="#subtable4745"><span class="std std-ref">B8 - AO Error Value</span></a> ), где <em>n</em> принимает значение от 0 до 7, в зависимости от номера платы. Если же значение <strong>False</strong>, выход не меняет своего состояния.</p>
+</div>
+<div class="section" id="b8-ao-error-value">
+<span id="subtable4745"></span><h2>B8 - AO Error Value<a class="headerlink" href="#b8-ao-error-value" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id35">
+<caption><span class="caption-text">Субиндексы 0x4745 B8 - AO Error Value(0—2)</span><a class="headerlink" href="#id35" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>B8 - AO Error Value 1</p></td>
+<td><p>Безопасное значение вых. 1</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>B8 - AO Error Value 2</p></td>
+<td><p>Безопасное значение вых. 2</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+<p>Используется для определения безопасного состояния аналогового выхода в случае ошибки(см.  <span class="xref std std-ref">subtable2012</span> ,   <a class="reference internal" href="#subtable4744"><span class="std std-ref">B8 - AO Error Mode</span></a> ).</p>
+</div>
+<div class="section" id="b8-pm-settings">
+<span id="subtable4760"></span><h2>B8 - PM Settings<a class="headerlink" href="#b8-pm-settings" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id36">
+<caption><span class="caption-text">Субиндексы 0x4760 B8 - PM Settings(0—9)</span><a class="headerlink" href="#id36" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 9</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Scheme</p></td>
+<td><p>Схема подключения</p></td>
+<td><p>0</p></td>
+<td><p>uint16</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Current Deadband Ref</p></td>
+<td><p>Диапазон трансформатора тока фазы</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Current Deadband Ref N</p></td>
+<td><p>Диапазон трансформатора тока нейтрали</p></td>
+<td><p>1</p></td>
+<td><p>uint8</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>CTR Num</p></td>
+<td><p>Числитель коэфф. трансформации тока фазы</p></td>
+<td><p>1</p></td>
+<td><p>int16</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>CTR Den</p></td>
+<td><p>Знаменатель коэфф. трансформации тока фазы</p></td>
+<td><p>1</p></td>
+<td><p>int16</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>CTR N Num</p></td>
+<td><p>Числитель коэфф. трансформации тока нейтрали</p></td>
+<td><p>1</p></td>
+<td><p>int16</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>CTR N Den</p></td>
+<td><p>Знаменатель коэфф. трансформации тока нейтрали</p></td>
+<td><p>1</p></td>
+<td><p>int16</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>VTR Num</p></td>
+<td><p>Числитель коэфф. трансформации напряжения</p></td>
+<td><p>1</p></td>
+<td><p>int16</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>VTR Den</p></td>
+<td><p>Знаменатель коэфф. трансформации напряжения</p></td>
+<td><p>1</p></td>
+<td><p>int16</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-pm-current">
+<span id="subtable4764"></span><h2>B8 - PM Current<a class="headerlink" href="#b8-pm-current" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id37">
+<caption><span class="caption-text">Субиндексы 0x4764 B8 - PM Current(0—5)</span><a class="headerlink" href="#id37" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 5</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Ia</p></td>
+<td><p>Ток фазы A, А</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Ib</p></td>
+<td><p>Ток фазы B, А</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Ic</p></td>
+<td><p>Ток фазы С, А</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>In</p></td>
+<td><p>Ток нейтрали, А</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Iavg</p></td>
+<td><p>Средний фазный ток, А</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-pm-voltage">
+<span id="subtable4765"></span><h2>B8 - PM Voltage<a class="headerlink" href="#b8-pm-voltage" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id38">
+<caption><span class="caption-text">Субиндексы 0x4765 B8 - PM Voltage(0—8)</span><a class="headerlink" href="#id38" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Ua</p></td>
+<td><p>Напряжение фазы A, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Ub</p></td>
+<td><p>Напряжение фазы B, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Uc</p></td>
+<td><p>Напряжение фазы C, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Upavg</p></td>
+<td><p>Среднее фазное напряжение, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Uab</p></td>
+<td><p>Напряжение между фазами A и B, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>Ubc</p></td>
+<td><p>Напряжение между фазами B и C, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>Uca</p></td>
+<td><p>Напряжение между фазами C и A, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>ULavg</p></td>
+<td><p>Среднее межфазное напряжение, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-pm-power">
+<span id="subtable4766"></span><h2>B8 - PM Power<a class="headerlink" href="#b8-pm-power" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id39">
+<caption><span class="caption-text">Субиндексы 0x4766 B8 - PM Power(0—16)</span><a class="headerlink" href="#id39" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 16</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Pa</p></td>
+<td><p>Активная мощность на фазе A, кВт</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Pb</p></td>
+<td><p>Активная мощность на фазе B, кВт</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Pc</p></td>
+<td><p>Активная мощность на фазе C, кВт</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>P</p></td>
+<td><p>Суммарная активная мощность, кВт</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Qa</p></td>
+<td><p>Реактивная мощность на фазе A, квар</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>Qb</p></td>
+<td><p>Реактивная мощность на фазе B, квар</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>Qc</p></td>
+<td><p>Реактивная мощность на фазе C, квар</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>Q</p></td>
+<td><p>Суммарная реактивная мощность, квар</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>Sa</p></td>
+<td><p>Полная мощность на фазе A, кВА</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>Sb</p></td>
+<td><p>Полная мощность на фазе B, кВА</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>Sc</p></td>
+<td><p>Полная мощность на фазе C, кВА</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>S</p></td>
+<td><p>Суммарная полная мощность, кВА</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>PFa</p></td>
+<td><p>Коэфф. мощности на фазе A</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>PFb</p></td>
+<td><p>Коэфф. мощности на фазе B</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>PFc</p></td>
+<td><p>Коэфф. мощности на фазе C</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>PFavg</p></td>
+<td><p>Средний коэфф. мощности</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-pm-energy">
+<span id="subtable4767"></span><h2>B8 - PM Energy<a class="headerlink" href="#b8-pm-energy" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id40">
+<caption><span class="caption-text">Субиндексы 0x4767 B8 - PM Energy(0—21)</span><a class="headerlink" href="#id40" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 21</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Energy Pulse Qty</p></td>
+<td><p>Количество энергии на единицу счёта</p></td>
+<td><p>0.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Wap</p></td>
+<td><p>Положительная активная энергия, фаза A, кВтч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Wbp</p></td>
+<td><p>Положительная активная энергия, фаза B, кВтч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Wcp</p></td>
+<td><p>Положительная активная энергия, фаза C, кВтч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Wp</p></td>
+<td><p>Суммарная положительная активная энергия, кВтч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>Wan</p></td>
+<td><p>Отрицательная активная энергия, фаза A, кВтч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>Wbn</p></td>
+<td><p>Отрицательная активная энергия, фаза B, кВтч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>Wcn</p></td>
+<td><p>Отрицательная активная энергия, фаза C, кВтч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>Wn</p></td>
+<td><p>Cуммарная отрицательная активная энергия, кВтч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>WQap</p></td>
+<td><p>Положительная реактивная энергия, фаза A, кварч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>WQbp</p></td>
+<td><p>Положительная реактивная энергия, фаза B, кварч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>WQcp</p></td>
+<td><p>Положительная реактивная энергия, фаза C, кварч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>WQp</p></td>
+<td><p>Суммарная положительная реактивная энергия, кварч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>WQan</p></td>
+<td><p>Отрицательная реактивная энергия, фаза A, кварч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>WQbn</p></td>
+<td><p>Отрицательная реактивная энергия, фаза B, кварч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>WQcn</p></td>
+<td><p>Отрицательная реактивная энергия, фаза C, кварч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>WQn</p></td>
+<td><p>Суммарная отрицательная реактивная энергия, кварч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>WSa</p></td>
+<td><p>Полная энергия, фаза A, кВАч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>WSb</p></td>
+<td><p>Полная энергия, фаза B, кВАч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>WSc</p></td>
+<td><p>Полная энергия, фаза C, кВАч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>21</p></td>
+<td><p>WS</p></td>
+<td><p>Суммарная полная энергия, кВАч</p></td>
+<td><p>0</p></td>
+<td><p>uint32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-pm-quality">
+<span id="subtable4768"></span><h2>B8 - PM Quality<a class="headerlink" href="#b8-pm-quality" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id41">
+<caption><span class="caption-text">Субиндексы 0x4768 B8 - PM Quality(0—9)</span><a class="headerlink" href="#id41" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 9</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>F</p></td>
+<td><p>Частота, Гц</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>THD Ua</p></td>
+<td><p>КНИ напряжения на фазе A, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>THD Ub</p></td>
+<td><p>КНИ напряжения на фазе B, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>THD Uc</p></td>
+<td><p>КНИ напряжения на фазе C, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>THD Uavg</p></td>
+<td><p>Средний КНИ напряжения, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>THD Ia</p></td>
+<td><p>КНИ тока на фазе A, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>THD Ib</p></td>
+<td><p>КНИ тока на фазе B, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>THD Ic</p></td>
+<td><p>КНИ тока на фазе C, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>THD Iavg</p></td>
+<td><p>Средний КНИ тока, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-pm-current-mag">
+<span id="subtable476a"></span><h2>B8 - PM Current Mag<a class="headerlink" href="#b8-pm-current-mag" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id42">
+<caption><span class="caption-text">Субиндексы 0x476A B8 - PM Current Mag(0—5)</span><a class="headerlink" href="#id42" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 5</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Ia</p></td>
+<td><p>Ток фазы A, А</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Ib</p></td>
+<td><p>Ток фазы B, А</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Ic</p></td>
+<td><p>Ток фазы С, А</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>In</p></td>
+<td><p>Ток нейтрали, А</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Iavg</p></td>
+<td><p>Средний фазный ток, А</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>В данном индексе хранятся значения тока, обработанные с учётом зоны нечувствительности <a class="reference internal" href="#subtable476e"><span class="std std-ref">B8 - PM Current Deadband</span></a>.</p>
+</div>
+<div class="section" id="b8-pm-voltage-mag">
+<span id="subtable476b"></span><h2>B8 - PM Voltage Mag<a class="headerlink" href="#b8-pm-voltage-mag" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id43">
+<caption><span class="caption-text">Субиндексы 0x476B B8 - PM Voltage Mag(0—8)</span><a class="headerlink" href="#id43" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 8</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Ua</p></td>
+<td><p>Напряжение фазы A, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Ub</p></td>
+<td><p>Напряжение фазы B, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Uc</p></td>
+<td><p>Напряжение фазы C, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Upavg</p></td>
+<td><p>Среднее фазное напряжение, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Uab</p></td>
+<td><p>Напряжение между фазами A и B, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>Ubc</p></td>
+<td><p>Напряжение между фазами B и C, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>Uca</p></td>
+<td><p>Напряжение между фазами C и A, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>ULavg</p></td>
+<td><p>Среднее межфазное напряжение, В</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>В данном индексе хранятся значения напряжения, обработанные с учётом зоны нечувствительности <a class="reference internal" href="#subtable476f"><span class="std std-ref">B8 - PM Voltage Deadband</span></a>.</p>
+</div>
+<div class="section" id="b8-pm-power-mag">
+<span id="subtable476c"></span><h2>B8 - PM Power Mag<a class="headerlink" href="#b8-pm-power-mag" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id44">
+<caption><span class="caption-text">Субиндексы 0x476C B8 - PM Power Mag(0—16)</span><a class="headerlink" href="#id44" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 16</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Pa</p></td>
+<td><p>Активная мощность на фазе A, кВт</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Pb</p></td>
+<td><p>Активная мощность на фазе B, кВт</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Pc</p></td>
+<td><p>Активная мощность на фазе C, кВт</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>P</p></td>
+<td><p>Суммарная активная мощность, кВт</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Qa</p></td>
+<td><p>Реактивная мощность на фазе A, квар</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>Qb</p></td>
+<td><p>Реактивная мощность на фазе B, квар</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>Qc</p></td>
+<td><p>Реактивная мощность на фазе C, квар</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>Q</p></td>
+<td><p>Суммарная реактивная мощность, квар</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>Sa</p></td>
+<td><p>Полная мощность на фазе A, кВА</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>Sb</p></td>
+<td><p>Полная мощность на фазе B, кВА</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>Sc</p></td>
+<td><p>Полная мощность на фазе C, кВА</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>S</p></td>
+<td><p>Суммарная полная мощность, кВА</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>PFa</p></td>
+<td><p>Коэфф. мощности на фазе A</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>PFb</p></td>
+<td><p>Коэфф. мощности на фазе B</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>PFc</p></td>
+<td><p>Коэфф. мощности на фазе C</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>PFavg</p></td>
+<td><p>Средний коэфф. мощности</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>В данном индексе хранятся значения мощности, обработанные с учётом зоны нечувствительности <a class="reference internal" href="#subtable4770"><span class="std std-ref">B8 - PM Power Deadband</span></a>.</p>
+</div>
+<div class="section" id="b8-pm-quality-mag">
+<span id="subtable476d"></span><h2>B8 - PM Quality Mag<a class="headerlink" href="#b8-pm-quality-mag" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id45">
+<caption><span class="caption-text">Субиндексы 0x476D B8 - PM Quality Mag(0—9)</span><a class="headerlink" href="#id45" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 9</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>F</p></td>
+<td><p>Частота, Гц</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>THD Ua</p></td>
+<td><p>КНИ напряжения на фазе A, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>THD Ub</p></td>
+<td><p>КНИ напряжения на фазе B, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>THD Uc</p></td>
+<td><p>КНИ напряжения на фазе C, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>THD Uavg</p></td>
+<td><p>Средний КНИ напряжения, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>THD Ia</p></td>
+<td><p>КНИ тока на фазе A, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>THD Ib</p></td>
+<td><p>КНИ тока на фазе B, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>THD Ic</p></td>
+<td><p>КНИ тока на фазе C, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>THD Iavg</p></td>
+<td><p>Средний КНИ тока, %%</p></td>
+<td><p>nan</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>В данном индексе хранятся параметры качества, обработанные с учётом зоны нечувствительности <a class="reference internal" href="#subtable4771"><span class="std std-ref">B8 - PM Quality Deadband</span></a>.</p>
+</div>
+<div class="section" id="b8-pm-current-deadband">
+<span id="subtable476e"></span><h2>B8 - PM Current Deadband<a class="headerlink" href="#b8-pm-current-deadband" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id46">
+<caption><span class="caption-text">Субиндексы 0x476E B8 - PM Current Deadband(0—2)</span><a class="headerlink" href="#id46" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>I</p></td>
+<td><p>Зона нечувствительности фазного тока</p></td>
+<td><p>500</p></td>
+<td><p>uint32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>In</p></td>
+<td><p>Зона нечувствительности тока нейтрали</p></td>
+<td><p>500</p></td>
+<td><p>uint32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-pm-voltage-deadband">
+<span id="subtable476f"></span><h2>B8 - PM Voltage Deadband<a class="headerlink" href="#b8-pm-voltage-deadband" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id47">
+<caption><span class="caption-text">Субиндексы 0x476F B8 - PM Voltage Deadband(0—1)</span><a class="headerlink" href="#id47" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>U</p></td>
+<td><p>Зона нечувствительности по напряжению, 0,001%%</p></td>
+<td><p>500</p></td>
+<td><p>uint32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-pm-power-deadband">
+<span id="subtable4770"></span><h2>B8 - PM Power Deadband<a class="headerlink" href="#b8-pm-power-deadband" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id48">
+<caption><span class="caption-text">Субиндексы 0x4770 B8 - PM Power Deadband(0—2)</span><a class="headerlink" href="#id48" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>P Q S</p></td>
+<td><p>Зона нечувствительности по мощности, 0,001%%</p></td>
+<td><p>500</p></td>
+<td><p>uint32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>PF</p></td>
+<td><p>Зона нечувствительности по коэфф. мощности, 0,001%%</p></td>
+<td><p>500</p></td>
+<td><p>uint32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-pm-quality-deadband">
+<span id="subtable4771"></span><h2>B8 - PM Quality Deadband<a class="headerlink" href="#b8-pm-quality-deadband" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id49">
+<caption><span class="caption-text">Субиндексы 0x4771 B8 - PM Quality Deadband(0—3)</span><a class="headerlink" href="#id49" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 3</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>F</p></td>
+<td><p>Зона нечувствительности по частоте, 0,001%%</p></td>
+<td><p>500</p></td>
+<td><p>uint32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>THD I</p></td>
+<td><p>Зона нечувствительности по КНИ тока, 0,001%%</p></td>
+<td><p>500</p></td>
+<td><p>uint32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>THD U</p></td>
+<td><p>Зона нечувствительности по КНИ напряжения, 0,001%%</p></td>
+<td><p>500</p></td>
+<td><p>uint32</p></td>
+<td><p>rw</p></td>
+<td><p>Да</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="b8-pm-current-deadband-ref">
+<span id="subtable4772"></span><h2>B8 - PM Current Deadband Ref<a class="headerlink" href="#b8-pm-current-deadband-ref" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id50">
+<caption><span class="caption-text">Субиндексы 0x4772 B8 - PM Current Deadband Ref(0—2)</span><a class="headerlink" href="#id50" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>I</p></td>
+<td><p>Диапазон тока фазы, А</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>In</p></td>
+<td><p>Диапазон тока нейтрали, А</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>Диапазон значений, относительно которого вычисляется <a class="reference internal" href="#subtable476a"><span class="std std-ref">B8 - PM Current Mag</span></a>. Связан с аппаратными особенностями платы расширения и типом подключенного датчика и не может быть изменён.</p>
+</div>
+<div class="section" id="b8-pm-voltage-deadband-ref">
+<span id="subtable4773"></span><h2>B8 - PM Voltage Deadband Ref<a class="headerlink" href="#b8-pm-voltage-deadband-ref" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id51">
+<caption><span class="caption-text">Субиндексы 0x4773 B8 - PM Voltage Deadband Ref(0—1)</span><a class="headerlink" href="#id51" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 1</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>U</p></td>
+<td><p>Диапазон напряжения, В</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>Диапазон значений, относительно которого вычисляется <a class="reference internal" href="#subtable476b"><span class="std std-ref">B8 - PM Voltage Mag</span></a>. Связан с аппаратными особенностями платы расширения и типом подключенного датчика и не может быть изменён.</p>
+</div>
+<div class="section" id="b8-pm-power-deadband-ref">
+<span id="subtable4774"></span><h2>B8 - PM Power Deadband Ref<a class="headerlink" href="#b8-pm-power-deadband-ref" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id52">
+<caption><span class="caption-text">Субиндексы 0x4774 B8 - PM Power Deadband Ref(0—3)</span><a class="headerlink" href="#id52" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 3</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>P</p></td>
+<td><p>Диапазон фазной мощности, кВт/квар/кВА</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Psumm</p></td>
+<td><p>Диапазон суммарной мощности, кВт/квар/кВА</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>PF</p></td>
+<td><p>Диапазон коэфф. мощности</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>Диапазон значений, относительно которого вычисляется <a class="reference internal" href="#subtable476c"><span class="std std-ref">B8 - PM Power Mag</span></a>. Связан с аппаратными особенностями платы расширения и типом подключенного датчика и не может быть изменён.</p>
+</div>
+<div class="section" id="b8-pm-quality-deadband-ref">
+<span id="subtable4775"></span><h2>B8 - PM Quality Deadband Ref<a class="headerlink" href="#b8-pm-quality-deadband-ref" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="docutils align-default" id="id53">
+<caption><span class="caption-text">Субиндексы 0x4775 B8 - PM Quality Deadband Ref(0—2)</span><a class="headerlink" href="#id53" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Subindex</p></th>
+<th class="head"><p>Название</p></th>
+<th class="head"><p>Описание</p></th>
+<th class="head"><p>Значение</p></th>
+<th class="head"><p>Тип</p></th>
+<th class="head"><p>Доступ</p></th>
+<th class="head"><p>Сохранение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Number of Entries</p></td>
+<td></td>
+<td><p>Всего Субиндексов: 2</p></td>
+<td><p>uint8</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>F</p></td>
+<td><p>Диапазон частоты, Гц</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>THD</p></td>
+<td><p>Диапазон КНИ, %%</p></td>
+<td><p>1.0</p></td>
+<td><p>float32</p></td>
+<td><p>r</p></td>
+<td><p>Нет</p></td>
+</tr>
+</tbody>
+</table>
+<p>Диапазон значений, относительно которого вычисляется <a class="reference internal" href="#subtable476d"><span class="std std-ref">B8 - PM Quality Mag</span></a>. Связан с аппаратными особенностями платы расширения и типом подключенного датчика и не может быть изменён.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, Prom-Teq LLC.<br/>
+      Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

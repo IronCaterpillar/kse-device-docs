@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Описание работы линии электрообогрева &#8212; документация Руководство пользователя 61.0.0.1</title>
+    <link rel="stylesheet" href="../../_static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          Руководство пользователя</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../device-specific/description.html">1. Введение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Common_Structure.html">2. Устройство словаря объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/device_index.html">3. Словарь объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device-specific/app-specific.html">4. Описание работы линии электрообогрева</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../device-specific/user-web.html">5. WEB-Интерфейс настройки устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FTP.html">6. FTP-сервер устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Mapping_Struct.html">7. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/modbus_mmappings.html">8. Отображение в адресное пространство Modbus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware_struct.html">9. Типовое содержимое архива с ПО для устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CAN_PDO_Mappings.html">10. Распределение параметров CANopen PDO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B0.html">Головная плата - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B1.html">Плата расширния №1 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B2.html">Плата расширния №2 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B3.html">Плата расширния №3 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B4.html">Плата расширния №4 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B5.html">Плата расширния №5 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B6.html">Плата расширния №6 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B7.html">Плата расширния №7 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/B8.html">Плата расширния №8 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/ExtIO.html">Данные с внешних устройств - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/UserApp.html">Приложение пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/UserAppData.html">Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/common_can.html">Объекты CANopen DS-301 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../generated/device_params.html">Параметры устройства - Содержимое</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Описание работы линии электрообогрева</a><ul>
+<li><a class="reference internal" href="#id2">Общее описание</a></li>
+<li><a class="reference internal" href="#id3">Словарь</a></li>
+<li><a class="reference internal" href="#id4">Описание работы</a><ul>
+<li><a class="reference internal" href="#id5">Режимы работы</a><ul>
+<li><a class="reference internal" href="#id6">Линия постоянно выключена</a></li>
+<li><a class="reference internal" href="#id7">Линия постоянно включена</a></li>
+<li><a class="reference internal" href="#id8">Дистанционное управление линией</a></li>
+<li><a class="reference internal" href="#id9">Режим ШИМ</a></li>
+<li><a class="reference internal" href="#id10">Релейный режим</a></li>
+<li><a class="reference internal" href="#id11">Пропорциональный ШИМ</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id12">Вычисление температуры процесса</a></li>
+<li><a class="reference internal" href="#id13">Аварийное отключение</a></li>
+<li><a class="reference internal" href="#id14">Переход в безопасный режим</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id15">Индикация ошибок</a></li>
+<li><a class="reference internal" href="#id16">Настройка линии</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../../_sources/written/HCR-01F/app-specific.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="id1">
+<h1>Описание работы линии электрообогрева<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="id2">
+<h2>Общее описание<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>«Линия электрообогрева» является моделью для описания работы системы электрообогрева. Работой линии управляет <em>Прикладное ПО</em>.
+В зависимости от аппаратной конфигурации устройства таких линий может быть разное количество.
+Принципы управления, контроля и измерения одинаковы для всех линий и устройств.</p>
+</div>
+<div class="section" id="id3">
+<h2>Словарь<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Словарь линии электрообогрева делится на стандартные блоки описания, статуса, управления, измерения и настроек.
+Подробное содержание словаря линии: <a class="reference internal" href="../../generated/UserApp.html#subtable5800"><span class="std std-ref">Line 1 Description</span></a>.</p>
+</div>
+<div class="section" id="id4">
+<h2>Описание работы<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Линия электрообогрева управляется в соответствии с выбранным режимом работы и уставками, заданными пользователем.
+При выходе параметров линии за аварийные пределы может осуществляться аварийное отключение линии, при этом повторное включение возможно лишь после квитирования.
+Контроль состояния линии может осуществляться посредством интерфейсов связи, включая WEB-интерфейс.
+Наличие ошибок линии можно контролировать с помощью индикатора <em>«Alarm»</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Линия электрообогрева может быть выведена из работы с помощью параметра «Разрешить ввод в работу». В данном режиме ни управление ни измерения не производятся</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>Контроль параметров линии и вывод аварий осуществляется во всех режимах</p>
+</div>
+<p>В случае обнаружения ошибки в настройках линия отключается и выставляется флаг «Неправильная конфигурация».</p>
+<div class="section" id="id5">
+<h3>Режимы работы<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="section" id="id6">
+<h4>Линия постоянно выключена<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h4>
+<p>В данном режиме выход линии постоянно отключен. Измерения токов и температур выполняются штатно.</p>
+</div>
+<div class="section" id="id7">
+<h4>Линия постоянно включена<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h4>
+<p>В данном режиме выход линии постоянно включен. Измерения токов и температур выполняются штатно.</p>
+</div>
+<div class="section" id="id8">
+<h4>Дистанционное управление линией<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h4>
+<p>В данном режиме управление линией происходит посредством выбранных интерфейсов связи, при этом
+логика работы обеспечивает обработку ошибок и функционирование защит.</p>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>При отсутствии опроса <em>Master</em> устройством происходит перевод линии в безопасный режим, выбранный пользователем.</p>
+</div>
+</div>
+<div class="section" id="id9">
+<h4>Режим ШИМ<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h4>
+<p>В данном режиме происходит периодическое включение и отключение выхода линии. Период режима ШИМ задаётся в секундах, длительность рабочего цикла выхода задаётся в процентах от периода.</p>
+</div>
+<div class="section" id="id10">
+<h4>Релейный режим<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h4>
+<p>В релейном режиме устройство поддерживает заданную пользователем температуру объекта путём двухпозиционного регулирования.
+<a class="reference internal" href="#id12">Вычисление температуры процесса</a> выполняется в соответствии с настройками.
+Уставка температуры задаётся в градусах, так же настраивается зона нечувствительности в положительном и отрицательном направлении.
+Пределы температуры включения/отключения:</p>
+<div class="math notranslate nohighlight">
+\[T_{ON} = T_{SETPOINT} - Hysteresis_{NEGATIVE}\]</div>
+<div class="math notranslate nohighlight">
+\[T_{OFF} = T_{SETPOINT} + Hysteresis_{POSITIVE}\]</div>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>При невозможности вычислить температуру процесса происходит перевод линии в безопасный режим, выбранный пользователем.</p>
+</div>
+</div>
+<div class="section" id="id11">
+<h4>Пропорциональный ШИМ<a class="headerlink" href="#id11" title="Ссылка на этот заголовок">¶</a></h4>
+<p>В режиме пропорционального ШИМ значение Duty-цикла интерполируется между двумя точками, заданными пользователем. Интерполяция выполняется на основе <em>температуры процесса</em>
+(см. <a class="reference internal" href="#id12">Вычисление температуры процесса</a>). Интерполяция линейная, ведётся по двум точкам. Названия точек соответствуют температуре, т.е. нижняя точка - точка с более низкой температурой.</p>
+<ul class="simple">
+<li><p>В нижней точке уставки задаётся температура и Duty-цикл; ниже температуры, заданной в этой точке, значение Duty-цикла будет <strong>постоянно и соответствовать нижней уставке</strong>;</p></li>
+<li><p>В верхней точке уставки задаётся температура и Duty-цикл; выше температуры, заданной в этой точке, значение Duty-цикла будет нулевым и линия будет <strong>выключена</strong>;</p></li>
+</ul>
+<div class="docutils container">
+<img alt="../../_images/app-specific_0_01.png" src="../../_images/app-specific_0_01.png" />
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>При невозможности вычислить температуру процесса происходит перевод линии в безопасный режим, выбранный пользователем.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h3>Вычисление температуры процесса<a class="headerlink" href="#id12" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Для работы в режимах, где управление ведётся по температуре вводится понятие <em>температура</em> <em>процесса</em>.
+В качестве <em>температуры</em> <em>процесса</em> можно использовать как данные с датчика температуры, так и вычисленное значение.</p>
+<p>Режимы вычисления <em>температуры</em> <em>процесса</em>:</p>
+<ul class="simple">
+<li><p>По одному из датчиков: температура берётся с одного из внешних датчиков.</p></li>
+<li><p>По среднему: за температуру процесса принимается среднее арифметическое температур, полученных с датчиков.</p></li>
+<li><p>По минимуму: за температуру процесса принимается минимальная из температур, полученных с внешних датчиков.</p></li>
+<li><p>По максимуму: за температуру процесса принимается максимальная из температур, полученных с датчиков.</p></li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h3>Аварийное отключение<a class="headerlink" href="#id13" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Аварийное отключение линии производится при выходе тока или температуры за заданные пределы. Функции аварийного отключения по превышению допустимого тока и температуры
+могут быть независимо деактивированы, в таком случае аварийное отключение по превышению параметром предела не выполняется.</p>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>Функция аварийного отключения по превышению температуры учитывает температуру датчиков, но не расчитаную температуру процесса</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>После срабатывания функции ввод линии в работу возможен только после квитирования пользователем, либо после вывода/ввода линии в/из работы.</p>
+</div>
+</div>
+<div class="section" id="id14">
+<h3>Переход в безопасный режим<a class="headerlink" href="#id14" title="Ссылка на этот заголовок">¶</a></h3>
+<p>При настройке линии пользователь выбирает режим, который является для технологического объекта безопасным.
+Доступен выбор из следующих вариантов:</p>
+<ul class="simple">
+<li><p>Линия постоянно выключена</p></li>
+<li><p>Линия постоянно включена</p></li>
+<li><p>режим ШИМ</p></li>
+</ul>
+<p>Переход в безопасный режим осуществляется в следующих случаях:</p>
+<ul class="simple">
+<li><p>Текущий режим - <strong>дистанционный</strong> и при этом отсутствует обмен через выбранный интерфейс</p></li>
+<li><p>Текущий режим - <strong>релейный</strong> либо <strong>пропорциональный ШИМ</strong>; режимы используют температуру процесса, но она не может быть вычислена(ошибка датчика/неверная настройка)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>Индикация ошибок<a class="headerlink" href="#id15" title="Ссылка на этот заголовок">¶</a></h2>
+<p>При обнаружении ошибок устройство выставляет соответствующий флаг.
+Так же, при наличии, будет включен световой индикатор <em>«Alarm»</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>При снятии ошибочного состояния флаг соответствующей ошибки сбрасывается с задержкой, задаваемой пользователем.
+То же самое касается и реле/индикатора ошибки.</p>
+</div>
+<p>В словаре устройства отображаются следующие ошибки:</p>
+<ol class="arabic simple">
+<li><p>Ошибки, связанные с температурой, см.  <a class="reference internal" href="../../generated/UserApp.html#subtable5802"><span class="std std-ref">Line 1 Temp Alarms</span></a></p>
+<ul class="simple">
+<li><p>Ошибки расчёта температуры процесса</p></li>
+<li><p>Ошибки датчиков температуры</p></li>
+<li><p>Выход температур за пределы уставок</p></li>
+</ul>
+</li>
+<li><p>Ошибки связанные с током, см.  <a class="reference internal" href="../../generated/UserApp.html#subtable5803"><span class="std std-ref">Line 1 Current Alarms</span></a></p>
+<ul class="simple">
+<li><p>Выход тока нагрузки за пределы уставок</p></li>
+<li><p>Наличие тока утечки</p></li>
+<li><p>Наличие тока при отключенной линии</p></li>
+</ul>
+</li>
+<li><p>Остальные ошибки, см.  <a class="reference internal" href="../../generated/UserApp.html#subtable5806"><span class="std std-ref">Line 1 Misc Alarms</span></a></p>
+<ul class="simple">
+<li><p>Неправильная настройка устройства</p></li>
+<li><p>При наличии дискретного ввода - ошибки, связанные с внешними коммутационными устройствами(контакторы, автоматы)</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="id16">
+<h2>Настройка линии<a class="headerlink" href="#id16" title="Ссылка на этот заголовок">¶</a></h2>
+<p>В словаре устройства настройки разделены на следующие категории:</p>
+<ul class="simple">
+<li><p>основные настройки(см.  <a class="reference internal" href="../../generated/UserApp.html#subtable5821"><span class="std std-ref">Line 1 Settings</span></a>)</p>
+<ul>
+<li><p>ввод линии в работу</p></li>
+<li><p>выбор режима</p></li>
+<li><p>параметры режимов</p></li>
+<li><p>выбор безопасного режима в случае ошибок</p></li>
+<li><p>стартовая задержка</p></li>
+<li><p>разрешение работы при частичном отказе датчиков температуры</p></li>
+</ul>
+</li>
+<li><p>настройки аварийных пределов температуры(см.  <a class="reference internal" href="../../generated/UserApp.html#subtable5822"><span class="std std-ref">Line 1 Temp Alarm Settings</span></a>)</p></li>
+<li><p>настройки аварийных пределов тока(см. <a class="reference internal" href="../../generated/UserApp.html#subtable5823"><span class="std std-ref">Line 1 Current Alarm Settings</span></a>)</p></li>
+<li><p>дополнительные настройки</p></li>
+<li><p>настройки, связанные с подключением датчиков и сигналов</p></li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, Prom-Teq LLC.<br/>
+      Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

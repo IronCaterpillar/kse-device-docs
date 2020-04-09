@@ -12,14 +12,15 @@
    :maxdepth: 1
    :caption: Содержание:
 
-   written/description
+   written/device-specific/description
    written/Common_Structure
    generated/device_index
-   written/heater_line
-   written/HCR01F-user-web
+   written/device-specific/app-specific
+   written/device-specific/user-web
    written/FTP
    written/Mapping_Struct
    generated/modbus_mmappings
+   written/KSE-Firmware-Upgrade
    firmware_struct
    written/CAN_PDO_Mappings
 
@@ -27,6 +28,14 @@
    :hidden:
 
    generated/B0
+   generated/B1  
+   generated/B2
+   generated/B3
+   generated/B4
+   generated/B5  
+   generated/B6
+   generated/B7
+   generated/B8
    generated/ExtIO
    generated/UserApp
    generated/UserAppData

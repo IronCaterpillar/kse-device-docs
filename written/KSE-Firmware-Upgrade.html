@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>9. Обновление ПО с помощью KSE Firmware Upgrade &#8212; документация Руководство пользователя 61.0.0.1</title>
+    <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+    <link rel="next" title="10. Типовое содержимое архива с ПО для устройства" href="../firmware_struct.html" />
+    <link rel="prev" title="8. Отображение в адресное пространство Modbus" href="../generated/modbus_mmappings.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Руководство пользователя</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="device-specific/description.html">1. Введение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Common_Structure.html">2. Устройство словаря объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/device_index.html">3. Словарь объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device-specific/app-specific.html">4. Описание работы линии электрообогрева</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device-specific/user-web.html">5. WEB-Интерфейс настройки устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FTP.html">6. FTP-сервер устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapping_Struct.html">7. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/modbus_mmappings.html">8. Отображение в адресное пространство Modbus</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Обновление ПО с помощью KSE Firmware Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">10. Типовое содержимое архива с ПО для устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CAN_PDO_Mappings.html">11. Распределение параметров CANopen PDO</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B0.html">Головная плата - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B1.html">Плата расширния №1 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B2.html">Плата расширния №2 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B3.html">Плата расширния №3 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B4.html">Плата расширния №4 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B5.html">Плата расширния №5 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B6.html">Плата расширния №6 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B7.html">Плата расширния №7 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B8.html">Плата расширния №8 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/ExtIO.html">Данные с внешних устройств - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/UserApp.html">Приложение пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/UserAppData.html">Данные приложения пользователя - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/common_can.html">Объекты CANopen DS-301 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/device_params.html">Параметры устройства - Содержимое</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">9. Обновление ПО с помощью KSE Firmware Upgrade</a><ul>
+<li><a class="reference internal" href="#id1">9.1. Общее описание утилиты KSE Firmware Upgrade</a></li>
+<li><a class="reference internal" href="#id2">9.2. Подготовка к системы к обновлению ПО</a><ul>
+<li><a class="reference internal" href="#id3">9.2.1. Установка драйвера</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">9.3. Работа с утилитой KSE Firmware Upgrade</a><ul>
+<li><a class="reference internal" href="#id5">9.3.1. Обновление ПО и файлов настройки устройства</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../generated/modbus_mmappings.html" title="Previous Chapter: 8. Отображение в адресное пространство Modbus"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 8. Отображени...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../firmware_struct.html" title="Next Chapter: 10. Типовое содержимое архива с ПО для устройства"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">10. Типовое с... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/written/KSE-Firmware-Upgrade.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="kse-firmware-upgrade">
+<h1>9. Обновление ПО с помощью KSE Firmware Upgrade<a class="headerlink" href="#kse-firmware-upgrade" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="id1">
+<h2>9.1. Общее описание утилиты KSE Firmware Upgrade<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Утилита <em>KSE Firmware Upgrade</em> предназначена для обновления встроенного ПО устройства, а так же для манипуляции с файлами настройки, WEB-интерфейса и др.
+Утилита поставляется в архиве и не требует установки. Допускается запуск с переносного накопителя.</p>
+</div>
+<div class="section" id="id2">
+<h2>9.2. Подготовка к системы к обновлению ПО<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Для обновления ПО устройства используется специальный драйвер <em>libusb</em>, который необходимо установить с помощью утилиты <em>«Zadig»</em>.</p>
+<div class="section" id="id3">
+<h3>9.2.1. Установка драйвера<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Утилита для установки драйверов <em>«Zadig»</em> входит в поставку и находится в папке с <em>KSE Firmware Upgrade</em>.
+При необходимости можно скачать наиболее актуальную версию утилиты на сайте <a class="reference external" href="https://zadig.akeo.ie/">zadig.akeo.ie</a>.
+Перед запуском утилиты необходимо перевести устройство в режим <em>DFU</em>, для чего следует нажать кнопку <em>Rst</em> и удерживать её до
+включения индикатора <em>Status</em>.  Затем следует запустить утилиту.</p>
+<div class="figure align-center" id="id6">
+<img alt="Общий вид утилиты" src="../_images/zadig1.png" />
+<p class="caption"><span class="caption-text">Общий вид утилиты</span><a class="headerlink" href="#id6" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>В выпадающем списке следует выбрать устройство <em>STM32</em>, в списке драйверов следует выбрать <em>WinUSB</em>, либо любой из драйверов семейства <em>libusb</em>.
+После этого необходимо нажать кнопку <em>Replace Driver</em>. В появившемся окне необходимо подтвердить намерение установить новый драйвер.</p>
+<div class="figure align-center" id="id7">
+<img alt="Замена драйвера" src="../_images/zadig2.png" />
+<p class="caption"><span class="caption-text">Замена драйвера</span><a class="headerlink" href="#id7" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>Установка драйвера завершена, можно закрыть утилиту и запустить <em>KSE Firmware Upgrade</em>.</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>9.3. Работа с утилитой KSE Firmware Upgrade<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="figure align-center" id="id8">
+<img alt="Окно KSE Firmware Upgrade" src="../_images/fwu1.png" />
+<p class="caption"><span class="caption-text">Окно KSE Firmware Upgrade</span><a class="headerlink" href="#id8" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>Окно утилиты содержит следующие элементы:</p>
+<ul class="simple">
+<li><p>Индикатор подключения по протоколу TCP/IP, который служит для обновления/чтения содержимого файловой системы устройства</p></li>
+<li><p>Индикатор активности режима обновления(<em>DFU</em>), который служит для обновления ПО устройства</p></li>
+<li><p>Кнопка <em>Загрузить в устройство</em>, которая используется для обновления ПО, а так же для обновления содержимого ФС</p></li>
+<li><p>Кнопка <em>Считать из устройства</em>, которая служит для создания резервной копии ПО, а так же файлов настройки устройства</p></li>
+<li><p>Области сообщений</p></li>
+<li><p>Меню, дублирующего кнопки управления</p></li>
+</ul>
+<div class="section" id="id5">
+<h3>9.3.1. Обновление ПО и файлов настройки устройства<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Для обновления ПО и/или файлов устройства нажмите кнопку <em>Загрузить в устройство</em>. Откроется диалог выбора файлов, где необходимо выбрать нужный файл прошивки,
+либо ранее созданный файл резервной копии. После этого откроется окно выбора компонентов для обновления:</p>
+<div class="figure align-center" id="id9">
+<img alt="Выбор обновляемых компонентов" src="../_images/fwu_load.png" />
+<p class="caption"><span class="caption-text">Выбор обновляемых компонентов</span><a class="headerlink" href="#id9" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>В открывшемся окне присутствуют следующие компоненты:</p>
+<ul class="simple">
+<li><p>Выбор системного ПО</p></li>
+<li><p>Просмотр истории изменений</p></li>
+<li><p>Выбор прикладного ПО</p></li>
+<li><p>Выбор файла отображения в адресное пространство протокола <em>Modbus</em> (modbus_mappings.cfg)</p></li>
+<li><p>Выбор WEB-интерфейса</p></li>
+<li><p>Выбор локального интерфейса пользователя</p></li>
+<li><p>IP адрес устройства</p></li>
+<li><p>Имя пользователя</p></li>
+<li><p>Пароль</p></li>
+<li><p>Кнопки индивидуального обновления компонентов</p></li>
+<li><p>Кнопку общего обновления компонентов</p></li>
+<li><p>Кнопку стирания системного ПО</p></li>
+<li><p>Кнопку стирания прикладного ПО</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>IP адрес, имя пользователя и пароль установлена на значения по умолчанию. Если эти параметры не были изменены, их значения не следует изменять.</p>
+</div>
+<p>При выборе обновления системного и/или прикладного ПО появится окно подтверждения, отображающее параметры установленного и устанавливаемого ПО.</p>
+<div class="figure align-center" id="id10">
+<img alt="Подтверждение обновления ПО" src="../_images/fwu_load_question.png" />
+<p class="caption"><span class="caption-text">Подтверждение обновления ПО</span><a class="headerlink" href="#id10" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>После подтверждения в окне приложения отобразится прогресс операции и в области сообщений появятся записи о ходе процесса.</p>
+<div class="figure align-center" id="id11">
+<img alt="Ход процесса резервного копирования" src="../_images/fwu_load_bcup.png" />
+<p class="caption"><span class="caption-text">Ход процесса резервного копирования</span><a class="headerlink" href="#id11" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<div class="figure align-center" id="id12">
+<img alt="Ход процесса обновления системного ПО" src="../_images/fwu_load_sys.png" />
+<p class="caption"><span class="caption-text">Ход процесса обновления системного ПО</span><a class="headerlink" href="#id12" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<div class="figure align-center" id="id13">
+<img alt="Ход процесса обновления настроек в ФС" src="../_images/fwu_load_ftp1.png" />
+<p class="caption"><span class="caption-text">Ход процесса обновления настроек в ФС</span><a class="headerlink" href="#id13" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>В случае отсутствия сообщений об ошибках, обновление считается завершённым, устройство готово к работе.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, Prom-Teq LLC.<br/>
+      Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

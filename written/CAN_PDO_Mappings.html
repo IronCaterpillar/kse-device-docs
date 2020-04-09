@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>10. Распределение параметров CANopen PDO &#8212; документация Руководство пользователя 61.0.0.1</title>
+    <title>11. Распределение параметров CANopen PDO &#8212; документация Руководство пользователя 61.0.0.1</title>
     <link rel="stylesheet" href="../_static/css/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/style.css" />
@@ -20,7 +20,7 @@
     <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
     <link rel="search" title="Поиск" href="../search.html" />
     <link rel="next" title="Головная плата - Содержимое" href="../generated/B0.html" />
-    <link rel="prev" title="9. Типовое содержимое архива с ПО для устройства" href="../firmware_struct.html" />
+    <link rel="prev" title="10. Типовое содержимое архива с ПО для устройства" href="../firmware_struct.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -60,19 +60,28 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Содержание:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="description.html">1. Введение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device-specific/description.html">1. Введение</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Common_Structure.html">2. Устройство словаря объектов</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../generated/device_index.html">3. Словарь объектов</a></li>
-<li class="toctree-l1"><a class="reference internal" href="heater_line.html">4. Описание работы линии электрообогрева</a></li>
-<li class="toctree-l1"><a class="reference internal" href="HCR01F-user-web.html">5. WEB-Интерфейс настройки устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device-specific/app-specific.html">4. Описание работы линии электрообогрева</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device-specific/user-web.html">5. WEB-Интерфейс настройки устройства</a></li>
 <li class="toctree-l1"><a class="reference internal" href="FTP.html">6. FTP-сервер устройства</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Mapping_Struct.html">7. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../generated/modbus_mmappings.html">8. Отображение в адресное пространство Modbus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">9. Типовое содержимое архива с ПО для устройства</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Распределение параметров CANopen PDO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="KSE-Firmware-Upgrade.html">9. Обновление по с помощью KSE Firmware Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">10. Типовое содержимое архива с ПО для устройства</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Распределение параметров CANopen PDO</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../generated/B0.html">Головная плата - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B1.html">Плата расширния №1 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B2.html">Плата расширния №2 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B3.html">Плата расширния №3 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B4.html">Плата расширния №4 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B5.html">Плата расширния №5 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B6.html">Плата расширния №6 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B7.html">Плата расширния №7 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generated/B8.html">Плата расширния №8 - Содержимое</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../generated/ExtIO.html">Данные с внешних устройств - Содержимое</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../generated/UserApp.html">Приложение пользователя - Содержимое</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../generated/UserAppData.html">Данные приложения пользователя - Содержимое</a></li>
@@ -91,33 +100,33 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">10. Распределение параметров CANopen PDO</a><ul>
-<li><a class="reference internal" href="#id1">10.1. Общие положения</a></li>
-<li><a class="reference internal" href="#pdo">10.2. Содержание PDO по платам</a><ul>
-<li><a class="reference internal" href="#id2">10.2.1. Головная плата</a></li>
-<li><a class="reference internal" href="#di-pdo">10.2.2. Отображение параметров плат DI в PDO</a><ul>
-<li><a class="reference internal" href="#tpdo">10.2.2.1. TPDO</a></li>
-<li><a class="reference internal" href="#rpdo">10.2.2.2. RPDO</a></li>
+<li><a class="reference internal" href="#">11. Распределение параметров CANopen PDO</a><ul>
+<li><a class="reference internal" href="#id1">11.1. Общие положения</a></li>
+<li><a class="reference internal" href="#pdo">11.2. Содержание PDO по платам</a><ul>
+<li><a class="reference internal" href="#id2">11.2.1. Головная плата</a></li>
+<li><a class="reference internal" href="#di-pdo">11.2.2. Отображение параметров плат DI в PDO</a><ul>
+<li><a class="reference internal" href="#tpdo">11.2.2.1. TPDO</a></li>
+<li><a class="reference internal" href="#rpdo">11.2.2.2. RPDO</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#do-pdo">10.2.3. Отображение параметров плат DO в PDO</a><ul>
-<li><a class="reference internal" href="#id3">10.2.3.1. TPDO</a></li>
-<li><a class="reference internal" href="#id4">10.2.3.2. RPDO</a></li>
+<li><a class="reference internal" href="#do-pdo">11.2.3. Отображение параметров плат DO в PDO</a><ul>
+<li><a class="reference internal" href="#id3">11.2.3.1. TPDO</a></li>
+<li><a class="reference internal" href="#id4">11.2.3.2. RPDO</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#ai-pdo">10.2.4. Отображение параметров плат AI в PDO</a><ul>
-<li><a class="reference internal" href="#id5">10.2.4.1. TPDO</a></li>
-<li><a class="reference internal" href="#id6">10.2.4.2. RPDO</a></li>
+<li><a class="reference internal" href="#ai-pdo">11.2.4. Отображение параметров плат AI в PDO</a><ul>
+<li><a class="reference internal" href="#id5">11.2.4.1. TPDO</a></li>
+<li><a class="reference internal" href="#id6">11.2.4.2. RPDO</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#ao-pdo">10.2.5. Отображение параметров плат AO в PDO</a><ul>
-<li><a class="reference internal" href="#id7">10.2.5.1. TPDO</a></li>
-<li><a class="reference internal" href="#id8">10.2.5.2. RPDO</a></li>
+<li><a class="reference internal" href="#ao-pdo">11.2.5. Отображение параметров плат AO в PDO</a><ul>
+<li><a class="reference internal" href="#id7">11.2.5.1. TPDO</a></li>
+<li><a class="reference internal" href="#id8">11.2.5.2. RPDO</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#pm-pdo">10.2.6. Отображение параметров плат PM в PDO</a><ul>
-<li><a class="reference internal" href="#id9">10.2.6.1. TPDO</a></li>
-<li><a class="reference internal" href="#id10">10.2.6.2. RPDO</a></li>
+<li><a class="reference internal" href="#pm-pdo">11.2.6. Отображение параметров плат PM в PDO</a><ul>
+<li><a class="reference internal" href="#id9">11.2.6.1. TPDO</a></li>
+<li><a class="reference internal" href="#id10">11.2.6.2. RPDO</a></li>
 </ul>
 </li>
 </ul>
@@ -133,7 +142,7 @@
               
                 
   <li>
-    <a href="../firmware_struct.html" title="Previous Chapter: 9. Типовое содержимое архива с ПО для устройства"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 9. Типовое со...</span>
+    <a href="../firmware_struct.html" title="Previous Chapter: 10. Типовое содержимое архива с ПО для устройства"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 10. Типовое с...</span>
     </a>
   </li>
   <li>
@@ -172,13 +181,13 @@
     <div class="body col-md-12 content" role="main">
       
   <div class="section" id="canopen-pdo">
-<h1>10. Распределение параметров CANopen PDO<a class="headerlink" href="#canopen-pdo" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>11. Распределение параметров CANopen PDO<a class="headerlink" href="#canopen-pdo" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="admonition attention">
 <p class="admonition-title">Внимание</p>
 <p>В PDO дочерних плат, где идёт ссылка на ошибки первой платы имеются ввиду ошибки соответствующей платы(0-8, Ext IO)</p>
 </div>
 <div class="section" id="id1">
-<h2>10.1. Общие положения<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>11.1. Общие положения<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
 <li><p>Плате счётчика (PM) выделено 6 PDO;</p></li>
 <li><p>Головной плате выделен дополнительный PDO (TPDO7);</p></li>
@@ -196,9 +205,9 @@
 </ul>
 </div>
 <div class="section" id="pdo">
-<h2>10.2. Содержание PDO по платам<a class="headerlink" href="#pdo" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>11.2. Содержание PDO по платам<a class="headerlink" href="#pdo" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="id2">
-<h3>10.2.1. Головная плата<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>11.2.1. Головная плата<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
 <p>Если плата является первой, то присутствует PDO 7</p>
@@ -219,28 +228,28 @@
 <td><p>Ошибки устройства из <a class="reference internal" href="../generated/common_can.html#subtable1001"><span class="std std-ref">Error Register</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>8</p></td>
-<td><p>Ошибка платы 1 <span class="xref std std-ref">subtable4001</span></p></td>
+<td><p>Ошибка платы 1 <a class="reference internal" href="../generated/B1.html#subtable4001"><span class="std std-ref">B1 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>9</p></td>
-<td><p>Ошибка платы 2 <span class="xref std std-ref">subtable4101</span></p></td>
+<td><p>Ошибка платы 2 <a class="reference internal" href="../generated/B2.html#subtable4101"><span class="std std-ref">B2 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>10</p></td>
-<td><p>Ошибка платы 3 <span class="xref std std-ref">subtable4201</span></p></td>
+<td><p>Ошибка платы 3 <a class="reference internal" href="../generated/B3.html#subtable4201"><span class="std std-ref">B3 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>11</p></td>
-<td><p>Ошибка платы 4 <span class="xref std std-ref">subtable4301</span></p></td>
+<td><p>Ошибка платы 4 <a class="reference internal" href="../generated/B4.html#subtable4301"><span class="std std-ref">B4 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>12</p></td>
-<td><p>Ошибка платы 5 <span class="xref std std-ref">subtable4401</span></p></td>
+<td><p>Ошибка платы 5 <a class="reference internal" href="../generated/B5.html#subtable4401"><span class="std std-ref">B5 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>13</p></td>
-<td><p>Ошибка платы 6 <span class="xref std std-ref">subtable4501</span></p></td>
+<td><p>Ошибка платы 6 <a class="reference internal" href="../generated/B6.html#subtable4501"><span class="std std-ref">B6 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>14</p></td>
-<td><p>Ошибка платы 7 <span class="xref std std-ref">subtable4601</span></p></td>
+<td><p>Ошибка платы 7 <a class="reference internal" href="../generated/B7.html#subtable4601"><span class="std std-ref">B7 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>15</p></td>
-<td><p>Ошибка платы 8 <span class="xref std std-ref">subtable4701</span></p></td>
+<td><p>Ошибка платы 8 <a class="reference internal" href="../generated/B8.html#subtable4701"><span class="std std-ref">B8 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>16-31</p></td>
 <td><p>DI 1-16 головной платы <a class="reference internal" href="../generated/B0.html#subtable3f10"><span class="std std-ref">B0 - DI Read Word</span></a></p></td>
@@ -266,22 +275,22 @@
 <td><p>Ошибки устройства из <a class="reference internal" href="../generated/common_can.html#subtable1001"><span class="std std-ref">Error Register</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>8</p></td>
-<td><p>Ошибка платы 1 <span class="xref std std-ref">subtable4001</span></p></td>
+<td><p>Ошибка платы 1 <a class="reference internal" href="../generated/B1.html#subtable4001"><span class="std std-ref">B1 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>9</p></td>
-<td><p>Ошибка платы 2 <span class="xref std std-ref">subtable4101</span></p></td>
+<td><p>Ошибка платы 2 <a class="reference internal" href="../generated/B2.html#subtable4101"><span class="std std-ref">B2 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>10</p></td>
-<td><p>Ошибка платы 3 <span class="xref std std-ref">subtable4201</span></p></td>
+<td><p>Ошибка платы 3 <a class="reference internal" href="../generated/B3.html#subtable4201"><span class="std std-ref">B3 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>11</p></td>
-<td><p>Ошибка платы 4 <span class="xref std std-ref">subtable4301</span></p></td>
+<td><p>Ошибка платы 4 <a class="reference internal" href="../generated/B4.html#subtable4301"><span class="std std-ref">B4 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>12</p></td>
-<td><p>Ошибка платы 5 <span class="xref std std-ref">subtable4401</span></p></td>
+<td><p>Ошибка платы 5 <a class="reference internal" href="../generated/B5.html#subtable4401"><span class="std std-ref">B5 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>13</p></td>
-<td><p>Ошибка платы 6 <span class="xref std std-ref">subtable4501</span></p></td>
+<td><p>Ошибка платы 6 <a class="reference internal" href="../generated/B6.html#subtable4501"><span class="std std-ref">B6 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>14-29</p></td>
 <td><p>DI 1-16 головной платы <a class="reference internal" href="../generated/B0.html#subtable3f10"><span class="std std-ref">B0 - DI Read Word</span></a></p></td>
@@ -293,9 +302,9 @@
 </table>
 </div>
 <div class="section" id="di-pdo">
-<h3>10.2.2. Отображение параметров плат DI в PDO<a class="headerlink" href="#di-pdo" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>11.2.2. Отображение параметров плат DI в PDO<a class="headerlink" href="#di-pdo" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="section" id="tpdo">
-<h4>10.2.2.1. TPDO<a class="headerlink" href="#tpdo" title="Ссылка на этот заголовок">¶</a></h4>
+<h4>11.2.2.1. TPDO<a class="headerlink" href="#tpdo" title="Ссылка на этот заголовок">¶</a></h4>
 <table class="docutils align-default" id="id13">
 <caption><span class="caption-text">PDO 1(NODE-ID+0x180)</span><a class="headerlink" href="#id13" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -309,10 +318,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0-15</p></td>
-<td><p>DI 1-16 из <span class="xref std std-ref">subtable4010</span></p></td>
+<td><p>DI 1-16 из <a class="reference internal" href="../generated/B1.html#subtable4010"><span class="std std-ref">B1 - DI Read Word</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>16-23</p></td>
-<td><p>Ошибки платы(Board Errors) из <span class="xref std std-ref">subtable4001</span></p></td>
+<td><p>Ошибки платы(Board Errors) из <a class="reference internal" href="../generated/B1.html#subtable4001"><span class="std std-ref">B1 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>24-63</p></td>
 <td><p>Reserved</p></td>
@@ -321,14 +330,14 @@
 </table>
 </div>
 <div class="section" id="rpdo">
-<h4>10.2.2.2. RPDO<a class="headerlink" href="#rpdo" title="Ссылка на этот заголовок">¶</a></h4>
+<h4>11.2.2.2. RPDO<a class="headerlink" href="#rpdo" title="Ссылка на этот заголовок">¶</a></h4>
 <p>Отсутствуют.</p>
 </div>
 </div>
 <div class="section" id="do-pdo">
-<h3>10.2.3. Отображение параметров плат DO в PDO<a class="headerlink" href="#do-pdo" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>11.2.3. Отображение параметров плат DO в PDO<a class="headerlink" href="#do-pdo" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="section" id="id3">
-<h4>10.2.3.1. TPDO<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h4>
+<h4>11.2.3.1. TPDO<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h4>
 <table class="docutils align-default" id="id14">
 <caption><span class="caption-text">PDO 1 (NODE-ID+0x180)</span><a class="headerlink" href="#id14" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -342,10 +351,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0-15</p></td>
-<td><p>DO 1-16 из <span class="xref std std-ref">subtable4020</span></p></td>
+<td><p>DO 1-16 из <a class="reference internal" href="../generated/B1.html#subtable4020"><span class="std std-ref">B1 - DO Write Word</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>16-23</p></td>
-<td><p>Ошибки платы(Board Errors) из <span class="xref std std-ref">subtable4001</span></p></td>
+<td><p>Ошибки платы(Board Errors) из <a class="reference internal" href="../generated/B1.html#subtable4001"><span class="std std-ref">B1 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>24-63</p></td>
 <td><p>Reserved</p></td>
@@ -354,7 +363,7 @@
 </table>
 </div>
 <div class="section" id="id4">
-<h4>10.2.3.2. RPDO<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h4>
+<h4>11.2.3.2. RPDO<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h4>
 <table class="docutils align-default" id="id15">
 <caption><span class="caption-text">PDO 8(NODE-ID+0x500)</span><a class="headerlink" href="#id15" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -368,7 +377,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0-15</p></td>
-<td><p>DO 1-16 из <span class="xref std std-ref">subtable4020</span></p></td>
+<td><p>DO 1-16 из <a class="reference internal" href="../generated/B1.html#subtable4020"><span class="std std-ref">B1 - DO Write Word</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>16-63</p></td>
 <td><p>Reserved</p></td>
@@ -378,9 +387,9 @@
 </div>
 </div>
 <div class="section" id="ai-pdo">
-<h3>10.2.4. Отображение параметров плат AI в PDO<a class="headerlink" href="#ai-pdo" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>11.2.4. Отображение параметров плат AI в PDO<a class="headerlink" href="#ai-pdo" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="section" id="id5">
-<h4>10.2.4.1. TPDO<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h4>
+<h4>11.2.4.1. TPDO<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h4>
 <table class="docutils align-default" id="id16">
 <caption><span class="caption-text">PDO 1(NODE-ID+0x180)</span><a class="headerlink" href="#id16" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -394,10 +403,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0-31</p></td>
-<td><p>AI 1 из <span class="xref std std-ref">subtable4031</span></p></td>
+<td><p>AI 1 из <a class="reference internal" href="../generated/B1.html#subtable4031"><span class="std std-ref">B1 - AI Read Float</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>32-63</p></td>
-<td><p>AI 2 из <span class="xref std std-ref">subtable4031</span></p></td>
+<td><p>AI 2 из <a class="reference internal" href="../generated/B1.html#subtable4031"><span class="std std-ref">B1 - AI Read Float</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -415,10 +424,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0-31</p></td>
-<td><p>AI 3 из <span class="xref std std-ref">subtable4031</span></p></td>
+<td><p>AI 3 из <a class="reference internal" href="../generated/B1.html#subtable4031"><span class="std std-ref">B1 - AI Read Float</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>32-63</p></td>
-<td><p>AI 4 из <span class="xref std std-ref">subtable4031</span></p></td>
+<td><p>AI 4 из <a class="reference internal" href="../generated/B1.html#subtable4031"><span class="std std-ref">B1 - AI Read Float</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -436,10 +445,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0-31</p></td>
-<td><p>AI 5 из <span class="xref std std-ref">subtable4031</span></p></td>
+<td><p>AI 5 из <a class="reference internal" href="../generated/B1.html#subtable4031"><span class="std std-ref">B1 - AI Read Float</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>32-63</p></td>
-<td><p>AI 6 из <span class="xref std std-ref">subtable4031</span></p></td>
+<td><p>AI 6 из <a class="reference internal" href="../generated/B1.html#subtable4031"><span class="std std-ref">B1 - AI Read Float</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -457,23 +466,23 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0-31</p></td>
-<td><p>AI 7 из <span class="xref std std-ref">subtable4031</span></p></td>
+<td><p>AI 7 из <a class="reference internal" href="../generated/B1.html#subtable4031"><span class="std std-ref">B1 - AI Read Float</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>32-63</p></td>
-<td><p>AI 8 из <span class="xref std std-ref">subtable4031</span></p></td>
+<td><p>AI 8 из <a class="reference internal" href="../generated/B1.html#subtable4031"><span class="std std-ref">B1 - AI Read Float</span></a></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="id6">
-<h4>10.2.4.2. RPDO<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h4>
+<h4>11.2.4.2. RPDO<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h4>
 <p>Отсутствуют.</p>
 </div>
 </div>
 <div class="section" id="ao-pdo">
-<h3>10.2.5. Отображение параметров плат AO в PDO<a class="headerlink" href="#ao-pdo" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>11.2.5. Отображение параметров плат AO в PDO<a class="headerlink" href="#ao-pdo" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="section" id="id7">
-<h4>10.2.5.1. TPDO<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h4>
+<h4>11.2.5.1. TPDO<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h4>
 <table class="docutils align-default" id="id20">
 <caption><span class="caption-text">PDO 1(NODE-ID+0x180)</span><a class="headerlink" href="#id20" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -487,10 +496,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0-31</p></td>
-<td><p>AO 1 из <span class="xref std std-ref">subtable4041</span></p></td>
+<td><p>AO 1 из <a class="reference internal" href="../generated/B1.html#subtable4041"><span class="std std-ref">B1 - AO Write Float</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>32-63</p></td>
-<td><p>AO 2 из <span class="xref std std-ref">subtable4041</span></p></td>
+<td><p>AO 2 из <a class="reference internal" href="../generated/B1.html#subtable4041"><span class="std std-ref">B1 - AO Write Float</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -508,7 +517,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0-8</p></td>
-<td><p>Ошибки платы (Board Errors) из <span class="xref std std-ref">subtable4001</span></p></td>
+<td><p>Ошибки платы (Board Errors) из <a class="reference internal" href="../generated/B1.html#subtable4001"><span class="std std-ref">B1 - Board Status</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>9-63</p></td>
 <td><p>Reserved</p></td>
@@ -517,7 +526,7 @@
 </table>
 </div>
 <div class="section" id="id8">
-<h4>10.2.5.2. RPDO<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h4>
+<h4>11.2.5.2. RPDO<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h4>
 <table class="docutils align-default" id="id22">
 <caption><span class="caption-text">PDO 8(NODE-ID+0x500)</span><a class="headerlink" href="#id22" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -531,19 +540,19 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0-31</p></td>
-<td><p>AO 1 из <span class="xref std std-ref">subtable4041</span></p></td>
+<td><p>AO 1 из <a class="reference internal" href="../generated/B1.html#subtable4041"><span class="std std-ref">B1 - AO Write Float</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>32-63</p></td>
-<td><p>AO 2 из <span class="xref std std-ref">subtable4041</span></p></td>
+<td><p>AO 2 из <a class="reference internal" href="../generated/B1.html#subtable4041"><span class="std std-ref">B1 - AO Write Float</span></a></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="section" id="pm-pdo">
-<h3>10.2.6. Отображение параметров плат PM в PDO<a class="headerlink" href="#pm-pdo" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>11.2.6. Отображение параметров плат PM в PDO<a class="headerlink" href="#pm-pdo" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="section" id="id9">
-<h4>10.2.6.1. TPDO<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h4>
+<h4>11.2.6.1. TPDO<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h4>
 <table class="docutils align-default" id="id23">
 <caption><span class="caption-text">PDO 1(NODE-ID+0x180)</span><a class="headerlink" href="#id23" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
@@ -557,10 +566,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0-31</p></td>
-<td><p>IA из <span class="xref std std-ref">subtable4064</span></p></td>
+<td><p>IA из <a class="reference internal" href="../generated/B1.html#subtable4064"><span class="std std-ref">B1 - PM Current</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>32-63</p></td>
-<td><p>UA из <span class="xref std std-ref">subtable4065</span></p></td>
+<td><p>UA из <a class="reference internal" href="../generated/B1.html#subtable4065"><span class="std std-ref">B1 - PM Voltage</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -578,10 +587,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0-31</p></td>
-<td><p>IB из <span class="xref std std-ref">subtable4064</span></p></td>
+<td><p>IB из <a class="reference internal" href="../generated/B1.html#subtable4064"><span class="std std-ref">B1 - PM Current</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>32-63</p></td>
-<td><p>UB из <span class="xref std std-ref">subtable4065</span></p></td>
+<td><p>UB из <a class="reference internal" href="../generated/B1.html#subtable4065"><span class="std std-ref">B1 - PM Voltage</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -599,10 +608,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0-31</p></td>
-<td><p>IC из <span class="xref std std-ref">subtable4064</span></p></td>
+<td><p>IC из <a class="reference internal" href="../generated/B1.html#subtable4064"><span class="std std-ref">B1 - PM Current</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>32-63</p></td>
-<td><p>UC из <span class="xref std std-ref">subtable4065</span></p></td>
+<td><p>UC из <a class="reference internal" href="../generated/B1.html#subtable4065"><span class="std std-ref">B1 - PM Voltage</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -620,10 +629,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0-31</p></td>
-<td><p>PFA из <span class="xref std std-ref">subtable4066</span></p></td>
+<td><p>PFA из <a class="reference internal" href="../generated/B1.html#subtable4066"><span class="std std-ref">B1 - PM Power</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>32-63</p></td>
-<td><p>PFB из <span class="xref std std-ref">subtable4066</span></p></td>
+<td><p>PFB из <a class="reference internal" href="../generated/B1.html#subtable4066"><span class="std std-ref">B1 - PM Power</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -641,10 +650,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0-31</p></td>
-<td><p>PFC из <span class="xref std std-ref">subtable4066</span></p></td>
+<td><p>PFC из <a class="reference internal" href="../generated/B1.html#subtable4066"><span class="std std-ref">B1 - PM Power</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>32-63</p></td>
-<td><p>F из <span class="xref std std-ref">subtable4068</span></p></td>
+<td><p>F из <a class="reference internal" href="../generated/B1.html#subtable4068"><span class="std std-ref">B1 - PM Quality</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -671,7 +680,7 @@
 </table>
 </div>
 <div class="section" id="id10">
-<h4>10.2.6.2. RPDO<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h4>
+<h4>11.2.6.2. RPDO<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h4>
 <p>Отсутствуют.</p>
 </div>
 </div>

@@ -19,8 +19,8 @@
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
     <link rel="search" title="Поиск" href="../search.html" />
-    <link rel="next" title="Данные с внешних устройств - Содержимое" href="ExtIO.html" />
-    <link rel="prev" title="10. Распределение параметров CANopen PDO" href="../written/CAN_PDO_Mappings.html" />
+    <link rel="next" title="Плата расширния №1 - Содержимое" href="B1.html" />
+    <link rel="prev" title="11. Распределение параметров CANopen PDO" href="../written/CAN_PDO_Mappings.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -60,19 +60,28 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Содержание:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../written/description.html">1. Введение</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/device-specific/description.html">1. Введение</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../written/Common_Structure.html">2. Устройство словаря объектов</a></li>
 <li class="toctree-l1"><a class="reference internal" href="device_index.html">3. Словарь объектов</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../written/heater_line.html">4. Описание работы линии электрообогрева</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../written/HCR01F-user-web.html">5. WEB-Интерфейс настройки устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/device-specific/app-specific.html">4. Описание работы линии электрообогрева</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/device-specific/user-web.html">5. WEB-Интерфейс настройки устройства</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../written/FTP.html">6. FTP-сервер устройства</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../written/Mapping_Struct.html">7. Принцип отображения словаря устройства в адресное пространство протокола <em>Modbus</em></a></li>
 <li class="toctree-l1"><a class="reference internal" href="modbus_mmappings.html">8. Отображение в адресное пространство Modbus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">9. Типовое содержимое архива с ПО для устройства</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">10. Распределение параметров CANopen PDO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/KSE-Firmware-Upgrade.html">9. Обновление ПО с помощью KSE Firmware Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware_struct.html">10. Типовое содержимое архива с ПО для устройства</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../written/CAN_PDO_Mappings.html">11. Распределение параметров CANopen PDO</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Головная плата - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B1.html">Плата расширния №1 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B2.html">Плата расширния №2 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B3.html">Плата расширния №3 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B4.html">Плата расширния №4 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B5.html">Плата расширния №5 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B6.html">Плата расширния №6 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B7.html">Плата расширния №7 - Содержимое</a></li>
+<li class="toctree-l1"><a class="reference internal" href="B8.html">Плата расширния №8 - Содержимое</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ExtIO.html">Данные с внешних устройств - Содержимое</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UserApp.html">Приложение пользователя - Содержимое</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UserAppData.html">Данные приложения пользователя - Содержимое</a></li>
@@ -129,11 +138,11 @@
               
                 
   <li>
-    <a href="../written/CAN_PDO_Mappings.html" title="Previous Chapter: 10. Распределение параметров CANopen PDO"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 10. Распредел...</span>
+    <a href="../written/CAN_PDO_Mappings.html" title="Previous Chapter: 11. Распределение параметров CANopen PDO"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 11. Распредел...</span>
     </a>
   </li>
   <li>
-    <a href="ExtIO.html" title="Next Chapter: Данные с внешних устройств - Содержимое"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Данные с внеш... &raquo;</span>
+    <a href="B1.html" title="Next Chapter: Плата расширния №1 - Содержимое"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Плата расширн... &raquo;</span>
     </a>
   </li>
               
