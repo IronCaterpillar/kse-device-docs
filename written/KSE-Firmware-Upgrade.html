@@ -108,6 +108,7 @@
 </li>
 <li><a class="reference internal" href="#id4">9.3. Работа с утилитой KSE Firmware Upgrade</a><ul>
 <li><a class="reference internal" href="#id5">9.3.1. Обновление ПО и файлов настройки устройства</a></li>
+<li><a class="reference internal" href="#id6">9.3.2. Настраиваемые параметры</a></li>
 </ul>
 </li>
 </ul>
@@ -175,24 +176,24 @@
 При необходимости можно скачать наиболее актуальную версию утилиты на сайте <a class="reference external" href="https://zadig.akeo.ie/">zadig.akeo.ie</a>.
 Перед запуском утилиты необходимо перевести устройство в режим <em>DFU</em>, для чего следует нажать кнопку <em>Rst</em> и удерживать её до
 включения индикатора <em>Status</em>.  Затем следует запустить утилиту.</p>
-<div class="figure align-center" id="id6">
+<div class="figure align-center" id="id7">
 <img alt="Общий вид утилиты" src="../_images/zadig1.png" />
-<p class="caption"><span class="caption-text">Общий вид утилиты</span><a class="headerlink" href="#id6" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Общий вид утилиты</span><a class="headerlink" href="#id7" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 <p>В выпадающем списке следует выбрать устройство <em>STM32</em>, в списке драйверов следует выбрать <em>WinUSB</em>, либо любой из драйверов семейства <em>libusb</em>.
 После этого необходимо нажать кнопку <em>Replace Driver</em>. В появившемся окне необходимо подтвердить намерение установить новый драйвер.</p>
-<div class="figure align-center" id="id7">
+<div class="figure align-center" id="id8">
 <img alt="Замена драйвера" src="../_images/zadig2.png" />
-<p class="caption"><span class="caption-text">Замена драйвера</span><a class="headerlink" href="#id7" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Замена драйвера</span><a class="headerlink" href="#id8" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 <p>Установка драйвера завершена, можно закрыть утилиту и запустить <em>KSE Firmware Upgrade</em>.</p>
 </div>
 </div>
 <div class="section" id="id4">
 <h2>9.3. Работа с утилитой KSE Firmware Upgrade<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
-<div class="figure align-center" id="id8">
+<div class="figure align-center" id="id9">
 <img alt="Окно KSE Firmware Upgrade" src="../_images/fwu1.png" />
-<p class="caption"><span class="caption-text">Окно KSE Firmware Upgrade</span><a class="headerlink" href="#id8" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Окно KSE Firmware Upgrade</span><a class="headerlink" href="#id9" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 <p>Окно утилиты содержит следующие элементы:</p>
 <ul class="simple">
@@ -207,9 +208,9 @@
 <h3>9.3.1. Обновление ПО и файлов настройки устройства<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Для обновления ПО и/или файлов устройства нажмите кнопку <em>Загрузить в устройство</em>. Откроется диалог выбора файлов, где необходимо выбрать нужный файл прошивки,
 либо ранее созданный файл резервной копии. После этого откроется окно выбора компонентов для обновления:</p>
-<div class="figure align-center" id="id9">
+<div class="figure align-center" id="id10">
 <img alt="Выбор обновляемых компонентов" src="../_images/fwu_load.png" />
-<p class="caption"><span class="caption-text">Выбор обновляемых компонентов</span><a class="headerlink" href="#id9" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Выбор обновляемых компонентов</span><a class="headerlink" href="#id10" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 <p>В открывшемся окне присутствуют следующие компоненты:</p>
 <ul class="simple">
@@ -229,27 +230,35 @@
 </ul>
 <div class="admonition attention">
 <p class="admonition-title">Внимание</p>
-<p>IP адрес, имя пользователя и пароль установлена на значения по умолчанию. Если эти параметры не были изменены, их значения не следует изменять.</p>
+<p>IP адрес, имя пользователя и пароль установлены на значения по умолчанию. Если эти параметры не были изменены, их значения не следует изменять.</p>
 </div>
 <p>При выборе обновления системного и/или прикладного ПО появится окно подтверждения, отображающее параметры установленного и устанавливаемого ПО.</p>
-<div class="figure align-center" id="id10">
+<div class="figure align-center" id="id11">
 <img alt="Подтверждение обновления ПО" src="../_images/fwu_load_question.png" />
-<p class="caption"><span class="caption-text">Подтверждение обновления ПО</span><a class="headerlink" href="#id10" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Подтверждение обновления ПО</span><a class="headerlink" href="#id11" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 <p>После подтверждения в окне приложения отобразится прогресс операции и в области сообщений появятся записи о ходе процесса.</p>
-<div class="figure align-center" id="id11">
-<img alt="Ход процесса резервного копирования" src="../_images/fwu_load_bcup.png" />
-<p class="caption"><span class="caption-text">Ход процесса резервного копирования</span><a class="headerlink" href="#id11" title="Постоянная ссылка на рисунок">¶</a></p>
-</div>
 <div class="figure align-center" id="id12">
-<img alt="Ход процесса обновления системного ПО" src="../_images/fwu_load_sys.png" />
-<p class="caption"><span class="caption-text">Ход процесса обновления системного ПО</span><a class="headerlink" href="#id12" title="Постоянная ссылка на рисунок">¶</a></p>
+<img alt="Ход процесса резервного копирования" src="../_images/fwu_load_bcup.png" />
+<p class="caption"><span class="caption-text">Ход процесса резервного копирования</span><a class="headerlink" href="#id12" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 <div class="figure align-center" id="id13">
+<img alt="Ход процесса обновления системного ПО" src="../_images/fwu_load_sys.png" />
+<p class="caption"><span class="caption-text">Ход процесса обновления системного ПО</span><a class="headerlink" href="#id13" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<div class="figure align-center" id="id14">
 <img alt="Ход процесса обновления настроек в ФС" src="../_images/fwu_load_ftp1.png" />
-<p class="caption"><span class="caption-text">Ход процесса обновления настроек в ФС</span><a class="headerlink" href="#id13" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Ход процесса обновления настроек в ФС</span><a class="headerlink" href="#id14" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 <p>В случае отсутствия сообщений об ошибках, обновление считается завершённым, устройство готово к работе.</p>
+</div>
+<div class="section" id="id6">
+<h3>9.3.2. Настраиваемые параметры<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
+<p>В главном меню утилиты есть пункт <em>Параметры</em>, позволяющий включать/отключать автоматическое создание резервной копии ПО.</p>
+<div class="figure align-center" id="id15">
+<img alt="Параметры" src="../_images/fwu_menu.png" />
+<p class="caption"><span class="caption-text">Параметры</span><a class="headerlink" href="#id15" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
 </div>
 </div>
 </div>
