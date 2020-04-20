@@ -10,7 +10,7 @@
 
     1001,Product Code,"Код типа устройства",  :ref:`0x2000:2<subtable2000>`, uint32, Нет
     1003,Revision Number,"Ревизия аппаратной части",  :ref:`0x2000:3<subtable2000>`, uint32, Нет
-    1005,UID,"Серийный номер",  :ref:`0x2000:4<subtable2000>`, uint32, Нет
+    1005,UID,"UID",  :ref:`0x2000:4<subtable2000>`, uint32, Нет
     1007,Manufacturing Date,"Дата производства в формате BCD",  :ref:`0x2000:5<subtable2000>`, uint32, Нет
     1009,SW Version,"Версия ПО, Десятичное число",  :ref:`0x2000:6<subtable2000>`, uint32, Нет
     1011,SW Build,"Контрольная сумма версии сборки ПО",  :ref:`0x2000:7<subtable2000>`, uint32, Нет
