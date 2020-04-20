@@ -223,7 +223,7 @@
 </tr>
 <tr class="row-even"><td><p>4</p></td>
 <td><p>Checksum</p></td>
-<td><p>Имя файла проекта</p></td>
+<td><p>Контрольная сумма файла проекта</p></td>
 <td><p>0</p></td>
 <td><p>uint32</p></td>
 <td><p>r</p></td>
@@ -451,50 +451,10 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition attention">
-<p class="admonition-title">Внимание</p>
-<p>Параметры Circuitbreaker OF, Circuitbreaker SD и Contactor отображают состояние объекта только если они соответствующим образом настроены в  <a class="reference internal" href="#subtable582b"><span class="std std-ref">Line 1 HW Specific Settings</span></a></p>
-</div>
 <ul class="simple">
 <li><p>1 - Fault</p></li>
 </ul>
 <p>Данный параметр показывает, что присутствует по крайней мере один сигнал «Alarm» и/или «Trip». Расшифровку сигналов «Alarm» см. в <a class="reference internal" href="#subtable5802"><span class="std std-ref">Line 1 Temp Alarms</span></a>, <a class="reference internal" href="#subtable5803"><span class="std std-ref">Line 1 Current Alarms</span></a>, <a class="reference internal" href="#subtable5806"><span class="std std-ref">Line 1 Misc Alarms</span></a>. Расшифровку сигналов «Trip» см. в <a class="reference internal" href="#subtable5807"><span class="std std-ref">Line 1 Temp Trip</span></a>, <a class="reference internal" href="#subtable5808"><span class="std std-ref">Line 1 Current Trip</span></a>.</p>
-<ul class="simple">
-<li><p>2 - Actual Control Mode</p></li>
-</ul>
-<table class="docutils align-default" id="id7">
-<caption><span class="caption-text">Режимы управления линией электрообогрева</span><a class="headerlink" href="#id7" title="Постоянная ссылка на таблицу">¶</a></caption>
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 88%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Режим №</p></th>
-<th class="head"><p>Описание</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>Нагрев всегда выключен</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>Нагрев всегда включен</p></td>
-</tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><dl class="simple">
-<dt>Дистанционный режим</dt><dd><p>(управление через 0x5820:2)</p>
-</dd>
-</dl>
-<p>см. <a class="reference internal" href="#subtable5820"><span class="std std-ref">Line 1 Control</span></a></p>
-</td>
-</tr>
-<tr class="row-odd"><td><p>3</p></td>
-<td><p>Периодический (ШИМ)
-включение через заданные промежутки времени
-период - 0x5821:5, рабочий цикл, % - 0x5821:6 <a class="reference internal" href="#subtable5821"><span class="std std-ref">Line 1 Settings</span></a></p></td>
-</tr>
-</tbody>
-</table>
 <ul class="simple">
 <li><p>3 - Safe Mode On</p></li>
 </ul>
@@ -504,8 +464,8 @@
 </div>
 <div class="section" id="line-1-temp-alarms">
 <span id="subtable5802"></span><h2>Line 1 Temp Alarms<a class="headerlink" href="#line-1-temp-alarms" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id8">
-<caption><span class="caption-text">Субиндексы 0x5802 Line 1 Temp Alarms(0—8)</span><a class="headerlink" href="#id8" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-text">Субиндексы 0x5802 Line 1 Temp Alarms(0—8)</span><a class="headerlink" href="#id7" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -603,8 +563,8 @@
 </div>
 <div class="section" id="line-1-current-alarms">
 <span id="subtable5803"></span><h2>Line 1 Current Alarms<a class="headerlink" href="#line-1-current-alarms" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id9">
-<caption><span class="caption-text">Субиндексы 0x5803 Line 1 Current Alarms(0—5)</span><a class="headerlink" href="#id9" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-text">Субиндексы 0x5803 Line 1 Current Alarms(0—5)</span><a class="headerlink" href="#id8" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -678,8 +638,8 @@
 </div>
 <div class="section" id="line-1-misc-alarms">
 <span id="subtable5806"></span><h2>Line 1 Misc Alarms<a class="headerlink" href="#line-1-misc-alarms" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id10">
-<caption><span class="caption-text">Субиндексы 0x5806 Line 1 Misc Alarms(0—2)</span><a class="headerlink" href="#id10" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id9">
+<caption><span class="caption-text">Субиндексы 0x5806 Line 1 Misc Alarms(0—2)</span><a class="headerlink" href="#id9" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -729,8 +689,8 @@
 </div>
 <div class="section" id="line-1-temp-trip">
 <span id="subtable5807"></span><h2>Line 1 Temp Trip<a class="headerlink" href="#line-1-temp-trip" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id11">
-<caption><span class="caption-text">Субиндексы 0x5807 Line 1 Temp Trip(0—3)</span><a class="headerlink" href="#id11" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id10">
+<caption><span class="caption-text">Субиндексы 0x5807 Line 1 Temp Trip(0—3)</span><a class="headerlink" href="#id10" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -788,8 +748,8 @@
 </div>
 <div class="section" id="line-1-current-trip">
 <span id="subtable5808"></span><h2>Line 1 Current Trip<a class="headerlink" href="#line-1-current-trip" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id12">
-<caption><span class="caption-text">Субиндексы 0x5808 Line 1 Current Trip(0—3)</span><a class="headerlink" href="#id12" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id11">
+<caption><span class="caption-text">Субиндексы 0x5808 Line 1 Current Trip(0—3)</span><a class="headerlink" href="#id11" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -847,8 +807,8 @@
 </div>
 <div class="section" id="line-1-temp-pv">
 <span id="subtable5810"></span><h2>Line 1 Temp PV<a class="headerlink" href="#line-1-temp-pv" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id13">
-<caption><span class="caption-text">Субиндексы 0x5810 Line 1 Temp PV(0—3)</span><a class="headerlink" href="#id13" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id12">
+<caption><span class="caption-text">Субиндексы 0x5810 Line 1 Temp PV(0—3)</span><a class="headerlink" href="#id12" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -910,8 +870,8 @@
 </div>
 <div class="section" id="line-1-current-pv">
 <span id="subtable5811"></span><h2>Line 1 Current PV<a class="headerlink" href="#line-1-current-pv" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id14">
-<caption><span class="caption-text">Субиндексы 0x5811 Line 1 Current PV(0—2)</span><a class="headerlink" href="#id14" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id13">
+<caption><span class="caption-text">Субиндексы 0x5811 Line 1 Current PV(0—2)</span><a class="headerlink" href="#id13" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -961,8 +921,8 @@
 </div>
 <div class="section" id="line-1-misc-pv">
 <span id="subtable5814"></span><h2>Line 1 Misc PV<a class="headerlink" href="#line-1-misc-pv" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id15">
-<caption><span class="caption-text">Субиндексы 0x5814 Line 1 Misc PV(0—1)</span><a class="headerlink" href="#id15" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id14">
+<caption><span class="caption-text">Субиндексы 0x5814 Line 1 Misc PV(0—1)</span><a class="headerlink" href="#id14" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -1004,8 +964,8 @@
 </div>
 <div class="section" id="line-1-control">
 <span id="subtable5820"></span><h2>Line 1 Control<a class="headerlink" href="#line-1-control" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id16">
-<caption><span class="caption-text">Субиндексы 0x5820 Line 1 Control(0—2)</span><a class="headerlink" href="#id16" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id15">
+<caption><span class="caption-text">Субиндексы 0x5820 Line 1 Control(0—2)</span><a class="headerlink" href="#id15" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -1056,8 +1016,8 @@
 <li><p>1 - Command</p></li>
 </ul>
 <p>Команды, поддерживаемые устройством:</p>
-<table class="docutils align-default" id="id17">
-<caption><span class="caption-text">Список команд</span><a class="headerlink" href="#id17" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id16">
+<caption><span class="caption-text">Список команд</span><a class="headerlink" href="#id16" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 33%" />
 <col style="width: 67%" />
@@ -1068,7 +1028,7 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>0x8000FFFF</p></td>
+<tr class="row-even"><td><p>0x0800FFFF</p></td>
 <td><p>Сброс сработавших Trip</p></td>
 </tr>
 </tbody>
@@ -1080,8 +1040,8 @@
 </div>
 <div class="section" id="line-1-settings">
 <span id="subtable5821"></span><h2>Line 1 Settings<a class="headerlink" href="#line-1-settings" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id18">
-<caption><span class="caption-text">Субиндексы 0x5821 Line 1 Settings(0—15)</span><a class="headerlink" href="#id18" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id17">
+<caption><span class="caption-text">Субиндексы 0x5821 Line 1 Settings(0—15)</span><a class="headerlink" href="#id17" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -1240,14 +1200,11 @@
 <li><p>2 - Startup Delay</p></li>
 </ul>
 <p>Задержка старта линии нужна для исключения бросков тока при одновременном включении большого количества устройств; целесообразно задавать этот параметр отличающимся на устройствах, которые подключены к одним питающим цепям.</p>
-<ul class="simple">
-<li><p>3 - Control Mode</p></li>
-</ul>
 </div>
 <div class="section" id="line-1-temp-alarm-settings">
 <span id="subtable5822"></span><h2>Line 1 Temp Alarm Settings<a class="headerlink" href="#line-1-temp-alarm-settings" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id19">
-<caption><span class="caption-text">Субиндексы 0x5822 Line 1 Temp Alarm Settings(0—2)</span><a class="headerlink" href="#id19" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id18">
+<caption><span class="caption-text">Субиндексы 0x5822 Line 1 Temp Alarm Settings(0—2)</span><a class="headerlink" href="#id18" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -1297,8 +1254,8 @@
 </div>
 <div class="section" id="line-1-current-alarm-settings">
 <span id="subtable5823"></span><h2>Line 1 Current Alarm Settings<a class="headerlink" href="#line-1-current-alarm-settings" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id20">
-<caption><span class="caption-text">Субиндексы 0x5823 Line 1 Current Alarm Settings(0—4)</span><a class="headerlink" href="#id20" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id19">
+<caption><span class="caption-text">Субиндексы 0x5823 Line 1 Current Alarm Settings(0—4)</span><a class="headerlink" href="#id19" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -1364,8 +1321,8 @@
 </div>
 <div class="section" id="line-1-misc-alarm-settings">
 <span id="subtable5826"></span><h2>Line 1 Misc Alarm Settings<a class="headerlink" href="#line-1-misc-alarm-settings" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id21">
-<caption><span class="caption-text">Субиндексы 0x5826 Line 1 Misc Alarm Settings(0—1)</span><a class="headerlink" href="#id21" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id20">
+<caption><span class="caption-text">Субиндексы 0x5826 Line 1 Misc Alarm Settings(0—1)</span><a class="headerlink" href="#id20" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -1407,8 +1364,8 @@
 </div>
 <div class="section" id="line-1-temp-trip-enable">
 <span id="subtable5828"></span><h2>Line 1 Temp Trip Enable<a class="headerlink" href="#line-1-temp-trip-enable" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id22">
-<caption><span class="caption-text">Субиндексы 0x5828 Line 1 Temp Trip Enable(0—2)</span><a class="headerlink" href="#id22" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id21">
+<caption><span class="caption-text">Субиндексы 0x5828 Line 1 Temp Trip Enable(0—2)</span><a class="headerlink" href="#id21" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -1458,8 +1415,8 @@
 </div>
 <div class="section" id="line-1-current-trip-enable">
 <span id="subtable5829"></span><h2>Line 1 Current Trip Enable<a class="headerlink" href="#line-1-current-trip-enable" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id23">
-<caption><span class="caption-text">Субиндексы 0x5829 Line 1 Current Trip Enable(0—2)</span><a class="headerlink" href="#id23" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id22">
+<caption><span class="caption-text">Субиндексы 0x5829 Line 1 Current Trip Enable(0—2)</span><a class="headerlink" href="#id22" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -1509,8 +1466,8 @@
 </div>
 <div class="section" id="line-1-deadband-settings">
 <span id="subtable582a"></span><h2>Line 1 Deadband Settings<a class="headerlink" href="#line-1-deadband-settings" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id24">
-<caption><span class="caption-text">Субиндексы 0x582A Line 1 Deadband Settings(0—6)</span><a class="headerlink" href="#id24" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id23">
+<caption><span class="caption-text">Субиндексы 0x582A Line 1 Deadband Settings(0—6)</span><a class="headerlink" href="#id23" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
@@ -1592,8 +1549,8 @@
 </div>
 <div class="section" id="line-1-hw-specific-settings">
 <span id="subtable582b"></span><h2>Line 1 HW Specific Settings<a class="headerlink" href="#line-1-hw-specific-settings" title="Ссылка на этот заголовок">¶</a></h2>
-<table class="docutils align-default" id="id25">
-<caption><span class="caption-text">Субиндексы 0x582B Line 1 HW Specific Settings(0—3)</span><a class="headerlink" href="#id25" title="Постоянная ссылка на таблицу">¶</a></caption>
+<table class="docutils align-default" id="id24">
+<caption><span class="caption-text">Субиндексы 0x582B Line 1 HW Specific Settings(0—3)</span><a class="headerlink" href="#id24" title="Постоянная ссылка на таблицу">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 14%" />
